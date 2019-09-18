@@ -22,6 +22,17 @@ namespace SchoolSafeID
         public Settings()
         {
             InitializeComponent();
+            school_url.Text = Properties.Settings.Default.school_url;            
+        }
+
+        private void btnSettings_Click(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.school_url  = school_url.Text.ToString();
+            Properties.Settings.Default.printer_name = printersList.SelectedValue.ToString();
+
+            Properties.Settings.Default.Save();
+
+            this.Close();
         }
     }
 }

@@ -24,8 +24,8 @@
             <TextBlock TextAlignment="Center" Width="960" Style="{StaticResource MaterialDesignDisplay1TextBlock}" Height="130"><Run Text="ID Scan Successful."/><LineBreak/><Run Text="Would you like to print your badge?" Foreground="#777"/></TextBlock>
 
 
-            <WrapPanel Width="960" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Grid Width="555" Height="320" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <WrapPanel>
+                <Grid Width="555" Height="320">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="30*"/>
                         <ColumnDefinition Width="30*"/>
@@ -41,7 +41,7 @@
                     <Border Grid.ColumnSpan="4" Background="#777" Grid.Row="1"/>
 
                     <StackPanel Grid.Column="2" Margin="40,64,0,56" VerticalAlignment="Center" Height="100" Grid.ColumnSpan="2">
-                        <TextBlock Foreground="White" FontSize="25" Text="Today - 64° F"/>
+                        <TextBlock Foreground="White" FontSize="25" Text="Today - 68° F"/>
                         <TextBlock Foreground="White" FontSize="25" Text="Partially Cloudy"/>
                         <TextBlock Foreground="White" FontSize="25" Text="Precipitation: 25%"/>
                     </StackPanel>
@@ -51,7 +51,7 @@
                         <TextBlock Foreground="White" FontSize="25" Text="Low: 43°" Margin="0,0,20,0"/>
                         <TextBlock Foreground="White" FontSize="25" Text="Feels like: 63°"/>
                     </StackPanel>
-                    <Image Margin="20" Source="Resources/ProfilePic.jpg" Grid.ColumnSpan="2"/>
+                    <Image Margin="5,0" Source="Resources/ProfilePic.jpg" Grid.ColumnSpan="2"/>
                 </Grid>
             </WrapPanel>
             

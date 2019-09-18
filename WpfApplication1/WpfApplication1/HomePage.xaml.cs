@@ -41,7 +41,32 @@ namespace SchoolSafeID
         private void btnSettings_Click(object sender, RoutedEventArgs e)
         {
             Settings settings = new Settings();
+            settings.school_url.Text = Properties.Settings.Default.school_url;
+
+            loadPrinters(settings.printersList);            
             settings.ShowDialog();
+        }
+
+
+        public void loadPrinters(ComboBox printersList)
+        {
+            int printerIndex = 0;
+            int i = 0;
+
+            foreach (string printerName in System.Drawing.Printing.PrinterSettings.InstalledPrinters)
+            {
+                if(printerName.Equals(Properties.Settings.Default.printer_name))
+                {
+                    printerIndex = i;
+                }
+
+                printersList.Items.Add(printerName);
+
+                i++;
+            }
+
+            printersList.SelectedIndex = printerIndex;
+
         }
     }
 }

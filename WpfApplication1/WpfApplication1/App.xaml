@@ -48,6 +48,16 @@
                 <Setter Property="BorderThickness" Value="1" />
             </Style>
 
+            <Style x:Key="ssid_ComboBox" TargetType="ComboBox">
+                <Setter Property="Width" Value="700" />
+                <Setter Property="Height" Value="70" />
+                <Setter Property="FontSize" Value="34" />
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="Margin" Value="0 8" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="BorderThickness" Value="1" />
+            </Style>
+
             <Style x:Key="WmTextField" TargetType="wpfx1:WatermarkTextBox">
                 <Setter Property="Width" Value="700" />
                 <Setter Property="Height" Value="70" />
