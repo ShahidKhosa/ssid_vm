@@ -87,7 +87,7 @@ namespace SchoolSafeID {
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
         public static void Main() {
-            SplashScreen splashScreen = new SplashScreen("splashscreen1.png");
+            SplashScreen splashScreen = new SplashScreen("splashscreen.jpg");
             splashScreen.Show(true);
             SchoolSafeID.App app = new SchoolSafeID.App();
             app.InitializeComponent();
