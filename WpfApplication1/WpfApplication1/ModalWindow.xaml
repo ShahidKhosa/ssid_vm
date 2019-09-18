@@ -1,0 +1,28 @@
+﻿<Window x:Class="SchoolSafeID.ModalWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SchoolSafeID"
+        xmlns:wpfx1="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="14"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"                
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Padding="20" WindowStyle="ToolWindow" ResizeMode="NoResize"
+        Title="Office Use Only" Icon="favicon.ico" HorizontalAlignment="Center" VerticalAlignment="Center" 
+        HorizontalContentAlignment="Center" Width="700" Height="350" WindowStartupLocation="CenterScreen">
+    <Grid>
+
+        <wpfx1:WatermarkPasswordBox Style="{StaticResource WmPassword}" Name="txt_password" Watermark="Enter Password" Margin="68,63,63,189" Width="Auto" />
+
+        <Button Style="{StaticResource MyButton}" Content="SUBMIT" Margin="59,187,355,0"/>
+        <Button Style="{StaticResource MyButton}" Content="CANCEL" Background="Gray" Margin="353,187,61,0" Click="Button_Click"/>
+
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,42 @@
+﻿<Page x:Class="SchoolSafeID.CheckinReasons"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SchoolSafeID"
+      mc:Ignorable="d"       
+      Title="Select Check-in Reasons">
+
+    <DockPanel LastChildFill="True">
+
+        <StackPanel DockPanel.Dock="Top"></StackPanel>
+
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Background="Black" Height="100">
+            <Button Style="{StaticResource MyButton}" HorizontalAlignment="Left" Margin="10 10 0 0" Content="GO BACK" Background="Gray" Click="btn_GoBack_Click" />
+            <Image HorizontalAlignment="Right" Margin="780 10 0 0" Width="276" Height="66" Source="Resources/poweredby_schoolsafe.png" />
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock="Left"></StackPanel>
+
+        <StackPanel DockPanel.Dock="Right"></StackPanel>
+
+        <WrapPanel Width="960" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock TextAlignment="Center" Width="960" Style="{StaticResource MaterialDesignDisplay1TextBlock}" Height="130"><Run Text="ID Scan Successful."/><LineBreak/><Run Text="Which option best describes you?"/></TextBlock>
+
+            <Button Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 1" Tag="1" Click="btnOptionClick" />
+            <Button Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 2" Tag="2" Click="btnOptionClick" />
+            <Button Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 3" Tag="3" Click="btnOptionClick" />
+
+            <Button Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 4" Tag="4" Click="btnOptionClick" />
+            <Button Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 5" Tag="5" Click="btnOptionClick" />
+            <Button Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 6" Tag="6" Click="btnOptionClick" />
+
+            <Button Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 7" Tag="7" Click="btnOptionClick" />
+            <Button Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 8" Tag="8" Click="btnOptionClick" />
+            <Button Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 9" Tag="9" Click="btnOptionClick" />
+        </WrapPanel>
+
+
+
+    </DockPanel>
+</Page>

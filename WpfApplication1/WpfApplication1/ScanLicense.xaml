@@ -1,0 +1,52 @@
+﻿<Page x:Class="SchoolSafeID.ScanLicense"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:adorners="http://gu.se/Adorners"            
+      xmlns:local="clr-namespace:SchoolSafeID"
+      xmlns:wpfx1="http://schemas.xceed.com/wpf/xaml/toolkit"
+      mc:Ignorable="d"       
+      Title="Scan License">
+
+    <DockPanel LastChildFill="True">
+
+        <StackPanel DockPanel.Dock="Top"></StackPanel>
+        
+
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Background="Black" Height="100">
+            <Button Style="{StaticResource MyButton}" HorizontalAlignment="Left" Margin="10 10 0 0" Content="GO BACK" Background="Gray" Click="btn_Home_Click" />
+            <Button Style="{StaticResource MyButton}" HorizontalAlignment="Left" Margin="10 10 0 0" Content="OFFICE USE ONLY" Click="btnOfficeUseOnlyClick" />
+            <Image Width="276" Height="66" Margin="500 10 10 0" HorizontalAlignment="Right" Source="Resources/poweredby_schoolsafe.png" />
+        </StackPanel>
+
+        
+        <StackPanel DockPanel.Dock="Left" Width="450" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Width="369" Height="261" HorizontalAlignment="Right" Margin="0 16 0 0" Source="Resources/barcode_scanner.png" />
+            <TextBlock HorizontalAlignment="Center" Style="{StaticResource MaterialDesignDisplay1TextBlock}" Margin="65 10 0 0"  TextWrapping="Wrap" FontSize="20" Foreground="#249c24" Text="Press scan button on device if it does not automatically scan."></TextBlock>
+
+            <Image Margin="0 50 0 0" Width="369" Height="111" HorizontalAlignment="Right" Source="Resources/pdf417.png" />
+            <TextBlock HorizontalAlignment="Center" Margin="30 10 0 0" Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" FontSize="20" Text="Sample barcode on back of license."></TextBlock>
+        </StackPanel>
+
+        
+        <StackPanel DockPanel.Dock="Right"></StackPanel>
+
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="36" Margin="0,0,0,10" Text="Scan Drivers License or Frequent Visitor ID"></TextBlock>
+
+            <StackPanel>
+                <wpfx1:WatermarkTextBox Style="{StaticResource WmTextField}" Name="txt_FirstName" Watermark="Legal First Name" />
+                <wpfx1:WatermarkTextBox Style="{StaticResource WmTextField}" Name="txt_LastName" Watermark="Legal Last Name" />
+                <wpfx1:MaskedTextBox Mask="00/00/0000" Style="{StaticResource MsTextField}" Name="txt_dob"/>
+                <!--<wpfx1:DateTimePicker TextAlignment="Left" AutoCloseCalendar="True" TimePickerVisibility="Hidden" Format="ShortDate" Style="{StaticResource MyDateTextField}" Name="txt_dob" Watermark="Date of Birth" />-->                
+                <Button Style="{StaticResource MyButton}" Content="CONFIRM AND SUBMIT" Width="700" Margin="0 10 0 20" Click="Button_Click"/>
+                <TextBlock Width="700" Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" FontSize="22" Text="Hold your drivers license up to the scanning device as shown. The back of your license should face the scanning device so that it can read the 2D bar code. Once you hear the beep, please confirm your first name, last name and date of birth. Hit submit to continue."></TextBlock>
+            </StackPanel>
+
+        </StackPanel>
+
+    </DockPanel>
+
+</Page>
