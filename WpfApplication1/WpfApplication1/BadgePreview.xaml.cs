@@ -27,7 +27,25 @@ namespace SchoolSafeID
 
         private void btn_GoBack_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("DigitalPass.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
+        }
+
+        private void page_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            Visitor.VisitDateTime = DateTime.Now;
+
+            txtSchoolName.Text  = "New School Name";
+            txtVisitorName.Text = (Visitor.FirstName + " " + Visitor.LastName);
+            txtVisitorType.Text = "Visitor Type " + Visitor.CheckinOption;
+            txtDestination.Text = "New Destination";
+
+            txtDate.Text = Visitor.VisitDateTime.ToString("MM/dd/yyyy");
+            txtTime.Text = Visitor.VisitDateTime.ToString("hh:mm:ss tt");
+
+            string filePath = @"C:\SSID\" + Visitor.Image;
+            imgVisitorImage.Source = new BitmapImage(new Uri(filePath, UriKind.Absolute));
+
+            //Visitor.VisitDateTime.ToString("MM/dd/yyyy hh:mm:ss tt");            
         }
     }
 }

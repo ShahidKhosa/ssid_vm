@@ -13,23 +13,27 @@
 
         <StackPanel DockPanel.Dock="Top"></StackPanel>
 
+        <StackPanel DockPanel.Dock="Bottom" Height="100" Background="Black">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Background>
+                    <ImageBrush ImageSource="Resources/poweredby_schoolsafe.png" Opacity="1" Stretch="None" AlignmentX="Right"/>
+                </StackPanel.Background>
 
-        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Background="Black" Height="100">
-            <Button Style="{StaticResource MyButton}" HorizontalAlignment="Left" Margin="10 10 0 0" Content="GO BACK" Background="Gray" Click="btn_GoBack_Click" />
-            <Image HorizontalAlignment="Right" Margin="780 10 0 0" Width="276" Height="66" Source="Resources/poweredby_schoolsafe.png" />
+                <Button Style="{StaticResource MyButton}" Margin="10 10 0 0" Content="GO BACK" Background="Gray" Click="btn_GoBack_Click" />
+            </StackPanel>
         </StackPanel>
 
 
-        <StackPanel DockPanel.Dock="Left" Width="450" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Image Width="372" Height="509" HorizontalAlignment="Right" Source="Resources/digit_pass_preview.png" />
+        <StackPanel DockPanel.Dock="Left" Width="509" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Image Width="372" Height="509" HorizontalAlignment="Right" Source="Resources/digit_pass_preview.png" ToolTip="Digital Pass" />
         </StackPanel>
 
 
-        <StackPanel DockPanel.Dock="Right"></StackPanel>
+        <StackPanel Width="200" DockPanel.Dock="Right"></StackPanel>
 
 
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Style="{StaticResource MaterialDesignDisplay3TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="0,0,0,30" Text="Save Time"></TextBlock>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="0,30,0,0">
+            <TextBlock Style="{StaticResource MaterialDesignDisplay3TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="0,0,0,10" Text="Save Time"></TextBlock>
 
             <StackPanel>
                 <wpfx1:MaskedTextBox Mask="(000) 000-0000" Style="{StaticResource MsTextField}" Name="txt_Phone"/>
@@ -38,8 +42,31 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <Button Style="{StaticResource MyButton}" Content="SEND MY PASS AND CONTINUE" Width="390" Margin="0 40 0 30"/>
-                <Button Name="btnNoThanks" Style="{StaticResource MyButton}" Content="NO THANKS" Width="250" Margin="20 40 0 30" Click="btnNoThanks_Click"/>
+                <Button Name="btnCreateDigtalPass" Style="{StaticResource MyButton}" Content="SEND MY PASS AND CONTINUE" Width="430" Margin="0 10 0 0" Click="btnCreateDigtalPass_Click"/>
+                <Button Name="btnNoThanks" Style="{StaticResource MyButton}" Content="NO THANKS" Width="250" Margin="20 10 0 0" Click="btnNoThanks_Click"/>
+            </StackPanel>
+
+            <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}" HorizontalAlignment="Left" Margin="0,15,0,0" Text="Receive the Digital Pass"></TextBlock>
+            
+            <StackPanel Margin="20,5,0,0">
+                <BulletDecorator Margin="0,3">
+                    <BulletDecorator.Bullet>
+                        <Image Width="18" Height="18" Source="Resources/select.png"></Image>
+                    </BulletDecorator.Bullet>
+                    <TextBlock Text="Faster Check-In" FontSize="18" Margin="5,0,0,0"></TextBlock>
+                </BulletDecorator>
+                <BulletDecorator Margin="0,3">
+                    <BulletDecorator.Bullet>
+                        <Image Width="18" Height="18" Source="Resources/select.png"></Image>
+                    </BulletDecorator.Bullet>
+                    <TextBlock Text="No License Needed" FontSize="18" Margin="5,0,0,0"></TextBlock>
+                </BulletDecorator>
+                <BulletDecorator Margin="0,3">
+                    <BulletDecorator.Bullet>
+                        <Image Width="18" Height="18" Source="Resources/select.png"></Image>
+                    </BulletDecorator.Bullet>
+                    <TextBlock Text="Receive School Notifications" FontSize="18" Margin="5,0,0,0"></TextBlock>
+                </BulletDecorator>
             </StackPanel>
 
         </StackPanel>

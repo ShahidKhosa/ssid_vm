@@ -109,9 +109,6 @@
     <Compile Include="BadgePreview.xaml.cs">
       <DependentUpon>BadgePreview.xaml</DependentUpon>
     </Compile>
-    <Compile Include="card_layout.xaml.cs">
-      <DependentUpon>card_layout.xaml</DependentUpon>
-    </Compile>
     <Compile Include="CheckinReasons.xaml.cs">
       <DependentUpon>CheckinReasons.xaml</DependentUpon>
     </Compile>
@@ -137,12 +134,9 @@
     <Compile Include="TakePhoto.xaml.cs">
       <DependentUpon>TakePhoto.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Visitor.cs" />
     <Compile Include="WebCam.cs" />
     <Page Include="BadgePreview.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="card_layout.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -271,6 +265,16 @@
   </ItemGroup>
   <ItemGroup>
     <SplashScreen Include="SplashScreen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bar_code.png" />
+    <Resource Include="Resources\schoolsafe-id.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\shahid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\select.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

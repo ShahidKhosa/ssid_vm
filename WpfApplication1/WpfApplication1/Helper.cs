@@ -28,27 +28,39 @@ namespace SchoolSafeID
             return bs;
 
         }
-        public static void SaveImageCapture(BitmapSource bitmap)
+
+        public static string SaveImageCapture(BitmapSource bitmap)
         {
-            JpegBitmapEncoder encoder = new JpegBitmapEncoder();
-            encoder.Frames.Add(BitmapFrame.Create(bitmap));
-            encoder.QualityLevel = 100;
+            string fileName = "";
 
-            // Save Image
-            string path = @"C:\SSID";
-
-
-            if (! Directory.Exists(path))
+            try
             {
-                // Try to create the directory.
-                DirectoryInfo di = Directory.CreateDirectory(path);
+                JpegBitmapEncoder encoder = new JpegBitmapEncoder();
+                encoder.Frames.Add(BitmapFrame.Create(bitmap));
+                encoder.QualityLevel = 100;
+
+                // Save Image
+                string path = @"C:\SSID";
+
+                if (!Directory.Exists(path))
+                {
+                    // Try to create the directory.
+                    DirectoryInfo di = Directory.CreateDirectory(path);
+                }
+
+                fileName = "visitor_" + Guid.NewGuid().ToString() + ".jpg";
+                string filePath = path + "\\" + fileName;
+
+                FileStream fstream = new FileStream(filePath, FileMode.Create);
+                encoder.Save(fstream);
+                fstream.Close();
             }
-
-            string filename = path + "\\Image.Jpg";
-            FileStream fstream = new FileStream(filename, FileMode.Create);
-            encoder.Save(fstream);
-            fstream.Close();
-
+            catch( Exception ex)
+            {
+                Console.Write(ex.Message);
+            }
+            
+            return fileName;
         }
     }
 }

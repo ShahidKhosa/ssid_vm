@@ -10,10 +10,15 @@
     <DockPanel LastChildFill="True">
 
         <StackPanel DockPanel.Dock="Top"></StackPanel>
+        
+        <StackPanel DockPanel.Dock="Bottom" Height="100" Background="Black">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Background>
+                    <ImageBrush ImageSource="Resources/poweredby_schoolsafe.png" Opacity="1" Stretch="None" AlignmentX="Right"/>
+                </StackPanel.Background>
 
-        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Background="Black" Height="100">
-            <Button Style="{StaticResource MyButton}" HorizontalAlignment="Left" Margin="10 10 0 0" Content="GO BACK" Background="Gray" Click="btn_GoBack_Click" />
-            <Image HorizontalAlignment="Right" Margin="780 10 0 0" Width="276" Height="66" Source="Resources/poweredby_schoolsafe.png" />
+                <Button Style="{StaticResource MyButton}" Margin="10 10 0 0" Content="GO BACK" Background="Gray" Click="btn_GoBack_Click" />
+            </StackPanel>
         </StackPanel>
 
         <StackPanel DockPanel.Dock="Left"></StackPanel>

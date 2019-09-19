@@ -33,13 +33,31 @@ namespace SchoolSafeID
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            Visitor.FirstName = txt_FirstName.Text;
+            Visitor.LastName = txt_LastName.Text;
+            Visitor.DateOfBirth = txt_DateOfBirth.Text;
+
             this.NavigationService.Navigate(new Uri("DigitalPass.xaml", UriKind.Relative));
         }
 
         private void btnOfficeUseOnlyClick(object sender, RoutedEventArgs e)
         {
-            ModalWindow mw = new ModalWindow();
+            ModalWindow mw = new ModalWindow
+            {
+                scanLicense = this
+            };
+            //mw.txt_password.Text = "";
             mw.ShowDialog();
+        }
+
+        private void txtBarcodeData_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter || e.Key == Key.Tab || e.Key == Key.LeftCtrl || e.Key == Key.RightCtrl || e.Key == Key.End)
+            {
+                string barcode = txtBarcodeData.Text;
+
+                txtBarcodeData.Text = "";
+            }
         }
     }
 }

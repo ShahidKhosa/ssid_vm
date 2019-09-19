@@ -38,12 +38,16 @@ namespace SchoolSafeID
 
         private void btnTakePhoto_Click(object sender, RoutedEventArgs e)
         {            
-            Helper.SaveImageCapture((BitmapSource)imgCapture.Source);
+           Visitor.Image = Helper.SaveImageCapture((BitmapSource)imgCapture.Source);
+            webcam.Stop();
+
+            this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
         }
 
 
         private void btn_GoBack_Click(object sender, RoutedEventArgs e)
         {
+            webcam.Stop();
             this.NavigationService.Navigate(new Uri("DigitalPass.xaml", UriKind.Relative));
         }
     }

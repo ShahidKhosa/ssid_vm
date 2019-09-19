@@ -12,17 +12,20 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"                
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Padding="20" WindowStyle="ToolWindow" ResizeMode="NoResize"
+        Padding="20" ResizeMode="NoResize"
         Title="Office Use Only" Icon="favicon.ico" HorizontalAlignment="Center" VerticalAlignment="Center" 
-        HorizontalContentAlignment="Center" Width="700" Height="350" WindowStartupLocation="CenterScreen">
+        HorizontalContentAlignment="Center" Width="700" Height="350" WindowStartupLocation="CenterOwner">
     <Grid>
 
-        <wpfx1:WatermarkPasswordBox Style="{StaticResource WmPassword}" Name="txt_password" Watermark="Enter Password" Margin="68,63,63,189" Width="Auto" />
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Margin="0,0,0,5">Enter Password:</Label>
+            <wpfx1:WatermarkPasswordBox Style="{StaticResource WmPassword}" Name="txt_password" Watermark="Enter Password" Margin="0,0,0,40" Width="Auto" />
 
-        <Button Style="{StaticResource MyButton}" Content="SUBMIT" Margin="59,187,355,0"/>
-        <Button Style="{StaticResource MyButton}" Content="CANCEL" Background="Gray" Margin="353,187,61,0" Click="Button_Click"/>
-
-
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Style="{StaticResource MyButton}" Content="SUBMIT" Name="btnSubmit" Click="btnSubmit_Click"/>
+                <Button Style="{StaticResource MyButton}" Content="CANCEL" Background="Gray" Click="Button_Click"/>
+            </StackPanel>
+        </StackPanel>
 
     </Grid>
 </Window>

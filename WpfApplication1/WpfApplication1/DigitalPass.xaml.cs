@@ -27,12 +27,35 @@ namespace SchoolSafeID
 
         private void btn_GoBack_Click(object sender, RoutedEventArgs e)
         {
+            ResetData();
             this.NavigationService.Navigate(new Uri("ScanLicense.xaml", UriKind.Relative));
         }
 
         private void btnNoThanks_Click(object sender, RoutedEventArgs e)
         {
+            ResetData();
             this.NavigationService.Navigate(new Uri("TakePhoto.xaml", UriKind.Relative));
+        }
+
+        private void btnCreateDigtalPass_Click(object sender, RoutedEventArgs e)
+        {
+            Visitor.DigitalPass = true;
+
+            // we must need to validate the email address before moving forward.
+            Visitor.EmailAddress = txt_Email.Text;
+            Visitor.PhoneNumber  = txt_Phone.Text;
+
+            this.NavigationService.Navigate(new Uri("TakePhoto.xaml", UriKind.Relative));
+        }
+
+        private void ResetData()
+        {
+            Visitor.DigitalPass  = false;
+            Visitor.EmailAddress = "";
+            Visitor.PhoneNumber  = "";
+
+            txt_Email.Text = "";
+            txt_Phone.Text = "";
         }
     }
 }

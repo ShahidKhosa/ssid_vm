@@ -73,9 +73,10 @@
                 <Setter Property="Height" Value="70" />
                 <Setter Property="FontSize" Value="34" />
                 <Setter Property="Padding" Value="10" />
-                <Setter Property="Margin" Value="0 8" />
+                <Setter Property="Margin" Value="0,8" />
                 <Setter Property="VerticalAlignment" Value="Center" />
                 <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="BorderBrush" Value="Black" />
             </Style>
 
             <Style x:Key="MsTextField" TargetType="wpfx1:MaskedTextBox">

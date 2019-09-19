@@ -5,63 +5,69 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SchoolSafeID"
       mc:Ignorable="d"       
-      Title="ID Scan Successfully">
+      Title="ID Scan Successfully" Loaded="page_Loaded">
 
     <DockPanel LastChildFill="True">
 
         <StackPanel DockPanel.Dock="Top"></StackPanel>
 
-        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Background="Black" Height="100">
-            <Button Style="{StaticResource MyButton}" HorizontalAlignment="Left" Margin="10 10 0 0" Content="GO BACK" Background="Gray" Click="btn_GoBack_Click" />
-            <Image HorizontalAlignment="Right" Margin="780 10 0 0" Width="276" Height="66" Source="Resources/poweredby_schoolsafe.png" />
+        <StackPanel DockPanel.Dock="Bottom" Height="100" Background="Black">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Background>
+                    <ImageBrush ImageSource="Resources/poweredby_schoolsafe.png" Opacity="1" Stretch="None" AlignmentX="Right"/>
+                </StackPanel.Background>
+
+                <Button Style="{StaticResource MyButton}" Margin="10 10 0 0" Content="GO BACK" Background="Gray" Click="btn_GoBack_Click" />
+            </StackPanel>
         </StackPanel>
 
         <StackPanel DockPanel.Dock="Left"></StackPanel>
 
         <StackPanel DockPanel.Dock="Right"></StackPanel>
 
-        <WrapPanel Width="960" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <WrapPanel Width="960" VerticalAlignment="Center">
             <TextBlock TextAlignment="Center" Width="960" Style="{StaticResource MaterialDesignDisplay1TextBlock}" Height="130"><Run Text="ID Scan Successful."/><LineBreak/><Run Text="Would you like to print your badge?" Foreground="#777"/></TextBlock>
 
+            <WrapPanel Width="900">
+                <StackPanel HorizontalAlignment="Center" Width="900">
+                    <Grid Width="555" Height="320">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20*"/>
+                            <ColumnDefinition Width="30*"/>
+                            <ColumnDefinition Width="60*"/>
+                            <ColumnDefinition Width="60*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="3*"/>
+                        </Grid.RowDefinitions>
+                        <Border CornerRadius="8" Grid.RowSpan="2" Grid.ColumnSpan="4" BorderThickness="1" BorderBrush="#ccc"></Border>
 
-            <WrapPanel>
-                <Grid Width="555" Height="320">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="30*"/>
-                        <ColumnDefinition Width="30*"/>
-                        <ColumnDefinition Width="60*"/>
-                        <ColumnDefinition Width="60*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="10*"/>
-                        <RowDefinition Height="5*"/>
-                    </Grid.RowDefinitions>
-                    <Border Background="#2f5cb6" Grid.ColumnSpan="2"/>
-                    <Border Grid.Column ="2" Background="Red" Grid.ColumnSpan="2"/>
-                    <Border Grid.ColumnSpan="4" Background="#777" Grid.Row="1"/>
-
-                    <StackPanel Grid.Column="2" Margin="40,64,0,56" VerticalAlignment="Center" Height="100" Grid.ColumnSpan="2">
-                        <TextBlock Foreground="White" FontSize="25" Text="Today - 68° F"/>
-                        <TextBlock Foreground="White" FontSize="25" Text="Partially Cloudy"/>
-                        <TextBlock Foreground="White" FontSize="25" Text="Precipitation: 25%"/>
-                    </StackPanel>
-                    <StackPanel Grid.Row="1" Grid.ColumnSpan="4" Orientation="Horizontal"
-            HorizontalAlignment="Center" VerticalAlignment="Center" Height="32" Margin="86,38,87,30" Width="382">
-                        <TextBlock Foreground="White" FontSize="25" Text="High: 66°" Margin="0,0,20,0"/>
-                        <TextBlock Foreground="White" FontSize="25" Text="Low: 43°" Margin="0,0,20,0"/>
-                        <TextBlock Foreground="White" FontSize="25" Text="Feels like: 63°"/>
-                    </StackPanel>
-                    <Image Margin="5,0" Source="Resources/ProfilePic.jpg" Grid.ColumnSpan="2"/>
-                </Grid>
+                        <StackPanel Grid.Column="2" VerticalAlignment="Top" Height="246" Grid.ColumnSpan="2" HorizontalAlignment="Center" Width="392">
+                            <TextBlock Name="txtSchoolName" Margin="0,10,0,0" Height="35" TextAlignment="Center" Foreground="Black" FontSize="24" Text="School Name Here"/>
+                            <Rectangle Margin="10" HorizontalAlignment="Stretch" Fill="Black" Height="5"/>
+                            <TextBlock Name="txtVisitorName" Foreground="Black" FontSize="36" TextAlignment="Center" Text="Visitor Name Here"/>
+                            <TextBlock Name="txtVisitorType" Foreground="Black" FontSize="24" TextAlignment="Center" Text="Type of Visitor"/>
+                            <Rectangle Margin="10" HorizontalAlignment="Stretch" Fill="Black" Height="5"/>
+                            <TextBlock Name="txtDate" Foreground="Black" FontSize="24" TextAlignment="Center" Text="Check-in: 09/15/19"/>
+                            <TextBlock Name="txtTime" Foreground="Black" FontSize="24" TextAlignment="Center" Text="08:23 AM"/>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Grid.ColumnSpan="4" Orientation="Horizontal" Width="Auto" VerticalAlignment="Center">
+                            <Image Margin="10,5,40,0" Source="Resources/schoolsafe-id.png" Width="150" HorizontalAlignment="Left"/>
+                            <Image Source="Resources/bar_code.png" Width="320" HorizontalAlignment="Right"/>
+                        </StackPanel>
+                        <StackPanel Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="10">
+                            <Image Name="imgVisitorImage" VerticalAlignment="Top" HorizontalAlignment="Center" Source="Resources/shahid.jpg" Height="151"/>
+                            <TextBlock Name="txtDestination" TextAlignment="Center" Foreground="Black" FontSize="18" Text="Destination Here" TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
             </WrapPanel>
             
-
-
-
-            <StackPanel Orientation="Horizontal" Margin="0 30 0 0">
-                <Button Style="{StaticResource MyButton}" Content="SIGN IN" />
-                <Button Style="{StaticResource MyButton}" Content="SIGN OUT" Background="#AC1315" />
-                <Button Style="{StaticResource MyButton}" Content="STUDENT SIGN IN" Background="#FC0" Foreground="#111" />
+            <StackPanel Orientation="Horizontal" Margin="0 50 0 0">
+                <Button Style="{StaticResource MyButton}" Content="Yes, Print Badge" />
+                <Button Style="{StaticResource MyButton}" Content="No, Make Changes" Background="#AC1315" />
+                <Button Style="{StaticResource MyButton}" Content="No Badge Needed" Background="#FC0" Foreground="#111" />
             </StackPanel>
         </WrapPanel>
 

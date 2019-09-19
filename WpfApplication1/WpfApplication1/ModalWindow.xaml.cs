@@ -19,6 +19,8 @@ namespace SchoolSafeID
     /// </summary>
     public partial class ModalWindow : Window
     {
+        public ScanLicense scanLicense;
+
         public ModalWindow()
         {
             InitializeComponent();
@@ -26,7 +28,44 @@ namespace SchoolSafeID
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            ResetData();
             this.Close();
+        }
+
+        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            if(txt_password.Password.Equals("1234"))
+            {
+                if(scanLicense != null)
+                {
+                    scanLicense.txt_FirstName.IsEnabled = true;
+                    scanLicense.txt_LastName.IsEnabled = true;
+                    scanLicense.txt_DateOfBirth.IsEnabled = true;
+                    scanLicense.btnConfirm.IsEnabled = true;
+
+                    Visitor.IsOfficeUseOnly = true;
+                    Visitor.OfficeUseOnlyPassword = txt_password.Password;
+                }
+            }
+            else
+            {
+                ResetData();
+            }
+
+            this.Close();
+        }
+
+
+        private void ResetData()
+        {
+            Visitor.IsOfficeUseOnly = false;
+            Visitor.OfficeUseOnlyPassword = "";
+
+            scanLicense.txt_FirstName.IsEnabled = false;
+            scanLicense.txt_LastName.IsEnabled = false;
+            scanLicense.txt_DateOfBirth.IsEnabled = false;
+            scanLicense.btnConfirm.IsEnabled = false;
+            scanLicense.txtBarcodeData.Focus();
         }
     }
 }

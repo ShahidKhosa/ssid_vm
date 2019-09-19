@@ -28,14 +28,29 @@ namespace SchoolSafeID
 
         private void btn_GoBack_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("DigitalPass.xaml", UriKind.Relative));
+            Visitor.CheckinOption = "";
+            this.NavigationService.Navigate(new Uri("TakePhoto.xaml", UriKind.Relative));
         }
 
 
         private void btnOptionClick(object sender, RoutedEventArgs e)
         {
             string btnVal = ((FrameworkElement)sender).Tag.ToString();
+
+            Visitor.CheckinOption = btnVal;
+
+            int[] destinationArray = { 1, 2, 3, 4 };
+
+            int value = Int32.Parse(btnVal);
+            var index = Array.FindIndex(destinationArray, x => x == value);
             
+            if (index > -1)
+            {
+                //show the destination window.
+
+            }
+
+            this.NavigationService.Navigate(new Uri("BadgePreview.xaml", UriKind.Relative));
         }
     }
 }
