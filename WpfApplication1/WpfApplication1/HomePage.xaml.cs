@@ -23,6 +23,7 @@ namespace SchoolSafeID
         public HomePage()
         {
             InitializeComponent();
+            Visitor.ResetData();
         }
 
 

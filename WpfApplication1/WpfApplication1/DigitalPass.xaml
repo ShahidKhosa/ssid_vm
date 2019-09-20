@@ -38,7 +38,7 @@
             <StackPanel>
                 <wpfx1:MaskedTextBox Mask="(000) 000-0000" Style="{StaticResource MsTextField}" Name="txt_Phone"/>
                 <!--<TextBox Style="{StaticResource MyTextField}" Name="txt_Phone" adorners:Watermark.Text="Enter Cell Phone Number"></TextBox>-->
-                <TextBox Style="{StaticResource MyTextField}" Name="txt_Email" adorners:Watermark.Text="Enter Email Address"></TextBox>
+                <TextBox Style="{StaticResource MyTextField}" Name="txt_Email" TextChanged="txt_Email_TextChanged" adorners:Watermark.Text="Enter Email Address"></TextBox>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">

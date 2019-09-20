@@ -66,6 +66,11 @@
                 <Setter Property="Margin" Value="0 8" />
                 <Setter Property="VerticalAlignment" Value="Center" />
                 <Setter Property="BorderThickness" Value="1" />
+                <Style.Triggers>
+                    <Trigger Property="IsEnabled" Value="False">
+                        <Setter Property="Background" Value="#ccc" />
+                    </Trigger>
+                </Style.Triggers>
             </Style>
 
             <Style x:Key="WmPassword" TargetType="wpfx1:WatermarkPasswordBox">
@@ -87,6 +92,11 @@
                 <Setter Property="Margin" Value="0 8" />
                 <Setter Property="VerticalAlignment" Value="Center" />
                 <Setter Property="BorderThickness" Value="1" />
+                <Style.Triggers>
+                    <Trigger Property="IsEnabled" Value="False">
+                        <Setter Property="Background" Value="#ccc" />
+                    </Trigger>
+                </Style.Triggers>
             </Style>
 
             <Style x:Key="MyButton" TargetType="Button">

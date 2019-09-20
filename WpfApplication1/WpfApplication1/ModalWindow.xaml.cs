@@ -34,7 +34,7 @@ namespace SchoolSafeID
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            if(txt_password.Password.Equals("1234"))
+            if(txt_password.Password != String.Empty && txt_password.Password.Equals("1234"))
             {
                 if(scanLicense != null)
                 {
@@ -49,6 +49,7 @@ namespace SchoolSafeID
             }
             else
             {
+                MessageBox.Show("Password not matched, please enter correct password to unlock fields");
                 ResetData();
             }
 
@@ -66,6 +67,14 @@ namespace SchoolSafeID
             scanLicense.txt_DateOfBirth.IsEnabled = false;
             scanLicense.btnConfirm.IsEnabled = false;
             scanLicense.txtBarcodeData.Focus();
+        }
+
+        private void txt_password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                btnSubmit_Click(sender, e);
+            }
         }
     }
 }

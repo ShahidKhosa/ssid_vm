@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PDFtoPrinter;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,6 +47,30 @@ namespace SchoolSafeID
             imgVisitorImage.Source = new BitmapImage(new Uri(filePath, UriKind.Absolute));
 
             //Visitor.VisitDateTime.ToString("MM/dd/yyyy hh:mm:ss tt");            
+        }
+
+        private void btnYesPrint_Click(object sender, RoutedEventArgs e)
+        {
+            //Print Badge and complete visitor sign-in process and move to the next screen.
+            //var filePath = @"D:\TestPrint\visitor-card-97328.pdf";
+            //var printWrapper = new PDFtoPrintWrapper();
+            //printWrapper.Print(filePath, Properties.Settings.Default.printer_name);
+
+            this.NavigationService.Navigate(new Uri("PrintCompleted.xaml", UriKind.Relative));
+        }
+
+        private void btnNoMakeChanges_Click(object sender, RoutedEventArgs e)
+        {
+            //Make changes and go back to checkin option page.
+            this.NavigationService.Navigate(new Uri("TakePhoto.xaml", UriKind.Relative));
+        }
+
+        private void btnNoBadgeNeeded_Click(object sender, RoutedEventArgs e)
+        {
+            Visitor.ResetData();
+
+            //Just Complete visitor sign-in process and go back to the home page.
+            this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
         }
     }
 }

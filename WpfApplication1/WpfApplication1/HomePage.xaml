@@ -25,7 +25,7 @@
 
             <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Center"><Run Text="Welcome to Centennial Elementary School! "/><LineBreak/><Run Text="Please select the option below to continue."/></TextBlock>
 
-            <StackPanel Orientation="Horizontal" Margin="0 30 0 0">
+            <StackPanel Orientation="Horizontal" Margin="0 50 0 0">
                 <Button Style="{StaticResource MyButton}" Content="SIGN IN" Click="btn_Signin_Click" />
                 <Button Style="{StaticResource MyButton}" Content="SIGN OUT" Background="#AC1315" Click="btn_Signout_Click" />
                 <Button Style="{StaticResource MyButton}" Content="STUDENT SIGN IN" Background="#FC0" Foreground="#111" />

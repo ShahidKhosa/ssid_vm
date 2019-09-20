@@ -65,9 +65,9 @@
             </WrapPanel>
             
             <StackPanel Orientation="Horizontal" Margin="0 50 0 0">
-                <Button Style="{StaticResource MyButton}" Content="Yes, Print Badge" />
-                <Button Style="{StaticResource MyButton}" Content="No, Make Changes" Background="#AC1315" />
-                <Button Style="{StaticResource MyButton}" Content="No Badge Needed" Background="#FC0" Foreground="#111" />
+                <Button Style="{StaticResource MyButton}" Content="Yes, Print Badge" Name="btnYesPrint" Click="btnYesPrint_Click" />
+                <Button Style="{StaticResource MyButton}" Content="No, Make Changes" Background="#AC1315" Name="btnNoMakeChanges" Click="btnNoMakeChanges_Click" />
+                <Button Style="{StaticResource MyButton}" Content="No Badge Needed" Background="#FC0" Foreground="#111" Name="btnNoBadgeNeeded" Click="btnNoBadgeNeeded_Click" />
             </StackPanel>
         </WrapPanel>
 

@@ -33,11 +33,14 @@ namespace SchoolSafeID
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Visitor.FirstName = txt_FirstName.Text;
-            Visitor.LastName = txt_LastName.Text;
-            Visitor.DateOfBirth = txt_DateOfBirth.Text;
+            if (txt_FirstName.Text != String.Empty && txt_LastName.Text != String.Empty && txt_DateOfBirth.Text != String.Empty)
+            {
+                Visitor.FirstName   = txt_FirstName.Text;
+                Visitor.LastName    = txt_LastName.Text;
+                Visitor.DateOfBirth = txt_DateOfBirth.Text;
 
-            this.NavigationService.Navigate(new Uri("DigitalPass.xaml", UriKind.Relative));
+                this.NavigationService.Navigate(new Uri("DigitalPass.xaml", UriKind.Relative));
+            }
         }
 
         private void btnOfficeUseOnlyClick(object sender, RoutedEventArgs e)

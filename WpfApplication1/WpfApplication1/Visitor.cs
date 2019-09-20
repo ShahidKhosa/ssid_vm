@@ -38,13 +38,11 @@ namespace SchoolSafeID
             set;
         }
 
-
         public static bool IsOfficeUseOnly
         {
             get;
             set;
         }
-
 
         public static bool DigitalPass
         {
@@ -86,6 +84,24 @@ namespace SchoolSafeID
         {
             get;
             set;
+        }
+
+
+
+        public static void ResetData()
+        {
+            FirstName = "";
+            LastName = "";
+            DateOfBirth = "";
+            BarcodeData = "";
+            OfficeUseOnlyPassword = "";
+            IsOfficeUseOnly = false;
+            DigitalPass = false;
+            EmailAddress = "";
+            PhoneNumber = "";
+            Image = "";
+            CheckinOption = "";
+            Destination = "";            
         }
 
     }

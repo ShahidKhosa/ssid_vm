@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Collections.Generic;
 using System.Windows.Media.Imaging;
+using System.Drawing;
 
 namespace SchoolSafeID
 {
@@ -37,7 +38,7 @@ namespace SchoolSafeID
             {
                 JpegBitmapEncoder encoder = new JpegBitmapEncoder();
                 encoder.Frames.Add(BitmapFrame.Create(bitmap));
-                encoder.QualityLevel = 100;
+                encoder.QualityLevel = 100;                
 
                 // Save Image
                 string path = @"C:\SSID";
@@ -54,6 +55,8 @@ namespace SchoolSafeID
                 FileStream fstream = new FileStream(filePath, FileMode.Create);
                 encoder.Save(fstream);
                 fstream.Close();
+
+                //CropImage(filePath, 70, 0, 275, 350);
             }
             catch( Exception ex)
             {
@@ -61,6 +64,20 @@ namespace SchoolSafeID
             }
             
             return fileName;
+        }
+
+        public static void CropImage(string filePath, int x = 70, int y = 0, int width = 275, int height = 350)
+        {
+            Image source = Image.FromFile(filePath);            
+            Rectangle crop = new Rectangle(x, y, width, height);
+
+            var bmp = new Bitmap(crop.Width, crop.Height);
+            using (var gr = Graphics.FromImage(bmp))
+            {
+                gr.DrawImage(source, new Rectangle(0, 0, bmp.Width, bmp.Height), crop, GraphicsUnit.Pixel);
+            }
+
+            bmp.Save("abc.jpg");
         }
     }
 }

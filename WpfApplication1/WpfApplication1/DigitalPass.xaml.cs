@@ -41,11 +41,14 @@ namespace SchoolSafeID
         {
             Visitor.DigitalPass = true;
 
-            // we must need to validate the email address before moving forward.
-            Visitor.EmailAddress = txt_Email.Text;
-            Visitor.PhoneNumber  = txt_Phone.Text;
+            if (txt_Email.Text != String.Empty && txt_Phone.Text != String.Empty && ValidatorExtensions.IsValidEmailAddress(txt_Email.Text))
+            {
+                // we must need to validate the email address before moving forward.
+                Visitor.EmailAddress = txt_Email.Text;
+                Visitor.PhoneNumber = txt_Phone.Text;
 
-            this.NavigationService.Navigate(new Uri("TakePhoto.xaml", UriKind.Relative));
+                this.NavigationService.Navigate(new Uri("TakePhoto.xaml", UriKind.Relative));
+            }
         }
 
         private void ResetData()
@@ -56,6 +59,13 @@ namespace SchoolSafeID
 
             txt_Email.Text = "";
             txt_Phone.Text = "";
+        }
+        
+        private void txt_Email_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            bool result = ValidatorExtensions.IsValidEmailAddress(txt_Email.Text);
+
+            txt_Email.BorderBrush = (result == true ? Brushes.Green : Brushes.Red);            
         }
     }
 }

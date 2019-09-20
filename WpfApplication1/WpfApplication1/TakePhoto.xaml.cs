@@ -31,7 +31,8 @@ namespace SchoolSafeID
         {
             // TODO: Add event handler implementation here.
             webcam = new WebCam();
-            webcam.InitializeWebCam(ref imgCapture);
+            webcam.InitializeWebCam(ref imgCapture);            
+            webcam.ResolutionSetting();
             webcam.Start();
         }
 
