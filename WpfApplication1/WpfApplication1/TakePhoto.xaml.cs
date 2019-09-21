@@ -31,15 +31,14 @@ namespace SchoolSafeID
         {
             // TODO: Add event handler implementation here.
             webcam = new WebCam();
-            webcam.InitializeWebCam(ref imgCapture);            
-            webcam.ResolutionSetting();
+            webcam.InitializeWebCam(ref imgCapture);                        
             webcam.Start();
         }
 
 
         private void btnTakePhoto_Click(object sender, RoutedEventArgs e)
-        {            
-           Visitor.Image = Helper.SaveImageCapture((BitmapSource)imgCapture.Source);
+        {
+            Visitor.Image = Helper.SaveImageCapture((BitmapSource)imgCapture.Source);
             webcam.Stop();
 
             this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));

@@ -56,7 +56,7 @@ namespace SchoolSafeID
                 encoder.Save(fstream);
                 fstream.Close();
 
-                //CropImage(filePath, 70, 0, 275, 350);
+                CropImage(filePath, 75, 50, 275, 350);
             }
             catch( Exception ex)
             {

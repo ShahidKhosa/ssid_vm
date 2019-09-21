@@ -24,12 +24,12 @@
         </StackPanel>
 
 
-        <StackPanel DockPanel.Dock="Left" Width="509" HorizontalAlignment="Right" VerticalAlignment="Center">
-            <Image Width="372" Height="509" HorizontalAlignment="Right" Source="Resources/digit_pass_preview.png" ToolTip="Digital Pass" />
+        <StackPanel DockPanel.Dock="Left" Width="509" VerticalAlignment="Center">
+            <Image Width="372" Height="509" Source="Resources/digit_pass_preview.png" ToolTip="Digital Pass" />
         </StackPanel>
 
 
-        <StackPanel Width="200" DockPanel.Dock="Right"></StackPanel>
+        <StackPanel Width="100" DockPanel.Dock="Right"></StackPanel>
 
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="0,30,0,0">
