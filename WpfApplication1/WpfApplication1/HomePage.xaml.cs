@@ -23,8 +23,23 @@ namespace SchoolSafeID
         public HomePage()
         {
             InitializeComponent();
-            Visitor.ResetData();
+            InitPage();
         }
+
+        public void InitPage()
+        {            
+            APIManager.GetKioskSettings();
+
+            txtWelcomeText.Text = APIManager.values["welcome_text"].ToString().Replace("<br/>", "\r\n").Replace("<br>", "\r\n");
+
+            imgSchoolLogo.Source = new BitmapImage(new Uri(APIManager.LogoPath, UriKind.Absolute));
+        }
+
+        private void page_Loaded(object sender, RoutedEventArgs e)
+        {
+            Visitor.ResetData();            
+        }
+
 
 
         private void btn_Signin_Click(object sender, RoutedEventArgs e)
@@ -43,6 +58,7 @@ namespace SchoolSafeID
         {
             Settings settings = new Settings();
             settings.school_url.Text = Properties.Settings.Default.school_url;
+            settings.homePage = this;
 
             loadPrinters(settings.printersList);            
             settings.ShowDialog();

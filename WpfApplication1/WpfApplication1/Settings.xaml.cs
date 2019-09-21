@@ -19,6 +19,8 @@ namespace SchoolSafeID
     /// </summary>
     public partial class Settings : Window
     {
+        public HomePage homePage = null;
+
         public Settings()
         {
             InitializeComponent();
@@ -27,12 +29,26 @@ namespace SchoolSafeID
 
         private void btnSettings_Click(object sender, RoutedEventArgs e)
         {
-            Properties.Settings.Default.school_url  = school_url.Text.ToString();
-            Properties.Settings.Default.printer_name = printersList.SelectedValue.ToString();
+            string old_school_url = Properties.Settings.Default.school_url;
 
-            Properties.Settings.Default.Save();
+            Properties.Settings.Default.school_url = school_url.Text.ToString();
+            Properties.Settings.Default.printer_name = printersList.SelectedValue.ToString();
+            Properties.Settings.Default.Save();            
+
+            if (!old_school_url.Equals(school_url.Text) && homePage != null)
+            {
+                APIManager.values = null;
+                homePage.InitPage();
+            }
 
             this.Close();
+        }
+
+        private void Restart()
+        {
+            // from System.Windows.Forms.dll
+            System.Windows.Forms.Application.Restart();
+            Application.Current.Shutdown();
         }
     }
 }

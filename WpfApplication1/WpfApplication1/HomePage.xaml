@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SchoolSafeID"
       mc:Ignorable="d"         
-      Title="Home Page">
+      Title="Home Page" Loaded="page_Loaded">
 
     <DockPanel LastChildFill="True">
 
@@ -20,10 +20,10 @@
         <StackPanel DockPanel.Dock="Right"></StackPanel>
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button Width="120" Height="40" HorizontalAlignment="Left" Margin="10 10 0 0" Content="SETTINGS" Name="btnSettings" Click="btnSettings_Click" />
-            <Image Width="600" Height="300" Source="Resources/1512956840.jpg" VerticalAlignment="Center" Margin="0,0,0,30"  />
+            <Button Width="120" Height="40" Foreground="White" HorizontalAlignment="Left" Margin="10 10 0 0" Content="SETTINGS" Name="btnSettings" Click="btnSettings_Click" />
+            <Image Name="imgSchoolLogo" Width="600" Height="300" Source="Resources/1512956840.jpg" VerticalAlignment="Center" Margin="0,0,0,30"  />
 
-            <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Center"><Run Text="Welcome to Centennial Elementary School! "/><LineBreak/><Run Text="Please select the option below to continue."/></TextBlock>
+            <TextBlock Name="txtWelcomeText" Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Center"><Run Text="Welcome to Centennial Elementary School! "/><LineBreak/><Run Text="Please select the option below to continue."/></TextBlock>
 
             <StackPanel Orientation="Horizontal" Margin="0 50 0 0">
                 <Button Style="{StaticResource MyButton}" Content="SIGN IN" Click="btn_Signin_Click" />

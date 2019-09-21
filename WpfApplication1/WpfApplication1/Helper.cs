@@ -30,6 +30,19 @@ namespace SchoolSafeID
 
         }
 
+        public static string GetPath(string innerPath = "")
+        {
+            string path = Directory.GetCurrentDirectory() + "\\SSID" + innerPath;
+
+            if (!Directory.Exists(path))
+            {
+                // Try to create the directory.
+                DirectoryInfo di = Directory.CreateDirectory(path);
+            }
+
+            return path;
+        }
+
         public static string SaveImageCapture(BitmapSource bitmap)
         {
             string fileName = "";
