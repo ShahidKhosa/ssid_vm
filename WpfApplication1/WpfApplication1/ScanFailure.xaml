@@ -1,4 +1,4 @@
-﻿<Page x:Class="SchoolSafeID.PrintCompleted"
+﻿<Page x:Class="SchoolSafeID.ScanFailure"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,8 +6,8 @@
       xmlns:adorners="http://gu.se/Adorners"            
       xmlns:local="clr-namespace:SchoolSafeID"
       xmlns:wpfx1="http://schemas.xceed.com/wpf/xaml/toolkit"
-      mc:Ignorable="d"       
-      Title="Print Completed">
+      mc:Ignorable="d"             
+      Title="Scan Failure">
 
     <DockPanel LastChildFill="True">
 
@@ -23,31 +23,16 @@
             </StackPanel>
         </StackPanel>
 
-        <StackPanel DockPanel.Dock="Left" Width="450" VerticalAlignment="Center">
-            <Image Width="332" Height="332" HorizontalAlignment="Right" Source="Resources/label_printer.png" />
-        </StackPanel>
+        <StackPanel DockPanel.Dock="Left"></StackPanel>
 
         <StackPanel DockPanel.Dock="Right"></StackPanel>
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="36" Margin="0,0,0,20" Text="Thank you! Check-in completed."></TextBlock>
-
-            <StackPanel>
-                <TextBlock Width="700" TextBlock.LineHeight="36" FontSize="26" Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap">                
-                    You have been successful signed in. Be sure to check out at this kiosk when you leave.
-                    <LineBreak />                    
-
-                    Please take the printed sticker and affix it to yourself in a visible place during your stay.
-                    <LineBreak />
-                    <LineBreak />
-                    Thanks!
-
-                </TextBlock>
-
-            </StackPanel>
+            <TextBlock Name="txtFailureMessage" Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="28" Margin="0,0,0,0" Text=""></TextBlock>
 
         </StackPanel>
 
     </DockPanel>
 
 </Page>
+

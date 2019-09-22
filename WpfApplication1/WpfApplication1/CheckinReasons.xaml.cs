@@ -37,7 +37,7 @@ namespace SchoolSafeID
         {
             string btnVal = ((FrameworkElement)sender).Tag.ToString();
 
-            Visitor.CheckinOption = btnVal;
+            Visitor.CheckinOption = APIManager.values["checkin_option" + btnVal].ToString();
 
             int[] destinationArray = { 1, 2, 3, 4 };
 
@@ -51,6 +51,33 @@ namespace SchoolSafeID
             }
 
             this.NavigationService.Navigate(new Uri("BadgePreview.xaml", UriKind.Relative));
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            setOption("checkin_option1", btnOption1);
+            setOption("checkin_option2", btnOption2);
+            setOption("checkin_option3", btnOption3);
+            setOption("checkin_option4", btnOption4);
+            setOption("checkin_option5", btnOption5);
+            setOption("checkin_option6", btnOption6);
+            setOption("checkin_option7", btnOption7);
+            setOption("checkin_option8", btnOption8);
+            setOption("checkin_option9", btnOption9);
+        }
+
+        private void setOption(string checkin_option, Button button)
+        {
+            if (APIManager.values[checkin_option] != null && APIManager.values[checkin_option].ToString() != String.Empty)
+            {
+                button.Content = APIManager.values[checkin_option].ToString();
+                button.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                button.Content = "";
+                button.Visibility = Visibility.Hidden;
+            }
         }
     }
 }

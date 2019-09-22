@@ -35,17 +35,19 @@ namespace SchoolSafeID
         {
             Visitor.VisitDateTime = DateTime.Now;
 
-            txtSchoolName.Text  = "New School Name";
+            txtSchoolName.Text  = APIManager.values["school"].ToString();
             txtVisitorName.Text = (Visitor.FirstName + " " + Visitor.LastName);
-            txtVisitorType.Text = "Visitor Type " + Visitor.CheckinOption;
+            txtVisitorType.Text = Visitor.CheckinOption;
             txtDestination.Text = "New Destination";
 
             txtDate.Text = Visitor.VisitDateTime.ToString("MM/dd/yyyy");
             txtTime.Text = Visitor.VisitDateTime.ToString("hh:mm:ss tt");
 
-            string filePath = @"C:\SSID\" + Visitor.Image;
-            imgVisitorImage.Source = new BitmapImage(new Uri(filePath, UriKind.Absolute));
 
+            string path = Helper.GetPath("\\" + APIManager.values["job_id"]);
+            string ImagePath = String.Format("{0}\\{1}", path, "visitor_croped.jpg");
+            
+            imgVisitorImage.Source = new BitmapImage(new Uri(ImagePath, UriKind.Absolute));
             //Visitor.VisitDateTime.ToString("MM/dd/yyyy hh:mm:ss tt");            
         }
 

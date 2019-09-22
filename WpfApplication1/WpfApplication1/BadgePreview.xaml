@@ -28,8 +28,8 @@
         <WrapPanel Width="960" VerticalAlignment="Center">
             <TextBlock TextAlignment="Center" Width="960" Style="{StaticResource MaterialDesignDisplay1TextBlock}" Height="130"><Run Text="ID Scan Successful."/><LineBreak/><Run Text="Would you like to print your badge?" Foreground="#777"/></TextBlock>
 
-            <WrapPanel Width="900">
-                <StackPanel HorizontalAlignment="Center" Width="900">
+            <WrapPanel Width="960">
+                <StackPanel HorizontalAlignment="Center" Width="960">
                     <Grid Width="555" Height="320">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="20*"/>
@@ -63,12 +63,15 @@
                     </Grid>
                 </StackPanel>
             </WrapPanel>
-            
-            <StackPanel Orientation="Horizontal" Margin="0 50 0 0">
-                <Button Style="{StaticResource MyButton}" Content="Yes, Print Badge" Name="btnYesPrint" Click="btnYesPrint_Click" />
-                <Button Style="{StaticResource MyButton}" Content="No, Make Changes" Background="#AC1315" Name="btnNoMakeChanges" Click="btnNoMakeChanges_Click" />
-                <Button Style="{StaticResource MyButton}" Content="No Badge Needed" Background="#FC0" Foreground="#111" Name="btnNoBadgeNeeded" Click="btnNoBadgeNeeded_Click" />
+
+            <StackPanel Margin="0 50 0 0" HorizontalAlignment="Center" Width="960">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Style="{StaticResource MyButton}" Content="Yes, Print Badge" Name="btnYesPrint" Click="btnYesPrint_Click" />
+                    <Button Style="{StaticResource MyButton}" Content="No, Make Changes" Background="#AC1315" Name="btnNoMakeChanges" Click="btnNoMakeChanges_Click" />
+                    <Button Style="{StaticResource MyButton}" Content="No Badge Needed" Background="#FC0" Foreground="#111" Name="btnNoBadgeNeeded" Click="btnNoBadgeNeeded_Click" />
+                </StackPanel>
             </StackPanel>
+            
         </WrapPanel>
 
 

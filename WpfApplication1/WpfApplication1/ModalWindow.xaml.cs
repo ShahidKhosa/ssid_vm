@@ -33,8 +33,8 @@ namespace SchoolSafeID
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
-        {
-            if(txt_password.Password != String.Empty && txt_password.Password.Equals("1234"))
+        {            
+            if (txt_password.Password != String.Empty && txt_password.Password.Equals(APIManager.values["office_use_only"].ToString()))
             {
                 if(scanLicense != null)
                 {
@@ -45,15 +45,15 @@ namespace SchoolSafeID
 
                     Visitor.IsOfficeUseOnly = true;
                     Visitor.OfficeUseOnlyPassword = txt_password.Password;
+
+                    this.Close();
                 }
             }
             else
             {
                 MessageBox.Show("Password not matched, please enter correct password to unlock fields");
                 ResetData();
-            }
-
-            this.Close();
+            }            
         }
 
 

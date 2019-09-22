@@ -19,13 +19,15 @@ namespace SchoolSafeID
     /// <summary>
     /// Interaction logic for PrintCompleted.xaml
     /// </summary>
-    public partial class PrintCompleted : Page
+    public partial class ScanFailure : Page
     {
         DispatcherTimer timer;
 
-        public PrintCompleted()
+        public ScanFailure()
         {
             InitializeComponent();
+
+            txtFailureMessage.Text = APIManager.values["scan_failure_msg"].ToString();
 
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(5);
@@ -43,7 +45,7 @@ namespace SchoolSafeID
             timer.Stop();
             Visitor.ResetData();
 
-            this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));            
+            this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
         }
     }
 }

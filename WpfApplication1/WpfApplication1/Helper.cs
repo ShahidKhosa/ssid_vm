@@ -45,25 +45,18 @@ namespace SchoolSafeID
 
         public static string SaveImageCapture(BitmapSource bitmap)
         {
-            string fileName = "";
+            string fileName = "visitor.jpg";
 
             try
             {
                 JpegBitmapEncoder encoder = new JpegBitmapEncoder();
                 encoder.Frames.Add(BitmapFrame.Create(bitmap));
-                encoder.QualityLevel = 100;                
+                encoder.QualityLevel = 100;
 
                 // Save Image
-                string path = @"C:\SSID";
-
-                if (!Directory.Exists(path))
-                {
-                    // Try to create the directory.
-                    DirectoryInfo di = Directory.CreateDirectory(path);
-                }
-
-                fileName = "visitor_" + Guid.NewGuid().ToString() + ".jpg";
+                string path = GetPath("\\" + APIManager.values["job_id"]);                
                 string filePath = path + "\\" + fileName;
+                Visitor.Image = fileName;
 
                 FileStream fstream = new FileStream(filePath, FileMode.Create);
                 encoder.Save(fstream);
@@ -90,7 +83,10 @@ namespace SchoolSafeID
                 gr.DrawImage(source, new Rectangle(0, 0, bmp.Width, bmp.Height), crop, GraphicsUnit.Pixel);
             }
 
-            bmp.Save("abc.jpg");
+            string path = GetPath("\\" + APIManager.values["job_id"]);
+            string ImagePath = String.Format("{0}\\{1}", path, "visitor_croped.jpg");
+
+            bmp.Save(ImagePath);
         }
     }
 }
