@@ -42,10 +42,17 @@ namespace SchoolSafeID
 
         void timer_Tick(object sender, EventArgs e)
         {
-            timer.Stop();
-            Visitor.ResetData();
+            try
+            {
+                timer.Stop();
+                Visitor.ResetData();
 
-            this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
+                this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

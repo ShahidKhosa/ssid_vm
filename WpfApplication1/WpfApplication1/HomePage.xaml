@@ -10,9 +10,15 @@
     <DockPanel LastChildFill="True">
 
         <StackPanel DockPanel.Dock="Top"></StackPanel>
+        
+        <StackPanel DockPanel.Dock="Bottom" Height="100" Background="Black">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Background>
+                    <ImageBrush ImageSource="Resources/poweredby_schoolsafe.png" Opacity="1" Stretch="None" AlignmentX="Right"/>
+                </StackPanel.Background>
 
-        <StackPanel DockPanel.Dock="Bottom" Background="Black"  Height="100">
-            <Image Width="276" Height="66" HorizontalAlignment="Right" Margin="0 16 16 0" Source="Resources/poweredby_schoolsafe.png" />
+                <Button Style="{StaticResource MyButton}" Visibility="Hidden"/>
+            </StackPanel>
         </StackPanel>
 
         <StackPanel DockPanel.Dock="Left"></StackPanel>
@@ -23,7 +29,7 @@
             <Button Width="120" Height="40" Foreground="White" HorizontalAlignment="Left" Margin="10 10 0 0" Content="SETTINGS" Name="btnSettings" Click="btnSettings_Click" />
             <Image Name="imgSchoolLogo" Width="600" Height="300" Source="Resources/1512956840.jpg" VerticalAlignment="Center" Margin="0,0,0,30"  />
 
-            <TextBlock Name="txtWelcomeText" Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Center"><Run Text="Welcome to Centennial Elementary School! "/><LineBreak/><Run Text="Please select the option below to continue."/></TextBlock>
+            <TextBlock Name="txtWelcomeText" Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center" />
 
             <StackPanel Orientation="Horizontal" Margin="0 50 0 0">
                 <Button Style="{StaticResource MyButton}" Content="SIGN IN" Click="btn_Signin_Click" />

@@ -21,6 +21,8 @@ namespace SchoolSafeID
     /// </summary>
     public partial class ScanLicense : Page
     {
+        public System.Windows.Forms.Timer tmrDelay;
+
         public ScanLicense()
         {
             InitializeComponent();
@@ -60,6 +62,49 @@ namespace SchoolSafeID
                 string barcode = txtBarcodeData.Text;
 
                 txtBarcodeData.Text = "";
+            }
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            tmrDelay = new System.Windows.Forms.Timer();
+            tmrDelay.Interval = 1000;
+            tmrDelay.Enabled = false;
+        }
+
+        private void txtBarcodeData_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                if (txtBarcodeData.Text.Trim().Length == 1)
+                {
+                    tmrDelay.Enabled = true;
+                    tmrDelay.Start();
+                    tmrDelay.Tick += new EventHandler(tmrDelay_Tick);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        void tmrDelay_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                tmrDelay.Stop();
+                string strCurrentString = txtBarcodeData.Text.Trim().ToString();
+                if (strCurrentString != "")
+                {
+                    //Do something with the barcode entered
+                    txtBarcodeData.Text = "";
+                }
+                txtBarcodeData.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

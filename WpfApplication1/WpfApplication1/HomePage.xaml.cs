@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,13 +23,25 @@ namespace SchoolSafeID
     {
         public HomePage()
         {
+            //Thread t1 = new Thread(() =>
+            //{
+            //    APIManager.GetKioskSettings();
+            //});
+
+            //t1.Start();
+
+
             InitializeComponent();
             InitPage();
         }
 
         public void InitPage()
-        {            
-            APIManager.GetKioskSettings();
+        {
+
+            if (APIManager.values == null)
+            {
+                APIManager.GetKioskSettings();
+            }
 
             txtWelcomeText.Text = APIManager.values["welcome_text"].ToString().Replace("<br/>", "\r\n").Replace("<br>", "\r\n");
 

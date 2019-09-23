@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\
+C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\
 SchoolSafeID
 none
 false
 DEBUG;TRACE
-F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\App.xaml
+C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\App.xaml
 151798417191
 
 24612507517
-301907014445
+30-1606345789
 BadgePreview.xaml;CheckinReasons.xaml;Dictionary1.xaml;DigitalPass.xaml;Footer.xaml;HomePage.xaml;MainWindow.xaml;ModalWindow.xaml;Page1.xaml;Page2.xaml;PrintCompleted.xaml;ScanFailure.xaml;ScanLicense.xaml;Settings.xaml;TakePhoto.xaml;
 splashscreen.jpg
 False

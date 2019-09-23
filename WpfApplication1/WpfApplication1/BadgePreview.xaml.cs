@@ -33,6 +33,8 @@ namespace SchoolSafeID
 
         private void page_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
+            btnNoBadgeNeeded.Visibility = (APIManager.values["visitor_no_badge"].ToString().ToLower().Equals("on") ? Visibility.Visible : Visibility.Collapsed);            
+
             Visitor.VisitDateTime = DateTime.Now;
 
             txtSchoolName.Text  = APIManager.values["school"].ToString();

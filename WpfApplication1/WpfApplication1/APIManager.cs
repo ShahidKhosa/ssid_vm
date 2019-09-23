@@ -15,6 +15,8 @@ namespace SchoolSafeID
     {
         private static int logoNumber = 0;
 
+        private static bool InProgress = false;
+
         private static bool IsSandBox = true;
 
         public static string LogoPath
@@ -70,39 +72,41 @@ namespace SchoolSafeID
 
 
         public static Dictionary<string, object> GetKioskSettings()
-        {
-            if(values != null)
+        {            
+            if(!InProgress && values == null)
             {
-                return values;
+                InProgress = true;
+                ++logoNumber;
+                string endURL = Properties.Settings.Default.school_url + "&api=vm";
+
+                if (IsSandBox)
+                {
+                    endURL = endURL.Replace("www", "dev");
+                }
+
+                var client = new RestClient(endURL);
+                //var client = new RestClient("https://dev.schoolsafeid.com/visitor-management&s=test-school&api=vm");            
+                var request = new RestRequest(Method.GET);
+
+                ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
+                IRestResponse response = client.Get(request);
+
+                string data = response.Content;
+                values = SimpleJson.DeserializeObject<Dictionary<string, object>>(data);
+
+                //foreach (var item in values)
+                //{
+                //    Console.WriteLine(item.Key + " : " + item.Value);                
+                //}
+                DownloadLogo(values["logo"].ToString());
+
+                //client.DownloadData(request).SaveAs(LogoPath);
+
+                InProgress = false;                
             }
 
-            ++logoNumber;
-            string endURL = Properties.Settings.Default.school_url + "&api=vm";
-
-            if(IsSandBox)
-            {
-                endURL = endURL.Replace("www", "dev");
-            }
-
-            var client = new RestClient(endURL);
-            //var client = new RestClient("https://dev.schoolsafeid.com/visitor-management&s=test-school&api=vm");            
-            var request = new RestRequest(Method.GET);
-            
-            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-
-            IRestResponse response = client.Get(request);
-
-            string data = response.Content;
-            values = SimpleJson.DeserializeObject<Dictionary<string, object>>(data);
-
-            //foreach (var item in values)
-            //{
-            //    Console.WriteLine(item.Key + " : " + item.Value);                
-            //}
-            DownloadLogo(values["logo"].ToString());
-
-            //client.DownloadData(request).SaveAs(LogoPath);
             return values;
         }
 
