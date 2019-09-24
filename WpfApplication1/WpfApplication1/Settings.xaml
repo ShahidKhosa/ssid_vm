@@ -15,12 +15,13 @@
         FontFamily="{DynamicResource MaterialDesignFont}"
         Padding="20" WindowStyle="ToolWindow" ResizeMode="NoResize"
         Title="Settings" Icon="favicon.ico" HorizontalAlignment="Center" VerticalAlignment="Center" 
-        HorizontalContentAlignment="Center" Width="700" Height="350" WindowStartupLocation="CenterScreen">
+        HorizontalContentAlignment="Center" Width="700" Height="365" WindowStartupLocation="CenterScreen">
 
     <StackPanel Margin="0,10,0,0">
-        <ComboBox Style="{StaticResource ssid_ComboBox}" Margin="20,20,20,0" Name="printersList" Width="Auto" />
-        <Label Margin="20,0,20,0">School URL:</Label>
-        <TextBox Style="{StaticResource MyTextField}" Name="school_url" adorners:Watermark.Text="School URL" Margin="20,0,9.6,0" Width="Auto"></TextBox>
+        <Label Margin="20,0,0,0">Select Printer:</Label>
+        <ComboBox Style="{StaticResource ssid_ComboBox}" Margin="20,0,20,0" Name="printersList" Width="Auto" />
+        <Label Margin="20,0,0,0">School URL:</Label>
+        <TextBox Style="{StaticResource MyTextField}" Name="school_url" adorners:Watermark.Text="School URL" Margin="20,0,20,0" Width="Auto"></TextBox>
         <Button Name="btnSettings" Style="{StaticResource MyButton}" Content="Save" Height="85" Width="220" HorizontalAlignment="Left" Margin="20" Click="btnSettings_Click"/>
     </StackPanel>
 

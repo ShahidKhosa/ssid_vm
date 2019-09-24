@@ -47,11 +47,19 @@ namespace SchoolSafeID
             if (index > -1)
             {
                 //show the destination window.
-
+                Destination ds = new Destination
+                {
+                    checkinReason = this
+                };
+                
+                ds.ShowDialog();
             }
-
-            this.NavigationService.Navigate(new Uri("BadgePreview.xaml", UriKind.Relative));
+            else
+            {
+                BadgePreview();
+            }            
         }
+
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
@@ -66,6 +74,7 @@ namespace SchoolSafeID
             setOption("checkin_option9", btnOption9);
         }
 
+
         private void setOption(string checkin_option, Button button)
         {
             if (APIManager.values[checkin_option] != null && APIManager.values[checkin_option].ToString() != String.Empty)
@@ -78,6 +87,12 @@ namespace SchoolSafeID
                 button.Content = "";
                 button.Visibility = Visibility.Hidden;
             }
+        }
+
+
+        public void BadgePreview()
+        {
+            this.NavigationService.Navigate(new Uri("BadgePreview.xaml", UriKind.Relative));
         }
     }
 }

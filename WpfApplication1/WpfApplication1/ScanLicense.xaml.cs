@@ -23,15 +23,18 @@ namespace SchoolSafeID
     {
         public System.Windows.Forms.Timer tmrDelay;
 
+
         public ScanLicense()
         {
             InitializeComponent();
         }
 
+
         private void btn_Home_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
         }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -45,6 +48,7 @@ namespace SchoolSafeID
             }
         }
 
+
         private void btnOfficeUseOnlyClick(object sender, RoutedEventArgs e)
         {
             ModalWindow mw = new ModalWindow
@@ -54,6 +58,7 @@ namespace SchoolSafeID
             //mw.txt_password.Text = "";
             mw.ShowDialog();
         }
+
 
         private void txtBarcodeData_KeyUp(object sender, KeyEventArgs e)
         {

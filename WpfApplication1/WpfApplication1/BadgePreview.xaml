@@ -57,8 +57,8 @@
                             <Image Source="Resources/bar_code.png" Width="320" HorizontalAlignment="Right"/>
                         </StackPanel>
                         <StackPanel Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="10">
-                            <Image Name="imgVisitorImage" VerticalAlignment="Top" HorizontalAlignment="Center" Source="Resources/shahid.jpg" Height="151"/>
-                            <TextBlock Name="txtDestination" TextAlignment="Center" Foreground="Black" FontSize="18" Text="Destination Here" TextWrapping="Wrap"/>
+                            <Image Name="imgVisitorImage" VerticalAlignment="Top" HorizontalAlignment="Left" Source="Resources/shahid.jpg" Height="151"/>
+                            <TextBlock Name="txtDestination" TextAlignment="Left" Foreground="Black" FontSize="18" Text="Destination Here" TextWrapping="Wrap"/>
                         </StackPanel>
                     </Grid>
                 </StackPanel>

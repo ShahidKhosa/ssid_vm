@@ -40,7 +40,7 @@ namespace SchoolSafeID
             txtSchoolName.Text  = APIManager.values["school"].ToString();
             txtVisitorName.Text = (Visitor.FirstName + " " + Visitor.LastName);
             txtVisitorType.Text = Visitor.CheckinOption;
-            txtDestination.Text = "New Destination";
+            txtDestination.Text = Visitor.Destination;
 
             txtDate.Text = Visitor.VisitDateTime.ToString("MM/dd/yyyy");
             txtTime.Text = Visitor.VisitDateTime.ToString("hh:mm:ss tt");

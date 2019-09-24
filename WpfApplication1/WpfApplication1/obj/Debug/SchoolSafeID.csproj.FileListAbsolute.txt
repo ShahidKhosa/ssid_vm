@@ -240,3 +240,5 @@ C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplicatio
 C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\ScanFailure.g.cs
 C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\ScanFailure.baml
 C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\SchoolSafeID.csprojResolveAssemblyReference.cache
+C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\Destination.g.cs
+C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\Destination.baml

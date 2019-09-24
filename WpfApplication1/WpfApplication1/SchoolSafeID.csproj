@@ -126,6 +126,9 @@
     <Compile Include="CheckinReasons.xaml.cs">
       <DependentUpon>CheckinReasons.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Destination.xaml.cs">
+      <DependentUpon>Destination.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DigitalPass.xaml.cs">
       <DependentUpon>DigitalPass.xaml</DependentUpon>
     </Compile>
@@ -163,6 +166,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CheckinReasons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Destination.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
