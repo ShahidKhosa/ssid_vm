@@ -54,15 +54,11 @@ namespace SchoolSafeID
                 encoder.QualityLevel = 100;
 
                 // Save Image
-                string path = GetPath("\\" + APIManager.values["job_id"]);                
-                string filePath = path + "\\" + fileName;
-                Visitor.Image = fileName;
-
-                FileStream fstream = new FileStream(filePath, FileMode.Create);
+                FileStream fstream = new FileStream(Visitor.FullImagePath, FileMode.Create);
                 encoder.Save(fstream);
                 fstream.Close();
 
-                CropImage(filePath, 75, 50, 275, 350);
+                CropImage(Visitor.FullImagePath, 75, 50, 275, 350);
             }
             catch( Exception ex)
             {
@@ -83,10 +79,7 @@ namespace SchoolSafeID
                 gr.DrawImage(source, new Rectangle(0, 0, bmp.Width, bmp.Height), crop, GraphicsUnit.Pixel);
             }
 
-            string path = GetPath("\\" + APIManager.values["job_id"]);
-            string ImagePath = String.Format("{0}\\{1}", path, "visitor_croped.jpg");
-
-            bmp.Save(ImagePath);
+            bmp.Save(Visitor.CroppedImagePath);
         }
     }
 }

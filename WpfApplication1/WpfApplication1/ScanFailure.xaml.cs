@@ -27,7 +27,7 @@ namespace SchoolSafeID
         {
             InitializeComponent();
 
-            txtFailureMessage.Text = APIManager.values["scan_failure_msg"].ToString();
+            txtFailureMessage.Text = APIManager.KioskSettings["scan_failure_msg"].ToString();
 
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(5);

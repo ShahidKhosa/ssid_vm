@@ -34,7 +34,7 @@ namespace SchoolSafeID
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {            
-            if (txt_password.Password != String.Empty && txt_password.Password.Equals(APIManager.values["office_use_only"].ToString()))
+            if (txt_password.Password != String.Empty && txt_password.Password.Equals(APIManager.KioskSettings["office_use_only"].ToString()))
             {
                 if(scanLicense != null)
                 {

@@ -37,7 +37,7 @@ namespace SchoolSafeID
         {
             string btnVal = ((FrameworkElement)sender).Tag.ToString();
 
-            Visitor.CheckinOption = APIManager.values["checkin_option" + btnVal].ToString();
+            Visitor.CheckinOption = APIManager.KioskSettings["checkin_option" + btnVal].ToString();
 
             int[] destinationArray = { 1, 2, 3, 4 };
 
@@ -77,9 +77,9 @@ namespace SchoolSafeID
 
         private void setOption(string checkin_option, Button button)
         {
-            if (APIManager.values[checkin_option] != null && APIManager.values[checkin_option].ToString() != String.Empty)
+            if (APIManager.KioskSettings[checkin_option] != null && APIManager.KioskSettings[checkin_option].ToString() != String.Empty)
             {
-                button.Content = APIManager.values[checkin_option].ToString();
+                button.Content = APIManager.KioskSettings[checkin_option].ToString();
                 button.Visibility = Visibility.Visible;
             }
             else
