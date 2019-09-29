@@ -44,9 +44,32 @@ namespace SchoolSafeID
                 Visitor.LastName    = txt_LastName.Text;
                 Visitor.DateOfBirth = txt_DateOfBirth.Text;
 
-                APIManager.VerifyVisitorData();
+                //New Visitor take photo and then verify the data
+                if (Visitor.IsOfficeUseOnly || Visitor.VisitorLiveImage == string.Empty)
+                {
+                    this.NavigationService.Navigate(new Uri("TakePhoto.xaml", UriKind.Relative));
+                }
+                //Visitor already have the photo, now verify the data
+                else
+                {                    
+                    bool result = APIManager.VerifyVisitorData();
 
-                this.NavigationService.Navigate(new Uri("DigitalPass.xaml", UriKind.Relative));
+                    if(result)
+                    {
+                        if(Visitor.PassURL == String.Empty)
+                        {
+                            this.NavigationService.Navigate(new Uri("DigitalPass.xaml", UriKind.Relative));                            
+                        }
+                        else
+                        {
+                            this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
+                        }                        
+                    }
+                    else
+                    {
+                        this.NavigationService.Navigate(new Uri("ScanFailure.xaml", UriKind.Relative));
+                    }
+                }                                
             }
         }
 

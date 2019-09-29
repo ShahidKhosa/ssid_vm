@@ -10,6 +10,18 @@ namespace SchoolSafeID
 {
     class Visitor
     {
+        public static string NextURL
+        {
+            get;
+            set;
+        }
+
+        public static string PreviousURL
+        {
+            get;
+            set;
+        }
+
         public static string FullImagePath => Helper.GetPath("\\" + APIManager.KioskSettings["job_id"]) + "\\visitor.jpg";
 
         public static string CroppedImagePath => String.Format("{0}\\{1}", Helper.GetPath("\\" + APIManager.KioskSettings["job_id"]), "visitor_croped.jpg");
@@ -116,6 +128,48 @@ namespace SchoolSafeID
             set;
         }
 
+        public static string PassURL
+        {
+            get;
+            set;
+        }
+
+        public static string VisitorLiveImage
+        {
+            get;
+            set;
+        }
+
+        public static string LicenseNo
+        {
+            get;
+            set;
+        }
+
+        public static string Address
+        {
+            get;
+            set;
+        }
+
+        public static string City
+        {
+            get;
+            set;
+        }
+
+        public static string State
+        {
+            get;
+            set;
+        }
+
+        public static string Zip
+        {
+            get;
+            set;
+        }
+
 
         public static void ResetData()
         {
@@ -138,17 +192,29 @@ namespace SchoolSafeID
 
 
         public static void SetData(Dictionary<string, object> data)
-        {
-            
-            ID              = (data["id"].ToString() == string.Empty ? 0 : Int32.Parse(data["id"].ToString()));
-            JobID           = (APIManager.KioskSettings["job_id"].ToString() == string.Empty ? 0 : Int32.Parse(APIManager.KioskSettings["job_id"].ToString()));
-            UNIQID          = (data["uniqid"].ToString() == string.Empty ? Guid.NewGuid().ToString() : data["uniqid"].ToString());
-            FirstName       = (data["first_name"].ToString() == string.Empty ? "" : data["first_name"].ToString());
-            LastName        = (data["last_name"].ToString() == string.Empty ? "" : data["last_name"].ToString());
-            DateOfBirth     = (data["dob"].ToString() == string.Empty ? "" : data["dob"].ToString());
+        {            
+            ID          = (data["id"].ToString() == string.Empty ? 0 : Int32.Parse(data["id"].ToString()));
+            JobID       = (APIManager.KioskSettings["job_id"].ToString() == string.Empty ? 0 : Int32.Parse(APIManager.KioskSettings["job_id"].ToString()));
+            UNIQID      = (data["uniqid"].ToString() == string.Empty ? Guid.NewGuid().ToString() : data["uniqid"].ToString());
+            FirstName   = (data["first_name"].ToString() == string.Empty ? "" : data["first_name"].ToString());
+            LastName    = (data["last_name"].ToString() == string.Empty ? "" : data["last_name"].ToString());
+            DateOfBirth = (data["dob"].ToString() == string.Empty ? "" : data["dob"].ToString());
+            PassURL     = (data["pass_url"].ToString() == string.Empty ? "" : data["pass_url"].ToString());
+            LicenseNo   = (data["license_no"].ToString() == string.Empty ? "" : data["license_no"].ToString());
+            Address     = (data["address"].ToString() == string.Empty ? "" : data["address"].ToString());
+            City        = (data["city"].ToString() == string.Empty ? "" : data["city"].ToString());
+            State       = (data["state"].ToString() == string.Empty ? "" : data["state"].ToString());
+            Zip         = (data["zip"].ToString() == string.Empty ? "" : data["zip"].ToString());
+            Destination = (data["destination"].ToString() == string.Empty ? "" : data["destination"].ToString());
 
-            IsOfficeUseOnly = false;                        
-            OfficeUseOnlyPassword = "";
+            VisitorLiveImage        = (data["image"].ToString() == string.Empty ? "" : data["image"].ToString());
+            IsOfficeUseOnly         = false;                        
+            OfficeUseOnlyPassword   = "";
+
+            if(ID > 0 && VisitorLiveImage != string.Empty)
+            {                
+                APIManager.DownloadFile(string.Format("/assets/visitors/{0}", VisitorLiveImage));
+            }
         }
 
 

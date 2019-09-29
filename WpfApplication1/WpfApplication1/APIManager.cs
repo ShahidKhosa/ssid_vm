@@ -94,6 +94,21 @@ namespace SchoolSafeID
         }
 
 
+        public static async void DownloadFile(string url)
+        {
+            var client      = new RestClient(BaseURL + url);
+            var request     = new RestRequest(Method.GET);            
+            var response    = await client.ExecuteTaskAsync(request);
+
+            if (response.StatusCode != HttpStatusCode.OK)
+            {
+                throw new Exception($"Unable to download file");
+            }
+                
+            response.RawBytes.SaveAs(Visitor.CroppedImagePath);
+        }
+
+
         public static Dictionary<string, object> GetKioskSettings()
         {            
             if(!InProgress && KioskSettings == null)
@@ -144,8 +159,8 @@ namespace SchoolSafeID
 
             // execute the request
             var response = client.Post(request);            
-            Dictionary <string, object> data = SimpleJson.DeserializeObject<Dictionary<string, object>>(response.Content);
-            Visitor.SetData(data);
+            Dictionary <string, object> result = SimpleJson.DeserializeObject<Dictionary<string, object>>(response.Content);
+            Visitor.SetData(result);            
         }
 
 
@@ -189,35 +204,35 @@ namespace SchoolSafeID
         }
 
 
-        public static void VerifyVisitorData()
+        public static bool VerifyVisitorData()
         {
+            bool result = false; 
             var client = new RestClient(BaseURL);
             client.Authenticator = new HttpBasicAuthenticator(Username, Password);
 
             var request = new RestRequest("/api/class_api.php", Method.POST);
             request.AddParameter("action", "verify_visitor");
-
             request.AddParameter("first_name", Visitor.FirstName);
             request.AddParameter("last_name", Visitor.LastName);
             request.AddParameter("date_birth", Visitor.DateOfBirth);
             request.AddParameter("is_visitor", Visitor.IsVisitor);
             request.AddParameter("job_id", KioskSettings["job_id"]);
+            var response = client.Execute(request);
 
-            // execute the request
-            client.ExecuteAsync(request, (response) =>
+            if (response.StatusCode == HttpStatusCode.OK)
             {
-                if (response.StatusCode == HttpStatusCode.OK)
-                {
-                    Dictionary<string, object> result = SimpleJson.DeserializeObject<Dictionary<string, object>>(response.Content);
+                Dictionary<string, object> data = SimpleJson.DeserializeObject<Dictionary<string, object>>(response.Content);
 
-                    Visitor.IsVerified = Boolean.Parse(result["success"].ToString());
-                }
-                else
-                {
-                    //error ocured during upload
-                    MessageBox.Show(response.StatusCode + "\n" + response.StatusDescription);
-                }
-            });
+                Visitor.IsVerified = result = Boolean.Parse(data["success"].ToString());
+            }
+            else
+            {
+                result = false;
+                //error ocured during upload
+                //MessageBox.Show(response.StatusCode + "\n" + response.StatusDescription);
+            }
+
+            return result;
         }
 
     }

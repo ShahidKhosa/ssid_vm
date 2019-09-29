@@ -34,7 +34,8 @@ namespace SchoolSafeID
         private void btnNoThanks_Click(object sender, RoutedEventArgs e)
         {
             ResetData();
-            this.NavigationService.Navigate(new Uri("TakePhoto.xaml", UriKind.Relative));
+
+            this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
         }
 
         private void btnCreateDigtalPass_Click(object sender, RoutedEventArgs e)
@@ -47,7 +48,7 @@ namespace SchoolSafeID
                 Visitor.EmailAddress = txt_Email.Text;
                 Visitor.PhoneNumber = txt_Phone.Text;
 
-                this.NavigationService.Navigate(new Uri("TakePhoto.xaml", UriKind.Relative));
+                this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
             }
         }
 
