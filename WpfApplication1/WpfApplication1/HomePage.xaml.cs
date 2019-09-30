@@ -37,13 +37,12 @@ namespace SchoolSafeID
 
         public void InitPage()
         {
-
-            if (APIManager.values == null)
+            if (APIManager.KioskSettings == null)
             {
                 APIManager.GetKioskSettings();
             }
 
-            txtWelcomeText.Text = APIManager.values["welcome_text"].ToString().Replace("<br/>", "\r\n").Replace("<br>", "\r\n");
+            txtWelcomeText.Text = APIManager.KioskSettings["welcome_text"].ToString().Replace("<br/>", "\r\n").Replace("<br>", "\r\n");
 
             imgSchoolLogo.Source = new BitmapImage(new Uri(APIManager.LogoPath, UriKind.Absolute));
         }
@@ -57,6 +56,7 @@ namespace SchoolSafeID
 
         private void btn_Signin_Click(object sender, RoutedEventArgs e)
         {
+            Visitor.IsVisitor = true;
             //this.NavigationService.Navigate(new Uri("BadgePreview.xaml", UriKind.Relative));
             //this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
             this.NavigationService.Navigate(new Uri("ScanLicense.xaml", UriKind.Relative));
@@ -70,7 +70,7 @@ namespace SchoolSafeID
         private void btnSettings_Click(object sender, RoutedEventArgs e)
         {
             Settings settings = new Settings();
-            settings.school_url.Text = Properties.Settings.Default.school_url;
+            settings.school_url.Text = Properties.Settings.Default.job_no;
             settings.homePage = this;
 
             loadPrinters(settings.printersList);            

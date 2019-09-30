@@ -38,7 +38,7 @@ namespace SchoolSafeID
 
         private void btnTakePhoto_Click(object sender, RoutedEventArgs e)
         {
-            Visitor.Image = Helper.SaveImageCapture((BitmapSource)imgCapture.Source);
+            Helper.SaveImageCapture((BitmapSource)imgCapture.Source);
             webcam.Stop();
 
             this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));

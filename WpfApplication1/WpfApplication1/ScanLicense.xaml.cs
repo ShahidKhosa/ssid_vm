@@ -44,7 +44,32 @@ namespace SchoolSafeID
                 Visitor.LastName    = txt_LastName.Text;
                 Visitor.DateOfBirth = txt_DateOfBirth.Text;
 
-                this.NavigationService.Navigate(new Uri("DigitalPass.xaml", UriKind.Relative));
+                //New Visitor take photo and then verify the data
+                if (Visitor.IsOfficeUseOnly || Visitor.VisitorLiveImage == string.Empty)
+                {
+                    this.NavigationService.Navigate(new Uri("TakePhoto.xaml", UriKind.Relative));
+                }
+                //Visitor already have the photo, now verify the data
+                else
+                {                    
+                    bool result = APIManager.VerifyVisitorData();
+
+                    if(result)
+                    {
+                        if(Visitor.PassURL == String.Empty)
+                        {
+                            this.NavigationService.Navigate(new Uri("DigitalPass.xaml", UriKind.Relative));                            
+                        }
+                        else
+                        {
+                            this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
+                        }                        
+                    }
+                    else
+                    {
+                        this.NavigationService.Navigate(new Uri("ScanFailure.xaml", UriKind.Relative));
+                    }
+                }                                
             }
         }
 
@@ -64,11 +89,13 @@ namespace SchoolSafeID
         {
             if(e.Key == Key.Enter || e.Key == Key.Tab || e.Key == Key.LeftCtrl || e.Key == Key.RightCtrl || e.Key == Key.End)
             {
-                string barcode = txtBarcodeData.Text;
+                Visitor.BarcodeData = txtBarcodeData.Text;
+                SetData();
 
-                txtBarcodeData.Text = "";
+                txtBarcodeData.Focus();
             }
         }
+
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
@@ -94,6 +121,7 @@ namespace SchoolSafeID
             }
         }
 
+
         void tmrDelay_Tick(object sender, EventArgs e)
         {
             try
@@ -102,8 +130,11 @@ namespace SchoolSafeID
                 string strCurrentString = txtBarcodeData.Text.Trim().ToString();
                 if (strCurrentString != "")
                 {
+                    Visitor.BarcodeData = strCurrentString;
+                    SetData();
+
                     //Do something with the barcode entered
-                    txtBarcodeData.Text = "";
+                    //txtBarcodeData.Text = "";
                 }
                 txtBarcodeData.Focus();
             }
@@ -112,5 +143,30 @@ namespace SchoolSafeID
                 MessageBox.Show(ex.Message);
             }
         }
+
+
+        public void SetData()
+        {
+            APIManager.GetVisitorData();
+
+            if(Visitor.FirstName != string.Empty)
+            {
+                txt_FirstName.Text = Visitor.FirstName;
+            }
+
+            if (Visitor.LastName != string.Empty)
+            {
+                txt_LastName.Text = Visitor.LastName;
+            }
+
+            if (Visitor.DateOfBirth != string.Empty)
+            {
+                txt_DateOfBirth.Text = Visitor.DateOfBirth;
+            }
+            
+            Visitor.IsOfficeUseOnly = false;
+            btnConfirm.IsEnabled = true;
+        }
+
     }
 }
