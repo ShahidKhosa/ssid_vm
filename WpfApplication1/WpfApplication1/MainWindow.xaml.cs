@@ -23,9 +23,16 @@ namespace SchoolSafeID
     {        
         public MainWindow()
         {
-            InitializeComponent();          
+            InitializeComponent();
 
-            _NavigationFrame.Navigate(new HomePage());
+            try
+            {
+                _NavigationFrame.Navigate(new HomePage());
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }            
         }
 
     }

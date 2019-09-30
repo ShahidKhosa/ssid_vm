@@ -30,7 +30,7 @@
 
             <WrapPanel Width="960">
                 <StackPanel HorizontalAlignment="Center" Width="960">
-                    <Grid Width="555" Height="320">
+                    <Grid Width="555" Height="310">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="20*"/>
                             <ColumnDefinition Width="30*"/>
@@ -52,12 +52,12 @@
                             <TextBlock Name="txtDate" Foreground="Black" FontSize="24" TextAlignment="Center" Text="Check-in: 09/15/19"/>
                             <TextBlock Name="txtTime" Foreground="Black" FontSize="24" TextAlignment="Center" Text="08:23 AM"/>
                         </StackPanel>
-                        <StackPanel Grid.Row="1" Grid.ColumnSpan="4" Orientation="Horizontal" Width="Auto" VerticalAlignment="Center">
+                        <StackPanel Grid.Row="1" Grid.ColumnSpan="4" Orientation="Horizontal" Width="Auto" VerticalAlignment="Bottom">
                             <Image Margin="10,5,40,0" Source="Resources/schoolsafe-id.png" Width="150" HorizontalAlignment="Left"/>
                             <Image Source="Resources/bar_code.png" Width="320" HorizontalAlignment="Right"/>
                         </StackPanel>
                         <StackPanel Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="10">
-                            <Image Name="imgVisitorImage" VerticalAlignment="Top" HorizontalAlignment="Left" Source="Resources/shahid.jpg" Height="151"/>
+                            <Image Name="imgVisitorImage" VerticalAlignment="Top" HorizontalAlignment="Left" Source="Resources/shahid.jpg" Height="160"/>
                             <TextBlock Name="txtDestination" TextAlignment="Left" Foreground="Black" FontSize="18" Text="Destination Here" TextWrapping="Wrap"/>
                         </StackPanel>
                     </Grid>

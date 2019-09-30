@@ -41,14 +41,39 @@ namespace SchoolSafeID
             Helper.SaveImageCapture((BitmapSource)imgCapture.Source);
             webcam.Stop();
 
-            this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
+            if(!Visitor.IsVerified)
+            {
+                bool result = APIManager.VerifyVisitorData();
+
+                if (result)
+                {
+                    if (Visitor.PassURL == String.Empty || Visitor.BarcodeData.Length > 40)
+                    {
+                        this.NavigationService.Navigate(new Uri("DigitalPass.xaml", UriKind.Relative));
+                    }
+                    else
+                    {
+                        this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
+                    }
+                }
+                else
+                {
+                    this.NavigationService.Navigate(new Uri("ScanFailure.xaml", UriKind.Relative));
+                }
+            }
+            else
+            {
+                this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
+            }
+
         }
 
 
         private void btn_GoBack_Click(object sender, RoutedEventArgs e)
         {
             webcam.Stop();
-            this.NavigationService.Navigate(new Uri("DigitalPass.xaml", UriKind.Relative));
+            //this.NavigationService.Navigate(new Uri("DigitalPass.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("ScanLicense.xaml", UriKind.Relative));
         }
     }
 }

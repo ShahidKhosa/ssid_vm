@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace SchoolSafeID
 {
@@ -192,29 +193,37 @@ namespace SchoolSafeID
 
 
         public static void SetData(Dictionary<string, object> data)
-        {            
-            ID          = (data["id"].ToString() == string.Empty ? 0 : Int32.Parse(data["id"].ToString()));
-            JobID       = (APIManager.KioskSettings["job_id"].ToString() == string.Empty ? 0 : Int32.Parse(APIManager.KioskSettings["job_id"].ToString()));
-            UNIQID      = (data["uniqid"].ToString() == string.Empty ? Guid.NewGuid().ToString() : data["uniqid"].ToString());
-            FirstName   = (data["first_name"].ToString() == string.Empty ? "" : data["first_name"].ToString());
-            LastName    = (data["last_name"].ToString() == string.Empty ? "" : data["last_name"].ToString());
-            DateOfBirth = (data["dob"].ToString() == string.Empty ? "" : data["dob"].ToString());
-            PassURL     = (data["pass_url"].ToString() == string.Empty ? "" : data["pass_url"].ToString());
-            LicenseNo   = (data["license_no"].ToString() == string.Empty ? "" : data["license_no"].ToString());
-            Address     = (data["address"].ToString() == string.Empty ? "" : data["address"].ToString());
-            City        = (data["city"].ToString() == string.Empty ? "" : data["city"].ToString());
-            State       = (data["state"].ToString() == string.Empty ? "" : data["state"].ToString());
-            Zip         = (data["zip"].ToString() == string.Empty ? "" : data["zip"].ToString());
-            Destination = (data["destination"].ToString() == string.Empty ? "" : data["destination"].ToString());
+        {
+            if(Boolean.Parse(data["success"].ToString()))
+            {
+                ID = (data.ContainsKey("id") ? Int32.Parse(data["id"].ToString()) : 0);
+                JobID = (APIManager.KioskSettings.ContainsKey("job_id") ? Int32.Parse(APIManager.KioskSettings["job_id"].ToString()) : 0);
+                UNIQID = (data.ContainsKey("uniqid") ? data["uniqid"].ToString() : Guid.NewGuid().ToString());
+                FirstName = (data.ContainsKey("first_name") ? data["first_name"].ToString() : "");
+                LastName = (data.ContainsKey("last_name") ? data["last_name"].ToString() : "");
+                DateOfBirth = (data.ContainsKey("dob") ? data["dob"].ToString() : "");
+                PassURL = (data.ContainsKey("pass_url") ? data["pass_url"].ToString() : "");
+                LicenseNo = (data.ContainsKey("license_no") ? data["license_no"].ToString() : "");
+                Address = (data.ContainsKey("address") ? data["address"].ToString() : "");
+                City = (data.ContainsKey("city") ? data["city"].ToString() : "");
+                State = (data.ContainsKey("state") ? data["state"].ToString() : "");
+                Zip = (data.ContainsKey("zip") ? data["zip"].ToString() : "");
+                Destination = (data.ContainsKey("destination") ? data["destination"].ToString() : "");
 
-            VisitorLiveImage        = (data["image"].ToString() == string.Empty ? "" : data["image"].ToString());
-            IsOfficeUseOnly         = false;                        
-            OfficeUseOnlyPassword   = "";
+                VisitorLiveImage = (data.ContainsKey("image") ? data["image"].ToString() : "");
+                IsOfficeUseOnly = false;
+                OfficeUseOnlyPassword = "";
 
-            if(ID > 0 && VisitorLiveImage != string.Empty)
-            {                
-                APIManager.DownloadFile(string.Format("/assets/visitors/{0}", VisitorLiveImage));
+                if (ID > 0 && VisitorLiveImage != string.Empty)
+                {
+                    APIManager.DownloadFile(string.Format("/assets/visitors/{0}", VisitorLiveImage));
+                }
             }
+            else
+            {
+                MessageBox.Show(data["message"].ToString());
+            }
+
         }
 
 

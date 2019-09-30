@@ -26,7 +26,7 @@ namespace SchoolSafeID
 
         public ScanLicense()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
 
@@ -56,7 +56,7 @@ namespace SchoolSafeID
 
                     if(result)
                     {
-                        if(Visitor.PassURL == String.Empty)
+                        if(Visitor.PassURL == String.Empty || Visitor.BarcodeData.Length > 40)
                         {
                             this.NavigationService.Navigate(new Uri("DigitalPass.xaml", UriKind.Relative));                            
                         }
@@ -89,10 +89,12 @@ namespace SchoolSafeID
         {
             if(e.Key == Key.Enter || e.Key == Key.Tab || e.Key == Key.LeftCtrl || e.Key == Key.RightCtrl || e.Key == Key.End)
             {
+                //@ANSI 636058050002DL00410217ZO02580064DLDAQY081724446DCSEADSDDENDACSTACYDDFNDADLYNNDDGNDCADDCBNONEDCDNONEDBC2DAU504DAYGRNDAG7016 STONYCREEK DRIVEDAIOKLAHOMACITYDAJOKDAK731320000DCFNONEDCGUSADAW118DBA07312019DBB12091979DBD08262015ZOZOANZOBNZOCRENEWALZODZOE5579ZOF55ZOG33.50ZOHZOINZOJN
                 Visitor.BarcodeData = txtBarcodeData.Text;
                 SetData();
 
                 txtBarcodeData.Focus();
+                txtBarcodeData.Text = "";
             }
         }
 
@@ -100,8 +102,9 @@ namespace SchoolSafeID
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             tmrDelay = new System.Windows.Forms.Timer();
-            tmrDelay.Interval = 1000;
+            tmrDelay.Interval = 1200;
             tmrDelay.Enabled = false;
+            txtBarcodeData.Focus();
         }
 
         private void txtBarcodeData_TextChanged(object sender, TextChangedEventArgs e)
@@ -134,7 +137,7 @@ namespace SchoolSafeID
                     SetData();
 
                     //Do something with the barcode entered
-                    //txtBarcodeData.Text = "";
+                    txtBarcodeData.Text = "";
                 }
                 txtBarcodeData.Focus();
             }

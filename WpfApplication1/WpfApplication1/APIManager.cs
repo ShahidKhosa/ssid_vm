@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RestSharp.Extensions;
 using System.Windows.Forms;
+using System.Runtime.Serialization;
 
 namespace SchoolSafeID
 {
@@ -130,8 +131,12 @@ namespace SchoolSafeID
                 var response = client.Post(request);
                 KioskSettings = SimpleJson.DeserializeObject<Dictionary<string, object>>(response.Content);
 
-                DownloadLogo(KioskSettings["logo"].ToString());
-
+                if (KioskSettings.ContainsKey("logo"))
+                {
+                    //https://dev.schoolsafeid.com/assets/school_logos/logo_ssi.png
+                    DownloadLogo(KioskSettings["logo"].ToString());
+                }
+                
 
                 //foreach (var item in values)
                 //{
@@ -221,13 +226,24 @@ namespace SchoolSafeID
 
             if (response.StatusCode == HttpStatusCode.OK)
             {
-                Dictionary<string, object> data = SimpleJson.DeserializeObject<Dictionary<string, object>>(response.Content);
+                try
+                {
+                    Dictionary<string, object> data = SimpleJson.DeserializeObject<Dictionary<string, object>>(response.Content);
 
-                Visitor.IsVerified = result = Boolean.Parse(data["success"].ToString());
+                    Visitor.IsVerified = result = Boolean.Parse(data["success"].ToString());
+                }
+                catch(SerializationException e)
+                {
+                    MessageBox.Show(e.Message);
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                }
             }
             else
             {
-                result = false;
+                Visitor.IsVerified = result = false;
                 //error ocured during upload
                 //MessageBox.Show(response.StatusCode + "\n" + response.StatusDescription);
             }
