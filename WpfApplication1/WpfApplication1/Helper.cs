@@ -73,13 +73,15 @@ namespace SchoolSafeID
             Image source = Image.FromFile(filePath);            
             Rectangle crop = new Rectangle(x, y, width, height);
 
-            var bmp = new Bitmap(crop.Width, crop.Height);
-            using (var gr = Graphics.FromImage(bmp))
-            {
+            using (var bmp = new Bitmap(crop.Width, crop.Height))
+            { 
+                var gr = Graphics.FromImage(bmp);            
                 gr.DrawImage(source, new Rectangle(0, 0, bmp.Width, bmp.Height), crop, GraphicsUnit.Pixel);
-            }
 
-            bmp.Save(Visitor.CroppedImagePath);
+                bmp.Save(Visitor.CroppedImagePath);
+
+                Visitor.VisitorHasNewImage = true;
+            }            
         }
     }
 }

@@ -29,19 +29,20 @@ namespace SchoolSafeID
         private void btn_GoBack_Click(object sender, RoutedEventArgs e)
         {
             Visitor.CheckinOption = "";
+            Visitor.CheckinOptionNumber = "";
             this.NavigationService.Navigate(new Uri("TakePhoto.xaml", UriKind.Relative));
         }
 
 
         private void btnOptionClick(object sender, RoutedEventArgs e)
         {
-            string btnVal = ((FrameworkElement)sender).Tag.ToString();
+            Visitor.CheckinOptionNumber = ((FrameworkElement)sender).Tag.ToString();
 
-            Visitor.CheckinOption = APIManager.KioskSettings["checkin_option" + btnVal].ToString();
+            Visitor.CheckinOption = APIManager.KioskSettings["checkin_option" + Visitor.CheckinOptionNumber].ToString();
 
             int[] destinationArray = { 1, 2, 3, 4 };
 
-            int value = Int32.Parse(btnVal);
+            int value = Int32.Parse(Visitor.CheckinOptionNumber);
             var index = Array.FindIndex(destinationArray, x => x == value);
             
             if (index > -1)
@@ -56,6 +57,7 @@ namespace SchoolSafeID
             }
             else
             {
+                Visitor.Destination = "";
                 BadgePreview();
             }            
         }

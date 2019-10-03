@@ -38,6 +38,7 @@ namespace SchoolSafeID
 
         private void btnTakePhoto_Click(object sender, RoutedEventArgs e)
         {
+            
             Helper.SaveImageCapture((BitmapSource)imgCapture.Source);
             webcam.Stop();
 

@@ -160,6 +160,9 @@
     <Compile Include="UriString.cs" />
     <Compile Include="ValidatorExtensions.cs" />
     <Compile Include="Visitor.cs" />
+    <Compile Include="VisitorSignout.xaml.cs">
+      <DependentUpon>VisitorSignout.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WebCam.cs" />
     <Page Include="BadgePreview.xaml">
       <SubType>Designer</SubType>
@@ -233,6 +236,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TakePhoto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisitorSignout.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

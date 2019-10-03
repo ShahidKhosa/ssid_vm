@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using RestSharp.Extensions;
 using System.Windows.Forms;
 using System.Runtime.Serialization;
+using System.IO;
+using PDFtoPrinter;
 
 namespace SchoolSafeID
 {
@@ -26,6 +28,14 @@ namespace SchoolSafeID
             get
             {
                 return String.Format("{0}\\school_logo_{1}.png", Helper.GetPath("\\" + KioskSettings["job_id"]), logoNumber);
+            }
+        }
+
+        public static string BadgePath
+        {
+            get
+            {
+                return "D:\\TestPrint\\visitor-card.pdf";
             }
         }
 
@@ -55,35 +65,9 @@ namespace SchoolSafeID
             }
         }
 
-        public void SendRequest()
-        {
-            var client = new RestClient(BaseURL);
-            client.Authenticator = new HttpBasicAuthenticator(Username, Password);
-
-            var request = new RestRequest("resource/{id}");
-            request.AddParameter("name", "value"); // adds to POST or URL querystring based on Method
-            request.AddUrlSegment("id", "123"); // replaces matching token in request.Resource
-
-            // easily add HTTP Headers
-            request.AddHeader("header", "value");
-
-            // add files to upload (works with compatible verbs)
-            //request.AddFile("file", path);
-
-            // execute the request
-            var response = client.Post(request);
-            var content = response.Content; // raw content as string
-
-            // or automatically deserialize result
-            // return content type is sniffed but can be explicitly set via RestClient.AddHandler();
-            //var response2 = client.Post<Person>(request);
-            //var name = response2.Data.Name;
 
 
-        }
-
-
-        public static void DownloadLogo(string url)
+        public static void Download(string url, string path)
         {
             var client = new RestClient(url);            
             var request = new RestRequest(Method.GET);
@@ -91,22 +75,27 @@ namespace SchoolSafeID
             ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
-            client.DownloadData(request).SaveAs(LogoPath);            
+            client.DownloadData(request).SaveAs(path);            
         }
 
 
-        public static async void DownloadFile(string url)
+
+        public static async void DownloadFile(string url, string path, int printBadge = 0)
         {
             var client      = new RestClient(BaseURL + url);
             var request     = new RestRequest(Method.GET);            
             var response    = await client.ExecuteTaskAsync(request);
 
-            if (response.StatusCode != HttpStatusCode.OK)
+            if (response.StatusCode == HttpStatusCode.OK)
             {
-                throw new Exception($"Unable to download file");
-            }
-                
-            response.RawBytes.SaveAs(Visitor.CroppedImagePath);
+                response.RawBytes.SaveAs(path);
+
+                if (printBadge == 1)
+                {
+                    var printWrapper = new PDFtoPrintWrapper();
+                    await printWrapper.Print(BadgePath, Properties.Settings.Default.printer_name);
+                }
+            }                            
         }
 
 
@@ -129,20 +118,16 @@ namespace SchoolSafeID
 
                 // execute the request
                 var response = client.Post(request);
-                KioskSettings = SimpleJson.DeserializeObject<Dictionary<string, object>>(response.Content);
 
-                if (KioskSettings.ContainsKey("logo"))
+                if (response.StatusCode == HttpStatusCode.OK)
                 {
-                    //https://dev.schoolsafeid.com/assets/school_logos/logo_ssi.png
-                    DownloadLogo(KioskSettings["logo"].ToString());
-                }
-                
+                    KioskSettings = SimpleJson.DeserializeObject<Dictionary<string, object>>(response.Content);
 
-                //foreach (var item in values)
-                //{
-                //    Console.WriteLine(item.Key + " : " + item.Value);                
-                //}
-                //client.DownloadData(request).SaveAs(LogoPath);
+                    if (KioskSettings.ContainsKey("logo"))
+                    {
+                        Download(KioskSettings["logo"].ToString(), LogoPath);
+                    }
+                }
 
                 InProgress = false;                
             }
@@ -151,33 +136,65 @@ namespace SchoolSafeID
         }
 
 
-        public static void GetVisitorData()
+        public static void GetVisitorData(string Action = "manage_preview")
         {
             var client = new RestClient(BaseURL);
             client.Authenticator = new HttpBasicAuthenticator(Username, Password);
 
             var request = new RestRequest("/api/class_api.php");
-            request.AddParameter("action", "manage_preview"); // adds to POST or URL querystring based on Method
-            request.AddParameter("IsAPI", "wpf_client"); // adds to POST or URL querystring based on Method
+            request.AddParameter("action", Action); // adds to POST or URL querystring based on Method            
             request.AddParameter("job_id", KioskSettings["job_id"]); // adds to POST or URL querystring based on Method
             request.AddParameter("barcode_data", Visitor.BarcodeData); // replaces matching token in request.Resource
 
             // execute the request
-            var response = client.Post(request);            
-            Dictionary <string, object> result = SimpleJson.DeserializeObject<Dictionary<string, object>>(response.Content);
-            Visitor.SetData(result);            
+            var response = client.Post(request);
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                Dictionary<string, object> result = SimpleJson.DeserializeObject<Dictionary<string, object>>(response.Content);
+
+                if (result.ContainsKey("success"))
+                {
+                    if (bool.Parse(result["success"].ToString()))
+                    {
+                        Visitor.SetData(result);
+                    }
+                    else if (result.ContainsKey("message"))
+                    {
+                        MessageBox.Show(result["message"].ToString());
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error! Please try again.");
+                    }
+                }
+            }                           
         }
 
 
-        public static void SendVisitorData()
-        {            
+        public static void SendVisitorData(int PrintSticker)
+        {
             var client = new RestClient(BaseURL);
             client.Authenticator = new HttpBasicAuthenticator(Username, Password);
 
             var request = new RestRequest("/api/class_api.php", Method.POST);
             request.AddParameter("action", "save_visitor"); // adds to POST or URL querystring based on Method                        
+            request.AddParameter("print_sticker", PrintSticker);
             Visitor.SaveVisitor(request);
 
+            if(PrintSticker == 1)
+            {
+                SendVisitorDataSync(request, client);
+            }
+            else
+            {
+                SendVisitorDataAsync(request, client);
+            }
+        }
+
+
+        public static void SendVisitorDataAsync(RestRequest request, RestClient client)
+        {
             // execute the request
             client.ExecuteAsync(request, (response) =>
             {
@@ -192,6 +209,36 @@ namespace SchoolSafeID
                     MessageBox.Show(response.StatusCode + "\n" + response.StatusDescription);
                 }
             });
+        }
+
+
+        public static void SendVisitorDataSync(RestRequest request, RestClient client)
+        {
+            // execute the request
+            var response = client.Execute(request);
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                //upload successfull
+                Dictionary<string, object> result = SimpleJson.DeserializeObject<Dictionary<string, object>>(response.Content);
+
+                if (result.ContainsKey("success"))
+                {
+                    if (result.ContainsKey("sticker"))
+                    {
+                        DownloadFile(result["sticker"].ToString(), BadgePath, 1);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Error! Please try again.");
+                }
+            }
+            else
+            {
+                //error ocured during upload                
+                MessageBox.Show(response.StatusCode + "\n" + response.StatusDescription);
+            }
         }
 
 
@@ -251,5 +298,26 @@ namespace SchoolSafeID
             return result;
         }
 
+
+        public static void DownloadPDF(string url)
+        {
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(BaseURL + url);
+
+            request.ContentType = "application/pdf;charset=UTF-8";
+            request.Method = "GET";
+
+            using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+            {
+                BinaryReader bin = new BinaryReader(response.GetResponseStream());
+
+                byte[] buffer = bin.ReadBytes((Int32)response.ContentLength);
+
+                using (Stream writer = File.Create("D:\\MyPDF.pdf"))
+                {
+                    writer.Write(buffer, 0, buffer.Length);
+                    writer.Flush();
+                }
+            }
+        }
     }
 }

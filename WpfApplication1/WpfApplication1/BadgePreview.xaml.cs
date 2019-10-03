@@ -54,12 +54,15 @@ namespace SchoolSafeID
 
         private void btnYesPrint_Click(object sender, RoutedEventArgs e)
         {
-            //Print Badge and complete visitor sign-in process and move to the next screen.
-            //var filePath = @"D:\TestPrint\visitor-card-97328.pdf";
-            //var printWrapper = new PDFtoPrintWrapper();
-            //printWrapper.Print(filePath, Properties.Settings.Default.printer_name);
+            btnYesPrint.Content = "Please wait...";
 
-            APIManager.SendVisitorData();
+            btn_GoBack.IsEnabled = false;
+            btnYesPrint.IsEnabled = false;
+            btnNoBadgeNeeded.IsEnabled = false;
+            btnNoMakeChanges.IsEnabled = false;
+
+            //Print Badge and complete visitor sign-in process and move to the next screen.
+            APIManager.SendVisitorData(1);
 
             this.NavigationService.Navigate(new Uri("PrintCompleted.xaml", UriKind.Relative));
         }
@@ -74,7 +77,7 @@ namespace SchoolSafeID
 
         private void btnNoBadgeNeeded_Click(object sender, RoutedEventArgs e)
         {
-            APIManager.SendVisitorData();
+            APIManager.SendVisitorData(0);
         
             //Just Complete visitor sign-in process and go back to the home page.
             this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));

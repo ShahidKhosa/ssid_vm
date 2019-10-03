@@ -56,15 +56,13 @@ namespace SchoolSafeID
 
         private void btn_Signin_Click(object sender, RoutedEventArgs e)
         {
-            Visitor.IsVisitor = true;
-            //this.NavigationService.Navigate(new Uri("BadgePreview.xaml", UriKind.Relative));
-            //this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
+            Visitor.IsVisitor = 0;// Zero mean a visitor record.            
             this.NavigationService.Navigate(new Uri("ScanLicense.xaml", UriKind.Relative));
         }
 
         private void btn_Signout_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("ScanFailure.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("VisitorSignout.xaml", UriKind.Relative));
         }
 
         private void btnSettings_Click(object sender, RoutedEventArgs e)
