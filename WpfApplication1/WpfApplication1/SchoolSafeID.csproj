@@ -120,6 +120,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="APIManager.cs" />
+    <Compile Include="AppSettings.cs" />
     <Compile Include="BadgePreview.xaml.cs">
       <DependentUpon>BadgePreview.xaml</DependentUpon>
     </Compile>

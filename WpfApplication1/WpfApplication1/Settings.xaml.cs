@@ -24,16 +24,16 @@ namespace SchoolSafeID
         public Settings()
         {
             InitializeComponent();
-            school_url.Text = Properties.Settings.Default.job_no;            
+            school_url.Text = AppSettings.JobNo;            
         }
 
         private void btnSettings_Click(object sender, RoutedEventArgs e)
         {
-            string old_school_url = Properties.Settings.Default.job_no;
+            string old_school_url = AppSettings.JobNo;
 
-            Properties.Settings.Default.job_no = school_url.Text.ToString();
-            Properties.Settings.Default.printer_name = printersList.SelectedValue.ToString();
-            Properties.Settings.Default.Save();            
+            AppSettings.JobNo = school_url.Text.ToString();
+            AppSettings.PrinterName = printersList.SelectedValue.ToString();
+            AppSettings.SaveAppSettings();
 
             if (!old_school_url.Equals(school_url.Text) && homePage != null)
             {

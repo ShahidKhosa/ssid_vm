@@ -23,20 +23,14 @@ namespace SchoolSafeID
     {
         public HomePage()
         {
-            //Thread t1 = new Thread(() =>
-            //{
-            //    APIManager.GetKioskSettings();
-            //});
-
-            //t1.Start();
-
+            AppSettings.GetAppSettings();
 
             InitializeComponent();
             InitPage();
         }
 
         public void InitPage()
-        {
+        {            
             if (APIManager.KioskSettings == null)
             {
                 APIManager.GetKioskSettings();
@@ -45,13 +39,21 @@ namespace SchoolSafeID
             txtWelcomeText.Text = APIManager.KioskSettings["welcome_text"].ToString().Replace("<br/>", "\r\n").Replace("<br>", "\r\n");
 
             imgSchoolLogo.Source = new BitmapImage(new Uri(APIManager.LogoPath, UriKind.Absolute));
+
+            if (APIManager.KioskSettings.ContainsKey("app_settings"))
+            {
+                if (APIManager.KioskSettings["app_settings"].ToString().ToLower().Equals("off"))
+                {
+                    btnSettings.Visibility = Visibility.Hidden;
+                }
+            }
         }
+
 
         private void page_Loaded(object sender, RoutedEventArgs e)
         {
             Visitor.ResetData();            
-        }
-
+        }        
 
 
         private void btn_Signin_Click(object sender, RoutedEventArgs e)
@@ -60,15 +62,17 @@ namespace SchoolSafeID
             this.NavigationService.Navigate(new Uri("ScanLicense.xaml", UriKind.Relative));
         }
 
+
         private void btn_Signout_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Uri("VisitorSignout.xaml", UriKind.Relative));
         }
 
+
         private void btnSettings_Click(object sender, RoutedEventArgs e)
         {
             Settings settings = new Settings();
-            settings.school_url.Text = Properties.Settings.Default.job_no;
+            settings.school_url.Text = AppSettings.JobNo;
             settings.homePage = this;
 
             loadPrinters(settings.printersList);            
@@ -83,7 +87,7 @@ namespace SchoolSafeID
 
             foreach (string printerName in System.Drawing.Printing.PrinterSettings.InstalledPrinters)
             {
-                if(printerName.Equals(Properties.Settings.Default.printer_name))
+                if(printerName.Equals(AppSettings.PrinterName))
                 {
                     printerIndex = i;
                 }

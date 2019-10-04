@@ -184,6 +184,14 @@ namespace SchoolSafeID
         }
 
 
+        public static string CheckoutType
+        {
+            get;
+            set;
+        }
+
+        
+
         public static void ResetData()
         {
             ID = 0;
@@ -211,6 +219,7 @@ namespace SchoolSafeID
             City = "";
             State = "";
             Zip = "";
+            CheckoutType = "";
         }
 
 
@@ -229,7 +238,7 @@ namespace SchoolSafeID
             State = (data.ContainsKey("state") ? data["state"].ToString() : "");
             Zip = (data.ContainsKey("zip") ? data["zip"].ToString() : "");
             Destination = (data.ContainsKey("destination") ? data["destination"].ToString() : "");
-
+            CheckoutType = (data.ContainsKey("check_out_type") ? data["check_out_type"].ToString() : "");
             VisitorLiveImage = (data.ContainsKey("image") ? data["image"].ToString() : "");
             IsOfficeUseOnly = false;
             OfficeUseOnlyPassword = "";

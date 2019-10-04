@@ -93,7 +93,7 @@ namespace SchoolSafeID
                 if (printBadge == 1)
                 {
                     var printWrapper = new PDFtoPrintWrapper();
-                    await printWrapper.Print(BadgePath, Properties.Settings.Default.printer_name);
+                    await printWrapper.Print(BadgePath, AppSettings.PrinterName);
                 }
             }                            
         }
@@ -114,7 +114,7 @@ namespace SchoolSafeID
 
                 var request = new RestRequest("/api/class_api.php");
                 request.AddParameter("action", "home_page"); 
-                request.AddParameter("job_no", Properties.Settings.Default.job_no);
+                request.AddParameter("job_no", AppSettings.JobNo);
 
                 // execute the request
                 var response = client.Post(request);
@@ -318,6 +318,22 @@ namespace SchoolSafeID
                     writer.Flush();
                 }
             }
+        }
+
+
+        public static void Signout()
+        {
+            var client = new RestClient(BaseURL);
+            client.Authenticator = new HttpBasicAuthenticator(Username, Password);
+
+            var request = new RestRequest("/api/class_api.php", Method.POST);
+            request.AddParameter("action", "api_signout");
+            request.AddParameter("id", Visitor.ID);
+            request.AddParameter("job_id", APIManager.KioskSettings["job_id"]);
+            request.AddParameter("barcode_data", Visitor.BarcodeData);
+            request.AddParameter("check_out_type", Visitor.CheckoutType);
+
+            SendVisitorDataAsync(request, client);
         }
     }
 }

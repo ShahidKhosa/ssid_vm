@@ -37,21 +37,11 @@ namespace SchoolSafeID
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (txt_FirstName.Text != String.Empty && txt_LastName.Text != String.Empty)
-            {
-                Visitor.FirstName = txt_FirstName.Text;
-                Visitor.LastName = txt_LastName.Text;
+            if (txt_FirstName.Text != String.Empty && txt_LastName.Text != String.Empty && Visitor.ID > 0)
+            {                
+                APIManager.Signout();
 
-                bool result = APIManager.VerifyVisitorData();
-
-                if (result)
-                {
-                    this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
-                }
-                else
-                {
-                    MessageBox.Show("Error! please try again.");
-                }
+                this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
             }
         }
 
