@@ -1,0 +1,80 @@
+﻿<Page x:Class="SchoolSafeID.StudentBadgePreview"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SchoolSafeID"
+      mc:Ignorable="d"       
+      Title="Student Badge Preview" Loaded="Page_Loaded">
+
+    <DockPanel LastChildFill="True">
+
+        <StackPanel DockPanel.Dock="Top"></StackPanel>
+
+        <StackPanel DockPanel.Dock="Bottom" Height="100" Background="Black">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Background>
+                    <ImageBrush ImageSource="Resources/poweredby_schoolsafe.png" Opacity="1" Stretch="None" AlignmentX="Right"/>
+                </StackPanel.Background>
+
+                <Button Name="btn_GoBack" Style="{StaticResource MyButton}" Margin="10 10 0 0" Content="GO BACK" Background="Gray" Click="btn_GoBack_Click" />
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock="Left"></StackPanel>
+
+        <StackPanel DockPanel.Dock="Right"></StackPanel>
+
+        <WrapPanel Width="960" VerticalAlignment="Center">
+            <TextBlock TextAlignment="Center" Width="960" Style="{StaticResource MaterialDesignDisplay1TextBlock}" Height="130"><Run Text="ID Scan Successful."/><LineBreak/><Run Text="Would you like to print your badge?" Foreground="#777"/></TextBlock>
+
+            <WrapPanel Width="960">
+                <StackPanel HorizontalAlignment="Center" Width="960">
+                    <Grid Width="555" Height="310">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20*"/>
+                            <ColumnDefinition Width="30*"/>
+                            <ColumnDefinition Width="60*"/>
+                            <ColumnDefinition Width="60*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="3*"/>
+                        </Grid.RowDefinitions>
+                        <Border CornerRadius="8" Grid.RowSpan="2" Grid.ColumnSpan="4" BorderThickness="1" BorderBrush="#ccc"></Border>
+
+                        <StackPanel Grid.Column="2" VerticalAlignment="Top" Height="246" Grid.ColumnSpan="2" HorizontalAlignment="Center" Width="392">
+                            <TextBlock Name="txtSchoolName" Margin="0,10,0,0" Height="35" TextAlignment="Center" Foreground="Black" FontSize="24" Text="School Name Here"/>
+                            <Rectangle Margin="10" HorizontalAlignment="Stretch" Fill="Black" Height="5"/>
+                            <TextBlock Name="txtStudentName" Foreground="Black" FontSize="36" TextAlignment="Center" Text="Student Name Here"/>
+                            <TextBlock Name="txtGrade" Foreground="Black" FontSize="24" TextAlignment="Center" Text="Grade"/>
+                            <Rectangle Margin="10" HorizontalAlignment="Stretch" Fill="Black" Height="5"/>
+                            <TextBlock Name="txtDate" Foreground="Black" FontSize="24" TextAlignment="Center" Text="Check-in: 09/15/19"/>
+                            <TextBlock Name="txtTime" Foreground="Black" FontSize="24" TextAlignment="Center" Text="08:23 AM"/>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Grid.ColumnSpan="4" Orientation="Horizontal" Width="Auto" VerticalAlignment="Bottom">
+                            <Image Margin="10,5,40,0" Source="Resources/schoolsafe-id.png" Width="150" HorizontalAlignment="Left"/>
+                            <Image Source="Resources/bar_code.png" Width="320" HorizontalAlignment="Right"/>
+                        </StackPanel>
+                        <StackPanel Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="10">
+                            <Image Name="imgStudentImage" VerticalAlignment="Top" HorizontalAlignment="Left" Source="Resources/shahid.jpg" Height="160"/>
+                            <TextBlock Name="txtSigninReason" Foreground="Black" FontSize="24" TextAlignment="Left" Text="Sign-in Reason"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </WrapPanel>
+
+            <StackPanel Margin="0 50 0 0" HorizontalAlignment="Center" Width="960">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button Style="{StaticResource MyButton}" Content="Print Student Pass" Name="btnPrintStudentPass" Click="btnPrintStudentPass_Click" />
+                    <Button Style="{StaticResource MyButton}" Content="Print Temporary Badge" Background="#AC1315" Name="btnPrintTemporaryBadge" Click="btnPrintTemporaryBadge_Click" />
+                    <Button Style="{StaticResource MyButton}" Content="No Badge Needed" Background="#FC0" Foreground="#111" Name="btnNoBadgeNeeded" Click="btnNoBadgeNeeded_Click" />
+                </StackPanel>
+            </StackPanel>
+
+        </WrapPanel>
+
+
+
+    </DockPanel>
+</Page>

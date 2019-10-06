@@ -82,5 +82,6 @@ namespace SchoolSafeID
             //Just Complete visitor sign-in process and go back to the home page.
             this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
         }
+
     }
 }

@@ -107,6 +107,7 @@ namespace SchoolSafeID
             txtBarcodeData.Focus();
         }
 
+
         private void txtBarcodeData_TextChanged(object sender, TextChangedEventArgs e)
         {
             try

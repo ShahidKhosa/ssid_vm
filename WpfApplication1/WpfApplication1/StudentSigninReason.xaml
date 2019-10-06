@@ -1,0 +1,51 @@
+﻿<Page x:Class="SchoolSafeID.StudentSigninReason"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SchoolSafeID"
+      mc:Ignorable="d"       
+      Title="Sign-in Reasons" Loaded="Page_Loaded">
+
+    <DockPanel LastChildFill="True">
+
+        <StackPanel DockPanel.Dock="Top"></StackPanel>
+
+        <StackPanel DockPanel.Dock="Bottom" Height="100" Background="Black">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Background>
+                    <ImageBrush ImageSource="Resources/poweredby_schoolsafe.png" Opacity="1" Stretch="None" AlignmentX="Right"/>
+                </StackPanel.Background>
+
+                <Button Style="{StaticResource MyButton}" Margin="10 10 0 0" Content="GO BACK" Background="Gray" Click="btn_GoBack_Click" />
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock="Left"></StackPanel>
+
+        <StackPanel DockPanel.Dock="Right"></StackPanel>
+
+        <WrapPanel Width="1020" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            
+                <TextBlock TextAlignment="Center" Width="960" Style="{StaticResource MaterialDesignDisplay1TextBlock}" Height="60"><Run Text="Reason for Sign In?"/></TextBlock>
+
+                <Button Name="btnOption1" Style="{StaticResource MarginButtonStyle}" Content="Reason 1" Tag="1" Click="btnOptionClick" />
+                <Button Name="btnOption2" Style="{StaticResource MarginButtonStyle}" Content="Reason 2" Tag="2" Click="btnOptionClick" />
+                <Button Name="btnOption3" Style="{StaticResource MarginButtonStyle}" Content="Reason 3" Tag="3" Click="btnOptionClick" />
+
+                <Button Name="btnOption4" Style="{StaticResource MarginButtonStyle}" Content="Reason 4" Tag="4" Click="btnOptionClick" />
+                <Button Name="btnOption5" Style="{StaticResource MarginButtonStyle}" Content="Reason 5" Tag="5" Click="btnOptionClick" />
+                <Button Name="btnOption6" Style="{StaticResource MarginButtonStyle}" Content="Reason 6" Tag="6" Click="btnOptionClick" />
+
+                <Button Name="btnOption7" Style="{StaticResource MarginButtonStyle}" Content="Reason 7" Tag="7" Click="btnOptionClick" />
+                <Button Name="btnOption8" Style="{StaticResource MarginButtonStyle}" Content="Reason 8" Tag="8" Click="btnOptionClick" />
+                <Button Name="btnOption9" Style="{StaticResource MarginButtonStyle}" Content="Reason 9" Tag="9" Click="btnOptionClick" />
+            
+            
+        </WrapPanel>
+
+
+
+    </DockPanel>
+</Page>

@@ -96,5 +96,6 @@ namespace SchoolSafeID
         {
             this.NavigationService.Navigate(new Uri("BadgePreview.xaml", UriKind.Relative));
         }
+
     }
 }

@@ -35,7 +35,7 @@ namespace SchoolSafeID
         {
             get
             {
-                return "D:\\TestPrint\\visitor-card.pdf";
+                return Helper.GetPath() + "\\badge.pdf";
             }
         }
 
@@ -335,5 +335,65 @@ namespace SchoolSafeID
 
             SendVisitorDataAsync(request, client);
         }
+
+
+        public static void GetStudentData(string Action = "manage_student_preview")
+        {
+            var client = new RestClient(BaseURL);
+            client.Authenticator = new HttpBasicAuthenticator(Username, Password);
+
+            var request = new RestRequest("/api/class_api.php");
+            request.AddParameter("action", Action); // adds to POST or URL querystring based on Method            
+            request.AddParameter("job_id", KioskSettings["job_id"]); // adds to POST or URL querystring based on Method
+            request.AddParameter("barcode_data", Student.BarcodeData); // replaces matching token in request.Resource
+
+            // execute the request
+            var response = client.Post(request);
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                Dictionary<string, object> result = SimpleJson.DeserializeObject<Dictionary<string, object>>(response.Content);
+
+                if (result.ContainsKey("success"))
+                {
+                    if (bool.Parse(result["success"].ToString()))
+                    {
+                        Student.SetData(result);
+                    }
+                    else if (result.ContainsKey("error"))
+                    {
+                        MessageBox.Show(result["error"].ToString());
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error! Please try again.");
+                    }
+                }
+            }
+        }
+
+
+        public static void SendStudentData(int PrintSticker, string BadgeType)
+        {
+            var client = new RestClient(BaseURL);
+            client.Authenticator = new HttpBasicAuthenticator(Username, Password);
+
+            var request = new RestRequest("/api/class_api.php", Method.POST);
+            request.AddParameter("action", "complete_student_signin");
+            request.AddParameter("print_sticker", PrintSticker);
+            request.AddParameter("card_type", BadgeType);
+            
+            Student.SaveStudent(request);
+
+            if (PrintSticker == 1)
+            {
+                SendVisitorDataSync(request, client);
+            }
+            else
+            {
+                SendVisitorDataAsync(request, client);
+            }
+        }
+
     }
 }
