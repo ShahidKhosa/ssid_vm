@@ -39,7 +39,7 @@ namespace SchoolSafeID
 
         private void btnNo_Click(object sender, RoutedEventArgs e)
         {
-
+            this.NavigationService.Navigate(new Uri("SearchStudent.xaml", UriKind.Relative));
         }
     }
 }

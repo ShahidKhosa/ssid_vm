@@ -35,7 +35,7 @@
                 <Button Style="{StaticResource MyButton}" Content="VISITOR SIGN IN" Click="btn_Signin_Click" />
                 <Button Style="{StaticResource MyButton}" Content="VISITOR SIGN OUT" Background="#AC1315" Click="btn_Signout_Click" />
                 <Button Name="btnStudentSignin" Style="{StaticResource MyButton}" Content="STUDENT SIGN IN" Background="#FC0" Foreground="#111" Click="btnStudentSignin_Click" />
-                <Button Style="{StaticResource MyButton}" Content="STUDENT SIGN OUT" Background="#3a5fcd" />
+                <Button Name="btnStudentSignout" Style="{StaticResource MyButton}" Content="STUDENT SIGN OUT" Background="#3a5fcd" Click="btnStudentSignout_Click" />
             </StackPanel>
 
         </StackPanel>

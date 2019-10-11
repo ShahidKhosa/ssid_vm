@@ -11,21 +11,7 @@ namespace SchoolSafeID
 {
     class Student
     {
-        public static string NextURL
-        {
-            get;
-            set;
-        }
-
-        public static string PreviousURL
-        {
-            get;
-            set;
-        }
-
-        public static string FullImagePath => Helper.GetPath("\\" + APIManager.KioskSettings["job_id"]) + "\\visitor.jpg";
-
-        public static string CroppedImagePath => String.Format("{0}\\{1}", Helper.GetPath("\\" + APIManager.KioskSettings["job_id"]), "visitor_croped.jpg");
+        public static string ImagePath => Helper.GetPath("\\" + APIManager.KioskSettings["job_id"]) + "\\" + LiveImage;
 
         public static int ID
         {
@@ -58,6 +44,18 @@ namespace SchoolSafeID
         }
 
         public static string Grade
+        {
+            get;
+            set;
+        }
+
+        public static string Teacher
+        {
+            get;
+            set;
+        }
+
+        public static string Image
         {
             get;
             set;
@@ -147,7 +145,7 @@ namespace SchoolSafeID
             set;
         }
 
-        public static string VisitorLiveImage
+        public static string LiveImage
         {
             get;
             set;
@@ -183,7 +181,6 @@ namespace SchoolSafeID
             set;
         }
 
-
         public static string CheckoutType
         {
             get;
@@ -211,7 +208,7 @@ namespace SchoolSafeID
             CheckinOption = "";
             CheckinOptionNumber = "";
             Destination = "";
-            VisitorLiveImage = "";
+            LiveImage = "";
             VisitorHasNewImage = false;
             PassURL = "";
             LicenseNo = "";
@@ -232,16 +229,16 @@ namespace SchoolSafeID
             LastName = (data.ContainsKey("last_name") ? data["last_name"].ToString() : "");
             Grade = (data.ContainsKey("grade") ? data["grade"].ToString() : "");
             
-            VisitorLiveImage = (data.ContainsKey("image") ? data["image"].ToString() : "");
+            LiveImage = (data.ContainsKey("image") ? data["image"].ToString() : "");
 
 
-            if (ID > 0 && VisitorLiveImage != string.Empty)
+            if (ID > 0 && LiveImage != string.Empty)
             {
-                APIManager.DownloadFile(string.Format("/assets/membership/{0}/{1}", JobID, VisitorLiveImage), Student.CroppedImagePath, 0);
+                APIManager.DownloadFile(string.Format("/assets/membership/{0}/{1}", JobID, LiveImage), Student.ImagePath, 0);
             }
             else
             {
-                APIManager.DownloadFile("/assets/membership/placeholder.jpg", Student.CroppedImagePath, 0);
+                APIManager.DownloadFile("/assets/membership/placeholder.jpg", Student.ImagePath, 0);
                 
             }
         }

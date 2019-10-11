@@ -11,6 +11,9 @@ namespace SchoolSafeID
 {
     class Helper
     {
+
+        public static string DefaultImage = GetPath() + "\\placeholder.jpg";
+
         //Block Memory Leak
         [System.Runtime.InteropServices.DllImport("gdi32.dll")]
         public static extern bool DeleteObject(IntPtr handle);

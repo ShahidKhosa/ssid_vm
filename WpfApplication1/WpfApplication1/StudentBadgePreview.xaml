@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SchoolSafeID"
       mc:Ignorable="d"       
-      Title="Student Badge Preview" Loaded="Page_Loaded">
+      Title="Student Badge Preview" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
 
     <DockPanel LastChildFill="True">
 
@@ -58,7 +58,7 @@
                         </StackPanel>
                         <StackPanel Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="10">
                             <Image Name="imgStudentImage" VerticalAlignment="Top" HorizontalAlignment="Left" Source="Resources/shahid.jpg" Height="160"/>
-                            <TextBlock Name="txtSigninReason" Foreground="Black" FontSize="24" TextAlignment="Left" Text="Sign-in Reason"/>
+                            <TextBlock Name="txtSigninReason" Foreground="Black" FontSize="20" TextAlignment="Left" Text="Sign-in Reason"/>
                         </StackPanel>
                     </Grid>
                 </StackPanel>

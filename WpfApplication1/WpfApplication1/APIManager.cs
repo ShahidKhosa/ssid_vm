@@ -77,8 +77,7 @@ namespace SchoolSafeID
 
             client.DownloadData(request).SaveAs(path);            
         }
-
-
+        
 
         public static async void DownloadFile(string url, string path, int printBadge = 0)
         {
@@ -88,7 +87,14 @@ namespace SchoolSafeID
 
             if (response.StatusCode == HttpStatusCode.OK)
             {
-                response.RawBytes.SaveAs(path);
+                try
+                {
+                    response.RawBytes.SaveAs(path);
+                }                
+                catch(Exception ex)
+                {
+
+                }
 
                 if (printBadge == 1)
                 {
@@ -127,6 +133,8 @@ namespace SchoolSafeID
                     {
                         Download(KioskSettings["logo"].ToString(), LogoPath);
                     }
+
+                    GetAllStudents("get_all_students");
                 }
 
                 InProgress = false;                
@@ -393,6 +401,35 @@ namespace SchoolSafeID
             {
                 SendVisitorDataAsync(request, client);
             }
+        }
+
+
+        public static void GetAllStudents(string Action = "get_all_students")
+        {
+            var client = new RestClient(BaseURL);
+            client.Authenticator = new HttpBasicAuthenticator(Username, Password);
+
+            var request = new RestRequest("/api/class_api.php", Method.POST);
+            request.AddParameter("action", Action);
+            request.AddParameter("job_id", KioskSettings["job_id"]);
+
+            if(KioskSettings.ContainsKey("show_teacher_name"))
+            {
+                request.AddParameter("show_teacher_name", KioskSettings["show_teacher_name"]);                
+            }
+            
+            client.ExecuteAsync(request, (response) =>
+            {
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    StudentPersonalInfo.Students = SimpleJson.DeserializeObject<List<StudentPersonalInfo>>(response.Content);                    
+                }
+                else
+                {
+                    //error ocured during upload
+                    MessageBox.Show(response.StatusCode + "\n" + response.StatusDescription);
+                }
+            });
         }
 
     }

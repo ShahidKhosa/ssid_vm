@@ -116,5 +116,10 @@ namespace SchoolSafeID
 
             this.NavigationService.Navigate(new Uri("SigninOptions.xaml", UriKind.Relative));
         }
+
+        private void btnStudentSignout_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("SearchStudent.xaml", UriKind.Relative));
+        }
     }
 }

@@ -61,6 +61,8 @@ namespace SchoolSafeID
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            System.Threading.Thread.Sleep(1000);
+
             btnNoBadgeNeeded.Visibility = (APIManager.KioskSettings["student_no_badge"].ToString().ToLower().Equals("on") ? Visibility.Visible : Visibility.Collapsed);
 
             Student.VisitDateTime = DateTime.Now;
@@ -73,8 +75,30 @@ namespace SchoolSafeID
             txtDate.Text = Student.VisitDateTime.ToString("MM/dd/yyyy");
             txtTime.Text = Student.VisitDateTime.ToString("hh:mm:ss tt");
 
-            imgStudentImage.Source = new BitmapImage(new Uri(Student.CroppedImagePath, UriKind.Absolute));
+
+            try
+            {
+                //var bmpimg = new BitmapImage();
+                //bmpimg.UriSource = new Uri(Student.ImagePath, UriKind.Absolute);
+                //bmpimg.Freeze();
+                //imgStudentImage.Source = bmpimg;
+                imgStudentImage.Source = new BitmapImage(new Uri(Student.ImagePath, UriKind.Absolute));
+            }
+            catch (System.NotSupportedException ex)
+            {                
+                imgStudentImage.Source = new BitmapImage(new Uri(Helper.DefaultImage, UriKind.Absolute));
+            }
+            catch(Exception ex)
+            {
+                imgStudentImage.Source = new BitmapImage(new Uri(Helper.DefaultImage, UriKind.Absolute));
+            }
+                        
             //Student.VisitDateTime.ToString("MM/dd/yyyy hh:mm:ss tt");  
+        }
+
+        private void Page_Unloaded(object sender, RoutedEventArgs e)
+        {
+            imgStudentImage.Source = null;
         }
     }
 }

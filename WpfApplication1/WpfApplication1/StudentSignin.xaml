@@ -24,7 +24,7 @@
             </StackPanel>
         </StackPanel>
 
-        <StackPanel DockPanel.Dock="Left" Width="450" HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="0,70,0,0">
+        <StackPanel DockPanel.Dock="Left" Width="450" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0,25,0,0">
             <Image Width="369" Height="261" HorizontalAlignment="Right" Margin="0 16 0 0" Source="Resources/scan_studentid.jpg" />
             <TextBlock HorizontalAlignment="Center" Style="{StaticResource MaterialDesignDisplay1TextBlock}" Margin="65 10 0 0"  TextWrapping="Wrap" FontSize="20" Foreground="#249c24" Text="Press scan button on device if it does not automatically scan."></TextBlock>
 
@@ -36,7 +36,7 @@
         <StackPanel DockPanel.Dock="Right"></StackPanel>
 
 
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0">
             <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="36" Margin="0,0,0,10" Text="Scan Student ID to Sign-in"></TextBlock>
 
             <StackPanel>

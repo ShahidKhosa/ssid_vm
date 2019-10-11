@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -64,6 +65,8 @@ namespace SchoolSafeID
             //Print Badge and complete visitor sign-in process and move to the next screen.
             APIManager.SendVisitorData(1);
 
+            Thread.Sleep(3000);
+
             this.NavigationService.Navigate(new Uri("PrintCompleted.xaml", UriKind.Relative));
         }
 
@@ -78,10 +81,14 @@ namespace SchoolSafeID
         private void btnNoBadgeNeeded_Click(object sender, RoutedEventArgs e)
         {
             APIManager.SendVisitorData(0);
-        
+            Thread.Sleep(1000);
             //Just Complete visitor sign-in process and go back to the home page.
             this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
         }
 
+        private void Page_Unloaded(object sender, RoutedEventArgs e)
+        {
+            imgVisitorImage.Source = null;
+        }
     }
 }
