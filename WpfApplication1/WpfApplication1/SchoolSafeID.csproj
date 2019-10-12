@@ -141,6 +141,9 @@
     <Compile Include="Page2.xaml.cs">
       <DependentUpon>Page2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ParentSignout.xaml.cs">
+      <DependentUpon>ParentSignout.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PrintCompleted.xaml.cs">
       <DependentUpon>PrintCompleted.xaml</DependentUpon>
     </Compile>
@@ -158,6 +161,9 @@
     </Compile>
     <Compile Include="SigninOptions.xaml.cs">
       <DependentUpon>SigninOptions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SignoutCompleted.xaml.cs">
+      <DependentUpon>SignoutCompleted.xaml</DependentUpon>
     </Compile>
     <Compile Include="StudentBadgePreview.xaml.cs">
       <DependentUpon>StudentBadgePreview.xaml</DependentUpon>
@@ -235,6 +241,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ParentSignout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PrintCompleted.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -256,6 +266,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SigninOptions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SignoutCompleted.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

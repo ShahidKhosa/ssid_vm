@@ -42,10 +42,10 @@ namespace SchoolSafeID
             {
                 Visitor.FirstName   = txt_FirstName.Text;
                 Visitor.LastName    = txt_LastName.Text;
-                Visitor.DateOfBirth = txt_DateOfBirth.Text;
+                Visitor.DateOfBirth = txt_DateOfBirth.Text;                
 
                 //New Visitor take photo and then verify the data
-                if (Visitor.IsOfficeUseOnly || Visitor.VisitorLiveImage == string.Empty)
+               if (Visitor.IsVisitor == 1 || Visitor.IsOfficeUseOnly || Visitor.VisitorLiveImage == string.Empty)
                 {
                     this.NavigationService.Navigate(new Uri("TakePhoto.xaml", UriKind.Relative));
                 }
@@ -62,7 +62,15 @@ namespace SchoolSafeID
                         }
                         else
                         {
-                            this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
+                            if (Visitor.IsVisitor == 0)
+                            {
+                                this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
+                            }
+                            else
+                            {
+                                //its a parent signin to checkout student.
+                                this.NavigationService.Navigate(new Uri("ParentSignout.xaml", UriKind.Relative));
+                            }                            
                         }                        
                     }
                     else

@@ -35,7 +35,15 @@ namespace SchoolSafeID
         {
             ResetData();
 
-            this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
+            if (Visitor.IsVisitor == 0)
+            {
+                this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
+            }
+            else
+            {
+                //its a parent signin to checkout student.
+                this.NavigationService.Navigate(new Uri("ParentSignout.xaml", UriKind.Relative));
+            }            
         }
 
         private void btnCreateDigtalPass_Click(object sender, RoutedEventArgs e)
@@ -48,7 +56,15 @@ namespace SchoolSafeID
                 Visitor.EmailAddress = txt_Email.Text;
                 Visitor.PhoneNumber = txt_Phone.Text;
 
-                this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
+                if (Visitor.IsVisitor == 0)
+                {
+                    this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
+                }
+                else
+                {
+                    //its a parent signin to checkout student.
+                    this.NavigationService.Navigate(new Uri("ParentSignout.xaml", UriKind.Relative));
+                }                
             }
         }
 

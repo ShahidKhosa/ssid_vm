@@ -103,23 +103,25 @@ namespace SchoolSafeID
 
         private void btnStudentSignin_Click(object sender, RoutedEventArgs e)
         {
-            //if(APIManager.KioskSettings.ContainsKey("student_no_required") && APIManager.KioskSettings["student_no_required"].ToString().ToLower() == "no")
-            //{
-            //    //header('Location: ./visitor-management&a=search_student');
-            //    this.NavigationService.Navigate(new Uri("VisitorSignout.xaml", UriKind.Relative));
-            //}
-            //else if (APIManager.KioskSettings.ContainsKey("tardy_pass_option") && APIManager.KioskSettings["tardy_pass_option"].ToString() == string.Empty)
-            //{
-            //    //header('Location: ./visitor-management&a=student_sign_in');
-            //    this.NavigationService.Navigate(new Uri("VisitorSignout.xaml", UriKind.Relative));
-            //}
+            if (APIManager.KioskSettings.ContainsKey("student_no_required") && APIManager.KioskSettings["student_no_required"].ToString().ToLower() == "no")
+            {
+                //header('Location: ./visitor-management&a=search_student');
+                this.NavigationService.Navigate(new Uri("SearchStudent.xaml", UriKind.Relative));
+            }
+            else if (APIManager.KioskSettings.ContainsKey("tardy_pass_option") && APIManager.KioskSettings["tardy_pass_option"].ToString() == string.Empty)
+            {
+                //header('Location: ./visitor-management&a=student_sign_in');
+                this.NavigationService.Navigate(new Uri("StudentSignin.xaml", UriKind.Relative));
+            }
 
             this.NavigationService.Navigate(new Uri("SigninOptions.xaml", UriKind.Relative));
         }
 
         private void btnStudentSignout_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("SearchStudent.xaml", UriKind.Relative));
+            Visitor.IsVisitor = 1;// 1 mean a parent is checking out a student 
+            this.NavigationService.Navigate(new Uri("ScanLicense.xaml", UriKind.Relative));
+            //this.NavigationService.Navigate(new Uri("ParentSignout.xaml", UriKind.Relative));
         }
     }
 }

@@ -38,7 +38,9 @@ namespace SchoolSafeID
 
         private void btnTakePhoto_Click(object sender, RoutedEventArgs e)
         {
-            
+            btnTakePhoto.IsEnabled  = false;
+            btnTakePhoto.Content    = "Processing...";
+
             Helper.SaveImageCapture((BitmapSource)imgCapture.Source);
             webcam.Stop();
 
@@ -54,7 +56,15 @@ namespace SchoolSafeID
                     }
                     else
                     {
-                        this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
+                        if (Visitor.IsVisitor == 0)
+                        {
+                            this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
+                        }
+                        else
+                        {
+                            //its a parent signin to checkout student.
+                            this.NavigationService.Navigate(new Uri("ParentSignout.xaml", UriKind.Relative));
+                        }                        
                     }
                 }
                 else
@@ -64,7 +74,15 @@ namespace SchoolSafeID
             }
             else
             {
-                this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
+                if(Visitor.IsVisitor == 0)
+                {
+                    this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
+                }
+                else
+                {
+                    //its a parent signin to checkout student.
+                    this.NavigationService.Navigate(new Uri("ParentSignout.xaml", UriKind.Relative));
+                }                
             }
 
         }

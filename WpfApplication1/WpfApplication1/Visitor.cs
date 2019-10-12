@@ -269,7 +269,7 @@ namespace SchoolSafeID
             request.AddParameter("destination", Destination);
             request.AddParameter("visit_date_time", VisitDateTime);            
 
-            if(Visitor.VisitorHasNewImage)
+            if(VisitorHasNewImage)
             {
                 request.AlwaysMultipartFormData = true;
                 request.AddHeader("Content-Type", "multipart/form-data");

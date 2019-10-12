@@ -12,6 +12,8 @@ using System.Windows.Forms;
 using System.Runtime.Serialization;
 using System.IO;
 using PDFtoPrinter;
+using System.Collections.ObjectModel;
+using Newtonsoft.Json;
 
 namespace SchoolSafeID
 {
@@ -430,6 +432,22 @@ namespace SchoolSafeID
                     MessageBox.Show(response.StatusCode + "\n" + response.StatusDescription);
                 }
             });
+        }
+
+
+        public static void ParentStudentSignout(ObservableCollection<StudentPersonalInfo> selectedStudentsList)
+        {
+            var client = new RestClient(BaseURL);
+            client.Authenticator = new HttpBasicAuthenticator(Username, Password);
+
+            var request = new RestRequest("/api/class_api.php", Method.POST);
+            request.AddParameter("action", "parent_student_signout");
+            Visitor.SaveVisitor(request);
+            
+            // Json to post.            
+            request.AddParameter("selected_students", JsonConvert.SerializeObject(selectedStudentsList));
+
+            SendVisitorDataAsync(request, client);
         }
 
     }
