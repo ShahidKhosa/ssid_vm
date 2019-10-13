@@ -435,7 +435,7 @@ namespace SchoolSafeID
         }
 
 
-        public static void ParentStudentSignout(ObservableCollection<StudentPersonalInfo> selectedStudentsList)
+        public static void ParentStudentSignout(ObservableCollection<StudentPersonalInfo> selectedStudentsList, SignoutReasons reason)
         {
             var client = new RestClient(BaseURL);
             client.Authenticator = new HttpBasicAuthenticator(Username, Password);
@@ -443,7 +443,10 @@ namespace SchoolSafeID
             var request = new RestRequest("/api/class_api.php", Method.POST);
             request.AddParameter("action", "parent_student_signout");
             Visitor.SaveVisitor(request);
-            
+
+            request.AddParameter("signout_reason_no", reason.ID);
+            request.AddParameter("signout_reason", reason.Reason);
+
             // Json to post.            
             request.AddParameter("selected_students", JsonConvert.SerializeObject(selectedStudentsList));
 

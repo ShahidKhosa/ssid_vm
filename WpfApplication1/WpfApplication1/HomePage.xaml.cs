@@ -44,8 +44,35 @@ namespace SchoolSafeID
             {
                 if (APIManager.KioskSettings["app_settings"].ToString().ToLower().Equals("off"))
                 {
-                    btnSettings.Visibility = Visibility.Hidden;
+                    btnSettings.Visibility = Visibility.Collapsed;
                 }
+                else
+                {
+                    btnSettings.Visibility = Visibility.Visible;
+                }
+            }
+            else
+            {
+                btnSettings.Visibility = Visibility.Collapsed;
+            }
+
+            if (APIManager.KioskSettings.ContainsKey("turn_student_kiosk"))
+            {
+                if (APIManager.KioskSettings["turn_student_kiosk"].ToString().ToLower().Equals("on"))
+                {
+                    btnStudentSignin.Visibility = Visibility.Visible;
+                    btnStudentSignout.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    btnStudentSignin.Visibility = Visibility.Collapsed;
+                    btnStudentSignout.Visibility = Visibility.Collapsed;
+                }
+            }
+            else
+            {
+                btnStudentSignin.Visibility = Visibility.Visible;
+                btnStudentSignout.Visibility = Visibility.Visible;
             }
         }
 

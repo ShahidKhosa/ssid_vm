@@ -121,8 +121,13 @@ namespace SchoolSafeID
 
                 if (student != null)
                 {
-                    SetData(student);
-                    this.NavigationService.Navigate(new Uri("StudentSigninReason.xaml", UriKind.Relative));
+                    MatchStudentID matchStudentID = new MatchStudentID()
+                    {
+                        Student = student,
+                        searchStudent = this
+                    };
+
+                    matchStudentID.Show();                                       
                 }
             }
             catch (NullReferenceException ex)
@@ -136,7 +141,7 @@ namespace SchoolSafeID
         }
 
 
-        private void SetData(StudentPersonalInfo student)
+        internal void SetStudentData(StudentPersonalInfo student)
         {
             Student.ID = student.ID;
             Student.JobID = (APIManager.KioskSettings.ContainsKey("job_id") ? Int32.Parse(APIManager.KioskSettings["job_id"].ToString()) : 0);
@@ -156,6 +161,8 @@ namespace SchoolSafeID
                 //    APIManager.DownloadFile(imagePath, Student.ImagePath, 0);
                 //}
             }
+
+            this.NavigationService.Navigate(new Uri("StudentSigninReason.xaml", UriKind.Relative));
         }
 
 

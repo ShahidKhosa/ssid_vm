@@ -54,7 +54,9 @@ namespace SchoolSafeID
                 btnBack.IsEnabled = false;
                 btnConfirm.IsEnabled = false;
 
-                APIManager.ParentStudentSignout(selectedStudentsList);
+                SignoutReasons reason = (SignoutReasons)cmbSignoutReasons.SelectedItem;                
+
+                APIManager.ParentStudentSignout(selectedStudentsList, reason);
 
                 this.NavigationService.Navigate(new Uri("SignoutCompleted.xaml", UriKind.Relative));
             }
@@ -80,6 +82,28 @@ namespace SchoolSafeID
             cmbSignoutReasons.DisplayMemberPath = "Reason";
 
             txtIndividual.Text = Visitor.FirstName + " " + Visitor.LastName;
+
+            if(APIManager.KioskSettings.ContainsKey("show_student_suggestion"))
+            {
+                if(APIManager.KioskSettings["show_student_suggestion"].ToString().ToLower().Equals("yes"))
+                {
+                    show_suggestions.Visibility = Visibility.Visible;
+                    manual_entry_label.Visibility = Visibility.Collapsed;
+                    manual_entry_fields.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    show_suggestions.Visibility = Visibility.Collapsed;
+                    manual_entry_label.Visibility = Visibility.Visible;
+                    manual_entry_fields.Visibility = Visibility.Visible;
+                }
+            }
+            else
+            {
+                show_suggestions.Visibility = Visibility.Visible;
+                manual_entry_label.Visibility = Visibility.Collapsed;
+                manual_entry_fields.Visibility = Visibility.Collapsed;
+            }            
         }
 
 
@@ -168,6 +192,7 @@ namespace SchoolSafeID
             }
         }
 
+
         private void cmbStudent_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             StudentPersonalInfo student = (StudentPersonalInfo)cmbStudent.SelectedItem;
@@ -210,6 +235,25 @@ namespace SchoolSafeID
         }
 
 
+        private void btnAddNew_Click(object sender, RoutedEventArgs e)
+        {
+            StudentPersonalInfo student = StudentPersonalInfo.Students.Find(s => (s.FirstName + " " + s.LastName).Equals(txtStudentName.Text) && s.Grade.Equals(txtStudentGrade.Text));
+
+            if (student != null && !selectedStudentsList.Contains(student))
+            {
+                selectedStudentsList.Add(student);
+            }
+
+            if (selectedStudentsList.Count > 0)
+            {
+                selecteStudents.ItemsSource = selectedStudentsList;
+                selecteStudents.DataContext = selectedStudentsList;
+                txtStudentGrade.Text = txtStudentName.Text = "";
+
+                lblSelectedStudents.Visibility = Visibility.Visible;
+                selecteStudents.Visibility = Visibility.Visible;
+            }
+        }
     }
 
     public class SignoutReasons
