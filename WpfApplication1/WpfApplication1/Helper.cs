@@ -62,7 +62,7 @@ namespace SchoolSafeID
                 encoder.Save(fstream);
                 fstream.Close();
 
-                CropImage(Visitor.FullImagePath, 75, 50, 275, 350);
+                CropImage(Visitor.FullImagePath, 100, 50, 275, 350);
             }
             catch( Exception ex)
             {

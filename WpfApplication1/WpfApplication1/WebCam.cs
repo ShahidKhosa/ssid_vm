@@ -18,8 +18,8 @@ namespace SchoolSafeID
         {
             webcam = new WebCamCapture();
             webcam.FrameNumber = ((ulong)(0ul));
-            webcam.CaptureWidth = 450;
-            webcam.CaptureHeight = 450;            
+            webcam.CaptureWidth = 500;
+            webcam.CaptureHeight = 400;
             webcam.TimeToCapture_milliseconds = FrameNumber;
             webcam.ImageCaptured += new WebCamCapture.WebCamEventHandler(webcam_ImageCaptured);
             _FrameImage = ImageControl;

@@ -247,7 +247,8 @@ namespace SchoolSafeID
             else
             {
                 //error ocured during upload                
-                MessageBox.Show(response.StatusCode + "\n" + response.StatusDescription);
+                MessageBox.Show("Error! Please try again.");
+                //MessageBox.Show(response.StatusCode + "\n" + response.StatusDescription);
             }
         }
 

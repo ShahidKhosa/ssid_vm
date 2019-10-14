@@ -20,13 +20,13 @@ namespace SchoolSafeID
     /// Interaction logic for Scan_License.xaml
     /// </summary>
     public partial class ScanLicense : Page
-    {
+    {        
         public System.Windows.Forms.Timer tmrDelay;
 
 
         public ScanLicense()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
 
@@ -112,7 +112,7 @@ namespace SchoolSafeID
             tmrDelay = new System.Windows.Forms.Timer();
             tmrDelay.Interval = 1200;
             tmrDelay.Enabled = false;
-            txtBarcodeData.Focus();
+            txtBarcodeData.Focus();            
         }
 
 
@@ -159,26 +159,44 @@ namespace SchoolSafeID
 
         public void SetData()
         {
-            APIManager.GetVisitorData();
-
-            if(Visitor.FirstName != string.Empty)
+            if(Visitor.BarcodeData != string.Empty)
             {
-                txt_FirstName.Text = Visitor.FirstName;
-            }
+                APIManager.GetVisitorData();
 
-            if (Visitor.LastName != string.Empty)
-            {
-                txt_LastName.Text = Visitor.LastName;
-            }
+                if (Visitor.FirstName != string.Empty)
+                {
+                    txt_FirstName.Text = Visitor.FirstName;
+                }
 
-            if (Visitor.DateOfBirth != string.Empty)
-            {
-                txt_DateOfBirth.Text = Visitor.DateOfBirth;
+                if (Visitor.LastName != string.Empty)
+                {
+                    txt_LastName.Text = Visitor.LastName;
+                }
+
+                if (Visitor.DateOfBirth != string.Empty)
+                {
+                    txt_DateOfBirth.Text = Visitor.DateOfBirth;
+                }
+
+                Visitor.IsOfficeUseOnly = false;
+                btnConfirm.IsEnabled = true;
             }
-            
-            Visitor.IsOfficeUseOnly = false;
-            btnConfirm.IsEnabled = true;
         }
 
+
+        public void Executed_Open(object sender, ExecutedRoutedEventArgs e)
+        {
+            //MessageBox.Show("Executing the Open command");
+            Visitor.BarcodeData = "@ANSI 636058050002DL00410217ZO02580064DLDAQY081724446DCSEADSDDENDACSTACYDDFNDADLYNNDDGNDCADDCBNONEDCDNONEDBC2DAU504DAYGRNDAG7016 STONYCREEK DRIVEDAIOKLAHOMACITYDAJOKDAK731320000DCFNONEDCGUSADAW118DBA07312019DBB12091979DBD08262015ZOZOANZOBNZOCRENEWALZODZOE5579ZOF55ZOG33.50ZOHZOINZOJN";
+            SetData();
+
+            txtBarcodeData.Focus();
+            txtBarcodeData.Text = "";            
+        }
+
+        public void CanExecute_Open(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
     }
 }
