@@ -1,0 +1,74 @@
+2019-10-16 23:39:11,410 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-16 23:39:11,801 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-16 23:39:13,710 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-16 23:39:25,675 [1] INFO SchoolSafeID.Helper - Camera Loaded
+2019-10-16 23:39:27,059 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:27,180 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:27,264 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:27,343 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:27,423 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:27,505 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:27,573 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:27,646 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:27,716 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:27,795 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:27,858 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:27,927 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:27,996 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:28,069 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:28,140 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:28,222 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:28,293 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:28,385 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:28,467 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:28,550 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:28,625 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:28,694 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:28,782 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:28,854 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:28,922 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:29,008 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:29,078 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:29,145 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:29,233 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:29,315 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:29,403 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:29,510 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:29,581 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:29,663 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:29,728 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:29,804 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:29,881 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:29,969 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:30,028 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:30,096 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:30,175 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:30,246 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:30,334 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:30,426 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:30,510 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:30,610 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-16 23:39:36,488 [1] INFO SchoolSafeID.Helper - Camera Loaded
+2019-10-16 23:39:37,836 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:37,888 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:37,955 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:38,013 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:38,083 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:38,153 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:38,224 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:38,309 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:38,401 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:38,505 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:38,593 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:38,660 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:38,745 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-16 23:39:38,816 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-17 00:54:30,157 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-17 00:54:30,415 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-17 00:54:33,009 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-17 00:55:36,655 [1] INFO SchoolSafeID.Helper - {Snagit 2018, Send To OneNote 16, OneNote, Microsoft XPS Document Writer, Microsoft Print to PDF, Fax, DYMO LabelWriter 450 Turbo, \\10.10.10.18\hp LaserJet 1320 PCL 5}
+2019-10-17 00:57:25,291 [1] INFO SchoolSafeID.Helper - Camera Loaded
+2019-10-17 00:57:26,694 [1] INFO SchoolSafeID.Helper - Detected Faces 0
+2019-10-17 01:00:54,036 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-17 01:00:54,431 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-17 01:00:57,017 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png

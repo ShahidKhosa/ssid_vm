@@ -71,13 +71,22 @@ namespace SchoolSafeID
 
         public static void Download(string url, string path)
         {
-            var client = new RestClient(url);            
-            var request = new RestRequest(Method.GET);
+            Helper.log.Info("Download School Logo " + url);
 
-            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            try
+            {
+                var client = new RestClient(url);
+                var request = new RestRequest(Method.GET);
 
-            client.DownloadData(request).SaveAs(path);            
+                ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
+                client.DownloadData(request).SaveAs(path);
+            }
+            catch(Exception ex)
+            {
+                Helper.log.Error("Download School Logo Exception ", ex);
+            }         
         }
         
 
@@ -95,7 +104,7 @@ namespace SchoolSafeID
                 }                
                 catch(Exception ex)
                 {
-
+                    Helper.log.Error("Download File Exception ", ex);
                 }
 
                 if (printBadge == 1)
@@ -103,7 +112,11 @@ namespace SchoolSafeID
                     var printWrapper = new PDFtoPrintWrapper();
                     await printWrapper.Print(BadgePath, AppSettings.PrinterName);
                 }
-            }                            
+            } 
+            else
+            {                
+                Helper.log.Error("Download File Status " + response.StatusCode + "\n" + response.StatusDescription);
+            }
         }
 
 
@@ -123,6 +136,8 @@ namespace SchoolSafeID
                 var request = new RestRequest("/api/class_api.php");
                 request.AddParameter("action", "home_page"); 
                 request.AddParameter("job_no", AppSettings.JobNo);
+                
+                Helper.log.Info("Fetch Kiosk Settings for Job No " + AppSettings.JobNo);
 
                 // execute the request
                 var response = client.Post(request);
@@ -137,6 +152,10 @@ namespace SchoolSafeID
                     }
 
                     GetAllStudents("get_all_students");
+                }
+                else
+                {
+                    Helper.log.Error("Kiosk Settings Status " + response.StatusCode + "\n" + response.StatusDescription);
                 }
 
                 InProgress = false;                
@@ -171,14 +190,20 @@ namespace SchoolSafeID
                     }
                     else if (result.ContainsKey("message"))
                     {
+                        Helper.log.Error("Get Visitor Data Error " + request);
                         MessageBox.Show(result["message"].ToString());
                     }
                     else
                     {
+                        Helper.log.Error("Get Visitor Data Error " + result);
                         MessageBox.Show("Error! Please try again.");
                     }
                 }
-            }                           
+            }
+            else
+            {
+                Helper.log.Error("Get Visitor Data Status " + response.StatusCode + "\n" + response.StatusDescription);
+            }
         }
 
 
@@ -199,7 +224,7 @@ namespace SchoolSafeID
             else
             {
                 SendVisitorDataAsync(request, client);
-            }
+            }            
         }
 
 
@@ -211,12 +236,12 @@ namespace SchoolSafeID
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
                     //upload successfull
-                    MessageBox.Show("Upload completed succesfully...\n" + response.Content);
+                    //MessageBox.Show("Upload completed succesfully...\n" + response.Content);
                 }
                 else
-                {
-                    //error ocured during upload
-                    MessageBox.Show(response.StatusCode + "\n" + response.StatusDescription);
+                {                    
+                    Helper.log.Error("Send Visitor Data Async " + response.StatusCode + "\n" + response.StatusDescription);
+                    MessageBox.Show("Error, please try again");
                 }
             });
         }
@@ -236,6 +261,7 @@ namespace SchoolSafeID
                 {
                     if (result.ContainsKey("sticker"))
                     {
+                        Helper.log.Info("Download Badge from " + result["sticker"]);
                         DownloadFile(result["sticker"].ToString(), BadgePath, 1);
                     }
                 }
@@ -246,9 +272,9 @@ namespace SchoolSafeID
             }
             else
             {
-                //error ocured during upload                
-                MessageBox.Show("Error! Please try again.");
-                //MessageBox.Show(response.StatusCode + "\n" + response.StatusDescription);
+                //error ocured during upload    
+                Helper.log.Error("Send Visitor Data Sync " + response.StatusCode + "\n" + response.StatusDescription);
+                MessageBox.Show("Error! Please try again.");                
             }
         }
 
@@ -290,20 +316,19 @@ namespace SchoolSafeID
 
                     Visitor.IsVerified = result = Boolean.Parse(data["success"].ToString());
                 }
-                catch(SerializationException e)
+                catch(SerializationException ex)
                 {
-                    MessageBox.Show(e.Message);
+                    Helper.log.Error("Verify Visitor Data Exception ", ex);                    
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
-                    MessageBox.Show(e.Message);
+                    Helper.log.Error("Verify Visitor Data Exception ", ex);                    
                 }
             }
             else
             {
                 Visitor.IsVerified = result = false;
-                //error ocured during upload
-                //MessageBox.Show(response.StatusCode + "\n" + response.StatusDescription);
+                Helper.log.Error("Verify Visitor Data " + response.StatusCode + "\n" + response.StatusDescription);                
             }
 
             return result;
@@ -373,13 +398,19 @@ namespace SchoolSafeID
                     }
                     else if (result.ContainsKey("error"))
                     {
+                        Helper.log.Error("Get Student Data Server Error " + result["error"]);
                         MessageBox.Show(result["error"].ToString());
                     }
                     else
                     {
+                        Helper.log.Error("Get Student Data General Error " + request);
                         MessageBox.Show("Error! Please try again.");
                     }
                 }
+            }
+            else
+            {                
+                Helper.log.Error("Get Student Data " + response.StatusCode + "\n" + response.StatusDescription);
             }
         }
 
@@ -430,7 +461,7 @@ namespace SchoolSafeID
                 else
                 {
                     //error ocured during upload
-                    MessageBox.Show(response.StatusCode + "\n" + response.StatusDescription);
+                    Helper.log.Error("Get All Students Request Error " + response.StatusCode + "\n" + response.StatusDescription);                    
                 }
             });
         }

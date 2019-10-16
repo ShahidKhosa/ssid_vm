@@ -13,17 +13,26 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using log4net;
 
 namespace SchoolSafeID
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /*
+     * Options Available
+     * log.info
+     * log.error
+     * log.fatal
+     * log.debug
+    */
     public partial class MainWindow : Window
     {        
         public MainWindow()
         {
             InitializeComponent();
+            log4net.Config.XmlConfigurator.Configure();
 
             try
             {
@@ -31,7 +40,7 @@ namespace SchoolSafeID
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Helper.log.Error(ex.Message);
             }            
         }
 

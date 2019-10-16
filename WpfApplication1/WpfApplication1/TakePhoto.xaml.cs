@@ -12,6 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Emgu.CV;
+using Emgu.CV.CvEnum;
+using Emgu.CV.Structure;
+using System.Runtime.InteropServices;
+using Emgu.CV.WPF;
+using log4net;
+using System.Windows.Threading;
+using System.IO;
+using System.Drawing;
+
 
 namespace SchoolSafeID
 {
@@ -20,19 +30,22 @@ namespace SchoolSafeID
     /// </summary>
     public partial class TakePhoto : Page
     {
-        WebCam webcam;
+        private VideoCapture _capture = null;
+        Image<Bgr, Byte> currentFrame = null;
+        private CascadeClassifier _haarCascade;
+        DispatcherTimer _timer;
+        
 
         public TakePhoto()
         {
             InitializeComponent();
+            LoadCamera();
+            Helper.log.Info("Camera Loaded");
         }
 
         private void page_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
-            // TODO: Add event handler implementation here.
-            webcam = new WebCam();
-            webcam.InitializeWebCam(ref imgCapture);                        
-            webcam.Start();
+            //LoadCamera();
         }
 
 
@@ -40,11 +53,11 @@ namespace SchoolSafeID
         {
             btnTakePhoto.IsEnabled  = false;
             btnTakePhoto.Content    = "Processing...";
+            
+            Helper.SaveImageCapture(currentFrame);
+            Helper.log.Info("Save Visitor Image");
 
-            Helper.SaveImageCapture((BitmapSource)imgCapture.Source);
-            webcam.Stop();
-
-            if(!Visitor.IsVerified)
+            if (!Visitor.IsVerified)
             {
                 bool result = APIManager.VerifyVisitorData();
 
@@ -89,10 +102,59 @@ namespace SchoolSafeID
 
 
         private void btn_GoBack_Click(object sender, RoutedEventArgs e)
-        {
-            webcam.Stop();
+        {            
             //this.NavigationService.Navigate(new Uri("DigitalPass.xaml", UriKind.Relative));
             this.NavigationService.Navigate(new Uri("ScanLicense.xaml", UriKind.Relative));
+        }
+
+
+        private void LoadCamera()
+        {
+            _capture = new VideoCapture(1); 
+            
+            if(_capture.Height < 1 && _capture.Width < 1)
+            {
+                _capture = new VideoCapture(0);
+            }
+
+            string filePath = System.IO.Path.Combine(Environment.CurrentDirectory, "haarcascade_frontalface_alt_tree.xml");
+
+            _haarCascade = new CascadeClassifier(filePath);
+
+            _timer = new DispatcherTimer();
+            _timer.Tick += (_, __) =>
+            {
+                var cf = _capture.QueryFrame();                
+
+                if (cf != null)
+                {
+                    currentFrame = cf.ToImage<Bgr, Byte>();                    
+                    Image<Gray, Byte> grayFrame = currentFrame.Convert<Gray, Byte>();
+
+                    var detectedFaces = _haarCascade.DetectMultiScale(grayFrame);
+                    Helper.log.Info("Detected Faces " + detectedFaces.Length);
+
+                    currentFrame.Draw(new System.Drawing.Rectangle(174, 59, 277, 352), new Bgr(0, double.MaxValue, 0), 1);
+
+                    //foreach (var face in detectedFaces)
+                    //{                        
+                    //    currentFrame.Draw(face, new Bgr(0, double.MaxValue, 0), 1);                    
+                    //}                        
+
+                    imgCapture.Source = BitmapSourceConvert.ToBitmapSource(currentFrame);
+                }
+            };
+
+            _timer.Interval = new TimeSpan(0, 0, 0, 0, 1);
+            _timer.Start();
+
+        }
+
+
+        private void Page_Unloaded(object sender, RoutedEventArgs e)
+        {
+            if (_capture != null)
+                _capture.Dispose();//worked but crashed due to memory issue
         }
     }
 }

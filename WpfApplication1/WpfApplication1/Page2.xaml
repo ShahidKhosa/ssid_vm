@@ -4,13 +4,9 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SchoolSafeID"
-      
-       xmlns:cam="clr-namespace:WebcamControl;assembly=WebcamControl"
-      
-      
+      xmlns:cam="clr-namespace:WebcamControl;assembly=WebcamControl"      
       mc:Ignorable="d" 
-      d:DesignHeight="495" d:DesignWidth="353"
-      
+      d:DesignHeight="495" d:DesignWidth="353"      
       Title="Page2">
 
     <Grid>

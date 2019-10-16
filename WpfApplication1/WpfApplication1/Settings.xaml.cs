@@ -50,5 +50,33 @@ namespace SchoolSafeID
             System.Windows.Forms.Application.Restart();
             Application.Current.Shutdown();
         }
+
+
+        private void LoadCameraList()
+        {
+            /*
+            //-> Create a List to store for ComboCameras
+            List<KeyValuePair<int, string>> ListCamerasData = new List<KeyValuePair<int, string>>();
+
+            //-> Find systems cameras with DirectShow.Net dll 
+            DsDevice[] _SystemCamereas = DsDevice.GetDevicesOfCat(FilterCategory.VideoInputDevice);
+
+            int _DeviceIndex = 0;
+            foreach (DirectShowLib.DsDevice _Camera in _SystemCamereas)
+            {
+                ListCamerasData.Add(new KeyValuePair<int, string>(_DeviceIndex, _Camera.Name));
+                _DeviceIndex++;
+            }
+
+            //-> clear the combobox
+            ComboBoxCameraList.DataSource = null;
+            ComboBoxCameraList.Items.Clear();
+
+            //-> bind the combobox
+            ComboBoxCameraList.DataSource = new BindingSource(ListCamerasData, null);
+            ComboBoxCameraList.DisplayMember = "Value";
+            ComboBoxCameraList.ValueMember = "Key";
+            */
+        }
     }
 }

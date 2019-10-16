@@ -6,33 +6,19 @@ using System.Collections.Generic;
 using System.Windows.Media.Imaging;
 using System.Drawing;
 using Newtonsoft.Json;
+using Emgu.CV;
+using Emgu.CV.Structure;
+using log4net;
 
 namespace SchoolSafeID
 {
     class Helper
     {
+        public static readonly ILog log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
 
         public static string DefaultImage = GetPath() + "\\placeholder.jpg";
 
-        //Block Memory Leak
-        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
-        public static extern bool DeleteObject(IntPtr handle);
-        public static BitmapSource bs;
-        public static IntPtr ip;
-        public static BitmapSource LoadBitmap(System.Drawing.Bitmap source)
-        {
-
-            ip = source.GetHbitmap();
-
-            bs = System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(ip, IntPtr.Zero, System.Windows.Int32Rect.Empty,
-
-                System.Windows.Media.Imaging.BitmapSizeOptions.FromEmptyOptions());
-
-            DeleteObject(ip);
-
-            return bs;
-
-        }
 
         public static string GetPath(string innerPath = "")
         {
@@ -47,32 +33,23 @@ namespace SchoolSafeID
             return path;
         }
 
-        public static string SaveImageCapture(BitmapSource bitmap)
-        {
-            string fileName = "visitor.jpg";
 
+        public static void SaveImageCapture(Image<Bgr, Byte> currentFrame)
+        {            
             try
             {
-                JpegBitmapEncoder encoder = new JpegBitmapEncoder();
-                encoder.Frames.Add(BitmapFrame.Create(bitmap));
-                encoder.QualityLevel = 100;
+                currentFrame.Save(Visitor.FullImagePath);
 
-                // Save Image
-                FileStream fstream = new FileStream(Visitor.FullImagePath, FileMode.Create);
-                encoder.Save(fstream);
-                fstream.Close();
-
-                CropImage(Visitor.FullImagePath, 100, 50, 275, 350);
+                CropImage(Visitor.FullImagePath, 175, 60, 275, 350);
             }
             catch( Exception ex)
             {
                 Console.Write(ex.Message);
-            }
-            
-            return fileName;
+            }                        
         }
 
-        public static void CropImage(string filePath, int x = 70, int y = 0, int width = 275, int height = 350)
+
+        public static void CropImage(string filePath, int x = 175, int y = 60, int width = 275, int height = 350)
         {
             Image source = Image.FromFile(filePath);            
             Rectangle crop = new Rectangle(x, y, width, height);

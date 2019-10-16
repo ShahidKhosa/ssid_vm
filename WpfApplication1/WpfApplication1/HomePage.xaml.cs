@@ -29,57 +29,66 @@ namespace SchoolSafeID
             InitPage();
         }
 
+
         public void InitPage()
-        {            
-            if (APIManager.KioskSettings == null)
+        {
+            try
             {
-                APIManager.GetKioskSettings();
-            }
-
-            txtWelcomeText.Text = APIManager.KioskSettings["welcome_text"].ToString().Replace("<br/>", "\r\n").Replace("<br>", "\r\n");
-
-            imgSchoolLogo.Source = new BitmapImage(new Uri(APIManager.LogoPath, UriKind.Absolute));
-
-            if (APIManager.KioskSettings.ContainsKey("app_settings"))
-            {
-                if (APIManager.KioskSettings["app_settings"].ToString().ToLower().Equals("off"))
+                if (APIManager.KioskSettings == null)
                 {
-                    btnSettings.Visibility = Visibility.Collapsed;
+                    APIManager.GetKioskSettings();
+                }
+
+                txtWelcomeText.Text = APIManager.KioskSettings["welcome_text"].ToString().Replace("<br/>", "\r\n").Replace("<br>", "\r\n");
+
+                imgSchoolLogo.Source = new BitmapImage(new Uri(APIManager.LogoPath, UriKind.Absolute));
+
+                if (APIManager.KioskSettings.ContainsKey("app_settings"))
+                {
+                    if (APIManager.KioskSettings["app_settings"].ToString().ToLower().Equals("off"))
+                    {
+                        btnSettings.Visibility = Visibility.Collapsed;
+                    }
+                    else
+                    {
+                        btnSettings.Visibility = Visibility.Visible;
+                    }
                 }
                 else
                 {
-                    btnSettings.Visibility = Visibility.Visible;
+                    btnSettings.Visibility = Visibility.Collapsed;
                 }
-            }
-            else
-            {
-                btnSettings.Visibility = Visibility.Collapsed;
-            }
 
-            if (APIManager.KioskSettings.ContainsKey("turn_student_kiosk"))
-            {
-                if (APIManager.KioskSettings["turn_student_kiosk"].ToString().ToLower().Equals("on"))
+                if (APIManager.KioskSettings.ContainsKey("turn_student_kiosk"))
+                {
+                    if (APIManager.KioskSettings["turn_student_kiosk"].ToString().ToLower().Equals("on"))
+                    {
+                        btnStudentSignin.Visibility = Visibility.Visible;
+                        btnStudentSignout.Visibility = Visibility.Visible;
+                    }
+                    else
+                    {
+                        btnStudentSignin.Visibility = Visibility.Collapsed;
+                        btnStudentSignout.Visibility = Visibility.Collapsed;
+                    }
+                }
+                else
                 {
                     btnStudentSignin.Visibility = Visibility.Visible;
                     btnStudentSignout.Visibility = Visibility.Visible;
                 }
-                else
-                {
-                    btnStudentSignin.Visibility = Visibility.Collapsed;
-                    btnStudentSignout.Visibility = Visibility.Collapsed;
-                }
             }
-            else
+            catch(Exception ex)
             {
-                btnStudentSignin.Visibility = Visibility.Visible;
-                btnStudentSignout.Visibility = Visibility.Visible;
+                Helper.log.Error("Home Page Error", ex);
             }
         }
 
 
         private void page_Loaded(object sender, RoutedEventArgs e)
         {
-            Visitor.ResetData();            
+            Visitor.ResetData();
+            Student.ResetData();
         }        
 
 
@@ -109,8 +118,10 @@ namespace SchoolSafeID
 
         public void loadPrinters(ComboBox printersList)
         {
+            Helper.log.Info(System.Drawing.Printing.PrinterSettings.InstalledPrinters);
+
             int printerIndex = 0;
-            int i = 0;
+            int i = 0;            
 
             foreach (string printerName in System.Drawing.Printing.PrinterSettings.InstalledPrinters)
             {
@@ -125,30 +136,28 @@ namespace SchoolSafeID
             }
 
             printersList.SelectedIndex = printerIndex;
-
         }
+
 
         private void btnStudentSignin_Click(object sender, RoutedEventArgs e)
         {
             if (APIManager.KioskSettings.ContainsKey("student_no_required") && APIManager.KioskSettings["student_no_required"].ToString().ToLower() == "no")
-            {
-                //header('Location: ./visitor-management&a=search_student');
+            {                
                 this.NavigationService.Navigate(new Uri("SearchStudent.xaml", UriKind.Relative));
             }
             else if (APIManager.KioskSettings.ContainsKey("tardy_pass_option") && APIManager.KioskSettings["tardy_pass_option"].ToString() == string.Empty)
-            {
-                //header('Location: ./visitor-management&a=student_sign_in');
+            {             
                 this.NavigationService.Navigate(new Uri("StudentSignin.xaml", UriKind.Relative));
             }
 
             this.NavigationService.Navigate(new Uri("SigninOptions.xaml", UriKind.Relative));
         }
 
+
         private void btnStudentSignout_Click(object sender, RoutedEventArgs e)
         {
             Visitor.IsVisitor = 1;// 1 mean a parent is checking out a student 
-            this.NavigationService.Navigate(new Uri("ScanLicense.xaml", UriKind.Relative));
-            //this.NavigationService.Navigate(new Uri("ParentSignout.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("ScanLicense.xaml", UriKind.Relative));            
         }
     }
 }
