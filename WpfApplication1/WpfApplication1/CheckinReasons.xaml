@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SchoolSafeID"
       mc:Ignorable="d"       
-      Title="Select Check-in Reasons" Loaded="Page_Loaded">
+      Title="Select Check-in Reasons" Loaded="Page_Loaded" Style="{StaticResource SSIDPage}">
 
     <DockPanel LastChildFill="True">
 
@@ -25,20 +25,20 @@
 
         <StackPanel DockPanel.Dock="Right"></StackPanel>
 
-        <WrapPanel Width="1020" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock TextAlignment="Center" Width="960" Style="{StaticResource MaterialDesignDisplay1TextBlock}" Height="130"><Run Text="ID Scan Successful."/><LineBreak/><Run Text="Which option best describes you?"/></TextBlock>
 
-            <Button Name="btnOption1" Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 1" Tag="1" Click="btnOptionClick" />
-            <Button Name="btnOption2" Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 2" Tag="2" Click="btnOptionClick" />
-            <Button Name="btnOption3" Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 3" Tag="3" Click="btnOptionClick" />
+            <Button Height="100" Name="btnOption1" Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 1" Tag="1" Click="btnOptionClick" />
+            <Button Height="100" Name="btnOption2" Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 2" Tag="2" Click="btnOptionClick" />
+            <Button Height="100" Name="btnOption3" Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 3" Tag="3" Click="btnOptionClick" />
 
-            <Button Name="btnOption4" Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 4" Tag="4" Click="btnOptionClick" />
-            <Button Name="btnOption5" Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 5" Tag="5" Click="btnOptionClick" />
-            <Button Name="btnOption6" Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 6" Tag="6" Click="btnOptionClick" />
+            <Button Height="100" Name="btnOption4" Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 4" Tag="4" Click="btnOptionClick" />
+            <Button Height="100" Name="btnOption5" Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 5" Tag="5" Click="btnOptionClick" />
+            <Button Height="100" Name="btnOption6" Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 6" Tag="6" Click="btnOptionClick" />
 
-            <Button Name="btnOption7" Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 7" Tag="7" Click="btnOptionClick" />
-            <Button Name="btnOption8" Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 8" Tag="8" Click="btnOptionClick" />
-            <Button Name="btnOption9" Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 9" Tag="9" Click="btnOptionClick" />
+            <Button Height="100" Name="btnOption7" Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 7" Tag="7" Click="btnOptionClick" />
+            <Button Height="100" Name="btnOption8" Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 8" Tag="8" Click="btnOptionClick" />
+            <Button Height="100" Name="btnOption9" Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 9" Tag="9" Click="btnOptionClick" />
         </WrapPanel>
 
 

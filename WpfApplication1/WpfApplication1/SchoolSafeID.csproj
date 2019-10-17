@@ -384,7 +384,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Resource Include="fonts\Lato-BlackItalic.ttf" />
-    <Resource Include="fonts\Lato-Bold.ttf" />
+    <Content Include="fonts\Lato-Bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Resource Include="fonts\Lato-BoldItalic.ttf" />
     <Resource Include="fonts\Lato-Italic.ttf" />
     <Resource Include="fonts\Lato-Light.ttf" />

@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SchoolSafeID"
       mc:Ignorable="d"         
-      Title="Signin Options">
+      Title="Signin Options" Style="{StaticResource SSIDPage}">
 
     <DockPanel LastChildFill="True">
 
@@ -27,7 +27,7 @@
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
 
-            <TextBlock Text="Do you have your Student ID Badge with you today?" Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center" />
+            <TextBlock FontSize="30" Text="Do you have your Student ID Badge with you today?" Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center" />
 
             <StackPanel Orientation="Horizontal" Margin="0 20 0 0" HorizontalAlignment="Center">
                 <Button Style="{StaticResource MyButton}" Content="YES" Name="btnYes" Click="btnYes_Click"/>

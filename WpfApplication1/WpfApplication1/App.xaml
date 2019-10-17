@@ -14,9 +14,17 @@
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Combobox.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
+
+            <Style x:Key="SSIDPage" TargetType="Page">
+                <Setter Property="FontFamily" Value="fonts/Lato-Bold.ttf" />
+                <Setter Property="Width" Value="1200" />
+                <Setter Property="Background" Value="Red" />
+            </Style>
+
             <Style TargetType="{x:Type TextBlock}">
-                <Setter Property="FontFamily" Value="fonts/Lato-Black.ttf" />
-            </Style>            
+                <Setter Property="FontFamily" Value="fonts/Lato-Bold.ttf" />
+            </Style>
+            
             <Style TargetType="{x:Type ComboBox}">
                 <Setter Property="FontFamily" Value="fonts/Lato-Black.ttf" />
             </Style>
@@ -67,7 +75,7 @@
             </Style>
 
             <Style x:Key="MyTextField" TargetType="TextBox">
-                <Setter Property="Width" Value="700" />
+                <Setter Property="Width" Value="650" />
                 <Setter Property="Height" Value="70" />
                 <Setter Property="FontSize" Value="34" />
                 <Setter Property="Padding" Value="10" />
@@ -77,7 +85,7 @@
             </Style>
             
             <Style x:Key="ssid_ComboBox" TargetType="ComboBox">
-                <Setter Property="Width" Value="700" />
+                <Setter Property="Width" Value="650" />
                 <Setter Property="Height" Value="70" />
                 <Setter Property="FontSize" Value="34" />
                 <Setter Property="Padding" Value="10" />
@@ -87,7 +95,7 @@
             </Style>
 
             <Style x:Key="WmTextField" TargetType="wpfx1:WatermarkTextBox">
-                <Setter Property="Width" Value="700" />
+                <Setter Property="Width" Value="650" />
                 <Setter Property="Height" Value="70" />
                 <Setter Property="FontSize" Value="34" />
                 <Setter Property="Padding" Value="10" />
@@ -96,7 +104,7 @@
                 <Setter Property="BorderThickness" Value="1" />
                 <Style.Triggers>
                     <Trigger Property="IsEnabled" Value="False">
-                        <Setter Property="Background" Value="#ccc" />
+                        <Setter Property="Background" Value="#ddd" />
                     </Trigger>
                 </Style.Triggers>
             </Style>
@@ -113,7 +121,7 @@
             </Style>
 
             <Style x:Key="MsTextField" TargetType="wpfx1:MaskedTextBox">
-                <Setter Property="Width" Value="700" />
+                <Setter Property="Width" Value="650" />
                 <Setter Property="Height" Value="70" />
                 <Setter Property="FontSize" Value="34" />
                 <Setter Property="Padding" Value="10" />
@@ -122,14 +130,14 @@
                 <Setter Property="BorderThickness" Value="1" />
                 <Style.Triggers>
                     <Trigger Property="IsEnabled" Value="False">
-                        <Setter Property="Background" Value="#ccc" />
+                        <Setter Property="Background" Value="#ddd" />
                     </Trigger>
                 </Style.Triggers>
             </Style>
 
             <Style x:Key="MyButton" TargetType="Button">
-                <Setter Property="FontFamily" Value="fonts/Lato-Black.ttf" />
-                <Setter Property="Width" Value="300" />
+                <Setter Property="FontFamily" Value="fonts/Lato-Bold.ttf" />
+                <Setter Property="Width" Value="280" />
                 <Setter Property="Height" Value="80" />
                 <Setter Property="FontSize" Value="28" />
                 <Setter Property="Padding" Value="21" />

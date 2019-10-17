@@ -45,7 +45,7 @@ namespace SchoolSafeID
             txtVisitorType.Text = Visitor.CheckinOption;
             txtDestination.Text = Visitor.Destination;
 
-            txtDate.Text = Visitor.VisitDateTime.ToString("MM/dd/yyyy");
+            txtDate.Text = "Check-in: " + Visitor.VisitDateTime.ToString("MM/dd/yyyy");
             txtTime.Text = Visitor.VisitDateTime.ToString("hh:mm:ss tt");
                         
             imgVisitorImage.Source = new BitmapImage(new Uri(Visitor.CroppedImagePath, UriKind.Absolute));

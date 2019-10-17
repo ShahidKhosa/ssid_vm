@@ -6,8 +6,7 @@
         TextElement.FontWeight="Regular"
         TextElement.FontSize="14"
         TextOptions.TextFormattingMode="Ideal" 
-        TextOptions.TextRenderingMode="Auto"                
-        FontFamily="{DynamicResource MaterialDesignFont}"
+        TextOptions.TextRenderingMode="Auto"                                
         Title="Vistor Management System" Icon="favicon.ico" HorizontalAlignment="Center" VerticalAlignment="Center" 
         WindowState="Maximized" WindowStyle="None" HorizontalContentAlignment="Center">
 

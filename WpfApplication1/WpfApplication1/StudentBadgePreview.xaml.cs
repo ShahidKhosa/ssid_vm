@@ -72,7 +72,7 @@ namespace SchoolSafeID
             txtSigninReason.Text = Student.CheckinOption;
             txtGrade.Text = Student.Grade;
 
-            txtDate.Text = Student.VisitDateTime.ToString("MM/dd/yyyy");
+            txtDate.Text = "Check-in: " + Student.VisitDateTime.ToString("MM/dd/yyyy");
             txtTime.Text = Student.VisitDateTime.ToString("hh:mm:ss tt");
 
 

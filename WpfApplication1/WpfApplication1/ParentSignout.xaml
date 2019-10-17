@@ -8,7 +8,7 @@
       xmlns:wpfx1="http://schemas.xceed.com/wpf/xaml/toolkit"
       mc:Ignorable="d"       
       FocusManager.FocusedElement="{Binding ElementName=txtBarcodeData}"
-      Title="Parent Sign-out" Loaded="Page_Loaded" Focusable="True">
+      Title="Parent Sign-out" Loaded="Page_Loaded" Focusable="True" Style="{StaticResource SSIDPage}">
 
     <DockPanel LastChildFill="True">
 
@@ -76,7 +76,7 @@
                 </ListBox>
 
                 <Label Style="{StaticResource ssidLabel}">Reason for sign-out:</Label>
-                <ComboBox Margin="0"
+                <ComboBox Margin="0" Width="700" Text="Select Reason..." 
                 Style="{StaticResource ssid_ComboBox}"
                 HorizontalAlignment="Center"             
                 VerticalAlignment="Center"                             
@@ -91,7 +91,7 @@
                 </ComboBox>
 
                 <Label Style="{StaticResource ssidLabel}">Authorized Individual Signing Student Out:</Label>
-                <TextBox Margin="0" Style="{StaticResource MyTextField}" Name="txtIndividual" IsEnabled="False" />
+                <TextBox Width="700" Margin="0" Style="{StaticResource MyTextField}" Name="txtIndividual" IsEnabled="False" />
 
                 <Button Name="btnConfirm" Style="{StaticResource MyButton}" Content="SUBMIT" Margin="0 20 0 0" Click="Button_Click"/>
                 

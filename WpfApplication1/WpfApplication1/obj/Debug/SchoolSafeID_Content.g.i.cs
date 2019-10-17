@@ -10,6 +10,7 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("log4net.config")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("fonts/lato-black.ttf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("fonts/lato-bold.ttf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("haarcascade_frontalface_alt_tree.xml")]
 
 

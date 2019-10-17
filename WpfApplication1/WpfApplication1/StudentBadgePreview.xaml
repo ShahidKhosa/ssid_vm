@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SchoolSafeID"
       mc:Ignorable="d"       
-      Title="Student Badge Preview" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
+      Title="Student Badge Preview" Loaded="Page_Loaded" Unloaded="Page_Unloaded" Style="{StaticResource SSIDPage}">
 
     <DockPanel LastChildFill="True">
 
@@ -26,7 +26,7 @@
         <StackPanel DockPanel.Dock="Right"></StackPanel>
 
         <WrapPanel Width="960" VerticalAlignment="Center">
-            <TextBlock TextAlignment="Center" Width="960" Style="{StaticResource MaterialDesignDisplay1TextBlock}" Height="130"><Run Text="ID Scan Successful."/><LineBreak/><Run Text="Would you like to print your badge?" Foreground="#777"/></TextBlock>
+            <TextBlock TextAlignment="Center" Width="960" Style="{StaticResource MaterialDesignDisplay1TextBlock}" Height="130"><Run Text="ID Scan Successful."/><LineBreak/><Run FontSize="28" Text="Would you like to print your badge?" Foreground="#777"/></TextBlock>
 
             <WrapPanel Width="960">
                 <StackPanel HorizontalAlignment="Center" Width="960">
@@ -46,7 +46,7 @@
                         <StackPanel Grid.Column="2" VerticalAlignment="Top" Height="246" Grid.ColumnSpan="2" HorizontalAlignment="Center" Width="392">
                             <TextBlock Name="txtSchoolName" Margin="0,10,0,0" Height="35" TextAlignment="Center" Foreground="Black" FontSize="24" Text="School Name Here"/>
                             <Rectangle Margin="10" HorizontalAlignment="Stretch" Fill="Black" Height="5"/>
-                            <TextBlock Name="txtStudentName" Foreground="Black" FontSize="36" TextAlignment="Center" Text="Student Name Here"/>
+                            <TextBlock Name="txtStudentName" Foreground="Black" FontWeight="500" FontSize="36" TextAlignment="Center" Text="Student Name Here"/>
                             <TextBlock Name="txtGrade" Foreground="Black" FontSize="24" TextAlignment="Center" Text="Grade"/>
                             <Rectangle Margin="10" HorizontalAlignment="Stretch" Fill="Black" Height="5"/>
                             <TextBlock Name="txtDate" Foreground="Black" FontSize="24" TextAlignment="Center" Text="Check-in: 09/15/19"/>

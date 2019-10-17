@@ -184,14 +184,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SchoolSafeID.exe" size="2046408">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SchoolSafeID.exe" size="1975240">
       <assemblyIdentity name="SchoolSafeID" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YIBmfHF8un/vc37gMQ3SkPxqsUonG5n3X+N/inVEjmc=</dsig:DigestValue>
+        <dsig:DigestValue>MaFsRf/SqqmWnLfsr25ni2B/uFeonc5sf2ag71hkQno=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -574,6 +574,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>iUTaWoYezgAYX6Fz6mUyTn1Hl6qGPG+g8D4GaAWXS2w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="fonts\Lato-Bold.ttf" size="73316">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>e3IFmfiu07rFuVMf7PZ1DI+n5ZO3J3ObwGkvzA9Vtng=</dsig:DigestValue>
     </hash>
   </file>
   <file name="haarcascade_frontalface_alt_tree.xml" size="2689040" writeableType="applicationData">

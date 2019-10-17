@@ -50,7 +50,7 @@ namespace SchoolSafeID
         {
             Visitor.DigitalPass = true;
 
-            if (txt_Email.Text != String.Empty && txt_Phone.Text != String.Empty && ValidatorExtensions.IsValidEmailAddress(txt_Email.Text))
+            if (txt_Phone.Text != String.Empty || (txt_Email.Text != String.Empty && ValidatorExtensions.IsValidEmailAddress(txt_Email.Text)))
             {
                 // we must need to validate the email address before moving forward.
                 Visitor.EmailAddress = txt_Email.Text;
@@ -83,6 +83,35 @@ namespace SchoolSafeID
             bool result = ValidatorExtensions.IsValidEmailAddress(txt_Email.Text);
 
             txt_Email.BorderBrush = (result == true ? Brushes.Green : Brushes.Red);            
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (APIManager.KioskSettings.ContainsKey("send_digital_pass"))
+            {
+                string digitalPassType = APIManager.KioskSettings["send_digital_pass"].ToString().ToLower();
+
+                if (digitalPassType.Equals("phone"))
+                {
+                    txt_Phone.Visibility = Visibility.Visible;
+                    txt_Email.Visibility = Visibility.Collapsed;
+                }
+                else if(digitalPassType.Equals("email"))
+                {
+                    txt_Email.Visibility = Visibility.Visible;
+                    txt_Phone.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    txt_Email.Visibility = Visibility.Visible;
+                    txt_Phone.Visibility = Visibility.Visible;
+                }
+            }
+            else
+            {
+                txt_Email.Visibility = Visibility.Visible;
+                txt_Phone.Visibility = Visibility.Visible;
+            }
         }
     }
 }

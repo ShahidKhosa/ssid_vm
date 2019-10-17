@@ -41,7 +41,7 @@ namespace SchoolSafeID
             {                
                 APIManager.Signout();
 
-                this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
+                this.NavigationService.Navigate(new Uri("SignoutCompleted.xaml", UriKind.Relative));
             }
         }
 

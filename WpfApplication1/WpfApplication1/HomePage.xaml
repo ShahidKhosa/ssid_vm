@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SchoolSafeID"
       mc:Ignorable="d"         
-      Title="Home Page" Loaded="page_Loaded">
+      Title="Home Page" Loaded="page_Loaded" Style="{StaticResource SSIDPage}">
 
     <DockPanel LastChildFill="True">
 
@@ -32,10 +32,18 @@
             <TextBlock Name="txtWelcomeText" Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center" />
 
             <StackPanel Orientation="Horizontal" Margin="0 50 0 0">
-                <Button Style="{StaticResource MyButton}" Content="VISITOR SIGN IN" Click="btn_Signin_Click" />
-                <Button Style="{StaticResource MyButton}" Content="VISITOR SIGN OUT" Background="#AC1315" Click="btn_Signout_Click" />
-                <Button Name="btnStudentSignin" Style="{StaticResource MyButton}" Content="STUDENT SIGN IN" Background="#FC0" Foreground="#111" Click="btnStudentSignin_Click" />
-                <Button Name="btnStudentSignout" Style="{StaticResource MyButton}" Content="STUDENT SIGN OUT" Background="#3a5fcd" Click="btnStudentSignout_Click" />
+                <Button Style="{StaticResource MyButton}" Click="btn_Signin_Click">
+                    <TextBlock Margin="0 5 0 0" FontSize="32" TextAlignment="Center" Style="{StaticResource MaterialDesignDisplay1TextBlock}"><Run Text="VISITOR SIGN IN"/><LineBreak/><Run FontSize="18" FontStyle="Italic" Text="registro de visitante"/></TextBlock>
+                </Button>
+                <Button Style="{StaticResource MyButton}" Background="#AC1315" Click="btn_Signout_Click">
+                    <TextBlock Margin="0 5 0 0" FontSize="32" TextAlignment="Center" Style="{StaticResource MaterialDesignDisplay1TextBlock}"><Run Text="VISITOR SIGN OUT"/><LineBreak/><Run FontSize="18" FontStyle="Italic" Text="salida de visitante"/></TextBlock>
+                </Button>
+                <Button Name="btnStudentSignin" Style="{StaticResource MyButton}" Background="#FC0" Foreground="#111" Click="btnStudentSignin_Click">
+                    <TextBlock Margin="0 5 0 0" FontSize="32" TextAlignment="Center" Style="{StaticResource MaterialDesignDisplay1TextBlock}"><Run Text="STUDENT SIGN IN"/><LineBreak/><Run FontSize="18" FontStyle="Italic" Text="registro de estudiante"/></TextBlock>
+                </Button>
+                <Button Name="btnStudentSignout" Style="{StaticResource MyButton}" Background="#3a5fcd" Click="btnStudentSignout_Click">
+                    <TextBlock Margin="0 5 0 0" FontSize="32" TextAlignment="Center" Style="{StaticResource MaterialDesignDisplay1TextBlock}"><Run Text="STUDENT SIGN OUT"/><LineBreak/><Run FontSize="18" FontStyle="Italic" Text="salida de estudiante"/></TextBlock>
+                </Button>
             </StackPanel>
 
         </StackPanel>

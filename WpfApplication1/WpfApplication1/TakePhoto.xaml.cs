@@ -51,9 +51,15 @@ namespace SchoolSafeID
 
         private void btnTakePhoto_Click(object sender, RoutedEventArgs e)
         {
-            btnTakePhoto.IsEnabled  = false;
-            btnTakePhoto.Content    = "Processing...";
-            
+            SavePhoto();
+        }
+
+
+        private void SavePhoto()
+        {
+            btnTakePhoto.IsEnabled = false;
+            btnTakePhoto.Content = "Processing...";
+
             Helper.SaveImageCapture(currentFrame);
             Helper.log.Info("Save Visitor Image");
 
@@ -77,7 +83,7 @@ namespace SchoolSafeID
                         {
                             //its a parent signin to checkout student.
                             this.NavigationService.Navigate(new Uri("ParentSignout.xaml", UriKind.Relative));
-                        }                        
+                        }
                     }
                 }
                 else
@@ -87,7 +93,7 @@ namespace SchoolSafeID
             }
             else
             {
-                if(Visitor.IsVisitor == 0)
+                if (Visitor.IsVisitor == 0)
                 {
                     this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
                 }
@@ -95,7 +101,7 @@ namespace SchoolSafeID
                 {
                     //its a parent signin to checkout student.
                     this.NavigationService.Navigate(new Uri("ParentSignout.xaml", UriKind.Relative));
-                }                
+                }
             }
 
         }
@@ -110,11 +116,11 @@ namespace SchoolSafeID
 
         private void LoadCamera()
         {
-            _capture = new VideoCapture(1); 
+            _capture = new VideoCapture(0); 
             
             if(_capture.Height < 1 && _capture.Width < 1)
             {
-                _capture = new VideoCapture(0);
+                _capture = new VideoCapture(1);
             }
 
             string filePath = System.IO.Path.Combine(Environment.CurrentDirectory, "haarcascade_frontalface_alt_tree.xml");
@@ -130,16 +136,15 @@ namespace SchoolSafeID
                 {
                     currentFrame = cf.ToImage<Bgr, Byte>();                    
                     Image<Gray, Byte> grayFrame = currentFrame.Convert<Gray, Byte>();
+                    
+                    var detectedFaces = _haarCascade.DetectMultiScale(grayFrame, 1.1, 10, System.Drawing.Size.Empty);                    
+                    //var sdetectedFaces = _haarCascade.DetectMultiScale(grayFrame, 1.5, 0, new System.Drawing.Size(277, 352), new System.Drawing.Size(277, 352));                    
+                    foreach (var face in detectedFaces)
+                    {
+                        currentFrame.Draw(face, new Bgr(System.Drawing.Color.Red), 1);
+                    }
 
-                    var detectedFaces = _haarCascade.DetectMultiScale(grayFrame);
-                    Helper.log.Info("Detected Faces " + detectedFaces.Length);
-
-                    currentFrame.Draw(new System.Drawing.Rectangle(174, 59, 277, 352), new Bgr(0, double.MaxValue, 0), 1);
-
-                    //foreach (var face in detectedFaces)
-                    //{                        
-                    //    currentFrame.Draw(face, new Bgr(0, double.MaxValue, 0), 1);                    
-                    //}                        
+                    //currentFrame.Draw(new System.Drawing.Rectangle(174, 59, 277, 352), new Bgr(0, double.MaxValue, 0), 1);
 
                     imgCapture.Source = BitmapSourceConvert.ToBitmapSource(currentFrame);
                 }
