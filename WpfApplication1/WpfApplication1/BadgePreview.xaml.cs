@@ -65,7 +65,7 @@ namespace SchoolSafeID
             //Print Badge and complete visitor sign-in process and move to the next screen.
             APIManager.SendVisitorData(1);
 
-            Thread.Sleep(3000);
+            //Thread.Sleep(3000);
 
             this.NavigationService.Navigate(new Uri("PrintCompleted.xaml", UriKind.Relative));
         }

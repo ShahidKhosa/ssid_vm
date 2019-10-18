@@ -12,6 +12,7 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"                
         FontFamily="{DynamicResource MaterialDesignFont}"
+        FocusManager.FocusedElement="{Binding ElementName=txtStudentID}"
         Padding="20" ResizeMode="NoResize"
         Title="Match Student ID" Icon="favicon.ico" HorizontalAlignment="Center" VerticalAlignment="Center" 
         HorizontalContentAlignment="Center" Width="700" Height="350" WindowStartupLocation="CenterOwner">

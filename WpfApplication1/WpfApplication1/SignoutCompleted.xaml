@@ -7,7 +7,7 @@
       xmlns:local="clr-namespace:SchoolSafeID"
       xmlns:wpfx1="http://schemas.xceed.com/wpf/xaml/toolkit"
       mc:Ignorable="d"             
-      Title="Thank you! Sign-out completed">
+      Title="Thank you! Sign-out completed" Style="{StaticResource SSIDPage}">
 
     <DockPanel LastChildFill="True">
 

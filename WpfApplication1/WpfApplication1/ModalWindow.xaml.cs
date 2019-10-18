@@ -43,6 +43,7 @@ namespace SchoolSafeID
                     scanLicense.txt_DateOfBirth.IsEnabled = true;
                     scanLicense.btnConfirm.IsEnabled = true;
 
+                    scanLicense.txt_FirstName.Focus();
                     Visitor.IsOfficeUseOnly = true;
                     Visitor.OfficeUseOnlyPassword = txt_password.Password;
 

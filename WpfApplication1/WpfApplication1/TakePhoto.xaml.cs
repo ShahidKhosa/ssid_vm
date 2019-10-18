@@ -137,14 +137,14 @@ namespace SchoolSafeID
                     currentFrame = cf.ToImage<Bgr, Byte>();                    
                     Image<Gray, Byte> grayFrame = currentFrame.Convert<Gray, Byte>();
                     
-                    var detectedFaces = _haarCascade.DetectMultiScale(grayFrame, 1.1, 10, System.Drawing.Size.Empty);                    
+                    //var detectedFaces = _haarCascade.DetectMultiScale(grayFrame, 1.1, 10, System.Drawing.Size.Empty);                    
                     //var sdetectedFaces = _haarCascade.DetectMultiScale(grayFrame, 1.5, 0, new System.Drawing.Size(277, 352), new System.Drawing.Size(277, 352));                    
-                    foreach (var face in detectedFaces)
-                    {
-                        currentFrame.Draw(face, new Bgr(System.Drawing.Color.Red), 1);
-                    }
+                    //foreach (var face in detectedFaces)
+                    //{
+                    //    currentFrame.Draw(face, new Bgr(System.Drawing.Color.Red), 1);
+                    //}
 
-                    //currentFrame.Draw(new System.Drawing.Rectangle(174, 59, 277, 352), new Bgr(0, double.MaxValue, 0), 1);
+                    currentFrame.Draw(new System.Drawing.Rectangle(174, 59, 277, 352), new Bgr(0, double.MaxValue, 0), 1);
 
                     imgCapture.Source = BitmapSourceConvert.ToBitmapSource(currentFrame);
                 }

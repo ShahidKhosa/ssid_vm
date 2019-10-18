@@ -31,6 +31,7 @@ namespace SchoolSafeID
             this.NavigationService.Navigate(new Uri("ScanLicense.xaml", UriKind.Relative));
         }
 
+
         private void btnNoThanks_Click(object sender, RoutedEventArgs e)
         {
             ResetData();
@@ -46,11 +47,12 @@ namespace SchoolSafeID
             }            
         }
 
+
         private void btnCreateDigtalPass_Click(object sender, RoutedEventArgs e)
         {
             Visitor.DigitalPass = true;
 
-            if (txt_Phone.Text != String.Empty || (txt_Email.Text != String.Empty && ValidatorExtensions.IsValidEmailAddress(txt_Email.Text)))
+            if ((!txt_Phone.Text.Equals("(___) ___-____") && txt_Phone.Text != String.Empty) || (txt_Email.Text != String.Empty && ValidatorExtensions.IsValidEmailAddress(txt_Email.Text)))
             {
                 // we must need to validate the email address before moving forward.
                 Visitor.EmailAddress = txt_Email.Text;
@@ -67,6 +69,7 @@ namespace SchoolSafeID
                 }                
             }
         }
+
 
         private void ResetData()
         {

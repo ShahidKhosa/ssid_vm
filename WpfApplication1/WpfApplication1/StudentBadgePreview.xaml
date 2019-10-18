@@ -66,9 +66,9 @@
 
             <StackPanel Margin="0 50 0 0" HorizontalAlignment="Center" Width="960">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Button Style="{StaticResource MyButton}" Content="Print Student Pass" Name="btnPrintStudentPass" Click="btnPrintStudentPass_Click" />
-                    <Button Style="{StaticResource MyButton}" Content="Print Temporary Badge" Background="#AC1315" Name="btnPrintTemporaryBadge" Click="btnPrintTemporaryBadge_Click" />
-                    <Button Style="{StaticResource MyButton}" Content="No Badge Needed" Background="#FC0" Foreground="#111" Name="btnNoBadgeNeeded" Click="btnNoBadgeNeeded_Click" />
+                    <Button Width="310" Style="{StaticResource MyButton}" Content="Print Student Pass" Name="btnPrintStudentPass" Click="btnPrintStudentPass_Click" />
+                    <Button Width="310" Style="{StaticResource MyButton}" Content="Print Temporary Badge" Background="#AC1315" Name="btnPrintTemporaryBadge" Click="btnPrintTemporaryBadge_Click" />
+                    <Button Width="310" Style="{StaticResource MyButton}" Content="No Badge Needed" Background="#FC0" Foreground="#111" Name="btnNoBadgeNeeded" Click="btnNoBadgeNeeded_Click" />
                 </StackPanel>
             </StackPanel>
 

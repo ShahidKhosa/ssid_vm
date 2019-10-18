@@ -28,7 +28,7 @@ namespace SchoolSafeID
             InitializeComponent();            
 
             timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(5);
+            timer.Interval = TimeSpan.FromSeconds(3);
             timer.Tick += timer_Tick;
             timer.Start();
         }

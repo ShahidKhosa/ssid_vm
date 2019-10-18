@@ -55,7 +55,7 @@ namespace SchoolSafeID
             //Print Badge and complete Student sign-in process and move to the next screen.
             APIManager.SendStudentData(1, BadgeType);
 
-            this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("PrintCompleted.xaml", UriKind.Relative));
         }
 
 

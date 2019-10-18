@@ -33,15 +33,15 @@
             <StackPanel>
                 <StackPanel Name="show_suggestions">
                     <Label Style="{StaticResource ssidLabel}">Enter Student Name:</Label>
-                    <ComboBox Margin="0"
-                Style="{StaticResource ssid_ComboBox}"
-                HorizontalAlignment="Center"             
-                VerticalAlignment="Center" 
-                IsTextSearchEnabled="False"
-                SelectionChanged="cmbStudent_SelectionChanged"
-                PreviewTextInput="PreviewTextInput_EnhanceComboSearch"
-                PreviewKeyUp="PreviewKeyUp_EnhanceComboSearch"
-                DataObject.Pasting="Pasting_EnhanceComboSearch" IsEditable="True" Name="cmbStudent">
+                    <ComboBox Margin="0" Width="700"
+                    Style="{StaticResource ssid_ComboBox}"
+                    HorizontalAlignment="Center"             
+                    VerticalAlignment="Center" 
+                    IsTextSearchEnabled="False"
+                    SelectionChanged="cmbStudent_SelectionChanged"
+                    PreviewTextInput="PreviewTextInput_EnhanceComboSearch"
+                    PreviewKeyUp="PreviewKeyUp_EnhanceComboSearch"
+                    DataObject.Pasting="Pasting_EnhanceComboSearch" IsEditable="True" Name="cmbStudent">
                         <ComboBox.ItemContainerStyle>
                             <Style TargetType="ComboBoxItem">
                                 <Setter Property="Height" Value="80" />

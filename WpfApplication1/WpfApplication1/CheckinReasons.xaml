@@ -25,7 +25,7 @@
 
         <StackPanel DockPanel.Dock="Right"></StackPanel>
 
-        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="1200">
             <TextBlock TextAlignment="Center" Width="960" Style="{StaticResource MaterialDesignDisplay1TextBlock}" Height="130"><Run Text="ID Scan Successful."/><LineBreak/><Run Text="Which option best describes you?"/></TextBlock>
 
             <Button Height="100" Name="btnOption1" Style="{StaticResource MarginButtonStyle}" Content="Sign-in Option 1" Tag="1" Click="btnOptionClick" />

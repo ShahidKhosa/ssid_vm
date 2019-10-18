@@ -42,6 +42,7 @@ namespace SchoolSafeID
         {
             timer.Stop();
             Visitor.ResetData();
+            Student.ResetData();
 
             this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));            
         }

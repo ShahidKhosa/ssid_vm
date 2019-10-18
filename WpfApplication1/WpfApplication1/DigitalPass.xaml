@@ -24,52 +24,61 @@
         </StackPanel>
 
 
-        <StackPanel DockPanel.Dock="Left" Width="450" VerticalAlignment="Center">
-            <Image Width="372" Height="509" Source="Resources/digit_pass_preview.png" ToolTip="Digital Pass" />
-        </StackPanel>
-
+        <StackPanel DockPanel.Dock="Left"></StackPanel>
 
         <StackPanel DockPanel.Dock="Right"></StackPanel>
 
 
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="0,35,0,0">
-            <TextBlock Foreground="#088F40" FontSize="70" LineHeight="50" FontWeight="SemiBold" Style="{StaticResource MaterialDesignDisplay3TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="0" Text="Save Time"></TextBlock>
+        <Grid Margin="0,35,0,0" Width="1200" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="430"/>
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
 
-            <StackPanel>
-                <wpfx1:MaskedTextBox Mask="(000) 000-0000" Style="{StaticResource MsTextField}" Name="txt_Phone"/>
-                <!--<TextBox Style="{StaticResource MyTextField}" Name="txt_Phone" adorners:Watermark.Text="Enter Cell Phone Number"></TextBox>-->
-                <TextBox Style="{StaticResource MyTextField}" Name="txt_Email" TextChanged="txt_Email_TextChanged" adorners:Watermark.Text="Enter Email Address"></TextBox>
+            <StackPanel Grid.Column="0" HorizontalAlignment="Right" Margin="0 93 0 0">
+                <Image Width="372" Source="Resources/digit_pass_preview.png" ToolTip="Digital Pass" />
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal">
-                <Button Name="btnCreateDigtalPass" Style="{StaticResource MyButton}" Content="SEND MY PASS AND CONTINUE" Width="420" Margin="0 10 0 0" Click="btnCreateDigtalPass_Click"/>
-                <Button Name="btnNoThanks" Style="{StaticResource MyButton}" Content="NO, THANKS" Width="210" Margin="20 10 0 0" Click="btnNoThanks_Click"/>
-            </StackPanel>
+            <WrapPanel Grid.Column="1" HorizontalAlignment="Center">
+                <TextBlock Foreground="#088F40" FontSize="70" LineHeight="50" FontWeight="SemiBold" Style="{StaticResource MaterialDesignDisplay3TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="0" Text="Save Time"></TextBlock>
 
-            <TextBlock Foreground="#088F40" FontSize="36" LineHeight="30" FontWeight="600" Style="{StaticResource MaterialDesignDisplay1TextBlock}" HorizontalAlignment="Left" Margin="0,15,0,0" Text="Receive the Digital Pass"></TextBlock>
-            
-            <StackPanel Margin="25,5,0,0">
-                <BulletDecorator Margin="0,3">
-                    <BulletDecorator.Bullet>
-                        <Image Width="18" Height="18" Source="Resources/select.png"></Image>
-                    </BulletDecorator.Bullet>
-                    <TextBlock Text="Faster Check-In" FontSize="24" Margin="8,0,0,0"></TextBlock>
-                </BulletDecorator>
-                <BulletDecorator Margin="0,3">
-                    <BulletDecorator.Bullet>
-                        <Image Width="18" Height="18" Source="Resources/select.png"></Image>
-                    </BulletDecorator.Bullet>
-                    <TextBlock Text="No License Needed" FontSize="24" Margin="8,0,0,0"></TextBlock>
-                </BulletDecorator>
-                <BulletDecorator Margin="0,3">
-                    <BulletDecorator.Bullet>
-                        <Image Width="18" Height="18" Source="Resources/select.png"></Image>
-                    </BulletDecorator.Bullet>
-                    <TextBlock Text="Receive School Notifications" FontSize="24" Margin="8,0,0,0"></TextBlock>
-                </BulletDecorator>
-            </StackPanel>
+                <StackPanel>
+                    <wpfx1:MaskedTextBox Mask="(000) 000-0000" Style="{StaticResource MsTextField}" Name="txt_Phone" InputScope="TelephoneNumber"/>
+                    <TextBox InputScope="EmailSmtpAddress" Style="{StaticResource MyTextField}" Name="txt_Email" TextChanged="txt_Email_TextChanged" adorners:Watermark.Text="Enter Email Address"></TextBox>
+                </StackPanel>
 
-        </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="btnCreateDigtalPass" Style="{StaticResource MyButton}" Content="SEND MY PASS AND CONTINUE" Width="420" Margin="0 10 0 0" Click="btnCreateDigtalPass_Click"/>
+                    <Button Name="btnNoThanks" Style="{StaticResource MyButton}" Content="NO, THANKS" Width="210" Margin="20 10 0 0" Click="btnNoThanks_Click"/>
+                </StackPanel>
+
+                <StackPanel Margin="0,15,0,0">
+                    <TextBlock Foreground="#088F40" FontSize="36" LineHeight="30" FontWeight="Medium" Style="{StaticResource MaterialDesignDisplay1TextBlock}" HorizontalAlignment="Left" Margin="0,15,0,0" Text="Receive the Digital Pass"></TextBlock>
+                    <BulletDecorator Margin="25,3">
+                        <BulletDecorator.Bullet>
+                            <Image Width="18" Height="18" Source="Resources/select.png"></Image>
+                        </BulletDecorator.Bullet>
+                        <TextBlock Text="Faster Check-In" FontSize="24" Margin="8,0,0,0"></TextBlock>
+                    </BulletDecorator>
+                    <BulletDecorator Margin="25,3">
+                        <BulletDecorator.Bullet>
+                            <Image Width="18" Height="18" Source="Resources/select.png"></Image>
+                        </BulletDecorator.Bullet>
+                        <TextBlock Text="No License Needed" FontSize="24" Margin="8,0,0,0"></TextBlock>
+                    </BulletDecorator>
+                    <BulletDecorator Margin="25,3">
+                        <BulletDecorator.Bullet>
+                            <Image Width="18" Height="18" Source="Resources/select.png"></Image>
+                        </BulletDecorator.Bullet>
+                        <TextBlock Text="Receive School Notifications" FontSize="24" Margin="8,0,0,0"></TextBlock>
+                    </BulletDecorator>
+                </StackPanel>
+
+            </WrapPanel>
+        </Grid>
 
     </DockPanel>
 
