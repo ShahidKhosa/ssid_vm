@@ -81,7 +81,7 @@ namespace SchoolSafeID
             set;
         }
 
-        public static bool IsVerified
+        public static int IsVerified
         {
             get;
             set;
@@ -205,7 +205,7 @@ namespace SchoolSafeID
             IsOfficeUseOnly = false;
             DigitalPass = false;
             IsVisitor = 0;
-            IsVerified = false;
+            IsVerified = -1;
             EmailAddress = "";
             PhoneNumber = "";            
             CheckinOption = "";

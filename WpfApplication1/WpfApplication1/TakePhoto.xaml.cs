@@ -39,8 +39,7 @@ namespace SchoolSafeID
         public TakePhoto()
         {
             InitializeComponent();
-            LoadCamera();
-            Helper.log.Info("Camera Loaded");
+            LoadCamera();            
         }
 
         private void page_Loaded(object sender, System.Windows.RoutedEventArgs e)
@@ -51,23 +50,27 @@ namespace SchoolSafeID
 
         private void btnTakePhoto_Click(object sender, RoutedEventArgs e)
         {
+            btnTakePhoto.IsEnabled = false;
+            btnTakePhoto.Content = "Processing...";
+            btnBack.IsEnabled = false;
+
             SavePhoto();
+
         }
 
 
-        private void SavePhoto()
+        private async void SavePhoto()
         {
-            btnTakePhoto.IsEnabled = false;
-            btnTakePhoto.Content = "Processing...";
+            await Task.Delay(100);
 
             Helper.SaveImageCapture(currentFrame);
             Helper.log.Info("Save Visitor Image");
 
-            if (!Visitor.IsVerified)
+            if (Visitor.IsVerified != 1)
             {
-                bool result = APIManager.VerifyVisitorData();
+                int result = APIManager.VerifyVisitorData();
 
-                if (result)
+                if (result == 1)
                 {
                     if (Visitor.PassURL == String.Empty || Visitor.BarcodeData.Length > 40)
                     {
@@ -86,12 +89,17 @@ namespace SchoolSafeID
                         }
                     }
                 }
-                else
+                else if (result == 0)
                 {
                     this.NavigationService.Navigate(new Uri("ScanFailure.xaml", UriKind.Relative));
                 }
+                else
+                {
+                    MessageBox.Show("Error, Please try again.");
+                    this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
+                }
             }
-            else
+            else if(Visitor.IsVerified == 1)
             {
                 if (Visitor.IsVisitor == 0)
                 {
@@ -103,7 +111,6 @@ namespace SchoolSafeID
                     this.NavigationService.Navigate(new Uri("ParentSignout.xaml", UriKind.Relative));
                 }
             }
-
         }
 
 

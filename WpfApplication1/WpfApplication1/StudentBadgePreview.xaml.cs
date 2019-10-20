@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
@@ -43,7 +44,7 @@ namespace SchoolSafeID
         }
 
 
-        private void PrintBadge(Button button, String BadgeType)
+        private async void PrintBadge(Button button, String BadgeType)
         {
             button.Content = "Please wait...";
 
@@ -55,6 +56,7 @@ namespace SchoolSafeID
             //Print Badge and complete Student sign-in process and move to the next screen.
             APIManager.SendStudentData(1, BadgeType);
 
+            await Task.Delay(3000);
             this.NavigationService.Navigate(new Uri("PrintCompleted.xaml", UriKind.Relative));
         }
 

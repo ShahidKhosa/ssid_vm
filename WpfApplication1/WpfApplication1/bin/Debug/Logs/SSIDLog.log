@@ -5505,3 +5505,215 @@ System.IO.IOException: The process cannot access the file 'C:\Users\shahid.amin\
 2019-10-19 01:08:58,016 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
 2019-10-19 01:09:23,210 [1] INFO SchoolSafeID.Helper - Camera Loaded
 2019-10-19 01:09:26,263 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-19 23:05:48,631 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-19 23:05:49,130 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-19 23:05:51,375 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-19 23:06:59,405 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-19 23:06:59,716 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-19 23:07:01,750 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-19 23:20:13,712 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-19 23:20:19,291 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-19 23:20:21,384 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-19 23:25:28,141 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-19 23:25:33,293 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-19 23:25:35,162 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-19 23:36:51,038 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-19 23:36:51,354 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-19 23:36:53,417 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-19 23:36:59,899 [7] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-19 23:37:01,392 [7] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-19 23:37:13,187 [8] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-19 23:37:14,557 [8] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-19 23:37:23,579 [8] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-19 23:37:25,010 [8] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-19 23:37:28,582 [7] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-19 23:37:29,914 [7] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-19 23:37:33,598 [7] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-19 23:37:34,316 [7] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-19 23:37:38,613 [15] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-19 23:37:39,341 [15] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-19 23:37:43,629 [15] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-19 23:37:44,321 [15] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 00:07:15,472 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-20 00:07:15,781 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-20 00:07:17,940 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 00:08:21,967 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-20 00:08:22,353 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-20 00:08:24,302 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 00:30:56,090 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-20 00:30:56,418 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-20 00:30:58,587 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 00:37:25,421 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-20 00:37:25,764 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-20 00:37:27,728 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 00:47:25,430 [1] INFO SchoolSafeID.Helper - Camera Loaded
+2019-10-20 00:47:33,745 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-20 01:20:11,420 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-20 01:20:11,733 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-20 01:20:13,821 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 01:20:21,627 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Status 0
+
+2019-10-20 01:20:33,652 [1] INFO SchoolSafeID.Helper - Camera Loaded
+2019-10-20 01:20:35,896 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-20 01:20:41,430 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/visitors/visitor-card-33961.pdf
+2019-10-20 01:24:58,136 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-20 01:24:58,462 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-20 01:25:00,323 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 01:26:53,916 [16] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-20 19:32:06,216 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-20 19:32:06,711 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-20 19:32:08,750 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 19:33:06,466 [1] ERROR SchoolSafeID.Helper - Get Student Data 0
+
+2019-10-20 19:33:11,775 [1] ERROR SchoolSafeID.Helper - Get Student Data Server Error Error, please try to scan your ID again.
+2019-10-20 19:33:17,142 [1] ERROR SchoolSafeID.Helper - Get Student Data Server Error Error, please try to scan your ID again.
+2019-10-20 19:33:30,321 [1] ERROR SchoolSafeID.Helper - Send Visitor Data Sync 0
+
+2019-10-20 19:33:54,109 [1] ERROR SchoolSafeID.Helper - Download File Exception 
+System.IO.IOException: The process cannot access the file 'F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SSID\83\900000039.jpg' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
+   at SchoolSafeID.APIManager.<DownloadFile>d__15.MoveNext() in F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 103
+2019-10-20 19:33:58,100 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/membership/83/student_card_900000039.pdf
+2019-10-20 19:34:18,421 [1] ERROR SchoolSafeID.Helper - Download File Exception 
+System.IO.IOException: The process cannot access the file 'F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SSID\83\900000039.jpg' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
+   at SchoolSafeID.APIManager.<DownloadFile>d__15.MoveNext() in F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 103
+2019-10-20 19:34:22,087 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/membership/83/student_card_900000039.pdf
+2019-10-20 19:34:33,705 [1] ERROR SchoolSafeID.Helper - Download File Exception 
+System.IO.IOException: The process cannot access the file 'F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SSID\83\900000039.jpg' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
+   at SchoolSafeID.APIManager.<DownloadFile>d__15.MoveNext() in F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 103
+2019-10-20 19:34:37,282 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/membership/83/student_card_900000039.pdf
+2019-10-20 19:34:38,324 [1] ERROR SchoolSafeID.Helper - Download File Exception 
+System.IO.IOException: The process cannot access the file 'F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SSID\badge.pdf' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
+   at SchoolSafeID.APIManager.<DownloadFile>d__15.MoveNext() in F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 103
+2019-10-20 19:35:01,267 [1] INFO SchoolSafeID.Helper - Camera Loaded
+2019-10-20 19:35:03,865 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-20 19:36:26,883 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/membership/83/student_card_900000039.pdf
+2019-10-20 19:36:27,954 [1] ERROR SchoolSafeID.Helper - Download File Exception 
+System.IO.IOException: The process cannot access the file 'F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SSID\badge.pdf' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
+   at SchoolSafeID.APIManager.<DownloadFile>d__15.MoveNext() in F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 103
+2019-10-20 19:36:52,916 [1] INFO SchoolSafeID.Helper - Camera Loaded
+2019-10-20 19:36:54,701 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-20 19:37:32,125 [1] ERROR SchoolSafeID.Helper - Download File Exception 
+System.IO.IOException: The process cannot access the file 'F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SSID\83\900000039.jpg' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
+   at SchoolSafeID.APIManager.<DownloadFile>d__15.MoveNext() in F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 103
+2019-10-20 19:37:36,655 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/membership/83/student_card_900000039.pdf
+2019-10-20 19:37:37,371 [1] ERROR SchoolSafeID.Helper - Download File Exception 
+System.IO.IOException: The process cannot access the file 'F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SSID\badge.pdf' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
+   at SchoolSafeID.APIManager.<DownloadFile>d__15.MoveNext() in F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 103
+2019-10-20 19:38:06,646 [1] INFO SchoolSafeID.Helper - {Send To OneNote 16, OneNote, Microsoft XPS Document Writer, Microsoft Print to PDF, Fax}
+2019-10-20 19:38:12,572 [1] INFO SchoolSafeID.Helper - {Send To OneNote 16, OneNote, Microsoft XPS Document Writer, Microsoft Print to PDF, Fax}
+2019-10-20 19:42:37,609 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Status 0
+
+2019-10-20 19:42:46,850 [1] ERROR SchoolSafeID.Helper - Verify Visitor Data 0
+
+2019-10-20 19:43:04,102 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Status 0
+
+2019-10-20 19:43:11,834 [1] ERROR SchoolSafeID.Helper - Verify Visitor Data 0
+
+2019-10-20 19:43:58,907 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Status 0
+
+2019-10-20 19:44:39,319 [1] INFO SchoolSafeID.Helper - Camera Loaded
+2019-10-20 19:47:40,543 [1] INFO SchoolSafeID.Helper - Camera Loaded
+2019-10-20 19:47:45,525 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-20 19:47:58,474 [1] INFO SchoolSafeID.Helper - Camera Loaded
+2019-10-20 19:48:00,141 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-20 19:50:48,608 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-20 19:50:48,911 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-20 19:50:50,697 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 19:51:04,971 [1] INFO SchoolSafeID.Helper - Camera Loaded
+2019-10-20 19:51:06,918 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-20 19:57:23,671 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-20 19:57:23,973 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-20 19:57:26,045 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 19:58:30,453 [1] INFO SchoolSafeID.Helper - Camera Loaded
+2019-10-20 19:59:03,889 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-20 19:59:04,196 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-20 19:59:06,017 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 19:59:19,719 [1] INFO SchoolSafeID.Helper - Camera Loaded
+2019-10-20 20:02:23,108 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-20 20:02:23,418 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-20 20:02:25,485 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 20:03:13,003 [1] INFO SchoolSafeID.Helper - Camera Loaded
+2019-10-20 20:03:14,920 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-20 20:03:21,992 [1] INFO SchoolSafeID.Helper - Camera Loaded
+2019-10-20 20:03:24,212 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-20 20:09:33,681 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-20 20:09:33,959 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-20 20:09:36,037 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 20:09:50,490 [1] INFO SchoolSafeID.Helper - Camera Loaded
+2019-10-20 20:09:52,650 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-20 20:10:02,280 [1] INFO SchoolSafeID.Helper - Camera Loaded
+2019-10-20 20:10:04,435 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-20 20:14:03,912 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-20 20:14:04,189 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-20 20:14:06,128 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 20:14:26,916 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-20 20:14:48,586 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-20 20:15:08,884 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/visitors/visitor-card-33961.pdf
+2019-10-20 20:18:34,124 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-20 20:18:34,426 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-20 20:18:36,266 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 20:19:23,600 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-20 20:20:04,749 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-20 20:20:05,049 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-20 20:20:07,068 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 20:20:55,432 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-20 20:20:55,730 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-20 20:20:57,602 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 20:21:14,256 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-20 21:05:26,602 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-20 21:05:26,986 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-20 21:05:29,011 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 21:05:50,878 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-20 21:06:07,470 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-20 21:07:13,733 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/membership/83/student_card_900000039.pdf
+2019-10-20 21:10:25,028 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-20 21:10:25,389 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-20 21:10:27,344 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 21:10:44,075 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/visitors/visitor-card-33961.pdf
+2019-10-20 21:11:12,251 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/visitors/visitor-card-33961.pdf
+2019-10-20 21:12:45,040 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-20 21:12:45,334 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-20 21:12:47,182 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 21:13:02,733 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/membership/83/student_card_900000039.pdf
+2019-10-20 22:37:40,918 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-20 22:37:41,320 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-20 22:37:43,368 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 22:38:25,513 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-20 22:39:01,912 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-20 22:39:02,201 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-20 22:39:04,038 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 22:39:18,117 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-20 22:40:00,929 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-20 22:40:01,221 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-20 22:40:03,211 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-20 22:40:21,608 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-20 22:40:37,259 [1] INFO SchoolSafeID.Helper - Save Visitor Image

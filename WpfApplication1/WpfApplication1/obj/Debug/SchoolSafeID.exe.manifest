@@ -42,16 +42,6 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="Microsoft.Expression.Encoder.Types" version="4.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="x86" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="Microsoft.Expression.Encoder.Utilities" version="4.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="x86" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Emgu.CV.UI.dll" size="111616">
       <assemblyIdentity name="Emgu.CV.UI" version="4.1.1.3497" publicKeyToken="7281126722AB4438" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -72,6 +62,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>Ce3MbmB0dqQXyA3DadoW3sAF5QvsQcxW8yW+HcvSbnQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FluentScheduler.dll" size="35840">
+      <assemblyIdentity name="FluentScheduler" version="5.3.0.0" publicKeyToken="B76503528A14EBD1" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>RmQuKsMYn5eNPzGKe8bp07/PUWamG7Uz5AVmfbfpUvI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -184,14 +186,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SchoolSafeID.exe" size="1977288">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SchoolSafeID.exe" size="1980360">
       <assemblyIdentity name="SchoolSafeID" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9QoldtbafUJ8oIm+H0uD/kdBBhJqDTE7DDr66uKRmqo=</dsig:DigestValue>
+        <dsig:DigestValue>N7lTOxni+QPjIxUmYoCrPj96tIULZEnZ5ohQRHNKI/0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -585,13 +587,13 @@
       <dsig:DigestValue>e3IFmfiu07rFuVMf7PZ1DI+n5ZO3J3ObwGkvzA9Vtng=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="haarcascade_frontalface_alt_tree.xml" size="2689040" writeableType="applicationData">
+  <file name="haarcascade_frontalface_alt_tree.xml" size="2785524" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Dl7kfswTJp1U3XpV+LU3UhZ8Ulh3IId3MjiPsHigSAo=</dsig:DigestValue>
+      <dsig:DigestValue>wjx1aWRo9yQGCSKJVru0YIxshcxYUKdr85FEs5Ra6kE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="log4net.config" size="1101">

@@ -52,9 +52,9 @@ namespace SchoolSafeID
                 //Visitor already have the photo, now verify the data
                 else
                 {                    
-                    bool result = APIManager.VerifyVisitorData();
+                    int result = APIManager.VerifyVisitorData();
 
-                    if(result)
+                    if(result == 1)
                     {
                         if(Visitor.PassURL == String.Empty || Visitor.BarcodeData.Length > 40)
                         {
@@ -73,9 +73,14 @@ namespace SchoolSafeID
                             }                            
                         }                        
                     }
-                    else
+                    else if(result == 0)
                     {
                         this.NavigationService.Navigate(new Uri("ScanFailure.xaml", UriKind.Relative));
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error, Please try again.");
+                        btn_Home_Click(sender, e);
                     }
                 }                                
             }

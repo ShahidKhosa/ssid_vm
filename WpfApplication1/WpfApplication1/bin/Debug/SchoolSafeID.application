@@ -7,14 +7,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="SchoolSafeID.exe.manifest" size="34744">
+    <dependentAssembly dependencyType="install" codebase="SchoolSafeID.exe.manifest" size="34802">
       <assemblyIdentity name="SchoolSafeID.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="amd64" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>aZjoQbqmR6Bv8iFe/dlzX01u6Q9BbTo+OKJaE3fJ8TI=</dsig:DigestValue>
+        <dsig:DigestValue>al+SPCpJdZBu/fawKmihs1Am7eJ7WbH71xNYlDKHaP4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

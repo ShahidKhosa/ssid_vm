@@ -53,7 +53,7 @@ namespace SchoolSafeID
         }
 
 
-        private void btnYesPrint_Click(object sender, RoutedEventArgs e)
+        private async void btnYesPrint_Click(object sender, RoutedEventArgs e)
         {
             btnYesPrint.Content = "Please wait...";
 
@@ -65,7 +65,7 @@ namespace SchoolSafeID
             //Print Badge and complete visitor sign-in process and move to the next screen.
             APIManager.SendVisitorData(1);
 
-            //Thread.Sleep(3000);
+            await Task.Delay(3000);
 
             this.NavigationService.Navigate(new Uri("PrintCompleted.xaml", UriKind.Relative));
         }

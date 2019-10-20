@@ -96,7 +96,6 @@ F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\
 F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
 F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
 F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
-F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\SchoolSafeID.csprojResolveAssemblyReference.cache
 F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\Dictionary1.baml
 F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\MainWindow.baml
 F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\Page1.baml
@@ -150,10 +149,6 @@ F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\
 F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\SearchStudent.baml
 F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\ParentSignout.g.cs
 F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\SearchStudent.g.cs
-F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\Microsoft.Expression.Encoder.Utilities.dll
-F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\Microsoft.Expression.Encoder.Types.dll
-F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\Microsoft.Expression.Encoder.Utilities.xml
-F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\Microsoft.Expression.Encoder.Types.xml
 F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\ParentSignout.baml
 F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\SignoutCompleted.g.cs
 F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\SignoutCompleted.baml
@@ -292,3 +287,48 @@ C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplicatio
 C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\fonts\Lato-Black.ttf
 C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\fonts\Lato-Bold.ttf
 C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\SchoolSafeID.csprojResolveAssemblyReference.cache
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\fonts\Lato-Black.ttf
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\fonts\Lato-Bold.ttf
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\haarcascade_frontalface_alt_tree.xml
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\x64\concrt140.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\x64\cvextern.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\x64\msvcp140.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\x64\opencv_videoio_ffmpeg411_64.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\x64\vcruntime140.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\x86\concrt140.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\x86\cvextern.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\x86\msvcp140.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\x86\opencv_videoio_ffmpeg411.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\x86\vcruntime140.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\log4net.config
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SchoolSafeID.exe.manifest
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SchoolSafeID.application
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\Emgu.CV.UI.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\Emgu.CV.World.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\FluentScheduler.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\log4net.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\ZedGraph.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\Emgu.CV.UI.xml
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\Emgu.CV.World.xml
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\FluentScheduler.pdb
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\FluentScheduler.xml
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\log4net.xml
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\ZedGraph.xml
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\de\ZedGraph.resources.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\es\ZedGraph.resources.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\fr\ZedGraph.resources.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\hu\ZedGraph.resources.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\it\ZedGraph.resources.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\ja\ZedGraph.resources.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\pt\ZedGraph.resources.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\ru\ZedGraph.resources.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\sk\ZedGraph.resources.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\sv\ZedGraph.resources.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\tr\ZedGraph.resources.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\zh-cn\ZedGraph.resources.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\zh-tw\ZedGraph.resources.dll
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\SchoolSafeID_Content.g.cs
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\SchoolSafeID.exe.manifest
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\SchoolSafeID.application
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\SchoolSafeID.csprojResolveAssemblyReference.cache
