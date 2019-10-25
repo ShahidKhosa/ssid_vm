@@ -98,20 +98,6 @@ namespace SchoolSafeID
         }
 
 
-        private void txtBarcodeData_KeyUp(object sender, KeyEventArgs e)
-        {
-            if(e.Key == Key.Enter || e.Key == Key.Tab || e.Key == Key.End)
-            {
-                //@ANSI 636058050002DL00410217ZO02580064DLDAQY081724446DCSEADSDDENDACSTACYDDFNDADLYNNDDGNDCADDCBNONEDCDNONEDBC2DAU504DAYGRNDAG7016 STONYCREEK DRIVEDAIOKLAHOMACITYDAJOKDAK731320000DCFNONEDCGUSADAW118DBA07312019DBB12091979DBD08262015ZOZOANZOBNZOCRENEWALZODZOE5579ZOF55ZOG33.50ZOHZOINZOJN
-                Visitor.BarcodeData = txtBarcodeData.Text;
-                SetData();
-
-                txtBarcodeData.Focus();
-                txtBarcodeData.Text = "";
-            }
-        }
-
-
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             tmrDelay = new System.Windows.Forms.Timer();
@@ -202,6 +188,11 @@ namespace SchoolSafeID
         public void CanExecute_Open(object sender, CanExecuteRoutedEventArgs e)
         {
             e.CanExecute = true;
+        }
+
+        private void txt_DateOfBirth_GotFocus(object sender, RoutedEventArgs e)
+        {
+            txt_DateOfBirth.Select(0, 0);
         }
     }
 }

@@ -81,12 +81,14 @@ namespace SchoolSafeID
             txt_Phone.Text = "";
         }
         
+
         private void txt_Email_TextChanged(object sender, TextChangedEventArgs e)
         {
             bool result = ValidatorExtensions.IsValidEmailAddress(txt_Email.Text);
 
             txt_Email.BorderBrush = (result == true ? Brushes.Green : Brushes.Red);            
         }
+
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
@@ -108,6 +110,12 @@ namespace SchoolSafeID
                 {
                     txt_Email.Visibility = Visibility.Visible;
                     txt_Phone.Visibility = Visibility.Visible;
+                }
+
+                if(txt_Phone.Visibility == Visibility.Visible)
+                {
+                    txt_Phone.Select(1, 0);
+                    txt_Phone.Focus();
                 }
             }
             else

@@ -37,6 +37,7 @@ namespace SchoolSafeID
 
         private void btn_Home_Click(object sender, RoutedEventArgs e)
         {
+            timer.Stop();
             this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
         }
 

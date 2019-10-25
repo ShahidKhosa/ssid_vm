@@ -48,8 +48,21 @@ namespace SchoolSafeID
             txtDate.Text = "Check-in: " + Visitor.VisitDateTime.ToString("MM/dd/yyyy");
             txtTime.Text = Visitor.VisitDateTime.ToString("hh:mm:ss tt");
                         
-            imgVisitorImage.Source = new BitmapImage(new Uri(Visitor.CroppedImagePath, UriKind.Absolute));
+            //imgVisitorImage.Source = new BitmapImage(new Uri(Visitor.CroppedImagePath, UriKind.Absolute));
             //Visitor.VisitDateTime.ToString("MM/dd/yyyy hh:mm:ss tt");            
+
+            try
+            {
+                imgVisitorImage.Source = new BitmapImage(new Uri(Visitor.CroppedImagePath, UriKind.Absolute));
+            }
+            catch (System.NotSupportedException ex)
+            {
+                imgVisitorImage.Source = new BitmapImage(new Uri(Helper.DefaultImage, UriKind.Absolute));
+            }
+            catch (Exception ex)
+            {
+                imgVisitorImage.Source = new BitmapImage(new Uri(Helper.DefaultImage, UriKind.Absolute));
+            }
         }
 
 
@@ -65,7 +78,7 @@ namespace SchoolSafeID
             //Print Badge and complete visitor sign-in process and move to the next screen.
             APIManager.SendVisitorData(1);
 
-            await Task.Delay(3000);
+            await Task.Delay(5000);
 
             this.NavigationService.Navigate(new Uri("PrintCompleted.xaml", UriKind.Relative));
         }
@@ -78,10 +91,11 @@ namespace SchoolSafeID
         }
 
 
-        private void btnNoBadgeNeeded_Click(object sender, RoutedEventArgs e)
+        private async void btnNoBadgeNeeded_Click(object sender, RoutedEventArgs e)
         {
             APIManager.SendVisitorData(0);
-            Thread.Sleep(1000);
+            
+            await Task.Delay(1000);
             //Just Complete visitor sign-in process and go back to the home page.
             this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
         }

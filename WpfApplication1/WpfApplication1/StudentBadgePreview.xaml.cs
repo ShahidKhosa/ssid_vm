@@ -56,14 +56,14 @@ namespace SchoolSafeID
             //Print Badge and complete Student sign-in process and move to the next screen.
             APIManager.SendStudentData(1, BadgeType);
 
-            await Task.Delay(3000);
+            await Task.Delay(5000);
             this.NavigationService.Navigate(new Uri("PrintCompleted.xaml", UriKind.Relative));
         }
 
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            System.Threading.Thread.Sleep(1000);
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
+        {            
+            //await Task.Delay(1000);
 
             btnNoBadgeNeeded.Visibility = (APIManager.KioskSettings["student_no_badge"].ToString().ToLower().Equals("on") ? Visibility.Visible : Visibility.Collapsed);
 
@@ -80,10 +80,6 @@ namespace SchoolSafeID
 
             try
             {
-                //var bmpimg = new BitmapImage();
-                //bmpimg.UriSource = new Uri(Student.ImagePath, UriKind.Absolute);
-                //bmpimg.Freeze();
-                //imgStudentImage.Source = bmpimg;
                 imgStudentImage.Source = new BitmapImage(new Uri(Student.ImagePath, UriKind.Absolute));
             }
             catch (System.NotSupportedException ex)

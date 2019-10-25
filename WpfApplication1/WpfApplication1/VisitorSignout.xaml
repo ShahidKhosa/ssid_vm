@@ -10,6 +10,13 @@
       FocusManager.FocusedElement="{Binding ElementName=txtBarcodeData}"
       Title="Visitor Signout" Loaded="Page_Loaded" Focusable="True" Style="{StaticResource SSIDPage}">
 
+    <Page.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Open" Executed="Executed_Open" CanExecute="CanExecute_Open"/>
+    </Page.CommandBindings>
+    <Page.InputBindings>
+        <KeyBinding Command="ApplicationCommands.Open" Gesture="Ctrl+O"/>
+    </Page.InputBindings>
+    
     <DockPanel LastChildFill="True">
 
         <StackPanel DockPanel.Dock="Top"></StackPanel>
@@ -51,7 +58,7 @@
                 <StackPanel>
                     <wpfx1:WatermarkTextBox Style="{StaticResource WmTextField}" Name="txt_FirstName" Watermark="First Name" IsEnabled="False" />
                     <wpfx1:WatermarkTextBox Style="{StaticResource WmTextField}" Name="txt_LastName" Watermark="Last Name" IsEnabled="False" />
-                    <TextBox InputMethod.IsInputMethodEnabled="False" TextWrapping="Wrap" Width="0" Name="txtBarcodeData" Text="97370-v" Opacity="0" Focusable="True" Height="0" KeyUp="txtBarcodeData_KeyUp" TextChanged="txtBarcodeData_TextChanged" />
+                    <TextBox InputMethod.IsInputMethodEnabled="False" Focusable="True" Name="txtBarcodeData" Opacity="0" Width="0" Height="0" Text="" TextChanged="txtBarcodeData_TextChanged" />
                     <Button Name="btnConfirm" IsEnabled="False" Style="{StaticResource MyButton}" Content="CONFIRM AND SUBMIT" Width="650" Margin="0 20 0 40" Click="Button_Click"/>
                     <TextBlock Width="650" TextBlock.LineHeight="36" FontSize="24" Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" Text="To sign out, please hold the visitor ID up to the scanning device with the barcode facing the device. Once you hear the beep, your visitor ID has been scanned properly. Press Submit to continue."></TextBlock>
                 </StackPanel>

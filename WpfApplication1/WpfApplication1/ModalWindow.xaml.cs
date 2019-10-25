@@ -60,13 +60,17 @@ namespace SchoolSafeID
 
         private void ResetData()
         {
+            if(scanLicense.txt_FirstName.Text != string.Empty)
+            {
+                scanLicense.btnConfirm.IsEnabled = true;
+            }
+
             Visitor.IsOfficeUseOnly = false;
             Visitor.OfficeUseOnlyPassword = "";
 
             scanLicense.txt_FirstName.IsEnabled = false;
             scanLicense.txt_LastName.IsEnabled = false;
-            scanLicense.txt_DateOfBirth.IsEnabled = false;
-            scanLicense.btnConfirm.IsEnabled = false;
+            scanLicense.txt_DateOfBirth.IsEnabled = false;            
             scanLicense.txtBarcodeData.Focus();
         }
 

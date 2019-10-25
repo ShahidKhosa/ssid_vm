@@ -46,29 +46,14 @@ namespace SchoolSafeID
         }
 
 
-
-
-        private void txtBarcodeData_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter || e.Key == Key.Tab || e.Key == Key.LeftCtrl || e.Key == Key.RightCtrl || e.Key == Key.End)
-            {
-                //@ANSI 636058050002DL00410217ZO02580064DLDAQY081724446DCSEADSDDENDACSTACYDDFNDADLYNNDDGNDCADDCBNONEDCDNONEDBC2DAU504DAYGRNDAG7016 STONYCREEK DRIVEDAIOKLAHOMACITYDAJOKDAK731320000DCFNONEDCGUSADAW118DBA07312019DBB12091979DBD08262015ZOZOANZOBNZOCRENEWALZODZOE5579ZOF55ZOG33.50ZOHZOINZOJN
-                Visitor.BarcodeData = txtBarcodeData.Text;
-                SetData();
-
-                txtBarcodeData.Focus();
-                txtBarcodeData.Text = "";
-            }
-        }
-
-
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             tmrDelay = new System.Windows.Forms.Timer();
-            tmrDelay.Interval = 1200;
+            tmrDelay.Interval = 1000;
             tmrDelay.Enabled = false;
             txtBarcodeData.Focus();
         }
+
 
         private void txtBarcodeData_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -128,5 +113,20 @@ namespace SchoolSafeID
             btnConfirm.IsEnabled = true;
         }
 
+
+        public void Executed_Open(object sender, ExecutedRoutedEventArgs e)
+        {            
+            Visitor.BarcodeData = "97370-v";
+            SetData();
+
+            txtBarcodeData.Focus();
+            txtBarcodeData.Text = "";
+        }
+
+
+        public void CanExecute_Open(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
     }
 }

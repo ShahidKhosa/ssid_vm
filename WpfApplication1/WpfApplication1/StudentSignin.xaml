@@ -10,6 +10,13 @@
       FocusManager.FocusedElement="{Binding ElementName=txtBarcodeData}"
       Title="Student Sign-in" Loaded="Page_Loaded" Focusable="True" Style="{StaticResource SSIDPage}">
 
+    <Page.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Open" Executed="Executed_Open" CanExecute="CanExecute_Open"/>
+    </Page.CommandBindings>
+    <Page.InputBindings>
+        <KeyBinding Command="ApplicationCommands.Open" Gesture="Ctrl+O"/>
+    </Page.InputBindings>
+    
     <DockPanel LastChildFill="True">
 
         <StackPanel DockPanel.Dock="Top"></StackPanel>
@@ -52,7 +59,7 @@
                     <wpfx1:WatermarkTextBox InputScope="PersonalFullName" Style="{StaticResource WmTextField}" Name="txt_FirstName" Watermark="First Name" IsEnabled="False" />
                     <wpfx1:WatermarkTextBox InputScope="PersonalFullName" Style="{StaticResource WmTextField}" Name="txt_LastName" Watermark="Last Name" IsEnabled="False" />
                     <wpfx1:WatermarkTextBox InputScope="PersonalFullName" Style="{StaticResource WmTextField}" Name="txt_Grade" Watermark="Grade" IsEnabled="False" />
-                    <TextBox InputMethod.IsInputMethodEnabled="False" TextWrapping="Wrap" Width="0" Name="txtBarcodeData" Text="900000039" Opacity="0" Focusable="True" Height="0" KeyUp="txtBarcodeData_KeyUp" TextChanged="txtBarcodeData_TextChanged" />
+                    <TextBox InputMethod.IsInputMethodEnabled="False" Focusable="True" Name="txtBarcodeData" Opacity="0" Width="0" Height="0" Text="" TextChanged="txtBarcodeData_TextChanged" />
                     <Button Name="btnConfirm" IsEnabled="False" Style="{StaticResource MyButton}" Content="CONFIRM AND SUBMIT" Width="650" Margin="0 10 0 20" Click="Button_Click"/>
                     <TextBlock Width="650" TextBlock.LineHeight="36" FontSize="24" Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" Text="Hold your Student ID up to the scanning device as shown. The Front of your card should face the scanning device so that it can read the bar code. Once you hear the beep, your ID has been scanned properly. Press Submit to continue."></TextBlock>
                 </StackPanel>

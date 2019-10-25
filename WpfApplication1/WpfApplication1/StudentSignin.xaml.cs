@@ -22,13 +22,20 @@ namespace SchoolSafeID
     {
         public System.Windows.Forms.Timer tmrDelay;
 
+
         public StudentSignin()
         {
             InitializeComponent();
         }
 
+
         private void btn_Home_Click(object sender, RoutedEventArgs e)
         {
+            if(tmrDelay != null)
+            {
+                tmrDelay.Stop();
+            }            
+
             this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
         }
 
@@ -36,22 +43,13 @@ namespace SchoolSafeID
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (txt_FirstName.Text != String.Empty && txt_LastName.Text != String.Empty)
-            {                
-                this.NavigationService.Navigate(new Uri("StudentSigninReason.xaml", UriKind.Relative));
-            }
-        }
-
-
-        private void txtBarcodeData_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter || e.Key == Key.Tab || e.Key == Key.LeftCtrl || e.Key == Key.RightCtrl || e.Key == Key.End)
             {
-                //@ANSI 636058050002DL00410217ZO02580064DLDAQY081724446DCSEADSDDENDACSTACYDDFNDADLYNNDDGNDCADDCBNONEDCDNONEDBC2DAU504DAYGRNDAG7016 STONYCREEK DRIVEDAIOKLAHOMACITYDAJOKDAK731320000DCFNONEDCGUSADAW118DBA07312019DBB12091979DBD08262015ZOZOANZOBNZOCRENEWALZODZOE5579ZOF55ZOG33.50ZOHZOINZOJN
-                Student.BarcodeData = txtBarcodeData.Text;
-                SetData();
+                if (tmrDelay != null)
+                {
+                    tmrDelay.Stop();
+                }
 
-                txtBarcodeData.Focus();
-                txtBarcodeData.Text = "";
+                this.NavigationService.Navigate(new Uri("StudentSigninReason.xaml", UriKind.Relative));
             }
         }
 
@@ -59,7 +57,7 @@ namespace SchoolSafeID
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             tmrDelay = new System.Windows.Forms.Timer();
-            tmrDelay.Interval = 1200;
+            tmrDelay.Interval = 1000;
             tmrDelay.Enabled = false;
             txtBarcodeData.Focus();
         }
@@ -124,9 +122,25 @@ namespace SchoolSafeID
             {
                 txt_Grade.Text = Student.Grade;
             }
-            
+
+            txtBarcodeData.Focus();
             btnConfirm.IsEnabled = true;
         }
 
+
+        public void Executed_Open(object sender, ExecutedRoutedEventArgs e)
+        {            
+            Student.BarcodeData = "900000039";
+            SetData();
+
+            txtBarcodeData.Focus();
+            txtBarcodeData.Text = "";
+        }
+
+
+        public void CanExecute_Open(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
     }
 }

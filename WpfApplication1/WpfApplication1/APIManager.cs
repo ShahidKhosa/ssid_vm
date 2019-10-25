@@ -14,6 +14,7 @@ using System.IO;
 using PDFtoPrinter;
 using System.Collections.ObjectModel;
 using Newtonsoft.Json;
+using System.Configuration;
 
 namespace SchoolSafeID
 {
@@ -51,22 +52,15 @@ namespace SchoolSafeID
             }
         }
 
-        public static string Username
-        {
-            get
-            {
-                return "wpf_client";
-            }
-        }
+        public static string Username => ConfigurationSettings.AppSettings["Username"];
 
-        public static string Password
-        {
-            get
-            {
-                return "schoolSafeid";
-            }
-        }
+        public static string Password => ConfigurationSettings.AppSettings["Password"];
 
+        public static string Base64Decode(string base64EncodedData)
+        {
+            var base64EncodedBytes = System.Convert.FromBase64String(base64EncodedData);
+            return System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
+        }
 
 
         public static void Download(string url, string path)
@@ -92,6 +86,9 @@ namespace SchoolSafeID
 
         public static async void DownloadFile(string url, string path, int printBadge = 0)
         {
+            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
             var client      = new RestClient(BaseURL + url);
             var request     = new RestRequest(Method.GET);            
             var response    = await client.ExecuteTaskAsync(request);
@@ -125,8 +122,7 @@ namespace SchoolSafeID
             if(!InProgress && KioskSettings == null)
             {
                 InProgress = true;
-                ++logoNumber;
-
+                
                 var client = new RestClient(BaseURL)
                 {
                     Authenticator = new HttpBasicAuthenticator(Username, Password)
@@ -149,6 +145,7 @@ namespace SchoolSafeID
 
                     if (KioskSettings.ContainsKey("logo"))
                     {
+                        //++logoNumber;
                         Download(KioskSettings["logo"].ToString(), LogoPath);
                     }
 
@@ -209,6 +206,10 @@ namespace SchoolSafeID
                 Authenticator = new HttpBasicAuthenticator(Username, Password),
                 Timeout = 5000 // 5000 milliseconds == 5 seconds
             };
+
+            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
             var request = new RestRequest("/api/class_api.php");
             request.AddParameter("action", Action); // adds to POST or URL querystring based on Method            
             request.AddParameter("job_id", KioskSettings["job_id"]); // adds to POST or URL querystring based on Method
@@ -253,6 +254,10 @@ namespace SchoolSafeID
                 Authenticator = new HttpBasicAuthenticator(Username, Password),
                 Timeout = 5000 // 5000 milliseconds == 5 seconds
             };
+
+            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
             var request = new RestRequest("/api/class_api.php", Method.POST);
             request.AddParameter("action", "save_visitor"); // adds to POST or URL querystring based on Method                        
             request.AddParameter("print_sticker", PrintSticker);
@@ -322,6 +327,9 @@ namespace SchoolSafeID
 
         public static void SendLogData()
         {
+            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
             var client = new RestClient(BaseURL);
             client.Authenticator = new HttpBasicAuthenticator(Username, Password);
 
@@ -342,7 +350,10 @@ namespace SchoolSafeID
                 Authenticator = new HttpBasicAuthenticator(Username, Password),
                 Timeout = 5000 // 5000 milliseconds == 5 seconds
             };
-            
+
+            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
             var request = new RestRequest("/api/class_api.php", Method.POST);
             request.AddParameter("action", "verify_visitor");
             request.AddParameter("first_name", Visitor.FirstName);
@@ -381,6 +392,9 @@ namespace SchoolSafeID
 
         public static void DownloadPDF(string url)
         {
+            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(BaseURL + url);
 
             request.ContentType = "application/pdf;charset=UTF-8";
@@ -408,6 +422,10 @@ namespace SchoolSafeID
                 Authenticator = new HttpBasicAuthenticator(Username, Password),
                 Timeout = 5000 // 5000 milliseconds == 5 seconds
             };
+
+            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
             var request = new RestRequest("/api/class_api.php", Method.POST);
             request.AddParameter("action", "api_signout");
             request.AddParameter("id", Visitor.ID);
@@ -426,6 +444,9 @@ namespace SchoolSafeID
                 Authenticator = new HttpBasicAuthenticator(Username, Password),
                 Timeout = 5000 // 5000 milliseconds == 5 seconds
             };
+
+            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;            
 
             var request = new RestRequest("/api/class_api.php");
             request.AddParameter("action", Action); // adds to POST or URL querystring based on Method            
@@ -472,6 +493,9 @@ namespace SchoolSafeID
                 Timeout = 5000 // 5000 milliseconds == 5 seconds
             };
 
+            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
             var request = new RestRequest("/api/class_api.php", Method.POST);
             request.AddParameter("action", "complete_student_signin");
             request.AddParameter("print_sticker", PrintSticker);
@@ -497,6 +521,9 @@ namespace SchoolSafeID
                 Authenticator = new HttpBasicAuthenticator(Username, Password),
                 Timeout = 10000 // 10000 milliseconds == 10 seconds
             };
+
+            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
             var request = new RestRequest("/api/class_api.php", Method.POST);
             request.AddParameter("action", Action);
@@ -530,6 +557,9 @@ namespace SchoolSafeID
                 Timeout = 10000 // 10000 milliseconds == 10 seconds
             };
 
+            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
             var request = new RestRequest("/api/class_api.php", Method.POST);
             request.AddParameter("action", "parent_student_signout");
             Visitor.SaveVisitor(request);
@@ -542,8 +572,6 @@ namespace SchoolSafeID
 
             SendVisitorDataAsync(request, client);
         }
-
-
 
     }
 }
