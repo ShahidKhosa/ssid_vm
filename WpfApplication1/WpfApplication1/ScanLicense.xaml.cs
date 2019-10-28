@@ -100,12 +100,7 @@ namespace SchoolSafeID
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            ResetData();
-
-            tmrDelay = new System.Windows.Forms.Timer();
-            tmrDelay.Interval = 1200;
-            tmrDelay.Enabled = false;
-            txtBarcodeData.Focus();            
+            ResetData();        
         }
 
 
@@ -200,7 +195,7 @@ namespace SchoolSafeID
         }
 
 
-        private void ResetData()
+        public void ResetData()
         {
             txt_FirstName.Text = "";
             txt_LastName.Text = "";
@@ -212,7 +207,11 @@ namespace SchoolSafeID
             txt_FirstName.IsEnabled = false;
             txt_LastName.IsEnabled = false;
             txt_DateOfBirth.IsEnabled = false;
-            btnConfirm.IsEnabled = false;
+            btnConfirm.IsEnabled = false;            
+
+            tmrDelay = new System.Windows.Forms.Timer();
+            tmrDelay.Interval = 1200;
+            tmrDelay.Enabled = false;
             txtBarcodeData.Focus();
         }
     }

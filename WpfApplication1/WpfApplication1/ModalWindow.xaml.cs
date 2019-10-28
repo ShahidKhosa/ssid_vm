@@ -27,9 +27,9 @@ namespace SchoolSafeID
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            ResetData();
+        {            
             this.Close();
+            ResetData();
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
@@ -72,10 +72,7 @@ namespace SchoolSafeID
             Visitor.IsOfficeUseOnly = false;
             Visitor.OfficeUseOnlyPassword = "";
 
-            scanLicense.txt_FirstName.IsEnabled = false;
-            scanLicense.txt_LastName.IsEnabled = false;
-            scanLicense.txt_DateOfBirth.IsEnabled = false;            
-            scanLicense.txtBarcodeData.Focus();
+            scanLicense.ResetData();
         }
 
         private void txt_password_KeyDown(object sender, KeyEventArgs e)

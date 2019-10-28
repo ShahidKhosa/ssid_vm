@@ -189,3 +189,9 @@ System.IO.IOException: The process cannot access the file 'C:\Users\shahid.amin\
 2019-10-29 00:32:28,416 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
 2019-10-29 00:32:30,512 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
 2019-10-29 00:32:44,352 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-29 01:16:49,370 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-29 01:16:49,639 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-29 01:16:51,336 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-29 01:22:03,624 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-29 01:22:03,865 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-29 01:22:05,836 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png

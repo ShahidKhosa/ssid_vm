@@ -244,13 +244,13 @@ namespace SchoolSafeID
             if (student != null && !selectedStudentsList.Contains(student))
             {
                 selectedStudentsList.Add(student);
+                txtStudentGrade.Text = txtStudentName.Text = "";
             }
 
             if (selectedStudentsList.Count > 0)
             {
                 selecteStudents.ItemsSource = selectedStudentsList;
-                selecteStudents.DataContext = selectedStudentsList;
-                txtStudentGrade.Text = txtStudentName.Text = "";
+                selecteStudents.DataContext = selectedStudentsList;                
 
                 lblSelectedStudents.Visibility = Visibility.Visible;
                 selecteStudents.Visibility = Visibility.Visible;
