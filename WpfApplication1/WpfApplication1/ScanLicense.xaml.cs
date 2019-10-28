@@ -100,6 +100,8 @@ namespace SchoolSafeID
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            ResetData();
+
             tmrDelay = new System.Windows.Forms.Timer();
             tmrDelay.Interval = 1200;
             tmrDelay.Enabled = false;
@@ -185,14 +187,33 @@ namespace SchoolSafeID
             txtBarcodeData.Text = "";            
         }
 
+
         public void CanExecute_Open(object sender, CanExecuteRoutedEventArgs e)
         {
             e.CanExecute = true;
         }
 
+
         private void txt_DateOfBirth_GotFocus(object sender, RoutedEventArgs e)
         {
             txt_DateOfBirth.Select(0, 0);
+        }
+
+
+        private void ResetData()
+        {
+            txt_FirstName.Text = "";
+            txt_LastName.Text = "";
+            txt_DateOfBirth.Text = "";
+
+            Visitor.IsOfficeUseOnly = false;
+            Visitor.OfficeUseOnlyPassword = "";
+
+            txt_FirstName.IsEnabled = false;
+            txt_LastName.IsEnabled = false;
+            txt_DateOfBirth.IsEnabled = false;
+            btnConfirm.IsEnabled = false;
+            txtBarcodeData.Focus();
         }
     }
 }

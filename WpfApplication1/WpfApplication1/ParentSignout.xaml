@@ -68,7 +68,7 @@
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Width="600" HorizontalAlignment="Left" VerticalAlignment="Center" Text="{Binding Name}" />
+                                <TextBlock Width="600" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Text="{Binding Name}" />
                                 <Button Background="#088F40" Foreground="White" Tag="{Binding ID}" Content="Delete" Click="cmdDeleteStudent_Clicked"></Button>
                             </StackPanel>
                         </DataTemplate>

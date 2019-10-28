@@ -20,6 +20,8 @@ namespace SchoolSafeID
 {
     class APIManager
     {
+        private static RestClient restClient = null;
+
         private static int logoNumber = 0;
 
         private static bool InProgress = false;
@@ -117,19 +119,33 @@ namespace SchoolSafeID
         }
 
 
+        private static RestClient GetClient(int timeOut = 10000)
+        {
+            if (restClient != null) return restClient;
+
+            ServicePointManager.DefaultConnectionLimit = 100;
+            ServicePointManager.MaxServicePointIdleTime = 5000;
+            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls | SecurityProtocolType.Ssl3;
+
+            var client = new RestClient(BaseURL)
+            {
+                Authenticator = new HttpBasicAuthenticator(Username, Password),
+                //Timeout = timeOut // 10000 milliseconds == 10 seconds
+            };
+
+            client.ConfigureWebRequest((r) => { r.ServicePoint.Expect100Continue = false; r.KeepAlive = true; });
+
+            return client;
+        }
+
+
         public static Dictionary<string, object> GetKioskSettings()
         {            
             if(!InProgress && KioskSettings == null)
             {
-                InProgress = true;
-                
-                var client = new RestClient(BaseURL)
-                {
-                    Authenticator = new HttpBasicAuthenticator(Username, Password)
-                };
-                ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-
+                InProgress  = true;
+                var client  = GetClient();
                 var request = new RestRequest("/api/class_api.php");
                 request.AddParameter("action", "home_page"); 
                 request.AddParameter("job_no", AppSettings.JobNo);
@@ -153,6 +169,8 @@ namespace SchoolSafeID
                 }
                 else
                 {
+                    
+                    Helper.log.Error("Kiosk Settings Error Message " + response.ErrorMessage, response.ErrorException);
                     Helper.log.Error("Kiosk Settings Status " + response.StatusCode + "\n" + response.StatusDescription);
                 }
 
@@ -167,12 +185,7 @@ namespace SchoolSafeID
         {
             if (KioskSettings != null)
             {                            
-                var client = new RestClient(BaseURL)
-                {
-                    Authenticator = new HttpBasicAuthenticator(Username, Password)
-                };
-                ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                var client = GetClient();
 
                 var request = new RestRequest("/api/class_api.php", Method.POST);
                 request.AddParameter("action", "home_page");
@@ -194,6 +207,11 @@ namespace SchoolSafeID
                             }
                         }
                     }
+                    else
+                    {
+                        Helper.log.Error("Get Schedule Kiosk Settings Error Message " + response.ErrorMessage, response.ErrorException);
+                        Helper.log.Error("Get Schedule Kiosk Settings Status " + response.StatusCode + "\n" + response.StatusDescription);
+                    }
                 });                          
             }            
         }
@@ -201,15 +219,7 @@ namespace SchoolSafeID
 
         public static void GetVisitorData(string Action = "manage_preview")
         {
-            var client = new RestClient(BaseURL)
-            {
-                Authenticator = new HttpBasicAuthenticator(Username, Password),
-                Timeout = 5000 // 5000 milliseconds == 5 seconds
-            };
-
-            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-
+            var client  = GetClient();
             var request = new RestRequest("/api/class_api.php");
             request.AddParameter("action", Action); // adds to POST or URL querystring based on Method            
             request.AddParameter("job_id", KioskSettings["job_id"]); // adds to POST or URL querystring based on Method
@@ -242,6 +252,7 @@ namespace SchoolSafeID
             }
             else
             {
+                Helper.log.Error("Get Visitor Data Status Error Message " + response.ErrorMessage, response.ErrorException);
                 Helper.log.Error("Get Visitor Data Status " + response.StatusCode + "\n" + response.StatusDescription);
             }
         }
@@ -249,15 +260,7 @@ namespace SchoolSafeID
 
         public static void SendVisitorData(int PrintSticker)
         {
-            var client = new RestClient(BaseURL)
-            {
-                Authenticator = new HttpBasicAuthenticator(Username, Password),
-                Timeout = 5000 // 5000 milliseconds == 5 seconds
-            };
-
-            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-
+            var client  = GetClient();
             var request = new RestRequest("/api/class_api.php", Method.POST);
             request.AddParameter("action", "save_visitor"); // adds to POST or URL querystring based on Method                        
             request.AddParameter("print_sticker", PrintSticker);
@@ -285,7 +288,8 @@ namespace SchoolSafeID
                     //MessageBox.Show("Upload completed succesfully...\n" + response.Content);
                 }
                 else
-                {                    
+                {
+                    Helper.log.Error("Send Visitor Data Async Error Message " + response.ErrorMessage, response.ErrorException);
                     Helper.log.Error("Send Visitor Data Async " + response.StatusCode + "\n" + response.StatusDescription);
                     MessageBox.Show("Error, please try again");
                 }
@@ -318,7 +322,8 @@ namespace SchoolSafeID
             }
             else
             {
-                //error ocured during upload    
+                //error ocured during upload   
+                Helper.log.Error("Send Visitor Data sync Error Message " + response.ErrorMessage, response.ErrorException);
                 Helper.log.Error("Send Visitor Data Sync " + response.StatusCode + "\n" + response.StatusDescription);
                 MessageBox.Show("Error! Please try again.");                
             }
@@ -327,12 +332,7 @@ namespace SchoolSafeID
 
         public static void SendLogData()
         {
-            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-
-            var client = new RestClient(BaseURL);
-            client.Authenticator = new HttpBasicAuthenticator(Username, Password);
-
+            var client  = GetClient();
             var request = new RestRequest("/api/class_api.php");
             request.AddParameter("action", "save_log"); // adds to POST or URL querystring based on Method                                    
 
@@ -345,15 +345,7 @@ namespace SchoolSafeID
         public static int VerifyVisitorData()
         {
             int result = -1;
-            var client = new RestClient(BaseURL)
-            {
-                Authenticator = new HttpBasicAuthenticator(Username, Password),
-                Timeout = 5000 // 5000 milliseconds == 5 seconds
-            };
-
-            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-
+            var client = GetClient();
             var request = new RestRequest("/api/class_api.php", Method.POST);
             request.AddParameter("action", "verify_visitor");
             request.AddParameter("first_name", Visitor.FirstName);
@@ -383,6 +375,7 @@ namespace SchoolSafeID
             else
             {
                 Visitor.IsVerified = result = -1;
+                Helper.log.Error("Verify Visitor Data Error Message " + response.ErrorMessage, response.ErrorException);
                 Helper.log.Error("Verify Visitor Data " + response.StatusCode + "\n" + response.StatusDescription);                
             }
 
@@ -417,15 +410,7 @@ namespace SchoolSafeID
 
         public static void Signout()
         {
-            var client = new RestClient(BaseURL)
-            {
-                Authenticator = new HttpBasicAuthenticator(Username, Password),
-                Timeout = 5000 // 5000 milliseconds == 5 seconds
-            };
-
-            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-
+            var client = GetClient();
             var request = new RestRequest("/api/class_api.php", Method.POST);
             request.AddParameter("action", "api_signout");
             request.AddParameter("id", Visitor.ID);
@@ -439,15 +424,7 @@ namespace SchoolSafeID
 
         public static void GetStudentData(string Action = "manage_student_preview")
         {
-            var client = new RestClient(BaseURL)
-            {
-                Authenticator = new HttpBasicAuthenticator(Username, Password),
-                Timeout = 5000 // 5000 milliseconds == 5 seconds
-            };
-
-            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;            
-
+            var client = GetClient();
             var request = new RestRequest("/api/class_api.php");
             request.AddParameter("action", Action); // adds to POST or URL querystring based on Method            
             request.AddParameter("job_id", KioskSettings["job_id"]); // adds to POST or URL querystring based on Method
@@ -479,7 +456,8 @@ namespace SchoolSafeID
                 }
             }
             else
-            {                
+            {
+                Helper.log.Error("Get Student Data Error Message " + response.ErrorMessage, response.ErrorException);
                 Helper.log.Error("Get Student Data " + response.StatusCode + "\n" + response.StatusDescription);
             }
         }
@@ -487,15 +465,7 @@ namespace SchoolSafeID
 
         public static void SendStudentData(int PrintSticker, string BadgeType)
         {
-            var client = new RestClient(BaseURL)
-            {
-                Authenticator = new HttpBasicAuthenticator(Username, Password),
-                Timeout = 5000 // 5000 milliseconds == 5 seconds
-            };
-
-            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-
+            var client = GetClient();
             var request = new RestRequest("/api/class_api.php", Method.POST);
             request.AddParameter("action", "complete_student_signin");
             request.AddParameter("print_sticker", PrintSticker);
@@ -516,15 +486,7 @@ namespace SchoolSafeID
 
         public static void GetAllStudents(string Action = "get_all_students")
         {
-            var client = new RestClient(BaseURL)
-            {
-                Authenticator = new HttpBasicAuthenticator(Username, Password),
-                Timeout = 10000 // 10000 milliseconds == 10 seconds
-            };
-
-            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-
+            var client = GetClient();
             var request = new RestRequest("/api/class_api.php", Method.POST);
             request.AddParameter("action", Action);
             request.AddParameter("job_id", KioskSettings["job_id"]);
@@ -543,6 +505,7 @@ namespace SchoolSafeID
                 else
                 {
                     //error ocured during upload
+                    Helper.log.Error("Get All Students Error Message " + response.ErrorMessage, response.ErrorException);
                     Helper.log.Error("Get All Students Request Error " + response.StatusCode + "\n" + response.StatusDescription);                    
                 }
             });
@@ -551,15 +514,7 @@ namespace SchoolSafeID
 
         public static void ParentStudentSignout(ObservableCollection<StudentPersonalInfo> selectedStudentsList, SignoutReasons reason)
         {
-            var client = new RestClient(BaseURL)
-            {
-                Authenticator = new HttpBasicAuthenticator(Username, Password),
-                Timeout = 10000 // 10000 milliseconds == 10 seconds
-            };
-
-            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-
+            var client = GetClient();
             var request = new RestRequest("/api/class_api.php", Method.POST);
             request.AddParameter("action", "parent_student_signout");
             Visitor.SaveVisitor(request);

@@ -19,7 +19,15 @@ namespace SchoolSafeID
         {
             Student.CheckinOption = "";
             Student.CheckinOptionNumber = "";
-            this.NavigationService.Navigate(new Uri("StudentSignin.xaml", UriKind.Relative));
+
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
+            else
+            {
+                this.NavigationService.Navigate(new Uri("StudentSignin.xaml", UriKind.Relative));
+            }            
         }
 
 

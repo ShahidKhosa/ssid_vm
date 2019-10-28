@@ -38,6 +38,10 @@ namespace SchoolSafeID
             {
                 if(scanLicense != null)
                 {
+                    scanLicense.txt_FirstName.Text   = "";
+                    scanLicense.txt_LastName.Text    = "";
+                    scanLicense.txt_DateOfBirth.Text = "";
+
                     scanLicense.txt_FirstName.IsEnabled = true;
                     scanLicense.txt_LastName.IsEnabled = true;
                     scanLicense.txt_DateOfBirth.IsEnabled = true;

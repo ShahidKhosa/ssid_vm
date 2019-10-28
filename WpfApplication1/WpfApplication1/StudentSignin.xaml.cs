@@ -34,9 +34,16 @@ namespace SchoolSafeID
             if(tmrDelay != null)
             {
                 tmrDelay.Stop();
-            }            
+            }
 
-            this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
+            else
+            {
+                this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
+            }            
         }
 
 
@@ -56,9 +63,14 @@ namespace SchoolSafeID
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            tmrDelay = new System.Windows.Forms.Timer();
-            tmrDelay.Interval = 1000;
-            tmrDelay.Enabled = false;
+            ResetData();
+
+            tmrDelay = new System.Windows.Forms.Timer
+            {
+                Interval = 1000,
+                Enabled = false
+            };
+
             txtBarcodeData.Focus();
         }
 
@@ -125,6 +137,19 @@ namespace SchoolSafeID
 
             txtBarcodeData.Focus();
             btnConfirm.IsEnabled = true;
+        }
+
+
+        private void ResetData()
+        {
+            txt_FirstName.Text = "";
+            txt_LastName.Text = "";
+            txt_Grade.Text = "";
+            txt_FirstName.IsEnabled = false;
+            txt_LastName.IsEnabled = false;
+            txt_Grade.IsEnabled = false;
+            btnConfirm.IsEnabled = false;
+            txtBarcodeData.Focus();
         }
 
 

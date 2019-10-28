@@ -19,7 +19,14 @@ namespace SchoolSafeID
 
         private void btn_GoBack_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("StudentSigninReason.xaml", UriKind.Relative));
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
+            else
+            {
+                this.NavigationService.Navigate(new Uri("StudentSigninReason.xaml", UriKind.Relative));
+            }            
         }
 
 

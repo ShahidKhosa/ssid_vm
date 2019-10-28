@@ -30,7 +30,15 @@ namespace SchoolSafeID
         {
             Visitor.CheckinOption = "";
             Visitor.CheckinOptionNumber = "";
-            this.NavigationService.Navigate(new Uri("TakePhoto.xaml", UriKind.Relative));
+
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
+            else
+            {
+                this.NavigationService.Navigate(new Uri("TakePhoto.xaml", UriKind.Relative));
+            }            
         }
 
 

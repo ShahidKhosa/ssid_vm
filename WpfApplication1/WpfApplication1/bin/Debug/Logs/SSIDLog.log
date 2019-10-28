@@ -57,3 +57,135 @@ System.IO.IOException: The process cannot access the file 'C:\Users\shahid.amin\
 2019-10-26 00:20:30,943 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
 2019-10-26 00:20:32,475 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
 2019-10-26 00:25:45,230 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-28 19:25:45,787 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:25:47,288 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:25:49,852 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:27:35,532 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:27:35,869 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:27:37,455 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:28:58,777 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:28:59,043 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:29:00,625 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:33:12,901 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:33:13,234 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:33:14,816 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:33:47,593 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Status Error Message The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+   at System.Net.HttpWebRequest.GetResponse()
+   at RestSharp.Http.GetRawResponse(HttpWebRequest request)
+   at RestSharp.Http.GetResponse(HttpWebRequest request)
+2019-10-28 19:33:47,600 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Status 0
+
+2019-10-28 19:36:26,394 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:36:26,704 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:36:28,494 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:39:14,016 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:39:14,281 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:39:15,940 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:42:22,489 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:42:22,800 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:42:24,349 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:42:46,342 [1] ERROR SchoolSafeID.Helper - Get Student Data Error Message The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+   at System.Net.HttpWebRequest.GetResponse()
+   at RestSharp.Http.GetRawResponse(HttpWebRequest request)
+   at RestSharp.Http.GetResponse(HttpWebRequest request)
+2019-10-28 19:42:46,356 [1] ERROR SchoolSafeID.Helper - Get Student Data 0
+
+2019-10-28 19:43:36,357 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:43:36,639 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:43:38,192 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:45:37,567 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:45:37,812 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:45:39,485 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:47:08,744 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:47:09,038 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:47:10,710 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:48:04,357 [1] ERROR SchoolSafeID.Helper - Download File Exception 
+System.IO.IOException: The process cannot access the file 'C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SSID\83\900000039.jpg' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
+   at SchoolSafeID.APIManager.<DownloadFile>d__16.MoveNext() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 100
+2019-10-28 19:48:08,985 [18] ERROR SchoolSafeID.Helper - Get Schedule Kiosk Settings Error Message The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at RestSharp.Http.GetRawResponseAsync(IAsyncResult result, Action`1 callback)
+   at RestSharp.Http.ResponseCallback(IAsyncResult result, Action`1 callback)
+2019-10-28 19:48:08,987 [18] ERROR SchoolSafeID.Helper - Get Schedule Kiosk Settings Status 0
+
+2019-10-28 19:52:18,460 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:52:18,756 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:52:20,307 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:53:06,852 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-28 19:53:19,603 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-28 19:53:36,628 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-28 19:56:14,574 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:56:14,840 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:56:16,367 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:59:21,419 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-28 19:59:21,667 [1] ERROR SchoolSafeID.Helper - Verify Visitor Data Error Message The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+   at System.Net.HttpWebRequest.GetResponse()
+   at RestSharp.Http.GetRawResponse(HttpWebRequest request)
+   at RestSharp.Http.GetResponse(HttpWebRequest request)
+2019-10-28 19:59:21,674 [1] ERROR SchoolSafeID.Helper - Verify Visitor Data 0
+
+2019-10-28 20:16:58,664 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 20:16:58,994 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 20:17:00,766 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 20:17:22,980 [12] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at RestSharp.Http.GetRawResponseAsync(IAsyncResult result, Action`1 callback)
+   at RestSharp.Http.ResponseCallback(IAsyncResult result, Action`1 callback)
+2019-10-28 20:17:22,989 [12] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-28 20:18:48,410 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 20:18:48,657 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 20:18:50,297 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 20:19:14,772 [1] ERROR SchoolSafeID.Helper - Download File Exception 
+System.IO.IOException: The process cannot access the file 'C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SSID\83\visitor_croped.jpg' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
+   at SchoolSafeID.APIManager.<DownloadFile>d__16.MoveNext() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 100
+2019-10-28 20:19:23,122 [1] ERROR SchoolSafeID.Helper - Download File Exception 
+System.IO.IOException: The process cannot access the file 'C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SSID\83\visitor_croped.jpg' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
+   at SchoolSafeID.APIManager.<DownloadFile>d__16.MoveNext() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 100
+2019-10-28 20:20:41,198 [1] ERROR SchoolSafeID.Helper - Download File Exception 
+System.IO.IOException: The process cannot access the file 'C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SSID\83\visitor_croped.jpg' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
+   at SchoolSafeID.APIManager.<DownloadFile>d__16.MoveNext() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 100
+2019-10-28 20:22:23,075 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 20:22:23,407 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 20:22:25,251 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 20:22:58,390 [1] ERROR SchoolSafeID.Helper - Download File Exception 
+System.IO.IOException: The process cannot access the file 'C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SSID\83\visitor_croped.jpg' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
+   at SchoolSafeID.APIManager.<DownloadFile>d__17.MoveNext() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 102
+2019-10-28 20:23:04,549 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-28 20:36:13,358 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-28 20:43:05,881 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 20:43:06,186 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 20:43:07,983 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-29 00:27:11,705 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-29 00:27:12,508 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-29 00:27:14,440 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-29 00:27:37,024 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-29 00:32:28,149 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-29 00:32:28,416 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-29 00:32:30,512 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-29 00:32:44,352 [1] INFO SchoolSafeID.Helper - Save Visitor Image

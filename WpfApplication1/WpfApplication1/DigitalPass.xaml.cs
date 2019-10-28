@@ -28,7 +28,15 @@ namespace SchoolSafeID
         private void btn_GoBack_Click(object sender, RoutedEventArgs e)
         {
             ResetData();
-            this.NavigationService.Navigate(new Uri("ScanLicense.xaml", UriKind.Relative));
+
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
+            else
+            {
+                this.NavigationService.Navigate(new Uri("ScanLicense.xaml", UriKind.Relative));
+            }            
         }
 
 
@@ -92,6 +100,8 @@ namespace SchoolSafeID
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            ResetData();
+
             if (APIManager.KioskSettings.ContainsKey("send_digital_pass"))
             {
                 string digitalPassType = APIManager.KioskSettings["send_digital_pass"].ToString().ToLower();
