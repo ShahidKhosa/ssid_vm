@@ -1,0 +1,892 @@
+2019-10-25 22:24:29,823 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-25 22:24:30,148 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 12345678
+2019-10-25 22:24:31,698 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/logo_ssi.png
+2019-10-25 22:28:02,313 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-25 22:28:02,697 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 12345678
+2019-10-25 22:28:04,271 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/logo_ssi.png
+2019-10-25 22:30:34,419 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-25 22:30:34,854 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 12345678
+2019-10-25 22:30:36,455 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/logo_ssi.png
+2019-10-25 22:34:00,221 [1] INFO SchoolSafeID.Helper - {OneNote, Snagit 2018, Send To OneNote 16, Microsoft XPS Document Writer, Microsoft Print to PDF, Fax, DYMO LabelWriter 450 Turbo, \\10.10.10.18\hp LaserJet 1320 PCL 5}
+2019-10-25 22:34:22,383 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-25 22:34:23,517 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-25 22:34:29,904 [1] INFO SchoolSafeID.Helper - {OneNote, Snagit 2018, Send To OneNote 16, Microsoft XPS Document Writer, Microsoft Print to PDF, Fax, DYMO LabelWriter 450 Turbo, \\10.10.10.18\hp LaserJet 1320 PCL 5}
+2019-10-25 22:34:34,702 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 12345678
+2019-10-25 22:34:39,877 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/logo_ssi.png
+2019-10-25 22:34:41,162 [1] ERROR SchoolSafeID.Helper - Download School Logo Exception 
+System.IO.IOException: The process cannot access the file 'C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SSID\146\school_logo_0.png' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
+   at SchoolSafeID.APIManager.Download(String url, String path) in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 78
+2019-10-25 22:34:59,494 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/visitors/visitor-card-97388.pdf
+2019-10-25 22:36:04,529 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/visitors/visitor-card-97388.pdf
+2019-10-25 22:36:25,363 [1] ERROR SchoolSafeID.Helper - Download File Exception 
+System.IO.IOException: The process cannot access the file 'C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SSID\146\visitor_croped.jpg' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
+   at SchoolSafeID.APIManager.<DownloadFile>d__16.MoveNext() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 100
+2019-10-25 22:36:38,477 [1] INFO SchoolSafeID.Helper - {OneNote, Snagit 2018, Send To OneNote 16, Microsoft XPS Document Writer, Microsoft Print to PDF, Fax, DYMO LabelWriter 450 Turbo, \\10.10.10.18\hp LaserJet 1320 PCL 5}
+2019-10-25 22:36:46,421 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-25 22:36:47,543 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-25 22:37:12,483 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-25 22:38:23,781 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-25 22:38:24,064 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-25 22:38:25,590 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-26 00:05:07,603 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-26 00:05:07,947 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-26 00:05:09,615 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-26 00:12:56,627 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-26 00:12:57,010 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-26 00:12:58,651 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-26 00:13:11,128 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-26 00:13:11,401 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-26 00:13:12,971 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-26 00:14:20,168 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-26 00:14:20,406 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-26 00:14:21,990 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-26 00:14:30,038 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Status 0
+
+2019-10-26 00:18:38,893 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-26 00:18:39,178 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-26 00:18:40,827 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-26 00:20:30,701 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-26 00:20:30,943 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-26 00:20:32,475 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-26 00:25:45,230 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-28 19:25:45,787 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:25:47,288 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:25:49,852 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:27:35,532 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:27:35,869 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:27:37,455 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:28:58,777 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:28:59,043 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:29:00,625 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:33:12,901 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:33:13,234 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:33:14,816 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:33:47,593 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Status Error Message The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+   at System.Net.HttpWebRequest.GetResponse()
+   at RestSharp.Http.GetRawResponse(HttpWebRequest request)
+   at RestSharp.Http.GetResponse(HttpWebRequest request)
+2019-10-28 19:33:47,600 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Status 0
+
+2019-10-28 19:36:26,394 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:36:26,704 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:36:28,494 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:39:14,016 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:39:14,281 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:39:15,940 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:42:22,489 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:42:22,800 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:42:24,349 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:42:46,342 [1] ERROR SchoolSafeID.Helper - Get Student Data Error Message The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+   at System.Net.HttpWebRequest.GetResponse()
+   at RestSharp.Http.GetRawResponse(HttpWebRequest request)
+   at RestSharp.Http.GetResponse(HttpWebRequest request)
+2019-10-28 19:42:46,356 [1] ERROR SchoolSafeID.Helper - Get Student Data 0
+
+2019-10-28 19:43:36,357 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:43:36,639 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:43:38,192 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:45:37,567 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:45:37,812 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:45:39,485 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:47:08,744 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:47:09,038 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:47:10,710 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:48:04,357 [1] ERROR SchoolSafeID.Helper - Download File Exception 
+System.IO.IOException: The process cannot access the file 'C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SSID\83\900000039.jpg' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
+   at SchoolSafeID.APIManager.<DownloadFile>d__16.MoveNext() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 100
+2019-10-28 19:48:08,985 [18] ERROR SchoolSafeID.Helper - Get Schedule Kiosk Settings Error Message The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at RestSharp.Http.GetRawResponseAsync(IAsyncResult result, Action`1 callback)
+   at RestSharp.Http.ResponseCallback(IAsyncResult result, Action`1 callback)
+2019-10-28 19:48:08,987 [18] ERROR SchoolSafeID.Helper - Get Schedule Kiosk Settings Status 0
+
+2019-10-28 19:52:18,460 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:52:18,756 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:52:20,307 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:53:06,852 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-28 19:53:19,603 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-28 19:53:36,628 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-28 19:56:14,574 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 19:56:14,840 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 19:56:16,367 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 19:59:21,419 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-28 19:59:21,667 [1] ERROR SchoolSafeID.Helper - Verify Visitor Data Error Message The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+   at System.Net.HttpWebRequest.GetResponse()
+   at RestSharp.Http.GetRawResponse(HttpWebRequest request)
+   at RestSharp.Http.GetResponse(HttpWebRequest request)
+2019-10-28 19:59:21,674 [1] ERROR SchoolSafeID.Helper - Verify Visitor Data 0
+
+2019-10-28 20:16:58,664 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 20:16:58,994 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 20:17:00,766 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 20:17:22,980 [12] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at RestSharp.Http.GetRawResponseAsync(IAsyncResult result, Action`1 callback)
+   at RestSharp.Http.ResponseCallback(IAsyncResult result, Action`1 callback)
+2019-10-28 20:17:22,989 [12] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-28 20:18:48,410 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 20:18:48,657 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 20:18:50,297 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 20:19:14,772 [1] ERROR SchoolSafeID.Helper - Download File Exception 
+System.IO.IOException: The process cannot access the file 'C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SSID\83\visitor_croped.jpg' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
+   at SchoolSafeID.APIManager.<DownloadFile>d__16.MoveNext() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 100
+2019-10-28 20:19:23,122 [1] ERROR SchoolSafeID.Helper - Download File Exception 
+System.IO.IOException: The process cannot access the file 'C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SSID\83\visitor_croped.jpg' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
+   at SchoolSafeID.APIManager.<DownloadFile>d__16.MoveNext() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 100
+2019-10-28 20:20:41,198 [1] ERROR SchoolSafeID.Helper - Download File Exception 
+System.IO.IOException: The process cannot access the file 'C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SSID\83\visitor_croped.jpg' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
+   at SchoolSafeID.APIManager.<DownloadFile>d__16.MoveNext() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 100
+2019-10-28 20:22:23,075 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 20:22:23,407 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 20:22:25,251 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-28 20:22:58,390 [1] ERROR SchoolSafeID.Helper - Download File Exception 
+System.IO.IOException: The process cannot access the file 'C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SSID\83\visitor_croped.jpg' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
+   at SchoolSafeID.APIManager.<DownloadFile>d__17.MoveNext() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 102
+2019-10-28 20:23:04,549 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-28 20:36:13,358 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-28 20:43:05,881 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-28 20:43:06,186 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-28 20:43:07,983 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-29 00:27:11,705 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-29 00:27:12,508 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-29 00:27:14,440 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-29 00:27:37,024 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-29 00:32:28,149 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-29 00:32:28,416 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-29 00:32:30,512 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-29 00:32:44,352 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-29 01:16:49,370 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-29 01:16:49,639 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-29 01:16:51,336 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-29 01:22:03,624 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-29 01:22:03,865 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-29 01:22:05,836 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-29 23:05:50,306 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-29 23:05:50,673 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-29 23:06:00,818 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-29 23:14:26,709 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-29 23:14:26,995 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-29 23:15:01,187 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-29 23:20:18,223 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-29 23:20:18,506 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-29 23:21:00,863 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-29 23:23:34,082 [22] ERROR SchoolSafeID.Helper - Get All Students Error Message The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at RestSharp.Http.GetRawResponseAsync(IAsyncResult result, Action`1 callback)
+   at RestSharp.Http.ResponseCallback(IAsyncResult result, Action`1 callback)
+2019-10-29 23:23:34,111 [22] ERROR SchoolSafeID.Helper - Get All Students Request Error 0
+
+2019-10-29 23:27:16,385 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-29 23:27:16,649 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-29 23:28:46,456 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-29 23:28:46,740 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-29 23:29:18,425 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-29 23:29:49,767 [3] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-29 23:29:49,774 [3] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-29 23:30:56,168 [19] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-29 23:30:56,168 [19] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-29 23:31:48,138 [18] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-29 23:31:48,139 [18] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-29 23:32:56,592 [22] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-29 23:32:56,592 [22] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-29 23:33:48,223 [21] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-29 23:33:48,224 [21] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-29 23:35:10,732 [30] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-29 23:35:10,732 [30] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-29 23:36:00,314 [38] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-29 23:36:00,314 [38] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-29 23:36:56,409 [27] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-29 23:36:56,409 [27] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-29 23:37:56,561 [26] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-29 23:37:56,561 [26] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-29 23:38:53,639 [13] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-29 23:38:53,639 [13] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-29 23:39:17,879 [3] ERROR SchoolSafeID.Helper - Get All Students Error Message The operation has timed out.
+System.Net.WebException: The operation has timed out.
+   at System.Net.ConnectStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at RestSharp.Extensions.MiscExtensions.ReadAsBytes(Stream input)
+   at RestSharp.Http.ProcessResponseStream(Stream webResponseStream, HttpResponse response)
+   at RestSharp.Http.ExtractResponseData(HttpWebResponse webResponse)
+   at RestSharp.Http.<>c__DisplayClass20_0.<ResponseCallback>b__0(HttpWebResponse webResponse)
+   at RestSharp.Http.GetRawResponseAsync(IAsyncResult result, Action`1 callback)
+   at RestSharp.Http.ResponseCallback(IAsyncResult result, Action`1 callback)
+2019-10-29 23:39:17,884 [3] ERROR SchoolSafeID.Helper - Get All Students Request Error 0
+
+2019-10-29 23:39:49,891 [3] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-29 23:39:49,891 [3] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-29 23:40:59,239 [44] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-29 23:40:59,239 [44] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-29 23:41:48,386 [48] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-29 23:41:48,387 [48] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-29 23:42:48,383 [3] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-29 23:42:48,384 [3] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-29 23:43:48,442 [45] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-29 23:43:48,442 [45] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-29 23:45:01,539 [40] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-29 23:45:01,539 [40] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:19:39,579 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 00:19:39,978 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 00:19:46,734 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 00:20:49,818 [3] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:20:49,824 [3] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:21:42,454 [22] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:21:42,454 [22] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:23:22,830 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 00:23:23,178 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 00:23:28,587 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 00:24:25,572 [3] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:24:25,580 [3] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:25:30,098 [18] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:25:30,098 [18] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:26:27,131 [23] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:26:27,131 [23] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:27:27,587 [22] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:27:27,587 [22] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:28:24,547 [32] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:28:24,547 [32] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:31:02,415 [29] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:31:02,415 [29] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:31:43,114 [17] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:31:43,114 [17] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:32:27,367 [10] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:32:27,367 [10] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:33:30,797 [33] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:33:30,797 [33] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:34:31,442 [34] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:34:31,442 [34] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:35:27,575 [15] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:35:27,575 [15] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:37:27,469 [14] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:37:27,469 [14] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:38:24,708 [10] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:38:24,708 [10] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:38:34,750 [27] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:38:34,750 [27] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:39:00,613 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 00:39:00,872 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 00:39:06,116 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 00:40:42,899 [14] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message Unable to connect to the remote server
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 199.201.110.190:443
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult)
+   at RestSharp.Http.RequestStreamCallback(IAsyncResult result, Action`1 callback)
+2019-10-30 00:40:42,914 [14] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:41:01,856 [14] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:41:01,856 [14] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:42:01,845 [16] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:42:01,845 [16] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:42:23,541 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 00:42:23,827 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 00:42:43,831 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 00:43:27,946 [11] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:43:27,951 [11] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:44:30,664 [21] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:44:30,664 [21] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:45:25,755 [25] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:45:25,755 [25] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:46:25,181 [25] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:46:25,182 [25] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 00:46:48,122 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 00:46:48,383 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 00:48:28,543 [1] ERROR SchoolSafeID.Helper - Kiosk Settings Error Message The operation has timed out
+System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at RestSharp.Http.WriteRequestBody(HttpWebRequest webRequest)
+   at RestSharp.Http.PostPutInternal(String method)
+   at RestSharp.RestClient.Execute(IRestRequest request, String httpMethod, Func`3 getResponse)
+2019-10-30 00:48:28,550 [1] ERROR SchoolSafeID.Helper - Kiosk Settings Status 0
+
+2019-10-30 00:48:28,660 [1] ERROR SchoolSafeID.Helper - Home Page Error
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at SchoolSafeID.HomePage.InitPage() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\HomePage.xaml.cs:line 43
+2019-10-30 00:49:13,443 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 00:49:13,868 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 00:49:19,864 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 00:50:17,551 [3] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 00:57:27,086 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 00:57:27,368 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 00:57:30,055 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 00:58:28,234 [11] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 01:05:18,100 [11] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 01:05:18,122 [16] ERROR SchoolSafeID.Helper - Get Schedule Kiosk Settings Error Message Unable to read data from the transport connection: The connection was closed.
+System.IO.IOException: Unable to read data from the transport connection: The connection was closed.
+   at System.Net.ConnectStream.InternalWrite(Boolean async, Byte[] buffer, Int32 offset, Int32 size, AsyncCallback callback, Object state)
+   at System.Net.ConnectStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at RestSharp.Http.RequestStreamCallback(IAsyncResult result, Action`1 callback)
+2019-10-30 01:05:18,151 [16] ERROR SchoolSafeID.Helper - Get Schedule Kiosk Settings Status 0
+
+2019-10-30 01:05:20,131 [15] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 01:05:20,132 [15] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 01:06:18,959 [25] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 01:06:18,959 [25] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 01:36:53,684 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 01:36:54,119 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 01:36:56,394 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 01:37:54,540 [16] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 01:37:54,546 [16] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 01:38:54,536 [13] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 01:38:57,072 [13] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 01:39:55,857 [10] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 01:39:58,367 [10] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 01:40:54,546 [22] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 01:40:54,547 [22] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 01:41:54,597 [10] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 01:41:54,597 [10] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 01:42:57,019 [29] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 01:42:57,019 [29] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 01:43:54,629 [36] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 01:43:54,630 [36] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 01:44:54,620 [25] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 01:44:54,620 [25] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 01:45:54,642 [21] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 01:45:54,643 [21] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 01:46:54,651 [18] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 01:46:54,651 [18] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 01:47:54,648 [16] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 01:47:54,648 [16] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 01:48:54,623 [15] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 01:48:54,624 [15] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 01:51:23,069 [23] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 01:51:23,069 [23] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 01:54:08,323 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 01:54:08,581 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 01:54:10,418 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 01:55:20,856 [21] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 01:55:20,872 [21] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 01:56:09,082 [26] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 01:56:09,082 [26] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 01:57:09,102 [32] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 01:57:09,103 [32] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 01:58:09,135 [31] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 01:58:09,136 [31] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 01:59:09,159 [17] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 01:59:09,159 [17] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:00:09,486 [24] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:00:09,487 [24] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:01:09,192 [39] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:01:09,192 [39] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:02:09,212 [43] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:02:09,212 [43] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:03:09,244 [48] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:03:09,244 [48] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:04:09,282 [54] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:04:09,282 [54] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:05:09,658 [58] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:05:09,658 [58] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:06:09,330 [64] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:06:09,330 [64] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:07:09,394 [52] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:07:09,394 [52] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:07:09,394 [50] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:07:09,394 [50] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:08:09,427 [55] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:08:09,427 [55] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:09:09,435 [43] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:09:09,435 [43] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:10:09,448 [38] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:10:09,448 [38] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:11:10,758 [19] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:11:10,758 [19] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:12:09,468 [17] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:12:09,468 [17] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:13:09,462 [27] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:13:09,462 [27] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:14:09,478 [27] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:14:09,478 [27] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:15:09,506 [27] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:15:09,506 [27] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:16:09,509 [32] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:16:09,509 [32] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:17:09,829 [17] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:17:09,829 [17] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:18:09,547 [20] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:18:09,547 [20] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:19:09,546 [39] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:19:09,546 [39] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:20:09,562 [41] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:20:09,562 [41] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:21:09,588 [41] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:21:09,588 [41] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:22:09,581 [50] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:22:09,581 [50] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:23:09,951 [61] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:23:09,951 [61] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:24:09,631 [60] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:24:09,631 [60] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:25:09,647 [62] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:25:09,647 [62] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:26:09,658 [63] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:26:09,659 [63] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:27:09,653 [59] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:27:09,653 [59] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:28:09,658 [59] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:28:09,658 [59] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:29:09,999 [59] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:29:09,999 [59] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:30:09,680 [48] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:30:09,680 [48] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:31:09,710 [55] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:31:09,710 [55] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:32:09,660 [41] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:32:09,675 [41] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:33:09,757 [15] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:33:09,757 [15] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:34:09,764 [25] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:34:09,764 [25] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:35:10,035 [15] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:35:10,035 [15] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:36:09,734 [74] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:36:09,734 [74] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:37:09,809 [73] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:37:09,810 [73] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:38:09,813 [76] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:38:09,813 [76] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:39:09,754 [76] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:39:09,754 [76] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:40:09,892 [29] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:40:09,892 [29] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:41:10,206 [21] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:41:10,206 [21] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:42:23,319 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 02:42:23,602 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 02:42:25,400 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 02:44:54,372 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 02:44:54,685 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 02:44:56,447 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 02:45:59,576 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 02:45:59,862 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 02:46:01,691 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 02:46:09,725 [3] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:46:23,165 [3] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:49:45,759 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 02:49:46,000 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 02:49:47,789 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 02:50:04,204 [11] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 02:50:08,772 [11] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 02:50:28,740 [15] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 03:01:16,167 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 03:01:16,496 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 03:01:18,193 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 03:01:29,328 [3] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 03:06:27,216 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 03:06:27,526 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 03:06:29,235 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 03:06:40,141 [10] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 03:06:45,420 [10] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 03:07:07,920 [18] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The request was aborted.
+System.Net.WebException: The request was aborted.
+2019-10-30 03:15:47,054 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 03:15:47,421 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 03:15:49,410 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 03:17:14,054 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 03:17:14,344 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 03:17:16,024 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 03:31:41,056 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 03:31:41,387 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 03:31:43,030 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 03:35:07,051 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 03:35:07,414 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 03:35:09,070 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 03:36:51,025 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 03:36:51,293 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 03:36:52,941 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 03:39:51,288 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 03:39:51,815 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 03:39:53,583 [1] ERROR SchoolSafeID.Helper - Home Page Error
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at RestSharp.SimpleJson.DeserializeObject(String json, Type type, IJsonSerializerStrategy jsonSerializerStrategy)
+   at RestSharp.SimpleJson.DeserializeObject[T](String json)
+   at SchoolSafeID.APIManager.GetKioskSettings() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 160
+   at SchoolSafeID.HomePage.InitPage() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\HomePage.xaml.cs:line 40
+2019-10-30 03:40:01,865 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 03:40:02,151 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 03:40:03,845 [1] ERROR SchoolSafeID.Helper - Home Page Error
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at RestSharp.SimpleJson.DeserializeObject(String json, Type type, IJsonSerializerStrategy jsonSerializerStrategy)
+   at RestSharp.SimpleJson.DeserializeObject[T](String json)
+   at SchoolSafeID.APIManager.GetKioskSettings() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 160
+   at SchoolSafeID.HomePage.InitPage() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\HomePage.xaml.cs:line 40
+2019-10-30 03:40:23,151 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 03:40:23,500 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 03:40:25,363 [1] ERROR SchoolSafeID.Helper - Home Page Error
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at RestSharp.SimpleJson.DeserializeObject(String json, Type type, IJsonSerializerStrategy jsonSerializerStrategy)
+   at RestSharp.SimpleJson.DeserializeObject[T](String json)
+   at SchoolSafeID.APIManager.GetKioskSettings() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 160
+   at SchoolSafeID.HomePage.InitPage() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\HomePage.xaml.cs:line 40
+2019-10-30 03:41:08,958 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 03:41:09,251 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 03:41:10,925 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 03:43:03,681 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 03:43:04,101 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 03:43:06,402 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 03:43:47,090 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 03:43:47,399 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 03:43:49,052 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 03:43:57,497 [11] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message Unable to read data from the transport connection: The connection was closed.
+System.IO.IOException: Unable to read data from the transport connection: The connection was closed.
+   at System.Net.ConnectStream.IOError(Exception exception, Boolean willThrow)
+   at System.Net.ConnectStream.InternalWrite(Boolean async, Byte[] buffer, Int32 offset, Int32 size, AsyncCallback callback, Object state)
+   at System.Net.ConnectStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at RestSharp.Http.RequestStreamCallback(IAsyncResult result, Action`1 callback)
+2019-10-30 03:43:57,507 [11] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-30 03:48:16,111 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 03:48:16,428 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 03:48:18,096 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 18:07:09,009 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 18:07:09,621 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 18:07:11,665 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 18:18:15,149 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 18:18:15,420 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 18:18:17,063 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 18:20:36,823 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 18:20:37,143 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 18:20:38,827 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 19:32:58,595 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 19:32:58,840 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 19:33:00,490 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 19:36:17,902 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 19:36:18,258 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 19:36:19,948 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 19:44:51,157 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 19:44:51,432 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 19:44:53,053 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 19:49:17,342 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 19:49:17,610 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 19:49:19,278 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 19:51:07,370 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 19:51:07,622 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 19:51:09,282 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 19:52:59,959 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 19:53:00,377 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 19:53:02,025 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 19:56:14,404 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 19:56:14,713 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 19:56:16,403 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 19:58:46,338 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 19:58:46,740 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 19:58:48,717 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 20:06:12,104 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 20:06:12,493 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 20:06:14,125 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 20:08:29,338 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 20:08:29,643 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 20:08:31,285 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 20:12:41,479 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 20:12:41,737 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 20:12:43,379 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 20:14:43,336 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 20:14:43,652 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 20:14:45,295 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 20:18:08,458 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 20:18:08,735 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 20:18:10,402 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 20:18:36,966 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 20:18:37,245 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 20:18:38,920 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 20:20:07,171 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 20:20:07,794 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 20:20:09,500 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 20:34:54,500 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 20:34:54,762 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 20:34:56,526 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 20:42:50,096 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 20:42:50,404 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 20:42:52,089 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 20:46:04,108 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 20:46:04,446 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 20:46:06,132 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 20:46:54,854 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 20:46:55,148 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 20:46:56,844 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 20:48:46,936 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 20:48:47,238 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 20:48:48,911 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 20:51:35,132 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 20:51:35,395 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 20:51:37,057 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 20:53:24,087 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 20:53:24,357 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 20:53:25,979 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 20:54:29,101 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 20:54:29,446 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 20:54:31,125 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 21:00:53,603 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 21:00:53,851 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 21:00:55,561 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 21:02:04,761 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 21:02:05,029 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 21:02:06,740 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 22:12:05,383 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 22:12:05,690 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 22:12:07,301 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 22:17:40,491 [1] ERROR SchoolSafeID.Helper - Invalid visitor date of birth: The DateTime represented by the string is not supported in calendar System.Globalization.GregorianCalendar.
+System.FormatException: The DateTime represented by the string is not supported in calendar System.Globalization.GregorianCalendar.
+   at System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   at SchoolSafeID.ScanLicense.ValidateDOB() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\ScanLicense.xaml.cs:line 47
+2019-10-30 22:18:35,026 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-30 22:18:35,334 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-30 22:18:36,971 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-30 22:18:59,577 [1] ERROR SchoolSafeID.Helper - Invalid visitor date of birth: The DateTime represented by the string is not supported in calendar System.Globalization.GregorianCalendar.
+System.FormatException: The DateTime represented by the string is not supported in calendar System.Globalization.GregorianCalendar.
+   at System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   at SchoolSafeID.ScanLicense.ValidateDOB() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\ScanLicense.xaml.cs:line 47
+2019-10-30 22:19:27,340 [1] INFO SchoolSafeID.Helper - Save Visitor Image

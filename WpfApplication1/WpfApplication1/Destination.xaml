@@ -21,7 +21,7 @@
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <Label Margin="0,0,0,5">Enter Destination:</Label>
 
-            <wpfx1:WatermarkTextBox Style="{StaticResource WmTextField}" Name="txt_Destination" Watermark="Enter Destination" Margin="0,0,0,40" Width="Auto" KeyDown="txt_Destination_KeyDown" />
+            <wpfx1:WatermarkTextBox MaxWidth="580" Style="{StaticResource WmTextField}" Name="txt_Destination" Watermark="Enter Destination" Margin="0,0,0,40" Width="Auto" KeyDown="txt_Destination_KeyDown" />
             
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button Style="{StaticResource MyButton}" Content="SUBMIT" Name="btnSubmit" Click="btnSubmit_Click"/>

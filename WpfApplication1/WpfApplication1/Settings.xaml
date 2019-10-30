@@ -21,7 +21,7 @@
         <Label Margin="20,0,0,0">Select Printer:</Label>
         <ComboBox Style="{StaticResource ssid_ComboBox}" Margin="20,0,20,0" Name="printersList" Width="Auto" />
         <Label Margin="20,5,0,0">School No:</Label>
-        <TextBox Style="{StaticResource MyTextField}" Name="school_url" adorners:Watermark.Text="School No" Margin="20,0,20,0" Width="Auto"></TextBox>
+        <TextBox InputScope="Number" MaxLength="15" Style="{StaticResource MyTextField}" Name="school_url" adorners:Watermark.Text="School No" Margin="20,0,20,0" Width="Auto"></TextBox>
         <Button Name="btnSettings" Style="{StaticResource MyButton}" Content="Save" Height="85" Width="220" HorizontalAlignment="Left" Margin="20" Click="btnSettings_Click"/>
     </StackPanel>
 

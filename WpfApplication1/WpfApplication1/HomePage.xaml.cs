@@ -90,6 +90,8 @@ namespace SchoolSafeID
         {
             Visitor.ResetData();
             Student.ResetData();
+
+            //Helper.ShowAppDownloadMessage();
         }        
 
 

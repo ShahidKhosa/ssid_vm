@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,10 +37,38 @@ namespace SchoolSafeID
         }
 
 
+        private bool ValidateDOB()
+        {
+            if(txt_DateOfBirth.Text != String.Empty && !txt_DateOfBirth.Text.Contains("_"))
+            {
+                try
+                {
+                    DateTime dt = DateTime.ParseExact(txt_DateOfBirth.Text.ToString(), "MM/dd/yyyy", CultureInfo.InvariantCulture);
+
+                    if (dt.Year > (DateTime.Now.Year - 80) && dt.Year < (DateTime.Now.Year - 15))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        Helper.log.Info("Out of range visitor dob: " + txt_DateOfBirth.Text);
+                        MessageBox.Show("Please enter valid date of birth (mm/dd/yyyy)");
+                    }
+                }
+                catch(Exception ex)
+                {
+                    Helper.log.Error("Invalid visitor date of birth: " + ex.Message, ex);
+                    MessageBox.Show("Please enter valid date of birth (mm/dd/yyyy)");
+                }
+            }                       
+
+            return false;
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (txt_FirstName.Text != String.Empty && txt_LastName.Text != String.Empty && txt_DateOfBirth.Text != String.Empty)
-            {
+            if (txt_FirstName.Text != String.Empty && txt_LastName.Text != String.Empty && ValidateDOB())
+            {                
                 Visitor.FirstName   = txt_FirstName.Text;
                 Visitor.LastName    = txt_LastName.Text;
                 Visitor.DateOfBirth = txt_DateOfBirth.Text;                
@@ -190,7 +219,12 @@ namespace SchoolSafeID
 
 
         private void txt_DateOfBirth_GotFocus(object sender, RoutedEventArgs e)
-        {
+        {   
+            if(txt_DateOfBirth.Text == string.Empty)
+            {
+                txt_DateOfBirth.Mask = "00/00/0000";                
+            }
+
             txt_DateOfBirth.Select(0, 0);
         }
 
@@ -213,6 +247,14 @@ namespace SchoolSafeID
             tmrDelay.Interval = 1200;
             tmrDelay.Enabled = false;
             txtBarcodeData.Focus();
+        }
+
+        private void txt_DateOfBirth_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (txt_DateOfBirth.Text == string.Empty || txt_DateOfBirth.Text.Equals("__/__/____"))
+            {
+                txt_DateOfBirth.Mask = "";                
+            }
         }
     }
 }

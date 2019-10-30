@@ -60,7 +60,7 @@ namespace SchoolSafeID
         {
             Visitor.DigitalPass = true;
 
-            if ((!txt_Phone.Text.Equals("(___) ___-____") && txt_Phone.Text != String.Empty) || (txt_Email.Text != String.Empty && ValidatorExtensions.IsValidEmailAddress(txt_Email.Text)))
+            if ((!txt_Phone.Text.Equals("(___) ___-____") && !txt_Phone.Text.Contains("_")) || (txt_Email.Text != String.Empty && ValidatorExtensions.IsValidEmailAddress(txt_Email.Text)))
             {
                 // we must need to validate the email address before moving forward.
                 Visitor.EmailAddress = txt_Email.Text;

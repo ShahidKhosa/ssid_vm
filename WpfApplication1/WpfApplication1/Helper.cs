@@ -9,6 +9,8 @@ using Newtonsoft.Json;
 using Emgu.CV;
 using Emgu.CV.Structure;
 using log4net;
+using System.Threading.Tasks;
+using System.Windows;
 
 namespace SchoolSafeID
 {
@@ -63,6 +65,24 @@ namespace SchoolSafeID
 
                 Visitor.VisitorHasNewImage = true;
             }            
-        }        
+        }
+
+        public async static void ShowAppDownloadMessage()
+        {
+            await Task.Delay(1500);
+
+            string message = "A new version of this app is available. Click OK to download now?";
+            string caption = "Confirmation";
+            MessageBoxButton buttons = MessageBoxButton.OKCancel;
+            MessageBoxImage icon = MessageBoxImage.Information;
+            if (MessageBox.Show(message, caption, buttons, icon) == MessageBoxResult.OK)
+            {
+                // OK code here                  
+            }
+            else
+            {
+                // Cancel code here                  
+            }
+        }
     }
 }

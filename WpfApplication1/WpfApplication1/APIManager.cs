@@ -291,7 +291,7 @@ namespace SchoolSafeID
                 {
                     Helper.log.Error("Send Visitor Data Async Error Message " + response.ErrorMessage, response.ErrorException);
                     Helper.log.Error("Send Visitor Data Async " + response.StatusCode + "\n" + response.StatusDescription);
-                    MessageBox.Show("Error, please try again");
+                    //MessageBox.Show("Error, please try again");
                 }
             });
         }
@@ -325,20 +325,43 @@ namespace SchoolSafeID
                 //error ocured during upload   
                 Helper.log.Error("Send Visitor Data sync Error Message " + response.ErrorMessage, response.ErrorException);
                 Helper.log.Error("Send Visitor Data Sync " + response.StatusCode + "\n" + response.StatusDescription);
-                MessageBox.Show("Error! Please try again.");                
+                MessageBox.Show("Application Error! Please try again.");                
             }
         }
 
 
         public static void SendLogData()
         {
-            var client  = GetClient();
-            var request = new RestRequest("/api/class_api.php");
-            request.AddParameter("action", "save_log"); // adds to POST or URL querystring based on Method                                    
+            string LogFilePath = Directory.GetCurrentDirectory() + "\\Logs\\SSIDLog.log";
+            string LogFileCopy = Directory.GetCurrentDirectory() + "\\Logs\\SSIDLogCopy.log";
 
-            // execute the request
-            var response = client.Post(request);
-            Dictionary<string, object> data = SimpleJson.DeserializeObject<Dictionary<string, object>>(response.Content);            
+            if (KioskSettings != null && File.Exists(LogFilePath))
+            {                                
+                var client = GetClient();
+                var request = new RestRequest("/api/class_api.php", Method.POST);
+                request.AddParameter("action", "save_api_log");
+                request.AddParameter("job_id", KioskSettings["job_id"]);
+
+                try
+                {
+                    File.Copy(LogFilePath, LogFileCopy, true);
+                    string content = File.ReadAllText(LogFileCopy, Encoding.UTF8);
+                    File.Delete(LogFileCopy);
+                    request.AddParameter("log_data", content);                    
+                }
+                catch (System.IO.IOException e)
+                {
+                    Helper.log.Error("Send Log File " + e.Message, e);                    
+                    return;
+                }
+
+                //request.AlwaysMultipartFormData = true;
+                //request.AddHeader("Content-Type", "multipart/form-data");
+                //request.AddFile("file", LogFilePath, "text/plain");
+                //request.AddParameter("multipart/form-data", Path.GetFileName(LogFilePath), ParameterType.RequestBody);
+
+                SendVisitorDataAsync(request, client);
+            }
         }
 
 

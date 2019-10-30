@@ -47,8 +47,6 @@ namespace SchoolSafeID
                 Helper.log.Error(ex.Message);
             }            
         }
-
-
     }
 
 
@@ -58,33 +56,48 @@ namespace SchoolSafeID
         {
             Schedule<KioskCronJob>()
                     .NonReentrant() // Only one instance of the job can run at a time
-                    .ToRunOnceAt(DateTime.Now.AddMinutes(1))    // Delay startup for a while
-                    .AndEvery(1).Minutes();     // Interval
+                    .ToRunOnceAt(DateTime.Now.AddMinutes(5))    // Delay startup for a while
+                    .AndEvery(10).Minutes();     // Interval
 
             Schedule<StudentsCronJob>()
                     .NonReentrant() // Only one instance of the job can run at a time
-                    .ToRunOnceAt(DateTime.Now.AddMinutes(2))    // Delay startup for a while
-                    .AndEvery(2).Minutes();     // Interval
+                    .ToRunOnceAt(DateTime.Now.AddMinutes(30))    // Delay startup for a while
+                    .AndEvery(30).Minutes();     // Interval
+
+            Schedule<SendLogFile>()
+                    .NonReentrant() // Only one instance of the job can run at a time
+                    .ToRunOnceAt(DateTime.Now.AddMinutes(1))    // Delay startup for a while
+                    .AndEvery(1).Hours();     // Interval
 
             // TODO... Add more schedules here
         }
     }
+
 
     public class KioskCronJob : IJob
     {
         public void Execute()
         {
             // Execute your scheduled task here
-            APIManager.GetScheduleKioskSettings();
-            Console.WriteLine("The time is {0:HH:mm:ss}", DateTime.Now);
+            APIManager.GetScheduleKioskSettings();            
         }
     }
+
 
     public class StudentsCronJob : IJob
     {
         public void Execute()
         {
            APIManager.GetAllStudents("get_all_students");
+        }
+    }
+
+
+    public class SendLogFile : IJob
+    {        
+        public void Execute()
+        {            
+            APIManager.SendLogData();
         }
     }
 }
