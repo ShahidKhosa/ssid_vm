@@ -37,9 +37,11 @@ namespace SchoolSafeID
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            if (txt_Destination.Text != String.Empty)
+            Destinations destination = (Destinations)cmbDestination.SelectedItem;
+
+            if (destination != null)
             {
-                Visitor.Destination = txt_Destination.Text;
+                Visitor.Destination = (destination.ID == 10 ? txt_Destination.Text : destination.Destination);
                 this.Close();     
                 
                 if(checkinReason != null)
@@ -68,5 +70,51 @@ namespace SchoolSafeID
                 btnSubmit_Click(sender, e);
             }
         }
+
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            List<Destinations> destinations = new List<Destinations>();
+
+            for (int i = 1; i < 10; i++)
+            {
+                string key = "destination" + i;
+
+                if (APIManager.KioskSettings.ContainsKey(key) && APIManager.KioskSettings[key].ToString() != string.Empty)
+                {
+                    destinations.Add(new Destinations() { ID = i, Destination = APIManager.KioskSettings[key].ToString() });
+                }
+            }
+
+            destinations.Add(new Destinations() { ID = 10, Destination = "Other" });
+
+            cmbDestination.ItemsSource = destinations;
+            cmbDestination.SelectedValuePath = "ID";
+            cmbDestination.DisplayMemberPath = "Destination";
+        }
+
+
+        private void cmbDestination_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Destinations destination = (Destinations)cmbDestination.SelectedItem;
+
+            if (destination != null && destination.ID == 10)
+            {
+                txt_Destination.Text = "";
+                txt_Destination.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                txt_Destination.Text = "";
+                txt_Destination.Visibility = Visibility.Collapsed;
+            }
+        }
+    }
+
+
+    public class Destinations
+    {
+        public int ID { get; set; }
+        public string Destination { get; set; }
     }
 }

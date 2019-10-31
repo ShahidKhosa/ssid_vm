@@ -161,6 +161,8 @@ namespace SchoolSafeID
             if (Student.ID > 0 && Student.LiveImage != string.Empty)
             {
                 string imagePath = string.Format("/assets/membership/{0}/{1}", Student.JobID, Student.LiveImage);
+                Student.ImagePath = Guid.NewGuid() + ".jpg";
+
                 APIManager.DownloadFile(imagePath, Student.ImagePath, 0);
 
                 //if (!File.Exists(Student.ImagePath))

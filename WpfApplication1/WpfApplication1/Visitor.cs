@@ -11,21 +11,33 @@ namespace SchoolSafeID
 {
     class Visitor
     {
-        public static string NextURL
+        private static string _visitorImage = "";
+
+        private static string _visitorFullImage = "";
+
+        public static string FullImagePath
         {
-            get;
-            set;
-        }
+            get
+            {
+                return Helper.GetPath("\\" + APIManager.KioskSettings["job_id"]) + "\\" + _visitorFullImage;
+            }
+            set
+            {
+                _visitorFullImage = value;
+            }
+        }                        
 
-        public static string PreviousURL
+        public static string CroppedImagePath
         {
-            get;
-            set;
-        }
-
-        public static string FullImagePath => Helper.GetPath("\\" + APIManager.KioskSettings["job_id"]) + "\\visitor.jpg";
-
-        public static string CroppedImagePath => String.Format("{0}\\{1}", Helper.GetPath("\\" + APIManager.KioskSettings["job_id"]), "visitor_croped.jpg");
+            get
+            {
+                return String.Format("{0}\\{1}", Helper.GetPath("\\" + APIManager.KioskSettings["job_id"]), _visitorImage);
+            }
+            set
+            {
+                _visitorImage = value;
+            }
+        }            
 
         public static int ID
         {
@@ -245,7 +257,9 @@ namespace SchoolSafeID
 
             if (ID > 0 && VisitorLiveImage != string.Empty)
             {
-                APIManager.DownloadFile(string.Format("/assets/visitors/{0}", VisitorLiveImage), Visitor.CroppedImagePath, 0);
+                CroppedImagePath = Guid.NewGuid() + ".jpg";
+
+                APIManager.DownloadFile(string.Format("/assets/visitors/{0}", VisitorLiveImage), CroppedImagePath, 0);
             }
         }
 

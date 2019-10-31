@@ -15,13 +15,27 @@
         Padding="20" ResizeMode="NoResize"
         FocusManager.FocusedElement="{Binding ElementName=txt_Destination}"
         Title="Enter Destination" Icon="favicon.ico" HorizontalAlignment="Center" VerticalAlignment="Center" 
-        HorizontalContentAlignment="Center" Width="700" Height="350" WindowStartupLocation="CenterOwner">
+        HorizontalContentAlignment="Center" Width="700" Height="360" WindowStartupLocation="CenterOwner" Loaded="Window_Loaded">
     <Grid>
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Label Margin="0,0,0,5">Enter Destination:</Label>
+            <Label Margin="0,0,0,5">Select Destination:</Label>
 
-            <wpfx1:WatermarkTextBox MaxWidth="580" Style="{StaticResource WmTextField}" Name="txt_Destination" Watermark="Enter Destination" Margin="0,0,0,40" Width="Auto" KeyDown="txt_Destination_KeyDown" />
+            <ComboBox Margin="0,0,0,20" MaxWidth="580" Text="Select Destination..." 
+                Style="{StaticResource ssid_ComboBox}"
+                HorizontalAlignment="Center"             
+                VerticalAlignment="Center"                             
+                Name="cmbDestination" SelectionChanged="cmbDestination_SelectionChanged">
+                <ComboBox.ItemContainerStyle>
+                    <Style TargetType="ComboBoxItem">
+                        <Setter Property="Height" Value="80" />
+                        <Setter Property="Padding" Value="15" />
+                        <Setter Property="VerticalAlignment" Value="Center" />
+                    </Style>
+                </ComboBox.ItemContainerStyle>
+            </ComboBox>
+            
+            <wpfx1:WatermarkTextBox MaxLength="25" Visibility="Collapsed" MaxWidth="580" Style="{StaticResource WmTextField}" Name="txt_Destination" Watermark="Enter Other Destination" Margin="0,0,0,20" Width="Auto" KeyDown="txt_Destination_KeyDown" />
             
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button Style="{StaticResource MyButton}" Content="SUBMIT" Name="btnSubmit" Click="btnSubmit_Click"/>

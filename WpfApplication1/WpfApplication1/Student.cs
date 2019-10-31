@@ -11,7 +11,20 @@ namespace SchoolSafeID
 {
     class Student
     {
-        public static string ImagePath => Helper.GetPath("\\" + APIManager.KioskSettings["job_id"]) + "\\" + LiveImage;
+        private static string _imageName = "";
+
+        public static string ImagePath
+        {
+            get
+            {
+                return Helper.GetPath("\\" + APIManager.KioskSettings["job_id"]) + "\\" + _imageName;
+            }
+            set
+            {
+                _imageName = value;
+            }
+        }
+            //=> 
 
         public static int ID
         {
@@ -222,24 +235,22 @@ namespace SchoolSafeID
 
         public static void SetData(Dictionary<string, object> data)
         {
-            ID = (data.ContainsKey("id") ? Int32.Parse(data["id"].ToString()) : 0);
-            JobID = (APIManager.KioskSettings.ContainsKey("job_id") ? Int32.Parse(APIManager.KioskSettings["job_id"].ToString()) : 0);
-            StudentID = (data.ContainsKey("std_id") ? data["std_id"].ToString() : "0");
-            FirstName = (data.ContainsKey("first_name") ? data["first_name"].ToString() : "");
-            LastName = (data.ContainsKey("last_name") ? data["last_name"].ToString() : "");
-            Grade = (data.ContainsKey("grade") ? data["grade"].ToString() : "");
-            
-            LiveImage = (data.ContainsKey("image") ? data["image"].ToString() : "");
-
+            ID          = (data.ContainsKey("id") ? Int32.Parse(data["id"].ToString()) : 0);
+            JobID       = (APIManager.KioskSettings.ContainsKey("job_id") ? Int32.Parse(APIManager.KioskSettings["job_id"].ToString()) : 0);
+            StudentID   = (data.ContainsKey("std_id") ? data["std_id"].ToString() : "0");
+            FirstName   = (data.ContainsKey("first_name") ? data["first_name"].ToString() : "");
+            LastName    = (data.ContainsKey("last_name") ? data["last_name"].ToString() : "");
+            Grade       = (data.ContainsKey("grade") ? data["grade"].ToString() : "");            
+            LiveImage   = (data.ContainsKey("image") ? data["image"].ToString() : "");
+            ImagePath   = Guid.NewGuid() + ".jpg";
 
             if (ID > 0 && LiveImage != string.Empty)
             {
-                APIManager.DownloadFile(string.Format("/assets/membership/{0}/{1}", JobID, LiveImage), Student.ImagePath, 0);
+                APIManager.DownloadFile(string.Format("/assets/membership/{0}/{1}", JobID, LiveImage), ImagePath, 0);
             }
             else
             {
-                APIManager.DownloadFile("/assets/membership/placeholder.jpg", Student.ImagePath, 0);
-                
+                APIManager.DownloadFile("/assets/membership/placeholder.jpg", ImagePath, 0);                
             }
         }
 

@@ -21,6 +21,7 @@ namespace SchoolSafeID
     class APIManager
     {
         private static RestClient restClient = null;
+        private static string _badgePath = "";
 
         private static int logoNumber = 0;
 
@@ -40,7 +41,11 @@ namespace SchoolSafeID
         {
             get
             {
-                return Helper.GetPath() + "\\badge.pdf";
+                return Helper.GetPath() + "\\"+ _badgePath + ".pdf";
+            }
+            set
+            {
+                _badgePath = value;
             }
         }
 
@@ -88,10 +93,19 @@ namespace SchoolSafeID
 
         public static async void DownloadFile(string url, string path, int printBadge = 0)
         {
+            ServicePointManager.DefaultConnectionLimit  = 100;
+            ServicePointManager.MaxServicePointIdleTime = 5000;
             ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls | SecurityProtocolType.Ssl3;
 
-            var client      = new RestClient(BaseURL + url);
+            var client = new RestClient(BaseURL + url)
+            {
+                Authenticator = new HttpBasicAuthenticator(Username, Password),
+                //Timeout = timeOut // 10000 milliseconds == 10 seconds
+            };
+
+            client.ConfigureWebRequest((r) => { r.ServicePoint.Expect100Continue = false; r.KeepAlive = true; });
+            
             var request     = new RestRequest(Method.GET);            
             var response    = await client.ExecuteTaskAsync(request);
 
@@ -311,6 +325,7 @@ namespace SchoolSafeID
                 {
                     if (result.ContainsKey("sticker"))
                     {
+                        BadgePath = Guid.NewGuid().ToString();
                         Helper.log.Info("Download Badge from " + result["sticker"]);
                         DownloadFile(result["sticker"].ToString(), BadgePath, 1);
                     }

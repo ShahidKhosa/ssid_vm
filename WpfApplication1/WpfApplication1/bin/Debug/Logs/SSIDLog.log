@@ -957,3 +957,44 @@ System.IO.IOException: The process cannot access the file 'C:\Users\shahid.amin\
    at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
    at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
    at SchoolSafeID.APIManager.<DownloadFile>d__17.MoveNext() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 102
+2019-10-31 17:50:37,115 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-31 17:50:38,903 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-31 17:50:41,089 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-31 17:53:23,564 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-31 17:53:25,054 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-31 17:53:27,338 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-31 17:53:48,472 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/visitors/visitor-card-97391.pdf
+2019-10-31 18:00:17,329 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-31 18:00:18,951 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-31 18:00:21,074 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-31 18:01:52,970 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/visitors/visitor-card-97391.pdf
+2019-10-31 18:03:52,804 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/visitors/visitor-card-97391.pdf
+2019-10-31 18:20:26,735 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-31 18:20:28,149 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-31 18:20:30,158 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-31 18:23:32,348 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-31 18:23:52,222 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/visitors/visitor-card-97391.pdf
+2019-10-31 18:29:24,144 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-31 18:29:46,076 [16] ERROR SchoolSafeID.Helper - Send Visitor Data Async Error Message The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at RestSharp.Http.GetRawResponseAsync(IAsyncResult result, Action`1 callback)
+   at RestSharp.Http.ResponseCallback(IAsyncResult result, Action`1 callback)
+2019-10-31 18:29:46,086 [16] ERROR SchoolSafeID.Helper - Send Visitor Data Async 0
+
+2019-10-31 18:47:32,813 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-31 18:47:34,463 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-31 18:47:36,708 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-31 18:58:53,415 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-31 18:58:54,824 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-31 18:58:57,187 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-10-31 18:59:31,090 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-31 19:02:05,999 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/visitors/visitor-card-97391.pdf
+2019-10-31 19:08:48,820 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-10-31 19:09:06,498 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/visitors/visitor-card-97391.pdf
+2019-10-31 19:16:49,522 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-10-31 19:16:50,991 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-10-31 19:16:52,957 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-11-01 01:13:11,991 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-11-01 01:13:13,631 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-11-01 01:13:15,940 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PublishUrlHistory>D:\deploy\publishing\|D:\xampp5.6\htdocs\dev.schoolsafeid.com\app\|D:\csharp\ssid_published\|F:\csharp\published\|publish\</PublishUrlHistory>
+    <PublishUrlHistory>F:\csharp\published\|D:\deploy\publishing\|D:\xampp5.6\htdocs\dev.schoolsafeid.com\app\|D:\csharp\ssid_published\|publish\</PublishUrlHistory>
     <InstallUrlHistory>https://dev.schoolsafeid.com/app/|https://www.schoolsafeid.com/app/|https://dev.schoolsafeid.com/api/</InstallUrlHistory>
     <SupportUrlHistory />
     <UpdateUrlHistory>https://www.schoolsafeid.com/app/</UpdateUrlHistory>

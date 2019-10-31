@@ -40,6 +40,7 @@ namespace SchoolSafeID
         {            
             try
             {
+                Visitor.FullImagePath = Guid.NewGuid() + ".jpg";
                 currentFrame.Save(Visitor.FullImagePath);
 
                 CropImage(Visitor.FullImagePath, 175, 60, 275, 350);
@@ -60,6 +61,8 @@ namespace SchoolSafeID
             { 
                 var gr = Graphics.FromImage(bmp);            
                 gr.DrawImage(source, new Rectangle(0, 0, bmp.Width, bmp.Height), crop, GraphicsUnit.Pixel);
+
+                Visitor.CroppedImagePath = Guid.NewGuid() + ".jpg";
 
                 bmp.Save(Visitor.CroppedImagePath);
 
