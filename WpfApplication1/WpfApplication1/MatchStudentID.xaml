@@ -20,7 +20,7 @@
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <Label Margin="0,0,0,5">Enter Student ID:</Label>
-            <TextBox Style="{StaticResource MyTextField}" Name="txtStudentID" Margin="0,0,0,40" Width="Auto" KeyDown="txtStudentID_KeyDown" />
+            <TextBox InputScope="Number" Style="{StaticResource MyTextField}" Name="txtStudentID" Margin="0,0,0,40" Width="Auto" KeyDown="txtStudentID_KeyDown" />
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button Style="{StaticResource MyButton}" Content="SUBMIT" Name="btnSubmit" Click="btnSubmit_Click"/>

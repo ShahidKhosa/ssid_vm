@@ -54,7 +54,9 @@ namespace SchoolSafeID
 
             txtDate.Text = "Check-in: " + Visitor.VisitDateTime.ToString("MM/dd/yyyy");
             txtTime.Text = Visitor.VisitDateTime.ToString("hh:mm:ss tt");
-                        
+
+            vbVisitorName.Stretch = (txtVisitorName.Text.Length > 20 ? Stretch.Fill : Stretch.None);
+
             //imgVisitorImage.Source = new BitmapImage(new Uri(Visitor.CroppedImagePath, UriKind.Absolute));
             //Visitor.VisitDateTime.ToString("MM/dd/yyyy hh:mm:ss tt");            
 
@@ -100,6 +102,12 @@ namespace SchoolSafeID
 
         private async void btnNoBadgeNeeded_Click(object sender, RoutedEventArgs e)
         {
+            btnNoBadgeNeeded.Content = "Please wait...";
+            btn_GoBack.IsEnabled = false;
+            btnYesPrint.IsEnabled = false;
+            btnNoBadgeNeeded.IsEnabled = false;
+            btnNoMakeChanges.IsEnabled = false;
+
             APIManager.SendVisitorData(0);
             
             await Task.Delay(1000);

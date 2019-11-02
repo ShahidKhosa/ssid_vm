@@ -29,7 +29,7 @@ namespace SchoolSafeID
      * log.debug
     */
     public partial class MainWindow : Window
-    {        
+    {
         public MainWindow()
         {
             InitializeComponent();
@@ -41,11 +41,11 @@ namespace SchoolSafeID
                 JobManager.Initialize(new ScheduledJobRegistry());
                 _NavigationFrame.Navigate(new HomePage());
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 JobManager.Stop();
                 Helper.log.Error(ex.Message);
-            }            
+            }
         }
     }
 
@@ -79,7 +79,7 @@ namespace SchoolSafeID
         public void Execute()
         {
             // Execute your scheduled task here
-            APIManager.GetScheduleKioskSettings();            
+            APIManager.GetScheduleKioskSettings();
         }
     }
 
@@ -88,15 +88,15 @@ namespace SchoolSafeID
     {
         public void Execute()
         {
-           APIManager.GetAllStudents("get_all_students");
+            APIManager.GetAllStudents("get_all_students");
         }
     }
 
 
     public class SendLogFile : IJob
-    {        
+    {
         public void Execute()
-        {            
+        {
             APIManager.SendLogData();
         }
     }

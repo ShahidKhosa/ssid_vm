@@ -46,7 +46,11 @@
                         <StackPanel Grid.Column="2" VerticalAlignment="Top" Height="246" Grid.ColumnSpan="2" HorizontalAlignment="Center" Width="392">
                             <TextBlock Name="txtSchoolName" Margin="0,10,0,0" Height="35" TextAlignment="Center" Foreground="Black" FontSize="24" Text="School Name Here"/>
                             <Rectangle Margin="10" HorizontalAlignment="Stretch" Fill="Black" Height="5"/>
-                            <TextBlock Name="txtStudentName" Foreground="Black" FontWeight="500" FontSize="36" TextAlignment="Center" Text="Student Name Here"/>
+
+                            <Viewbox Stretch="None" MaxWidth="360" Name="vbStudentName">
+                                <TextBlock Name="txtStudentName" FontWeight="Medium" Foreground="Black" TextAlignment="Center" Text="" FontSize="36"/>
+                            </Viewbox>
+                            
                             <TextBlock Name="txtGrade" Foreground="Black" FontSize="24" TextAlignment="Center" Text="Grade"/>
                             <Rectangle Margin="10" HorizontalAlignment="Stretch" Fill="Black" Height="5"/>
                             <TextBlock Name="txtDate" Foreground="Black" FontSize="24" TextAlignment="Center" Text="Check-in: 09/15/19"/>

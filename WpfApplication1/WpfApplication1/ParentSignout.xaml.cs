@@ -239,7 +239,7 @@ namespace SchoolSafeID
 
         private void btnAddNew_Click(object sender, RoutedEventArgs e)
         {
-            StudentPersonalInfo student = StudentPersonalInfo.Students.Find(s => (s.FirstName + " " + s.LastName).Equals(txtStudentName.Text) && s.Grade.Equals(txtStudentGrade.Text));
+            StudentPersonalInfo student = StudentPersonalInfo.Students.Find(s => (s.FirstName + " " + s.LastName).Equals(txtStudentName.Text, StringComparison.OrdinalIgnoreCase) && s.Grade.Equals(txtStudentGrade.Text, StringComparison.OrdinalIgnoreCase));
 
             if (student != null && !selectedStudentsList.Contains(student))
             {

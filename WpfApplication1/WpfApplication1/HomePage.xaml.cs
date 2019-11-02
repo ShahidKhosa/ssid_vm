@@ -78,6 +78,8 @@ namespace SchoolSafeID
                     btnStudentSignin.Visibility = Visibility.Visible;
                     btnStudentSignout.Visibility = Visibility.Visible;
                 }
+
+                Helper.CleanExtraResources();
             }
             catch(Exception ex)
             {

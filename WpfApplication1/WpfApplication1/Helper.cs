@@ -87,5 +87,44 @@ namespace SchoolSafeID
                 // Cancel code here                  
             }
         }
+
+
+        public static void CleanExtraResources()
+        {
+            try
+            {
+                string dirPath = GetPath() + "\\" + APIManager.KioskSettings["job_id"] + "\\";
+
+                string[] filePaths = Directory.GetFiles(dirPath, "*.jpg");
+                foreach (string filePath in filePaths)
+                {
+                    try
+                    {
+                        File.Delete(filePath);
+                    }
+                    catch (Exception ex)
+                    {
+                        //Helper.log.Error("Delete Image Error " + ex.Message, ex);
+                    }
+                }
+
+                string[] files = Directory.GetFiles(GetPath(), "*.pdf");
+                foreach (string file in files)
+                {
+                    try
+                    {
+                        File.Delete(file);
+                    }
+                    catch (Exception ex)
+                    {
+                        //Helper.log.Error("Delete PDF File Error " + ex.Message, ex);
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                Helper.log.Error("Clean Extra resouces Error " + ex.Message, ex);
+            }
+        }
     }
 }

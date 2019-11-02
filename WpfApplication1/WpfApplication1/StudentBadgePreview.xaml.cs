@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 namespace SchoolSafeID
@@ -44,6 +45,13 @@ namespace SchoolSafeID
 
         private void btnNoBadgeNeeded_Click(object sender, RoutedEventArgs e)
         {
+            btnNoBadgeNeeded.Content = "Please wait...";
+
+            btn_GoBack.IsEnabled = false;
+            btnPrintStudentPass.IsEnabled = false;
+            btnNoBadgeNeeded.IsEnabled = false;
+            btnPrintTemporaryBadge.IsEnabled = false;
+
             APIManager.SendStudentData(0, "");
 
             //Just Complete Student sign-in process and go back to the home page.
@@ -83,7 +91,7 @@ namespace SchoolSafeID
 
             txtDate.Text = "Check-in: " + Student.VisitDateTime.ToString("MM/dd/yyyy");
             txtTime.Text = Student.VisitDateTime.ToString("hh:mm:ss tt");
-
+            vbStudentName.Stretch = (txtStudentName.Text.Length > 20 ? Stretch.Fill : Stretch.None);
 
             try
             {

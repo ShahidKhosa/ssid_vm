@@ -95,6 +95,11 @@
                 <Setter Property="BorderThickness" Value="1" />
             </Style>
 
+            <Style x:Key="WaterMarkStyle" TargetType="{x:Type TextBlock}">
+                <Setter Property="FontStyle" Value="Normal" />
+                <Setter Property="Foreground" Value="#666" />
+            </Style>
+
             <Style x:Key="WmTextField" TargetType="wpfx1:WatermarkTextBox">
                 <Setter Property="Width" Value="650" />
                 <Setter Property="Height" Value="70" />
@@ -166,10 +171,19 @@
                                     <Setter Property="Opacity" Value="1" />
                                     <!--<Setter Property="Margin" Value="5 6 5 5" />-->
                                 </Trigger>
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter Property="Opacity" Value="0.4" />
+                                </Trigger>
                             </ControlTemplate.Triggers>
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
+
+                <!--<Style.Triggers>
+                    <Trigger Property="IsEnabled" Value="False">
+                        <Setter Property="Opacity" Value="0.4" />
+                    </Trigger>
+                </Style.Triggers>-->
             </Style>
 
             <Style x:Key="MarginButtonStyle" TargetType="Button" BasedOn="{StaticResource MyButton}">

@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:SchoolSafeID"
         xmlns:wpfx1="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
+        xmlns:adorners="http://gu.se/Adorners"            
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="14"
@@ -21,15 +22,15 @@
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <Label Margin="0,0,0,5">Select Destination:</Label>
 
-            <ComboBox Margin="0,0,0,20" MaxWidth="580" Text="Select Destination..." 
+            <ComboBox Margin="0,0,0,20" MaxWidth="580" adorners:Watermark.TextStyle="{StaticResource WaterMarkStyle}" adorners:Watermark.Text="Select Destination..." 
                 Style="{StaticResource ssid_ComboBox}"
                 HorizontalAlignment="Center"             
                 VerticalAlignment="Center"                             
                 Name="cmbDestination" SelectionChanged="cmbDestination_SelectionChanged">
                 <ComboBox.ItemContainerStyle>
                     <Style TargetType="ComboBoxItem">
-                        <Setter Property="Height" Value="80" />
-                        <Setter Property="Padding" Value="15" />
+                        <!--<Setter Property="Height" Value="80" />
+                        <Setter Property="Padding" Value="15" />-->
                         <Setter Property="VerticalAlignment" Value="Center" />
                     </Style>
                 </ComboBox.ItemContainerStyle>

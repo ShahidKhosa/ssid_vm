@@ -57,11 +57,11 @@ namespace SchoolSafeID
             if (!string.IsNullOrEmpty(cmb.Text))
             {
                 string fullText = cmb.Text.Insert(GetChildOfType<TextBox>(cmb).CaretIndex, e.Text);
-                cmb.ItemsSource = StudentPersonalInfo.Students.Where(s => s.Name.IndexOf(fullText, StringComparison.InvariantCultureIgnoreCase) != -1).ToList();                
+                cmb.ItemsSource = StudentPersonalInfo.Students.Where(s => s.Name.IndexOf(fullText, StringComparison.OrdinalIgnoreCase) != -1).ToList();                
             }
             else if (!string.IsNullOrEmpty(e.Text))
             {
-                cmb.ItemsSource = StudentPersonalInfo.Students.Where(s => s.Name.IndexOf(e.Text, StringComparison.InvariantCultureIgnoreCase) != -1).ToList();
+                cmb.ItemsSource = StudentPersonalInfo.Students.Where(s => s.Name.IndexOf(e.Text, StringComparison.OrdinalIgnoreCase) != -1).ToList();
             }
             else
             {
@@ -84,7 +84,7 @@ namespace SchoolSafeID
 
             if (!string.IsNullOrEmpty(fullText))
             {
-                cmb.ItemsSource = StudentPersonalInfo.Students.Where(s => s.Name.IndexOf(fullText, StringComparison.InvariantCultureIgnoreCase) != -1).ToList();
+                cmb.ItemsSource = StudentPersonalInfo.Students.Where(s => s.Name.IndexOf(fullText, StringComparison.OrdinalIgnoreCase) != -1).ToList();
             }
             else
             {
@@ -106,7 +106,7 @@ namespace SchoolSafeID
 
                 if (!string.IsNullOrEmpty(cmb.Text))
                 {
-                    cmb.ItemsSource = StudentPersonalInfo.Students.Where(s => s.Name.IndexOf(cmb.Text, StringComparison.InvariantCultureIgnoreCase) != -1).ToList();
+                    cmb.ItemsSource = StudentPersonalInfo.Students.Where(s => s.Name.IndexOf(cmb.Text, StringComparison.OrdinalIgnoreCase) != -1).ToList();
                 }
                 else
                 {

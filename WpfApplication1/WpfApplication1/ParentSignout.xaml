@@ -83,8 +83,8 @@
                 Name="cmbSignoutReasons">
                     <ComboBox.ItemContainerStyle>
                         <Style TargetType="ComboBoxItem">
-                            <Setter Property="Height" Value="80" />
-                            <Setter Property="Padding" Value="15" />
+                            <!--<Setter Property="Height" Value="80" />
+                            <Setter Property="Padding" Value="15" />-->
                             <Setter Property="VerticalAlignment" Value="Center" />
                         </Style>
                     </ComboBox.ItemContainerStyle>
