@@ -13,7 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using TouchKeyboardSample.Extensions;
+using TouchKeyboardSample.Providers;
 
 namespace SchoolSafeID
 {
@@ -23,6 +24,7 @@ namespace SchoolSafeID
     public partial class ScanLicense : Page
     {        
         public System.Windows.Forms.Timer tmrDelay;
+        private readonly ITouchKeyboardProvider _touchKeyboardProvider = new TouchKeyboardProvider();
 
 
         public ScanLicense()
@@ -64,6 +66,7 @@ namespace SchoolSafeID
 
             return false;
         }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -195,8 +198,11 @@ namespace SchoolSafeID
                     txt_DateOfBirth.Text = Visitor.DateOfBirth;
                 }
 
-                Visitor.IsOfficeUseOnly = false;
-                btnConfirm.IsEnabled = true;
+                if (Visitor.FirstName != string.Empty && Visitor.LastName != string.Empty)
+                {
+                    Visitor.IsOfficeUseOnly = false;
+                    btnConfirm.IsEnabled = true;
+                }                    
             }
         }
 
@@ -246,8 +252,9 @@ namespace SchoolSafeID
             tmrDelay = new System.Windows.Forms.Timer();
             tmrDelay.Interval = 1200;
             tmrDelay.Enabled = false;
-            txtBarcodeData.Focus();
+            txtBarcodeData.Focus();            
         }
+
 
         private void txt_DateOfBirth_LostFocus(object sender, RoutedEventArgs e)
         {
@@ -255,6 +262,11 @@ namespace SchoolSafeID
             {
                 txt_DateOfBirth.Mask = "";                
             }
+        }
+
+        private void HideTouchKeyboard(object sender, RoutedEventArgs e)
+        {
+            _touchKeyboardProvider.HideTouchKeyboard();
         }
     }
 }

@@ -22,12 +22,17 @@ namespace SchoolSafeID
     /// </summary>
     public partial class HomePage : Page
     {
+        public static HomePage ThisThis;
+
+
         public HomePage()
-        {
+        {            
             AppSettings.GetAppSettings();
 
             InitializeComponent();
             InitPage();
+
+            ThisThis = this;
         }
 
 
@@ -48,15 +53,18 @@ namespace SchoolSafeID
                 {
                     if (APIManager.KioskSettings["app_settings"].ToString().ToLower().Equals("off"))
                     {
+                        btnExit.Visibility = Visibility.Collapsed;
                         btnSettings.Visibility = Visibility.Collapsed;
                     }
                     else
                     {
+                        btnExit.Visibility = Visibility.Visible;
                         btnSettings.Visibility = Visibility.Visible;
                     }
                 }
                 else
                 {
+                    btnExit.Visibility = Visibility.Collapsed;
                     btnSettings.Visibility = Visibility.Collapsed;
                 }
 
@@ -92,6 +100,8 @@ namespace SchoolSafeID
         {
             Visitor.ResetData();
             Student.ResetData();
+
+            //UpdateManager.InstallUpdateSyncWithInfo();
 
             //Helper.ShowAppDownloadMessage();
         }        
@@ -150,12 +160,14 @@ namespace SchoolSafeID
             {                
                 this.NavigationService.Navigate(new Uri("SearchStudent.xaml", UriKind.Relative));
             }
-            else if (APIManager.KioskSettings.ContainsKey("tardy_pass_option") && APIManager.KioskSettings["tardy_pass_option"].ToString() == string.Empty)
+            else if (APIManager.KioskSettings.ContainsKey("tardy_pass_option") && APIManager.KioskSettings["tardy_pass_option"].Equals("student_sign_in"))
             {             
                 this.NavigationService.Navigate(new Uri("StudentSignin.xaml", UriKind.Relative));
             }
-
-            this.NavigationService.Navigate(new Uri("SigninOptions.xaml", UriKind.Relative));
+            else
+            {
+                this.NavigationService.Navigate(new Uri("SigninOptions.xaml", UriKind.Relative));
+            }            
         }
 
 
@@ -163,6 +175,20 @@ namespace SchoolSafeID
         {
             Visitor.IsVisitor = 1;// 1 mean a parent is checking out a student 
             this.NavigationService.Navigate(new Uri("ScanLicense.xaml", UriKind.Relative));            
+        }
+
+
+        public void ReturnToHome()
+        {
+            Visitor.IsVisitor = 0;// Zero mean a visitor record.            
+            this.NavigationService.Navigate(new Uri("ScanLicense.xaml", UriKind.Relative));
+        }
+
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            // Shutdown the application.
+            Application.Current.Shutdown();
         }
     }
 }

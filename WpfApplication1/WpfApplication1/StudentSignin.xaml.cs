@@ -135,13 +135,19 @@ namespace SchoolSafeID
                 txt_Grade.Text = Student.Grade;
             }
 
-            txtBarcodeData.Focus();
-            btnConfirm.IsEnabled = true;
+
+            if (Student.FirstName != string.Empty && Student.LastName != string.Empty)
+            {
+                txtBarcodeData.Focus();
+                btnConfirm.IsEnabled = true;
+            }
         }
 
 
         private void ResetData()
         {
+            Student.ResetData();
+
             txt_FirstName.Text = "";
             txt_LastName.Text = "";
             txt_Grade.Text = "";

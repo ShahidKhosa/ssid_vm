@@ -16,7 +16,7 @@ namespace SchoolSafeID
 
         public SearchStudent()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
 
@@ -174,6 +174,9 @@ namespace SchoolSafeID
             this.NavigationService.Navigate(new Uri("StudentSigninReason.xaml", UriKind.Relative));
         }
 
-
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            cmbStudent.Text = "";            
+        }
     }
 }

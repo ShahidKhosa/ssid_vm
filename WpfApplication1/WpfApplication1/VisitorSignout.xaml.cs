@@ -109,8 +109,11 @@ namespace SchoolSafeID
             {
                 txt_LastName.Text = Visitor.LastName;
             }
-            
-            btnConfirm.IsEnabled = true;
+
+            if (Visitor.FirstName != string.Empty && Visitor.LastName != string.Empty)
+            {
+                btnConfirm.IsEnabled = true;
+            }            
         }
 
 

@@ -47,9 +47,7 @@ namespace SchoolSafeID
             {
                 _badgePath = value;
             }
-        }
-
-        public static Dictionary<string, object> KioskSettings = null;
+        }        
 
         public static string BaseURL
         {
@@ -62,6 +60,9 @@ namespace SchoolSafeID
         public static string Username => ConfigurationSettings.AppSettings["Username"];
 
         public static string Password => ConfigurationSettings.AppSettings["Password"];
+
+        public static Dictionary<string, object> KioskSettings = null;
+
 
         public static string Base64Decode(string base64EncodedData)
         {
@@ -76,12 +77,8 @@ namespace SchoolSafeID
 
             try
             {
-                var client = new RestClient(url);
+                var client  = GetClient(url);
                 var request = new RestRequest(Method.GET);
-
-                ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-
                 client.DownloadData(request).SaveAs(path);
             }
             catch(Exception ex)
@@ -93,19 +90,7 @@ namespace SchoolSafeID
 
         public static async void DownloadFile(string url, string path, int printBadge = 0)
         {
-            ServicePointManager.DefaultConnectionLimit  = 100;
-            ServicePointManager.MaxServicePointIdleTime = 5000;
-            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls | SecurityProtocolType.Ssl3;
-
-            var client = new RestClient(BaseURL + url)
-            {
-                Authenticator = new HttpBasicAuthenticator(Username, Password),
-                //Timeout = timeOut // 10000 milliseconds == 10 seconds
-            };
-
-            client.ConfigureWebRequest((r) => { r.ServicePoint.Expect100Continue = false; r.KeepAlive = true; });
-            
+            var client      = GetClient(BaseURL + url, 10000);
             var request     = new RestRequest(Method.GET);            
             var response    = await client.ExecuteTaskAsync(request);
 
@@ -133,7 +118,7 @@ namespace SchoolSafeID
         }
 
 
-        private static RestClient GetClient(int timeOut = 10000)
+        private static RestClient GetClient(string fullURL = "", int timeOut = 10000)
         {
             if (restClient != null) return restClient;
 
@@ -142,7 +127,7 @@ namespace SchoolSafeID
             ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls | SecurityProtocolType.Ssl3;
 
-            var client = new RestClient(BaseURL)
+            var client = new RestClient((fullURL == string.Empty ? BaseURL : fullURL))
             {
                 Authenticator = new HttpBasicAuthenticator(Username, Password),
                 //Timeout = timeOut // 10000 milliseconds == 10 seconds
@@ -313,34 +298,41 @@ namespace SchoolSafeID
 
         public static void SendVisitorDataSync(RestRequest request, RestClient client)
         {
-            // execute the request
-            var response = client.Execute(request);
-
-            if (response.StatusCode == HttpStatusCode.OK)
+            try
             {
-                //upload successfull
-                Dictionary<string, object> result = SimpleJson.DeserializeObject<Dictionary<string, object>>(response.Content);
+                // execute the request
+                var response = client.Execute(request);
 
-                if (result.ContainsKey("success"))
+                if (response.StatusCode == HttpStatusCode.OK)
                 {
-                    if (result.ContainsKey("sticker"))
+                    //upload successfull
+                    Dictionary<string, object> result = SimpleJson.DeserializeObject<Dictionary<string, object>>(response.Content);
+
+                    if (result.ContainsKey("success"))
                     {
-                        BadgePath = Guid.NewGuid().ToString();
-                        Helper.log.Info("Download Badge from " + result["sticker"]);
-                        DownloadFile(result["sticker"].ToString(), BadgePath, 1);
+                        if (result.ContainsKey("sticker"))
+                        {
+                            BadgePath = Guid.NewGuid().ToString();
+                            Helper.log.Info("Download Badge from " + result["sticker"]);
+                            DownloadFile(result["sticker"].ToString(), BadgePath, 1);
+                        }
                     }
+                    else
+                    {
+                        MessageBox.Show("Error! Please try again.");
+                    }                                        
                 }
                 else
                 {
-                    MessageBox.Show("Error! Please try again.");
+                    //error ocured during upload   
+                    Helper.log.Error("Send Visitor Data sync Error Message " + response.ErrorMessage, response.ErrorException);
+                    Helper.log.Error("Send Visitor Data Sync " + response.StatusCode + "\n" + response.StatusDescription);
+                    MessageBox.Show("Application Error! Please try again.");                    
                 }
             }
-            else
+            catch (Exception ex)
             {
-                //error ocured during upload   
-                Helper.log.Error("Send Visitor Data sync Error Message " + response.ErrorMessage, response.ErrorException);
-                Helper.log.Error("Send Visitor Data Sync " + response.StatusCode + "\n" + response.StatusDescription);
-                MessageBox.Show("Application Error! Please try again.");                
+                Helper.log.Error("Send Visitor Data Sync Exception " + ex.Message, ex);
             }
         }
 

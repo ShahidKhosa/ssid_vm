@@ -28,7 +28,7 @@
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="675">
             <Grid>
-                <Image x:Name="imgCapture" Stretch="Fill"/>
+                <Image x:Name="imgCapture" Stretch="None" Width="601" Height="480"/>
             </Grid>
             <TextBlock HorizontalAlignment="Center" Text="Align your face in the square and press the 'Take Photo' button." FontSize="18" Margin="0,10,0,20" />
             <Button x:Name="btnTakePhoto" Content="Take Photo" Style="{StaticResource MyButton}" Click="btnTakePhoto_Click"/>

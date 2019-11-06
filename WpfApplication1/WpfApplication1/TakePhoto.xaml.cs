@@ -100,15 +100,22 @@ namespace SchoolSafeID
                 }
             }
             else if(Visitor.IsVerified == 1)
-            {
-                if (Visitor.IsVisitor == 0)
+            {                
+                if (Visitor.IsVisitor == 1)
                 {
-                    this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
+                    this.NavigationService.Navigate(new Uri("DigitalPass.xaml", UriKind.Relative));
                 }
                 else
                 {
-                    //its a parent signin to checkout student.
-                    this.NavigationService.Navigate(new Uri("ParentSignout.xaml", UriKind.Relative));
+                    if (Visitor.IsVisitor == 0)
+                    {
+                        this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
+                    }
+                    else
+                    {
+                        //its a parent signin to checkout student.
+                        this.NavigationService.Navigate(new Uri("ParentSignout.xaml", UriKind.Relative));
+                    }
                 }
             }
         }
@@ -157,7 +164,7 @@ namespace SchoolSafeID
                     //    currentFrame.Draw(face, new Bgr(System.Drawing.Color.Red), 1);
                     //}
 
-                    currentFrame.Draw(new System.Drawing.Rectangle(174, 59, 277, 352), new Bgr(0, double.MaxValue, 0), 1);
+                    currentFrame.Draw(new System.Drawing.Rectangle(162, 62, 279, 354), new Bgr(System.Drawing.Color.Red), 1);
 
                     imgCapture.Source = BitmapSourceConvert.ToBitmapSource(currentFrame);
                 }

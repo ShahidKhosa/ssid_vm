@@ -48,7 +48,7 @@ namespace SchoolSafeID
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            if(selectedStudentsList.Count > 0 && cmbSignoutReasons.SelectedValue.ToString() != string.Empty)
+            if (selectedStudentsList.Count > 0 && cmbSignoutReasons.SelectedValue != null)
             {
                 btnConfirm.Content = "Please wait...";
                 btnBack.IsEnabled = false;
@@ -61,6 +61,16 @@ namespace SchoolSafeID
                 APIManager.ParentStudentSignout(selectedStudentsList, reason);
 
                 this.NavigationService.Navigate(new Uri("SignoutCompleted.xaml", UriKind.Relative));
+            }
+            else if (selectedStudentsList.Count < 1)
+            {
+                MessageBox.Show("Please select student to sign-out.");
+                cmbStudent.Focus();
+            }
+            else if (cmbSignoutReasons.SelectedValue == null)
+            {
+                MessageBox.Show("Please select reason for sign-out.");
+                cmbSignoutReasons.Focus();
             }
         }
 

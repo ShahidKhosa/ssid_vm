@@ -11,6 +11,8 @@ using Emgu.CV.Structure;
 using log4net;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Deployment;
+using System.Deployment.Application;
 
 namespace SchoolSafeID
 {
@@ -41,9 +43,8 @@ namespace SchoolSafeID
             try
             {
                 Visitor.FullImagePath = Guid.NewGuid() + ".jpg";
-                currentFrame.Save(Visitor.FullImagePath);
-
-                CropImage(Visitor.FullImagePath, 175, 60, 275, 350);
+                currentFrame.Save(Visitor.FullImagePath);                
+                CropImage(Visitor.FullImagePath, 164, 66, 275, 350);
             }
             catch( Exception ex)
             {
@@ -124,6 +125,20 @@ namespace SchoolSafeID
             catch(Exception ex)
             {
                 Helper.log.Error("Clean Extra resouces Error " + ex.Message, ex);
+            }
+        }
+
+
+        public static void CheckForUpdate()
+        {
+            ApplicationDeployment updateCheck = ApplicationDeployment.CurrentDeployment;
+            UpdateCheckInfo info = updateCheck.CheckForDetailedUpdate();
+            //
+            if (info.UpdateAvailable)
+            {
+                updateCheck.Update();
+                MessageBox.Show("The application has been upgraded, and will now restart.");                
+                //System.Windows.Forms.Application.Restart();
             }
         }
     }
