@@ -62,7 +62,7 @@
                         </StackPanel>
                         <StackPanel Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="10">
                             <Image Name="imgStudentImage" VerticalAlignment="Top" HorizontalAlignment="Left" Source="Resources/shahid.jpg" Height="160"/>
-                            <TextBlock Name="txtSigninReason" Foreground="Black" FontSize="20" TextAlignment="Left" Text="Sign-in Reason"/>
+                            <TextBlock Name="txtSigninReason" Foreground="Black" TextWrapping="Wrap" FontSize="20" TextAlignment="Left" Text="Sign-in Reason"/>
                         </StackPanel>
                     </Grid>
                 </StackPanel>

@@ -237,6 +237,10 @@ namespace SchoolSafeID
 
         public void ResetData()
         {
+            int isVisitor = Visitor.IsVisitor;
+            Visitor.ResetData();
+            Visitor.IsVisitor = isVisitor;
+
             txt_FirstName.Text = "";
             txt_LastName.Text = "";
             txt_DateOfBirth.Text = "";
@@ -263,6 +267,7 @@ namespace SchoolSafeID
                 txt_DateOfBirth.Mask = "";                
             }
         }
+
 
         private void HideTouchKeyboard(object sender, RoutedEventArgs e)
         {

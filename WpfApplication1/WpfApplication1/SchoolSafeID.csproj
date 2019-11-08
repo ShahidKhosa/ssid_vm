@@ -375,7 +375,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <SplashScreen Include="splash.jpg" />
+    <SplashScreen Include="splash-banner.jpg" />
     <Resource Include="ssid.ico" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -453,9 +453,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="SplashScreen.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\bar_code.png" />
     <Resource Include="Resources\schoolsafe-id.png" />
   </ItemGroup>
@@ -485,12 +482,12 @@
   <ItemGroup>
     <PublishFile Include="WebCam_Capture">
       <Visible>False</Visible>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>

@@ -188,6 +188,7 @@
 
             <Style x:Key="MarginButtonStyle" TargetType="Button" BasedOn="{StaticResource MyButton}">
                 <Setter Property="Margin" Value="20"/>
+                <Setter Property="Width" Value="360" />
             </Style>
 
             <!--<Style x:Key="MaterialDesignComboBox" TargetType="{x:Type ComboBox}">

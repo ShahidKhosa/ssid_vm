@@ -48,12 +48,14 @@ namespace SchoolSafeID
 
             Visitor.CheckinOption = APIManager.KioskSettings["checkin_option" + Visitor.CheckinOptionNumber].ToString();
 
-            int[] destinationArray = { 1, 2, 3, 4 };
+            string showDestination = APIManager.KioskSettings["settings_checkin_option" + Visitor.CheckinOptionNumber].ToString();
 
-            int value = Int32.Parse(Visitor.CheckinOptionNumber);
-            var index = Array.FindIndex(destinationArray, x => x == value);
+            //int[] destinationArray = { 1, 2, 3, 4 };
+
+            //int value = Int32.Parse(Visitor.CheckinOptionNumber);
+            //var index = Array.FindIndex(destinationArray, x => x == value);
             
-            if (index > -1)
+            if (showDestination.Equals("yes", StringComparison.OrdinalIgnoreCase))
             {
                 //show the destination window.
                 Destination ds = new Destination
