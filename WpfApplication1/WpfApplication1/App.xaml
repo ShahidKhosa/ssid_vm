@@ -82,7 +82,7 @@
                 <Setter Property="Margin" Value="0 8" />
                 <Setter Property="VerticalAlignment" Value="Center" />
                 <Setter Property="BorderThickness" Value="1" />
-                <Setter Property="MaxLength" Value="50" />
+                <Setter Property="MaxLength" Value="25" />
             </Style>
             
             <Style x:Key="ssid_ComboBox" TargetType="ComboBox">
@@ -108,7 +108,7 @@
                 <Setter Property="Margin" Value="0 8" />
                 <Setter Property="VerticalAlignment" Value="Center" />
                 <Setter Property="BorderThickness" Value="1" />
-                <Setter Property="MaxLength" Value="50" />
+                <Setter Property="MaxLength" Value="25" />
                 <Style.Triggers>
                     <Trigger Property="IsEnabled" Value="False">
                         <Setter Property="Background" Value="#ddd" />
@@ -125,7 +125,7 @@
                 <Setter Property="VerticalAlignment" Value="Center" />
                 <Setter Property="BorderThickness" Value="1" />
                 <Setter Property="BorderBrush" Value="Black" />
-                <Setter Property="MaxLength" Value="50" />
+                <Setter Property="MaxLength" Value="25" />
             </Style>
 
             <Style x:Key="MsTextField" TargetType="wpfx1:MaskedTextBox">
@@ -137,7 +137,7 @@
                 <Setter Property="VerticalAlignment" Value="Center" />
                 <Setter Property="BorderThickness" Value="1" />
                 <Setter Property="FontStyle" Value="Normal" />
-                <Setter Property="MaxLength" Value="50" />
+                <Setter Property="MaxLength" Value="25" />
                 <Style.Triggers>
                     <Trigger Property="IsEnabled" Value="False">
                         <Setter Property="Background" Value="#ddd" />

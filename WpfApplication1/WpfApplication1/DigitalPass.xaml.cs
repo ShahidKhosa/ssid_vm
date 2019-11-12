@@ -134,5 +134,23 @@ namespace SchoolSafeID
                 txt_Phone.Visibility = Visibility.Visible;
             }
         }
+
+        private void txt_Phone_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (txt_Phone.Text == string.Empty)
+            {
+                txt_Phone.Mask = "(000) 000-0000";
+            }
+
+            txt_Phone.Select(0, 0);
+        }
+
+        private void txt_Phone_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (txt_Phone.Text == string.Empty || txt_Phone.Text.Equals("(___) ___-____"))
+            {
+                txt_Phone.Mask = "";
+            }
+        }
     }
 }

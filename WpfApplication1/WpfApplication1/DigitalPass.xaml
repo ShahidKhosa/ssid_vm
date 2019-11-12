@@ -1,10 +1,9 @@
 ﻿<Page x:Class="SchoolSafeID.DigitalPass"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:adorners="http://gu.se/Adorners"
-      xmlns:local="clr-namespace:SchoolSafeID"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:wpfx1="http://schemas.xceed.com/wpf/xaml/toolkit"
       mc:Ignorable="d"
       Title="Get Digital Pass" Loaded="Page_Loaded" Style="{StaticResource SSIDPage}">
@@ -46,8 +45,8 @@
                 <TextBlock Foreground="#088F40" FontSize="70" LineHeight="50" FontWeight="SemiBold" Style="{StaticResource MaterialDesignDisplay3TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="0" Text="Save Time"></TextBlock>
 
                 <StackPanel>
-                    <wpfx1:MaskedTextBox Mask="(000) 000-0000" Style="{StaticResource MsTextField}" Name="txt_Phone" InputScope="TelephoneNumber"/>
-                    <TextBox InputScope="EmailSmtpAddress" Style="{StaticResource MyTextField}" Name="txt_Email" TextChanged="txt_Email_TextChanged" adorners:Watermark.Text="Enter Email Address"></TextBox>
+                    <wpfx1:MaskedTextBox Style="{StaticResource MsTextField}" Name="txt_Phone" InputScope="TelephoneNumber" adorners:Watermark.TextStyle="{StaticResource WaterMarkStyle}" adorners:Watermark.Text="Enter Phone Number" GotFocus="txt_Phone_GotFocus" LostFocus="txt_Phone_LostFocus"/>
+                    <TextBox MaxLength="100" InputScope="EmailSmtpAddress" Style="{StaticResource MyTextField}" Name="txt_Email" TextChanged="txt_Email_TextChanged" adorners:Watermark.TextStyle="{StaticResource WaterMarkStyle}" adorners:Watermark.Text="Enter Email Address"></TextBox>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
