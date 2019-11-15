@@ -58,14 +58,31 @@ namespace SchoolSafeID
 
         private void btnCreateDigtalPass_Click(object sender, RoutedEventArgs e)
         {
-            Visitor.DigitalPass = true;
+            Visitor.DigitalPass = false;
+            string digitalPassType = APIManager.KioskSettings["send_digital_pass"].ToString().ToLower();            
 
-            if ((!txt_Phone.Text.Equals("(___) ___-____") && !txt_Phone.Text.Contains("_")) || (txt_Email.Text != String.Empty && ValidatorExtensions.IsValidEmailAddress(txt_Email.Text)))
+            if (digitalPassType.Equals("phone") && (txt_Phone.Text != String.Empty && !txt_Phone.Text.Equals("(___) ___-____") && !txt_Phone.Text.Contains("_")))
             {
-                // we must need to validate the email address before moving forward.
+                Visitor.EmailAddress = "";
+                Visitor.PhoneNumber = txt_Phone.Text;
+                Visitor.DigitalPass = true;
+            }
+            else if (digitalPassType.Equals("email") && (txt_Email.Text != String.Empty && ValidatorExtensions.IsValidEmailAddress(txt_Email.Text)))
+            {
+                Visitor.EmailAddress = txt_Email.Text;
+                Visitor.PhoneNumber = "";
+                Visitor.DigitalPass = true;
+            }
+            else if ((txt_Phone.Text != String.Empty && !txt_Phone.Text.Equals("(___) ___-____") && !txt_Phone.Text.Contains("_")) && (txt_Email.Text != String.Empty && ValidatorExtensions.IsValidEmailAddress(txt_Email.Text)))
+            {
                 Visitor.EmailAddress = txt_Email.Text;
                 Visitor.PhoneNumber = txt_Phone.Text;
+                Visitor.DigitalPass = true;
+            }
 
+
+            if(Visitor.DigitalPass)
+            {
                 if (Visitor.IsVisitor == 0)
                 {
                     this.NavigationService.Navigate(new Uri("CheckinReasons.xaml", UriKind.Relative));
@@ -74,9 +91,9 @@ namespace SchoolSafeID
                 {
                     //its a parent signin to checkout student.
                     this.NavigationService.Navigate(new Uri("ParentSignout.xaml", UriKind.Relative));
-                }                
+                }
             }
-        }
+        }      
 
 
         private void ResetData()

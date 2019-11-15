@@ -43,7 +43,13 @@ namespace SchoolSafeID
 
         private void page_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
-            btnNoBadgeNeeded.Visibility = (APIManager.KioskSettings["visitor_no_badge"].ToString().ToLower().Equals("on") ? Visibility.Visible : Visibility.Collapsed);            
+            if(APIManager.KioskSettings.ContainsKey("visitor_badge_options"))
+            {
+                int option = int.Parse(APIManager.KioskSettings["visitor_badge_options"].ToString());
+
+                btnYesPrint.Visibility      = (option == 1 || option == 3 ? Visibility.Visible : Visibility.Collapsed);
+                btnNoBadgeNeeded.Visibility = (option == 2 || option == 3 ? Visibility.Visible : Visibility.Collapsed);
+            }                        
 
             Visitor.VisitDateTime = DateTime.Now;
 

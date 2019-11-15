@@ -484,3 +484,21 @@ System.Net.WebException: The underlying connection was closed: A connection that
 2019-11-12 22:31:09,767 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
 2019-11-12 22:31:10,007 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
 2019-11-12 22:31:11,575 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-11-13 20:21:56,258 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-11-13 20:21:56,931 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-11-13 20:21:58,717 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-11-13 20:34:35,069 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-11-13 20:34:35,345 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-11-13 20:34:36,888 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-11-16 01:20:57,331 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-11-16 01:20:58,107 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-11-16 01:20:59,966 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-11-16 01:22:59,895 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-11-16 01:23:00,224 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-11-16 01:23:01,800 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-11-16 01:23:34,122 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-11-16 01:23:34,394 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-11-16 01:23:35,896 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-11-16 01:25:54,584 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-11-16 01:25:54,901 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-11-16 01:25:56,466 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png

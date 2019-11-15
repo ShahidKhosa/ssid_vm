@@ -76,11 +76,15 @@ namespace SchoolSafeID
         }
 
 
-        private async void Page_Loaded(object sender, RoutedEventArgs e)
-        {            
-            //await Task.Delay(1000);
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {                        
+            if (APIManager.KioskSettings.ContainsKey("student_badge_options"))
+            {
+                int option = int.Parse(APIManager.KioskSettings["student_badge_options"].ToString());
 
-            btnNoBadgeNeeded.Visibility = (APIManager.KioskSettings["student_no_badge"].ToString().ToLower().Equals("on") ? Visibility.Visible : Visibility.Collapsed);
+                btnPrintTemporaryBadge.Visibility = btnPrintStudentPass.Visibility = (option == 1 || option == 3 ? Visibility.Visible : Visibility.Collapsed);
+                btnNoBadgeNeeded.Visibility = (option == 2 || option == 3 ? Visibility.Visible : Visibility.Collapsed);
+            }            
 
             Student.VisitDateTime = DateTime.Now;
 
@@ -95,6 +99,7 @@ namespace SchoolSafeID
 
             try
             {
+                //await Task.Delay(500);
                 imgStudentImage.Source = new BitmapImage(new Uri(Student.ImagePath, UriKind.Absolute));
             }
             catch (System.NotSupportedException ex)
