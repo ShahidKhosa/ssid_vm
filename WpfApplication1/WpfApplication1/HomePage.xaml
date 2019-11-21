@@ -17,7 +17,7 @@
                     <ImageBrush ImageSource="Resources/poweredby_schoolsafe.png" Opacity="1" Stretch="None" AlignmentX="Right"/>
                 </StackPanel.Background>
 
-                <Button Style="{StaticResource MyButton}" HorizontalAlignment="Left" Margin="10 10 0 0" Content="Exit" Background="Gray" Name="btnExit" Click="btnExit_Click" />
+                <!--<Button Style="{StaticResource MyButton}" HorizontalAlignment="Left" Margin="10 10 0 0" Content="Exit" Background="Gray" Name="btnExit" Click="btnExit_Click" />-->
             </StackPanel>
         </StackPanel>
 

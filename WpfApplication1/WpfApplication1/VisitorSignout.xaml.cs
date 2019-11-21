@@ -52,6 +52,8 @@ namespace SchoolSafeID
             tmrDelay.Interval = 1000;
             tmrDelay.Enabled = false;
             txtBarcodeData.Focus();
+
+            formWrapper.Visibility = Visibility.Collapsed;
         }
 
 
@@ -113,6 +115,7 @@ namespace SchoolSafeID
             if (Visitor.FirstName != string.Empty && Visitor.LastName != string.Empty)
             {
                 btnConfirm.IsEnabled = true;
+                formWrapper.Visibility = Visibility.Visible;
             }            
         }
 

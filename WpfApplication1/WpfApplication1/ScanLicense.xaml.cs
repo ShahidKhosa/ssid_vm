@@ -25,6 +25,7 @@ namespace SchoolSafeID
     {        
         public System.Windows.Forms.Timer tmrDelay;
         private readonly ITouchKeyboardProvider _touchKeyboardProvider = new TouchKeyboardProvider();
+        public static ModalWindow mw;
 
 
         public ScanLicense()
@@ -121,12 +122,24 @@ namespace SchoolSafeID
 
         private void btnOfficeUseOnlyClick(object sender, RoutedEventArgs e)
         {
-            ModalWindow mw = new ModalWindow
+            try
             {
-                scanLicense = this
-            };
-            //mw.txt_password.Text = "";
-            mw.ShowDialog();
+                if (mw != null)
+                {
+                    mw.Close();
+                }
+
+                mw = new ModalWindow
+                {
+                    scanLicense = this
+                };
+                
+                mw.ShowDialog();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }            
         }
 
 
@@ -168,7 +181,9 @@ namespace SchoolSafeID
                     //Do something with the barcode entered
                     txtBarcodeData.Text = "";
                 }
-                txtBarcodeData.Focus();
+
+                SetBarcodeFocus();
+
             }
             catch (Exception ex)
             {
@@ -202,6 +217,8 @@ namespace SchoolSafeID
                 {
                     Visitor.IsOfficeUseOnly = false;
                     btnConfirm.IsEnabled = true;
+
+                    formWrapper.Visibility = Visibility.Visible;
                 }                    
             }
         }
@@ -213,7 +230,7 @@ namespace SchoolSafeID
             Visitor.BarcodeData = "@ANSI 636058050002DL00410217ZO02580064DLDAQY081724446DCSEADSDDENDACSTACYDDFNDADLYNNDDGNDCADDCBNONEDCDNONEDBC2DAU504DAYGRNDAG7016 STONYCREEK DRIVEDAIOKLAHOMACITYDAJOKDAK731320000DCFNONEDCGUSADAW118DBA07312019DBB12091979DBD08262015ZOZOANZOBNZOCRENEWALZODZOE5579ZOF55ZOG33.50ZOHZOINZOJN";
             SetData();
 
-            txtBarcodeData.Focus();
+            SetBarcodeFocus();
             txtBarcodeData.Text = "";            
         }
 
@@ -247,6 +264,7 @@ namespace SchoolSafeID
 
             Visitor.IsOfficeUseOnly = false;
             Visitor.OfficeUseOnlyPassword = "";
+            formWrapper.Visibility = Visibility.Collapsed;
 
             txt_FirstName.IsEnabled = false;
             txt_LastName.IsEnabled = false;
@@ -256,7 +274,7 @@ namespace SchoolSafeID
             tmrDelay = new System.Windows.Forms.Timer();
             tmrDelay.Interval = 1200;
             tmrDelay.Enabled = false;
-            txtBarcodeData.Focus();            
+            SetBarcodeFocus();
         }
 
 
@@ -269,9 +287,29 @@ namespace SchoolSafeID
         }
 
 
-        private void HideTouchKeyboard(object sender, RoutedEventArgs e)
+        private void Page_Unloaded(object sender, RoutedEventArgs e)
         {
-            _touchKeyboardProvider.HideTouchKeyboard();
+            try
+            {
+                if (mw != null)
+                {
+                    mw.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+
+
+        public void SetBarcodeFocus()
+        {
+            if(!Visitor.IsOfficeUseOnly)
+            {
+                txtBarcodeData.Focus();
+            }            
+        }
+
     }
 }

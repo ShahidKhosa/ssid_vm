@@ -26,7 +26,7 @@
         <StackPanel DockPanel.Dock="Right"></StackPanel>
 
         <WrapPanel Width="960" VerticalAlignment="Center">
-            <TextBlock TextAlignment="Center" Width="960" Style="{StaticResource MaterialDesignDisplay1TextBlock}" Height="130"><Run Text="ID Scan Successful."/><LineBreak/><Run FontSize="28" Text="Would you like to print your badge?" Foreground="#777"/></TextBlock>
+            <TextBlock Name="PageHeading" TextAlignment="Center" Width="960" Style="{StaticResource MaterialDesignDisplay1TextBlock}" Height="130"><Run Text="ID Scan Successful."/><LineBreak/><Run Name="PrintBadgeText" FontSize="28" Text="Would you like to print your badge?" Foreground="#777"/></TextBlock>
 
             <WrapPanel Width="960">
                 <StackPanel HorizontalAlignment="Center" Width="960">
@@ -61,8 +61,8 @@
                             <Image Source="Resources/bar_code.png" Width="320" HorizontalAlignment="Right"/>
                         </StackPanel>
                         <StackPanel Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="10">
-                            <Image Name="imgStudentImage" VerticalAlignment="Top" HorizontalAlignment="Left" Source="Resources/shahid.jpg" Height="160"/>
-                            <TextBlock Name="txtSigninReason" Foreground="Black" TextWrapping="Wrap" FontSize="20" TextAlignment="Left" Text="Sign-in Reason"/>
+                            <Image Name="imgStudentImage" VerticalAlignment="Top" HorizontalAlignment="Left" Height="160"/>
+                            <TextBlock Name="txtSigninReason" Foreground="Black" TextWrapping="Wrap" FontSize="18" TextAlignment="Left" Text="Sign-in Reason"/>
                         </StackPanel>
                     </Grid>
                 </StackPanel>

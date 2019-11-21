@@ -68,6 +68,8 @@ namespace SchoolSafeID
             btnNoBadgeNeeded.IsEnabled = false;
             btnPrintTemporaryBadge.IsEnabled = false;
 
+            await Task.Delay(100);
+
             //Print Badge and complete Student sign-in process and move to the next screen.
             APIManager.SendStudentData(1, BadgeType);
 
@@ -76,14 +78,26 @@ namespace SchoolSafeID
         }
 
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {                        
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            
+
             if (APIManager.KioskSettings.ContainsKey("student_badge_options"))
             {
                 int option = int.Parse(APIManager.KioskSettings["student_badge_options"].ToString());
 
-                btnPrintTemporaryBadge.Visibility = btnPrintStudentPass.Visibility = (option == 1 || option == 3 ? Visibility.Visible : Visibility.Collapsed);
+                btnPrintTemporaryBadge.Visibility = btnPrintStudentPass.Visibility = (option == 1 || option == 3 ? Visibility.Visible : Visibility.Collapsed);                               
+
                 btnNoBadgeNeeded.Visibility = (option == 2 || option == 3 ? Visibility.Visible : Visibility.Collapsed);
+
+                if (option == 2)
+                {                    
+                    btnNoBadgeNeeded.Background = btnPrintStudentPass.Background;
+                    btnNoBadgeNeeded.Content    = "Submit";
+                    btnNoBadgeNeeded.Foreground = Brushes.White;
+                    PrintBadgeText.Text = "";
+                    PageHeading.Height = 80;
+                }
             }            
 
             Student.VisitDateTime = DateTime.Now;
@@ -99,7 +113,8 @@ namespace SchoolSafeID
 
             try
             {
-                //await Task.Delay(500);
+                await Task.Delay(500);
+
                 imgStudentImage.Source = new BitmapImage(new Uri(Student.ImagePath, UriKind.Absolute));
             }
             catch (System.NotSupportedException ex)

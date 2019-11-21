@@ -8,7 +8,7 @@
       xmlns:wpfx1="http://schemas.xceed.com/wpf/xaml/toolkit"
       mc:Ignorable="d"       
       FocusManager.FocusedElement="{Binding ElementName=txtBarcodeData}"
-      Title="Scan License" Loaded="Page_Loaded" Focusable="True" Style="{StaticResource SSIDPage}">
+      Title="Scan License" Loaded="Page_Loaded" Focusable="True" Style="{StaticResource SSIDPage}" Unloaded="Page_Unloaded">
 
     <Page.CommandBindings>
         <CommandBinding Command="ApplicationCommands.Open" Executed="Executed_Open" CanExecute="CanExecute_Open"/>
@@ -54,16 +54,17 @@
             </StackPanel>
 
             <WrapPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top">
-                <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="35" Margin="0,0,0,7" Text="Scan Drivers License or Frequent Visitor ID"></TextBlock>
-
-                <StackPanel>
+                <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="35" Margin="0,0,0,0" Text="Scan Drivers License or Frequent Visitor ID"></TextBlock>
+                <TextBox InputMethod.IsInputMethodEnabled="False" Name="txtBarcodeData" Opacity="0" Width="0" Height="0" Text="" TextChanged="txtBarcodeData_TextChanged"/>
+                <StackPanel Name="formWrapper" Visibility="Collapsed" Margin="0 8 0 0">
                     <wpfx1:WatermarkTextBox InputScope="PersonalFullName" Style="{StaticResource WmTextField}" Name="txt_FirstName" Watermark="Legal First Name" IsEnabled="False" />
                     <wpfx1:WatermarkTextBox InputScope="PersonalFullName" Style="{StaticResource WmTextField}" Name="txt_LastName" Watermark="Legal Last Name" IsEnabled="False" />
                     <wpfx1:MaskedTextBox InputScope="Number" Style="{StaticResource MsTextField}" Name="txt_DateOfBirth" IsEnabled="False" GotFocus="txt_DateOfBirth_GotFocus" adorners:Watermark.TextStyle="{StaticResource WaterMarkStyle}" adorners:Watermark.Text="Date of Birth (MM/DD/YYYY)" LostFocus="txt_DateOfBirth_LostFocus"/>
-                    <TextBox InputMethod.IsInputMethodEnabled="False" Focusable="True" Name="txtBarcodeData" Opacity="0" Width="0" Height="0" Text="" TextChanged="txtBarcodeData_TextChanged" GotFocus="HideTouchKeyboard"/>
-                    <Button Name="btnConfirm" IsEnabled="False" Style="{StaticResource MyButton}" Content="CONFIRM AND SUBMIT" Width="650" Margin="0 10 0 40" Click="Button_Click"/>
-                    <TextBlock Width="650" TextBlock.LineHeight="36" FontSize="24" Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" Text="Hold your drivers license up to the scanning device as shown. The back of your license should face the scanning device so that it can read the 2D bar code. Once you hear the beep, please confirm your first name, last name and date of birth. Hit submit to continue."></TextBlock>
+                    <Button Name="btnConfirm" IsEnabled="False" Style="{StaticResource MyButton}" Content="CONFIRM AND SUBMIT" Width="650" Margin="0 10 0 15" Click="Button_Click"/>
                 </StackPanel>
+
+                <TextBlock Margin="0 11 0 0" Width="650" TextBlock.LineHeight="36" FontSize="24" Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" Text="Hold your drivers license up to the scanning device as shown. The back of your license should face the scanning device so that it can read the 2D bar code. Once you hear the beep, please confirm your first name, last name and date of birth. Hit submit to continue."></TextBlock>
+                
             </WrapPanel>
         </Grid>
 

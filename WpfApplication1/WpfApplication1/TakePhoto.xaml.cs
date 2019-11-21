@@ -101,7 +101,7 @@ namespace SchoolSafeID
             }
             else if(Visitor.IsVerified == 1)
             {                
-                if (Visitor.IsVisitor == 1)
+                if (Visitor.IsVisitor == 1 || Visitor.IsOfficeUseOnly)
                 {
                     this.NavigationService.Navigate(new Uri("DigitalPass.xaml", UriKind.Relative));
                 }

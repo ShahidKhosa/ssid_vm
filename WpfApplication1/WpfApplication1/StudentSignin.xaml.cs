@@ -140,6 +140,7 @@ namespace SchoolSafeID
             {
                 txtBarcodeData.Focus();
                 btnConfirm.IsEnabled = true;
+                formWrapper.Visibility = Visibility.Visible;
             }
         }
 
@@ -156,6 +157,8 @@ namespace SchoolSafeID
             txt_Grade.IsEnabled = false;
             btnConfirm.IsEnabled = false;
             txtBarcodeData.Focus();
+
+            formWrapper.Visibility = Visibility.Collapsed;
         }
 
 

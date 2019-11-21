@@ -38,6 +38,7 @@ namespace SchoolSafeID
             {
                 if(scanLicense != null)
                 {
+                    scanLicense.formWrapper.Visibility = Visibility.Visible;
                     scanLicense.txt_FirstName.Text   = "";
                     scanLicense.txt_LastName.Text    = "";
                     scanLicense.txt_DateOfBirth.Text = "";
@@ -49,7 +50,7 @@ namespace SchoolSafeID
 
                     scanLicense.txt_FirstName.Focus();
                     Visitor.IsOfficeUseOnly = true;
-                    Visitor.OfficeUseOnlyPassword = txt_password.Password;
+                    Visitor.OfficeUseOnlyPassword = txt_password.Password;                    
 
                     this.Close();
                 }

@@ -49,6 +49,15 @@ namespace SchoolSafeID
 
                 btnYesPrint.Visibility      = (option == 1 || option == 3 ? Visibility.Visible : Visibility.Collapsed);
                 btnNoBadgeNeeded.Visibility = (option == 2 || option == 3 ? Visibility.Visible : Visibility.Collapsed);
+
+                if (option == 2)
+                {
+                    btnNoBadgeNeeded.Background = btnYesPrint.Background;
+                    btnNoBadgeNeeded.Content = "Submit";
+                    btnNoBadgeNeeded.Foreground = Brushes.White;
+                    PrintBadgeText.Text = "";
+                    PageHeading.Height = 80;
+                }
             }                        
 
             Visitor.VisitDateTime = DateTime.Now;
@@ -89,6 +98,8 @@ namespace SchoolSafeID
             btnYesPrint.IsEnabled = false;
             btnNoBadgeNeeded.IsEnabled = false;
             btnNoMakeChanges.IsEnabled = false;
+
+            await Task.Delay(100);
 
             //Print Badge and complete visitor sign-in process and move to the next screen.
             APIManager.SendVisitorData(1);

@@ -51,20 +51,20 @@ namespace SchoolSafeID
 
                 if (APIManager.KioskSettings.ContainsKey("app_settings"))
                 {
-                    if (APIManager.KioskSettings["app_settings"].ToString().ToLower().Equals("off"))
+                    if (APIManager.KioskSettings["app_settings"].ToString().ToLower().Equals("on"))
                     {
-                        btnExit.Visibility = Visibility.Collapsed;
-                        btnSettings.Visibility = Visibility.Collapsed;
+                        //btnExit.Visibility = Visibility.Collapsed;                        
+                        btnSettings.Visibility = Visibility.Visible;
                     }
                     else
                     {
-                        btnExit.Visibility = Visibility.Visible;
-                        btnSettings.Visibility = Visibility.Visible;
+                        //btnExit.Visibility = Visibility.Visible;
+                        btnSettings.Visibility = Visibility.Collapsed;                        
                     }
                 }
                 else
                 {
-                    btnExit.Visibility = Visibility.Collapsed;
+                    //btnExit.Visibility = Visibility.Collapsed;
                     btnSettings.Visibility = Visibility.Collapsed;
                 }
 

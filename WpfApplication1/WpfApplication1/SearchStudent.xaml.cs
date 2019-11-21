@@ -12,7 +12,8 @@ namespace SchoolSafeID
     /// Interaction logic for SearchStudent.xaml
     /// </summary>
     public partial class SearchStudent : Page
-    {        
+    {
+        public static MatchStudentID matchStudentID;
 
         public SearchStudent()
         {
@@ -127,14 +128,29 @@ namespace SchoolSafeID
                 StudentPersonalInfo student = StudentPersonalInfo.Students.Find(s => s.ID == ((StudentPersonalInfo)cmbStudent.SelectedItem).ID);
 
                 if (student != null)
-                {
-                    MatchStudentID matchStudentID = new MatchStudentID()
+                {                    
+                    if(matchStudentID != null)
                     {
-                        Student = student,
-                        searchStudent = this
-                    };
+                        matchStudentID.Close();
+                    }
 
-                    matchStudentID.Show();                                       
+                    if (APIManager.KioskSettings.ContainsKey("student_no_required"))
+                    {
+                        if (APIManager.KioskSettings["student_no_required"].ToString().ToLower().Equals("yes"))
+                        {
+                            matchStudentID = new MatchStudentID()
+                            {
+                                Student = student,
+                                searchStudent = this
+                            };
+
+                            matchStudentID.Show();
+                        }
+                        else
+                        {
+                            SetStudentData(student);
+                        }
+                    }                                                       
                 }
             }
             catch (NullReferenceException ex)
@@ -177,6 +193,14 @@ namespace SchoolSafeID
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             cmbStudent.Text = "";            
+        }
+
+        private void Page_Unloaded(object sender, RoutedEventArgs e)
+        {
+            if (matchStudentID != null)
+            {
+                matchStudentID.Close();
+            }
         }
     }
 }

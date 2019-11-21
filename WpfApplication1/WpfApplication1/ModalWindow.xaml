@@ -11,9 +11,9 @@
         TextElement.FontSize="14"
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"                
-        FontFamily="{DynamicResource MaterialDesignFont}"
-        Padding="20" ResizeMode="NoResize"
+        FontFamily="{DynamicResource MaterialDesignFont}"            
         FocusManager.FocusedElement="{Binding ElementName=txt_password}"
+        Padding="20" ResizeMode="NoResize"
         Title="Office Use Only" Icon="favicon.ico" HorizontalAlignment="Center" VerticalAlignment="Center" 
         HorizontalContentAlignment="Center" Width="700" Height="350" WindowStartupLocation="CenterOwner">
     <Grid>
