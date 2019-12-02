@@ -438,11 +438,11 @@ namespace SchoolSafeID
         }
 
 
-        public static void Signout()
+        public static void Signout(string action = "api_signout")
         {
             var client = GetClient();
             var request = new RestRequest("/api/class_api.php", Method.POST);
-            request.AddParameter("action", "api_signout");
+            request.AddParameter("action", action);
             request.AddParameter("id", Visitor.ID);
             request.AddParameter("job_id", APIManager.KioskSettings["job_id"]);
             request.AddParameter("barcode_data", Visitor.BarcodeData);
@@ -511,6 +511,21 @@ namespace SchoolSafeID
             {
                 SendVisitorDataAsync(request, client);
             }
+        }
+
+
+
+        public static void FacultySignin()
+        {
+            var client = GetClient();
+            var request = new RestRequest("/api/class_api.php", Method.POST);
+            request.AddParameter("action", "faculty_signin");
+            request.AddParameter("id", Student.ID);
+            request.AddParameter("job_id", (Student.JobID > 0 ? Student.JobID : APIManager.KioskSettings["job_id"]));
+            request.AddParameter("std_id", Student.StudentID);
+            request.AddParameter("barcode_data", Student.BarcodeData);
+
+            SendVisitorDataAsync(request, client);
         }
 
 

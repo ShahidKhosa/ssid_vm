@@ -200,6 +200,15 @@
     </Compile>
     <Compile Include="Extensions\DependencyObjectExtensions.cs" />
     <Compile Include="Extensions\FrameworkElementExtensions.cs" />
+    <Compile Include="FacultyOptions.xaml.cs">
+      <DependentUpon>FacultyOptions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FacultySignin.xaml.cs">
+      <DependentUpon>FacultySignin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FacultySignout.xaml.cs">
+      <DependentUpon>FacultySignout.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
@@ -229,6 +238,9 @@
     </Compile>
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SigninCompleted.xaml.cs">
+      <DependentUpon>SigninCompleted.xaml</DependentUpon>
     </Compile>
     <Compile Include="SigninOptions.xaml.cs">
       <DependentUpon>SigninOptions.xaml</DependentUpon>
@@ -274,6 +286,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DigitalPass.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FacultyOptions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FacultySignin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FacultySignout.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -329,6 +353,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SigninCompleted.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

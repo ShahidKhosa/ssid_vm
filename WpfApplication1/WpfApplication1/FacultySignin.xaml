@@ -1,0 +1,73 @@
+﻿<Page x:Class="SchoolSafeID.FacultySignin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:adorners="http://gu.se/Adorners"            
+      xmlns:local="clr-namespace:SchoolSafeID"
+      xmlns:wpfx1="http://schemas.xceed.com/wpf/xaml/toolkit"
+      mc:Ignorable="d"       
+      FocusManager.FocusedElement="{Binding ElementName=txtBarcodeData}"
+      Title="Faculty Sign-in" Loaded="Page_Loaded" Focusable="True" Style="{StaticResource SSIDPage}">
+
+    <Page.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Open" Executed="Executed_Open" CanExecute="CanExecute_Open"/>
+    </Page.CommandBindings>
+    <Page.InputBindings>
+        <KeyBinding Command="ApplicationCommands.Open" Gesture="Ctrl+O"/>
+    </Page.InputBindings>
+
+    <DockPanel LastChildFill="True">
+
+        <StackPanel DockPanel.Dock="Top"></StackPanel>
+
+        <StackPanel DockPanel.Dock="Bottom" Height="100" Background="Black">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Background>
+                    <ImageBrush ImageSource="Resources/poweredby_schoolsafe.png" Opacity="1" Stretch="None" AlignmentX="Right"/>
+                </StackPanel.Background>
+
+                <Button Style="{StaticResource MyButton}" HorizontalAlignment="Left" Margin="10 10 0 0" Content="GO BACK" Background="Gray" Click="btn_Home_Click" />
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock="Left"></StackPanel>
+
+        <StackPanel DockPanel.Dock="Right"></StackPanel>
+
+        <Grid Width="1200" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="430"/>
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"  Margin="0,10,0,0">
+                <Image Width="369" Height="261" HorizontalAlignment="Center" Margin="0 16 0 0" Source="Resources/scan_studentid.jpg" />
+                <TextBlock HorizontalAlignment="Center" Style="{StaticResource MaterialDesignDisplay1TextBlock}" Margin="0 9 0 0"  TextWrapping="Wrap" FontSize="20" Foreground="#249c24" Text="Press scan button on device if it does not automatically scan."></TextBlock>
+
+                <Image Margin="0 50 0 0" Width="369" Height="44" HorizontalAlignment="Center" Source="Resources/bar_code.png" />
+                <TextBlock HorizontalAlignment="Center" Margin="0 10 0 0" Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" FontSize="20" Text="Sample barcode on Faculty ID"></TextBlock>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,13,0,0">
+                <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="36" Margin="0,0,0,0" Text="Scan Staff ID to Sign-in"></TextBlock>
+
+                <TextBox InputMethod.IsInputMethodEnabled="False" Focusable="True" Name="txtBarcodeData" Opacity="0" Width="0" Height="0" Text="" TextChanged="txtBarcodeData_TextChanged" />
+
+                <StackPanel Name="formWrapper" Visibility="Collapsed" Margin="0 20 0 0">
+                    <wpfx1:WatermarkTextBox InputScope="PersonalFullName" Style="{StaticResource WmTextField}" Name="txt_FirstName" Watermark="First Name" IsEnabled="False" />
+                    <wpfx1:WatermarkTextBox InputScope="PersonalFullName" Style="{StaticResource WmTextField}" Name="txt_LastName" Watermark="Last Name" IsEnabled="False" />
+                    <wpfx1:WatermarkTextBox InputScope="PersonalFullName" Style="{StaticResource WmTextField}" Name="txt_Grade" Watermark="Grade" IsEnabled="False" />
+                    <Button Name="btnConfirm" IsEnabled="False" Style="{StaticResource MyButton}" Content="CONFIRM AND SUBMIT" Width="650" Margin="0 10 0 0" Click="Button_Click"/>
+                </StackPanel>
+                <TextBlock Margin="0 20 0 0" Width="650" TextBlock.LineHeight="36" FontSize="24" Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" Text="Hold your Faculty ID up to the scanning device as shown. The Front of your card should face the scanning device so that it can read the bar code. Once you hear the beep, your ID has been scanned properly. Press Submit to continue."></TextBlock>
+
+            </StackPanel>
+        </Grid>
+
+    </DockPanel>
+
+</Page>

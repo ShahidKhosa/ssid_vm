@@ -162,8 +162,6 @@ F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\
 F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\x86\opencv_videoio_ffmpeg411.dll
 F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\x86\vcruntime140.dll
 F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\log4net.config
-F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SchoolSafeID.exe.manifest
-F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\SchoolSafeID.application
 F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\Emgu.CV.UI.dll
 F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\Emgu.CV.World.dll
 F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\FluentScheduler.dll
@@ -190,9 +188,6 @@ F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\
 F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\zh-cn\ZedGraph.resources.dll
 F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\zh-tw\ZedGraph.resources.dll
 F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\SchoolSafeID_Content.g.cs
-F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\SchoolSafeID.exe.manifest
-F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\SchoolSafeID.application
-F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\SchoolSafeID.TrustInfo.xml
 F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\SchoolSafeID.csprojResolveAssemblyReference.cache
 C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\fonts\Lato-Black.ttf
 C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\fonts\Lato-Bold.ttf
@@ -320,3 +315,9 @@ C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplicatio
 C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\SchoolSafeID.exe
 C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\SchoolSafeID.pdb
 C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\SchoolSafeID.csprojResolveAssemblyReference.cache
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\FacultyOptions.g.cs
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\FacultyOptions.baml
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\FacultySignin.g.cs
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\FacultySignin.baml
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\FacultySignout.g.cs
+F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\FacultySignout.baml

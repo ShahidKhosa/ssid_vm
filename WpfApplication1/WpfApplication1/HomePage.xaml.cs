@@ -190,5 +190,10 @@ namespace SchoolSafeID
             // Shutdown the application.
             Application.Current.Shutdown();
         }
+
+        private void btnFacultySignin_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("FacultyOptions.xaml", UriKind.Relative));
+        }
     }
 }
