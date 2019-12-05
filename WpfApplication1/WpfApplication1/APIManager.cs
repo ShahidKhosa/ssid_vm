@@ -519,7 +519,7 @@ namespace SchoolSafeID
         {
             var client = GetClient();
             var request = new RestRequest("/api/class_api.php", Method.POST);
-            request.AddParameter("action", "faculty_signin");
+            request.AddParameter("action", "api_faculty_signin");
             request.AddParameter("id", Student.ID);
             request.AddParameter("job_id", (Student.JobID > 0 ? Student.JobID : APIManager.KioskSettings["job_id"]));
             request.AddParameter("std_id", Student.StudentID);

@@ -710,3 +710,9 @@ System.Net.WebException: Unable to connect to the remote server ---> System.Net.
 2019-11-30 09:00:05,884 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
 2019-11-30 09:00:07,132 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
 2019-11-30 09:00:09,498 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-04 21:28:09,015 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-04 21:28:11,440 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-04 21:28:13,813 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-04 22:38:07,841 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-04 22:38:08,235 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-04 22:38:10,015 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\
+C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\
 SchoolSafeID
 none
 false
 DEBUG;TRACE
-F:\csharp\General_NetSDK_Eng_Win64_IS_V3.049.0000000.2.R.180127\demo\CSharpDemo\IntelligentTraffic\ssid_vm\WpfApplication1\WpfApplication1\App.xaml
-26-569826456
+C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\App.xaml
+27-1832075488
 41909904211
-432050875990
-38-1969021731
-BadgePreview.xaml;CheckinReasons.xaml;Destination.xaml;Dictionary1.xaml;DigitalPass.xaml;FacultyOptions.xaml;FacultySignin.xaml;FacultySignout.xaml;Footer.xaml;HomePage.xaml;MainWindow.xaml;MatchStudentID.xaml;ModalWindow.xaml;ParentSignout.xaml;PrintCompleted.xaml;ScanFailure.xaml;ScanLicense.xaml;SearchStudent.xaml;Settings.xaml;SigninOptions.xaml;SignoutCompleted.xaml;StudentBadgePreview.xaml;StudentSignin.xaml;StudentSigninReason.xaml;TakePhoto.xaml;VisitorSignout.xaml;
+44-563654275
+38-1752351595
+BadgePreview.xaml;CheckinReasons.xaml;Destination.xaml;Dictionary1.xaml;DigitalPass.xaml;FacultyOptions.xaml;FacultySignin.xaml;FacultySignout.xaml;Footer.xaml;HomePage.xaml;MainWindow.xaml;MatchStudentID.xaml;ModalWindow.xaml;ParentSignout.xaml;PrintCompleted.xaml;ScanFailure.xaml;ScanLicense.xaml;SearchStudent.xaml;Settings.xaml;SigninCompleted.xaml;SigninOptions.xaml;SignoutCompleted.xaml;StudentBadgePreview.xaml;StudentSignin.xaml;StudentSigninReason.xaml;TakePhoto.xaml;VisitorSignout.xaml;
 splash-banner.jpg
 False
 
