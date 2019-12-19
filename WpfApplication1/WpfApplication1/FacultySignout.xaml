@@ -8,7 +8,7 @@
       xmlns:wpfx1="http://schemas.xceed.com/wpf/xaml/toolkit"
       mc:Ignorable="d"       
       FocusManager.FocusedElement="{Binding ElementName=txtBarcodeData}"
-      Title="Faculty Signout" Loaded="Page_Loaded" Focusable="True" Style="{StaticResource SSIDPage}">
+      Title="Faculty Signout" Loaded="Page_Loaded" Unloaded="Page_Unloaded" Focusable="True" Style="{StaticResource SSIDPage}">
 
     <Page.CommandBindings>
         <CommandBinding Command="ApplicationCommands.Open" Executed="Executed_Open" CanExecute="CanExecute_Open"/>
@@ -54,8 +54,6 @@
 
             <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,23,0,0">
                 <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="36" Margin="0,0,0,10" Text="Scan Staff ID to Sign-out"></TextBlock>
-
-                <TextBox InputMethod.IsInputMethodEnabled="False" Focusable="True" Name="txtBarcodeData" Opacity="0" Width="0" Height="0" Text="" TextChanged="txtBarcodeData_TextChanged" />
 
                 <StackPanel Name="formWrapper" Visibility="Collapsed">
                     <wpfx1:WatermarkTextBox Style="{StaticResource WmTextField}" Name="txt_FirstName" Watermark="First Name" IsEnabled="False" />

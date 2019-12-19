@@ -216,8 +216,9 @@ namespace SchoolSafeID
         }
 
 
-        public static void GetVisitorData(string Action = "manage_preview")
+        public static bool GetVisitorData(string Action = "manage_preview")
         {
+            bool responseResult = false;
             var client  = GetClient();
             var request = new RestRequest("/api/class_api.php");
             request.AddParameter("action", Action); // adds to POST or URL querystring based on Method            
@@ -233,7 +234,9 @@ namespace SchoolSafeID
 
                 if (result.ContainsKey("success"))
                 {
-                    if (bool.Parse(result["success"].ToString()))
+                    responseResult = bool.Parse(result["success"].ToString());
+
+                    if (responseResult)
                     {
                         Visitor.SetData(result);
                     }
@@ -254,6 +257,8 @@ namespace SchoolSafeID
                 Helper.log.Error("Get Visitor Data Status Error Message " + response.ErrorMessage, response.ErrorException);
                 Helper.log.Error("Get Visitor Data Status " + response.StatusCode + "\n" + response.StatusDescription);
             }
+
+            return responseResult;
         }
 
 
@@ -452,8 +457,9 @@ namespace SchoolSafeID
         }
 
 
-        public static void GetStudentData(string Action = "manage_student_preview")
+        public static bool GetStudentData(string Action = "manage_student_preview")
         {
+            bool responseResult = false;
             var client = GetClient();
             var request = new RestRequest("/api/class_api.php");
             request.AddParameter("action", Action); // adds to POST or URL querystring based on Method            
@@ -469,7 +475,9 @@ namespace SchoolSafeID
 
                 if (result.ContainsKey("success"))
                 {
-                    if (bool.Parse(result["success"].ToString()))
+                    responseResult = bool.Parse(result["success"].ToString());
+
+                    if (responseResult)
                     {
                         Student.SetData(result);
                     }
@@ -490,6 +498,8 @@ namespace SchoolSafeID
                 Helper.log.Error("Get Student Data Error Message " + response.ErrorMessage, response.ErrorException);
                 Helper.log.Error("Get Student Data " + response.StatusCode + "\n" + response.StatusDescription);
             }
+
+            return responseResult;
         }
 
 

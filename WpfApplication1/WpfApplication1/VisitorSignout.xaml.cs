@@ -12,6 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CoreScanner;
+using System.Threading;
+using System.Windows.Threading;
+using System.Windows.Forms;
 
 namespace SchoolSafeID
 {
@@ -19,8 +23,10 @@ namespace SchoolSafeID
     /// Interaction logic for VisitorSignout.xaml
     /// </summary>
     public partial class VisitorSignout : Page
-    {
-        public System.Windows.Forms.Timer tmrDelay;
+    {        
+        public static ModalWindow mw;
+        CCoreScannerClass m_pCoreScanner;
+        _ICoreScannerEvents_BarcodeEventEventHandler BarcodeEventHandler;
 
 
         public VisitorSignout()
@@ -48,85 +54,102 @@ namespace SchoolSafeID
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            tmrDelay = new System.Windows.Forms.Timer();
-            tmrDelay.Interval = 1000;
-            tmrDelay.Enabled = false;
-            txtBarcodeData.Focus();
+            ResetData();
 
-            formWrapper.Visibility = Visibility.Collapsed;
-        }
-
-
-        private void txtBarcodeData_TextChanged(object sender, TextChangedEventArgs e)
-        {
             try
             {
-                if (txtBarcodeData.Text.Trim().Length == 1)
-                {
-                    tmrDelay.Enabled = true;
-                    tmrDelay.Start();
-                    tmrDelay.Tick += new EventHandler(tmrDelay_Tick);
-                }
+                m_pCoreScanner = new CoreScanner.CCoreScannerClass();
+                ViewBarcode viewBarcode = new ViewBarcode(m_pCoreScanner);
+                BarcodeEventHandler = new CoreScanner._ICoreScannerEvents_BarcodeEventEventHandler(OnBarcodeEvent);
+                m_pCoreScanner.BarcodeEvent += BarcodeEventHandler;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-            }
+
+            }            
         }
 
 
-        void tmrDelay_Tick(object sender, EventArgs e)
+        /// <summary>
+        /// BarcodeEvent received
+        /// </summary>
+        /// <param name="eventType">Type of event</param>
+        /// <param name="scanData">Barcode string</param>
+        public void OnBarcodeEvent(short eventType, ref string scanData)
         {
             try
             {
-                tmrDelay.Stop();
-                string strCurrentString = txtBarcodeData.Text.Trim().ToString();
-                if (strCurrentString != "")
+                string tmpScanData  = scanData;
+                Visitor.BarcodeData = ViewBarcode.ShowBarcodeLabel(tmpScanData);                
+
+                if (APIManager.GetVisitorData("manage_signout_preview"))
                 {
-                    Visitor.BarcodeData = strCurrentString;
                     SetData();
-
-                    //Do something with the barcode entered
-                    txtBarcodeData.Text = "";
                 }
-                txtBarcodeData.Focus();
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                MessageBox.Show(ex.Message);
+                System.Windows.MessageBox.Show("Barcode Event issue " + e.Message);
             }
         }
+
 
 
         public void SetData()
-        {
-            APIManager.GetVisitorData("manage_signout_preview");
-
+        {            
             if (Visitor.FirstName != string.Empty)
-            {
-                txt_FirstName.Text = Visitor.FirstName;
+            {                
+                Dispatcher.BeginInvoke(new Action(() =>
+                {
+                    txt_FirstName.Text = Visitor.FirstName;
+
+                }), DispatcherPriority.Background);
             }
 
             if (Visitor.LastName != string.Empty)
-            {
-                txt_LastName.Text = Visitor.LastName;
+            {                
+                Dispatcher.BeginInvoke(new Action(() =>
+                {
+                    txt_LastName.Text = Visitor.LastName;
+
+                }), DispatcherPriority.Background);
             }
 
             if (Visitor.FirstName != string.Empty && Visitor.LastName != string.Empty)
             {
-                btnConfirm.IsEnabled = true;
-                formWrapper.Visibility = Visibility.Visible;
+                Dispatcher.BeginInvoke(new Action(() =>
+                {
+                    btnConfirm.IsEnabled = true;
+                    formWrapper.Visibility = Visibility.Visible;
+
+                }), DispatcherPriority.Background);
             }            
         }
+
+
+        public void ResetData()
+        {            
+            Visitor.ResetData();         
+
+            txt_FirstName.Text = "";
+            txt_LastName.Text = "";                        
+            formWrapper.Visibility = Visibility.Collapsed;
+
+            txt_FirstName.IsEnabled = false;
+            txt_LastName.IsEnabled = false;            
+            btnConfirm.IsEnabled = false;
+        }
+
 
 
         public void Executed_Open(object sender, ExecutedRoutedEventArgs e)
         {            
             Visitor.BarcodeData = "97370-v";
-            SetData();
 
-            txtBarcodeData.Focus();
-            txtBarcodeData.Text = "";
+            if (APIManager.GetVisitorData("manage_signout_preview"))
+            {
+                SetData();
+            }            
         }
 
 
@@ -134,5 +157,25 @@ namespace SchoolSafeID
         {
             e.CanExecute = true;
         }
+
+
+        private void Page_Unloaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                m_pCoreScanner.BarcodeEvent -= BarcodeEventHandler;
+
+                if (mw != null)
+                {
+                    mw.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show(ex.Message);
+            }
+        }
+
+
     }
 }

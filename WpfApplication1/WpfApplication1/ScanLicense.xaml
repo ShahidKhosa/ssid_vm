@@ -6,8 +6,7 @@
       xmlns:adorners="http://gu.se/Adorners"            
       xmlns:local="clr-namespace:SchoolSafeID"
       xmlns:wpfx1="http://schemas.xceed.com/wpf/xaml/toolkit"
-      mc:Ignorable="d"       
-      FocusManager.FocusedElement="{Binding ElementName=txtBarcodeData}"
+      mc:Ignorable="d"             
       Title="Scan License" Loaded="Page_Loaded" Focusable="True" Style="{StaticResource SSIDPage}" Unloaded="Page_Unloaded">
 
     <Page.CommandBindings>
@@ -55,7 +54,6 @@
 
             <WrapPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top">
                 <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="35" Margin="0,0,0,0" Text="Scan Drivers License or Frequent Visitor ID"></TextBlock>
-                <TextBox InputMethod.IsInputMethodEnabled="False" Name="txtBarcodeData" Opacity="0" Width="0" Height="0" Text="" TextChanged="txtBarcodeData_TextChanged"/>
                 <StackPanel Name="formWrapper" Visibility="Collapsed" Margin="0 8 0 0">
                     <wpfx1:WatermarkTextBox InputScope="PersonalFullName" Style="{StaticResource WmTextField}" Name="txt_FirstName" Watermark="Legal First Name" IsEnabled="False" />
                     <wpfx1:WatermarkTextBox InputScope="PersonalFullName" Style="{StaticResource WmTextField}" Name="txt_LastName" Watermark="Legal Last Name" IsEnabled="False" />

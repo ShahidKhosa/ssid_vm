@@ -6,9 +6,8 @@
       xmlns:adorners="http://gu.se/Adorners"            
       xmlns:local="clr-namespace:SchoolSafeID"
       xmlns:wpfx1="http://schemas.xceed.com/wpf/xaml/toolkit"
-      mc:Ignorable="d"       
-      FocusManager.FocusedElement="{Binding ElementName=txtBarcodeData}"
-      Title="Faculty Sign-in" Loaded="Page_Loaded" Focusable="True" Style="{StaticResource SSIDPage}">
+      mc:Ignorable="d"             
+      Title="Faculty Sign-in" Loaded="Page_Loaded" Unloaded="Page_Unloaded" Style="{StaticResource SSIDPage}">
 
     <Page.CommandBindings>
         <CommandBinding Command="ApplicationCommands.Open" Executed="Executed_Open" CanExecute="CanExecute_Open"/>
@@ -54,8 +53,6 @@
 
             <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,13,0,0">
                 <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="36" Margin="0,0,0,0" Text="Scan Staff ID to Sign-in"></TextBlock>
-
-                <TextBox InputMethod.IsInputMethodEnabled="False" Focusable="True" Name="txtBarcodeData" Opacity="0" Width="0" Height="0" Text="" TextChanged="txtBarcodeData_TextChanged" />
 
                 <StackPanel Name="formWrapper" Visibility="Collapsed" Margin="0 20 0 0">
                     <wpfx1:WatermarkTextBox InputScope="PersonalFullName" Style="{StaticResource WmTextField}" Name="txt_FirstName" Watermark="First Name" IsEnabled="False" />

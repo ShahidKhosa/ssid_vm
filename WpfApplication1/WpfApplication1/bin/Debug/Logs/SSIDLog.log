@@ -716,3 +716,373 @@ System.Net.WebException: Unable to connect to the remote server ---> System.Net.
 2019-12-04 22:38:07,841 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
 2019-12-04 22:38:08,235 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
 2019-12-04 22:38:10,015 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-05 23:50:55,983 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-05 23:50:56,420 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-05 23:50:59,737 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-05 23:51:26,233 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-05 23:54:52,944 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-05 23:54:53,192 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-05 23:54:54,998 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 00:59:44,817 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 00:59:45,131 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 00:59:46,945 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 01:00:46,060 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 01:00:46,299 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 01:00:48,087 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 01:02:47,547 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 01:02:47,782 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 01:02:49,590 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 01:03:37,900 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 01:03:38,161 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 01:03:40,012 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 01:04:04,187 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 01:04:04,440 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 01:04:07,184 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 01:05:53,078 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 01:05:53,320 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 01:05:55,125 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 01:10:20,593 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 01:10:21,321 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 01:10:23,351 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 01:20:05,315 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 01:20:05,546 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 01:20:07,255 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 01:40:03,892 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 01:40:04,222 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 01:40:05,920 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 01:52:17,880 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 01:52:18,176 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 01:52:19,883 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 01:55:09,022 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 01:55:09,292 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 01:55:10,949 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 01:55:25,474 [14] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 01:57:27,966 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 01:57:28,200 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 01:57:29,808 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 02:00:20,088 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 02:00:20,468 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 02:00:22,200 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 02:03:23,152 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 02:03:23,451 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 02:03:25,250 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 02:52:57,871 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 02:52:58,336 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 02:52:59,987 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 02:53:48,099 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 02:53:48,819 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 02:53:55,790 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 02:53:56,455 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 02:54:35,996 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 02:54:36,257 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 02:54:37,937 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 02:54:52,244 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 02:54:52,959 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 02:55:41,953 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 02:55:51,336 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 02:55:55,831 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 02:59:10,211 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 02:59:10,512 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 02:59:12,338 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 02:59:57,400 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 02:59:57,683 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 02:59:59,343 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 03:00:33,212 [15] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:00:42,353 [15] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:01:18,602 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 03:01:18,869 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 03:01:20,553 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 03:01:41,927 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:01:46,940 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Status Error Message The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+   at System.Net.HttpWebRequest.GetResponse()
+   at RestSharp.Http.GetRawResponse(HttpWebRequest request)
+   at RestSharp.Http.GetResponse(HttpWebRequest request)
+2019-12-06 03:01:46,947 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Status 0
+
+2019-12-06 03:01:57,270 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:01:57,934 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:02:07,523 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:02:08,192 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:02:08,879 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:05:31,339 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 03:05:31,588 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 03:05:33,235 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 03:05:40,238 [14] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:06:35,836 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 03:06:36,087 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 03:06:37,878 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 03:06:43,922 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:06:47,957 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:06:52,509 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:06:57,817 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:07:12,930 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:14:55,057 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 03:14:55,379 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 03:14:57,272 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 03:16:53,595 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 03:16:53,877 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 03:16:55,536 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 03:17:16,298 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:17:17,006 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:17:22,208 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:17:22,859 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:17:29,612 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:17:30,308 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:17:40,635 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:17:41,316 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:17:46,303 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:17:46,983 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:18:00,354 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:18:00,998 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:18:01,663 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:18:10,138 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:18:10,810 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:18:11,499 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:18:21,180 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:18:21,855 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:18:22,543 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:18:23,245 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:19:10,686 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 03:19:10,921 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 03:19:12,627 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 03:19:19,493 [16] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:27:03,553 [16] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:27:11,084 [16] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:28:14,211 [16] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:30:44,823 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 03:30:45,053 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 03:30:46,678 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 03:30:56,366 [17] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:31:06,331 [17] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:31:06,352 [11] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:33:11,770 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 03:33:12,037 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 03:33:13,666 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 03:33:22,038 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:33:28,641 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 03:33:29,324 [1] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 18:20:08,732 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 18:20:10,245 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 18:20:12,164 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 18:28:25,386 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 18:28:25,629 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 18:28:27,322 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 18:31:22,549 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 18:31:22,784 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 18:31:24,585 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 18:33:21,241 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 18:33:21,496 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 18:33:23,161 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 18:35:16,669 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 18:35:16,922 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 18:35:18,759 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 18:51:59,845 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 18:52:00,144 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 18:52:01,773 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 18:52:48,784 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 18:52:49,034 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 18:52:50,679 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 18:53:48,024 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 18:53:48,259 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 18:53:49,975 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 18:54:28,308 [14] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 18:55:22,393 [19] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 18:56:26,993 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 18:56:27,280 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 18:56:28,947 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 18:56:39,761 [14] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 18:57:04,828 [14] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 18:58:25,265 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 18:58:25,505 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 18:58:27,351 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 18:58:34,976 [13] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:00:41,504 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 19:00:41,728 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 19:00:43,385 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 19:00:51,639 [15] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:06:29,481 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 19:06:29,732 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 19:06:31,374 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 19:06:38,162 [13] ERROR SchoolSafeID.Helper - Get Visitor Data Status Error Message The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+   at System.Net.HttpWebRequest.GetResponse()
+   at RestSharp.Http.GetRawResponse(HttpWebRequest request)
+   at RestSharp.Http.GetResponse(HttpWebRequest request)
+2019-12-06 19:06:38,170 [13] ERROR SchoolSafeID.Helper - Get Visitor Data Status 0
+
+2019-12-06 19:07:21,147 [13] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:07:46,112 [13] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:07:54,598 [13] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:18:05,217 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 19:18:05,517 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 19:18:07,339 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 19:18:36,828 [18] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:18:36,870 [16] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:18:36,882 [19] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:19:31,191 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 19:19:31,435 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 19:19:33,205 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 19:20:17,090 [16] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:20:29,735 [16] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:20:35,740 [16] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:20:36,687 [6] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:21:45,313 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 19:21:45,589 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 19:21:47,700 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 19:27:58,730 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 19:27:59,044 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 19:28:00,839 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 19:29:07,108 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 19:29:07,355 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 19:29:09,147 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 19:29:19,349 [13] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:29:28,198 [13] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:29:28,338 [16] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:34:40,495 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 19:34:40,771 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 19:34:44,114 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 19:35:00,508 [15] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:35:09,954 [18] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:35:14,245 [18] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:35:31,162 [18] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:35:34,046 [18] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:35:35,777 [18] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:35:36,825 [18] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:35:51,164 [15] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:35:53,504 [15] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:35:58,697 [15] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 19:35:59,598 [15] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 23:55:14,395 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-06 23:55:14,879 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-06 23:55:16,800 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-06 23:56:11,463 [14] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-06 23:56:17,674 [13] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-07 00:00:22,508 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-07 00:00:22,779 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-07 00:00:24,639 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-07 00:17:22,078 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-07 00:17:22,330 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-07 00:17:24,176 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-07 00:17:39,239 [14] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-07 00:44:31,704 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-07 00:44:32,189 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-07 00:44:34,300 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-07 00:45:37,992 [15] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-07 00:46:04,943 [15] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-07 00:46:13,685 [15] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-07 00:46:13,708 [11] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-07 00:50:14,543 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-07 00:50:14,778 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-07 00:50:16,518 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-07 00:51:30,044 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-07 00:51:30,323 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-07 00:51:32,976 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-07 00:51:48,140 [16] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-07 00:51:57,829 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-07 00:51:58,153 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-07 00:52:00,872 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-07 00:52:14,698 [16] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-07 00:52:26,365 [16] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-07 00:52:26,634 [13] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-07 00:52:36,343 [16] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-07 00:52:36,645 [10] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-07 00:52:36,678 [17] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-07 00:55:44,458 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-07 00:55:44,709 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-07 00:55:47,470 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-07 00:56:03,364 [14] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-07 00:56:12,967 [14] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-07 00:56:23,222 [13] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-07 00:56:24,332 [14] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-07 00:56:29,601 [13] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-07 00:56:30,490 [17] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-07 00:56:30,534 [14] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-07 01:05:20,791 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-07 01:05:21,040 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-07 01:05:22,754 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-07 01:22:39,994 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-07 01:22:40,336 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-07 01:22:42,030 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-07 01:28:39,504 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-07 01:28:40,040 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-07 01:28:41,728 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-09 20:03:47,971 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-09 20:03:48,714 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-09 20:03:50,541 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-18 23:24:55,308 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-18 23:24:56,408 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-18 23:24:58,254 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-18 23:52:26,468 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-18 23:52:26,749 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-18 23:52:28,395 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-18 23:54:20,877 [7] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-18 23:54:36,375 [7] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-18 23:54:59,089 [7] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-18 23:55:09,563 [20] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-18 23:55:24,391 [20] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-18 23:55:45,573 [7] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-18 23:55:55,917 [7] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-18 23:56:04,235 [7] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-18 23:56:14,772 [7] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-19 00:05:43,895 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-19 00:05:45,054 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-19 00:05:47,253 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-19 17:52:06,785 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-19 17:52:08,233 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-19 17:52:11,836 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-19 17:52:52,026 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-19 17:52:52,283 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-19 17:52:53,946 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-19 17:53:16,958 [14] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-19 17:53:57,614 [7] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-19 17:54:08,497 [7] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-19 17:56:31,369 [7] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-19 17:58:03,964 [14] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-19 18:02:13,386 [7] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-19 18:03:26,404 [6] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-19 18:03:31,418 [6] ERROR SchoolSafeID.Helper - Get Visitor Data Status Error Message The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+   at System.Net.HttpWebRequest.GetResponse()
+   at RestSharp.Http.GetRawResponse(HttpWebRequest request)
+   at RestSharp.Http.GetResponse(HttpWebRequest request)
+2019-12-19 18:03:31,456 [6] ERROR SchoolSafeID.Helper - Get Visitor Data Status 0
+
+2019-12-19 18:03:33,662 [6] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-19 18:03:38,954 [6] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-19 18:05:07,735 [6] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-19 18:05:18,519 [6] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-19 18:05:27,329 [6] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-19 18:06:12,400 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-12-19 18:23:33,234 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-19 18:23:33,505 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-19 18:23:35,326 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-19 18:23:43,760 [13] ERROR SchoolSafeID.Helper - Get Visitor Data Error System.Collections.Generic.Dictionary`2[System.String,System.Object]
+2019-12-19 18:25:30,071 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-19 18:25:30,417 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-19 18:25:32,049 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-19 18:26:14,097 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-19 18:26:14,313 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-19 18:26:15,955 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-19 18:26:40,313 [14] ERROR SchoolSafeID.Helper - Get Visitor Data Error System.Collections.Generic.Dictionary`2[System.String,System.Object]
+2019-12-19 18:26:50,515 [14] ERROR SchoolSafeID.Helper - Get Visitor Data Error System.Collections.Generic.Dictionary`2[System.String,System.Object]
+2019-12-19 18:27:12,693 [1] INFO SchoolSafeID.Helper - {Snagit 2018, Send To OneNote 16, OneNote, Microsoft XPS Document Writer, Microsoft Print to PDF, Fax, DYMO LabelWriter 450 Turbo, \\10.10.10.18\hp LaserJet 1320 PCL 5}
+2019-12-19 18:27:20,550 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 12345678
+2019-12-19 18:27:21,208 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1574106428.png
+2019-12-19 19:10:37,771 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-19 19:10:38,088 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 12345678
+2019-12-19 19:10:39,845 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1574106428.png
+2019-12-19 19:10:57,137 [13] ERROR SchoolSafeID.Helper - Get Student Data Server Error Error, please try to scan your ID again.
+2019-12-19 19:12:04,756 [13] ERROR SchoolSafeID.Helper - Get Student Data Server Error Error, please try to scan your ID again.
+2019-12-19 19:14:08,479 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/membership/146/student_card_310105.pdf
+2019-12-19 19:31:58,452 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-19 19:31:58,737 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 12345678
+2019-12-19 19:32:00,378 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1574106428.png
+2019-12-19 19:33:11,292 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-12-19 19:33:54,150 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/membership/146/student_card_310105.pdf
+2019-12-19 19:34:16,490 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/membership/146/student_card_310105.pdf
+2019-12-19 19:34:55,493 [1] INFO SchoolSafeID.Helper - {Snagit 2018, Send To OneNote 16, OneNote, Microsoft XPS Document Writer, Microsoft Print to PDF, Fax, DYMO LabelWriter 450 Turbo, \\10.10.10.18\hp LaserJet 1320 PCL 5}
+2019-12-19 19:35:41,636 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-19 19:35:43,110 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-19 19:37:19,890 [15] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2019-12-19 19:37:34,633 [1] INFO SchoolSafeID.Helper - Save Visitor Image

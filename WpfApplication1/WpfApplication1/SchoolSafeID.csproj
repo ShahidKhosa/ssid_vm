@@ -113,6 +113,10 @@
     <Reference Include="Gu.Wpf.Adorners, Version=1.5.2.0, Culture=neutral, PublicKeyToken=6dfb64f9972bd31d, processorArchitecture=MSIL">
       <HintPath>..\packages\Gu.Wpf.Adorners.1.5.2\lib\net45\Gu.Wpf.Adorners.dll</HintPath>
     </Reference>
+    <Reference Include="Interop.CoreScanner">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Zebra Technologies\Barcode Scanners\Scanner SDK\Scanner SDK\Sample Applications\src\SampleApp_CSharp\obj\Debug\Interop.CoreScanner.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
@@ -233,6 +237,8 @@
     <Compile Include="ScanLicense.xaml.cs">
       <DependentUpon>ScanLicense.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Scanner.cs" />
+    <Compile Include="ScannerAttribute.cs" />
     <Compile Include="SearchStudent.xaml.cs">
       <DependentUpon>SearchStudent.xaml</DependentUpon>
     </Compile>
@@ -265,10 +271,12 @@
     <Compile Include="UriString.cs" />
     <Compile Include="ValidatorExtensions.cs" />
     <Compile Include="Student.cs" />
+    <Compile Include="ViewBarcode.cs" />
     <Compile Include="Visitor.cs" />
     <Compile Include="VisitorSignout.xaml.cs">
       <DependentUpon>VisitorSignout.xaml</DependentUpon>
     </Compile>
+    <Compile Include="XmlReader.cs" />
     <Page Include="BadgePreview.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

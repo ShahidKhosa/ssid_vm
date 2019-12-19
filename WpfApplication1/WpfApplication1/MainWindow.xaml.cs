@@ -30,6 +30,8 @@ namespace SchoolSafeID
     */
     public partial class MainWindow : Window
     {
+        public static bool EventBinded = false;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -47,7 +49,9 @@ namespace SchoolSafeID
                 Helper.log.Error(ex.Message);
             }
         }
+
     }
+
 
 
     public class ScheduledJobRegistry : Registry
