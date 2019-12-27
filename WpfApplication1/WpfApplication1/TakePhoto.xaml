@@ -12,7 +12,7 @@
         <StackPanel DockPanel.Dock="Top"></StackPanel>
         
         <StackPanel DockPanel.Dock="Bottom" Height="100" Background="Black">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" Name="footerBar">
                 <StackPanel.Background>
                     <ImageBrush ImageSource="Resources/poweredby_schoolsafe.png" Opacity="1" Stretch="None" AlignmentX="Right"/>
                 </StackPanel.Background>
@@ -25,13 +25,13 @@
 
         <StackPanel DockPanel.Dock="Right"></StackPanel>
 
-
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="675">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="800">
+            <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="36" Margin="0,0,0,0" Text="Take Photo"></TextBlock>
+            <TextBlock HorizontalAlignment="Center" Text="Align your face in the square and press the &quot;Take Photo&quot; button." FontSize="28" Margin="0,10,0,20" />
             <Grid>
-                <Image x:Name="imgCapture" Stretch="None" Width="601" Height="480"/>
+                <Image x:Name="imgCapture" Stretch="None" Width="415" Height="355"/>
             </Grid>
-            <TextBlock HorizontalAlignment="Center" Text="Align your face in the square and press the 'Take Photo' button." FontSize="18" Margin="0,10,0,20" />
-            <Button x:Name="btnTakePhoto" Content="Take Photo" Style="{StaticResource MyButton}" Click="btnTakePhoto_Click"/>
+            <Button x:Name="btnTakePhoto" Content="Take Photo" Style="{StaticResource MyButton}" Click="btnTakePhoto_Click" Margin="0,30,0,0"/>
         </StackPanel>
 
     </DockPanel>

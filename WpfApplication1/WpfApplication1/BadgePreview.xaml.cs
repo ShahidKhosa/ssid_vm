@@ -25,6 +25,7 @@ namespace SchoolSafeID
         public BadgePreview()
         {
             InitializeComponent();
+            Helper.UpdateLogoVisibility(footerBar);
         }
 
 

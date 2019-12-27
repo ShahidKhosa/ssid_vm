@@ -22,7 +22,7 @@
         <StackPanel DockPanel.Dock="Top"></StackPanel>
 
         <StackPanel DockPanel.Dock="Bottom" Height="100" Background="Black">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" Name="footerBar">
                 <StackPanel.Background>
                     <ImageBrush ImageSource="Resources/poweredby_schoolsafe.png" Opacity="1" Stretch="None" AlignmentX="Right"/>
                 </StackPanel.Background>
@@ -55,7 +55,7 @@
             <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,23,0,0">
                 <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="36" Margin="0,0,0,10" Text="Scan Staff ID to Sign-out"></TextBlock>
 
-                <StackPanel Name="formWrapper" Visibility="Collapsed">
+                <StackPanel>
                     <wpfx1:WatermarkTextBox Style="{StaticResource WmTextField}" Name="txt_FirstName" Watermark="First Name" IsEnabled="False" />
                     <wpfx1:WatermarkTextBox Style="{StaticResource WmTextField}" Name="txt_LastName" Watermark="Last Name" IsEnabled="False" />
                     <Button Name="btnConfirm" IsEnabled="False" Style="{StaticResource MyButton}" Content="CONFIRM AND SUBMIT" Width="650" Margin="0 20 0 40" Click="Button_Click"/>

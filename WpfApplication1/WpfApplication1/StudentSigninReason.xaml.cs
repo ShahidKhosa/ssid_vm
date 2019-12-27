@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -12,6 +13,7 @@ namespace SchoolSafeID
         public StudentSigninReason()
         {
             InitializeComponent();
+            Helper.UpdateLogoVisibility(footerBar);
         }
 
 
@@ -31,18 +33,36 @@ namespace SchoolSafeID
         }
 
 
-        private void btnOptionClick(object sender, RoutedEventArgs e)
+        private async void btnOptionClick(object sender, RoutedEventArgs e)
         {
             Student.CheckinOptionNumber = ((FrameworkElement)sender).Tag.ToString();
-
             Student.CheckinOption = APIManager.KioskSettings["lateness_reason" + Student.CheckinOptionNumber].ToString();
 
+
+            disableSigninOptions();
+
+            //add delay to make sure picture downloaded.
+            await Task.Delay(1700);
             this.NavigationService.Navigate(new Uri("StudentBadgePreview.xaml", UriKind.Relative));
         }
 
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
+        private void disableSigninOptions()
         {
+            btnOption1.IsEnabled = false;
+            btnOption2.IsEnabled = false;
+            btnOption3.IsEnabled = false;
+            btnOption4.IsEnabled = false;
+            btnOption5.IsEnabled = false;
+            btnOption6.IsEnabled = false;
+            btnOption7.IsEnabled = false;
+            btnOption8.IsEnabled = false;
+            btnOption9.IsEnabled = false;
+        }
+
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {            
             setOption("lateness_reason1", btnOption1);
             setOption("lateness_reason2", btnOption2);
             setOption("lateness_reason3", btnOption3);
@@ -51,7 +71,7 @@ namespace SchoolSafeID
             setOption("lateness_reason6", btnOption6);
             setOption("lateness_reason7", btnOption7);
             setOption("lateness_reason8", btnOption8);
-            setOption("lateness_reason9", btnOption9);
+            setOption("lateness_reason9", btnOption9);            
         }
 
 
@@ -61,11 +81,13 @@ namespace SchoolSafeID
             {
                 button.Content = APIManager.KioskSettings[lateness_reason].ToString();
                 button.Visibility = Visibility.Visible;
+                button.IsEnabled = true;
             }
             else
             {
                 button.Content = "";
                 button.Visibility = Visibility.Hidden;
+                button.IsEnabled = false;
             }
         }
 

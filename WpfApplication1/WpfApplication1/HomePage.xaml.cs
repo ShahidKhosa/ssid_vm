@@ -87,6 +87,23 @@ namespace SchoolSafeID
                     btnStudentSignout.Visibility = Visibility.Visible;
                 }
 
+                if (APIManager.KioskSettings.ContainsKey("faculty_attendance_settings"))
+                {
+                    if (APIManager.KioskSettings["faculty_attendance_settings"].ToString().ToLower().Equals("show"))
+                    {                        
+                        btnFacultySignin.Visibility = Visibility.Visible;
+                    }
+                    else
+                    {                        
+                        btnFacultySignin.Visibility = Visibility.Hidden;
+                    }
+                }
+                else
+                {                    
+                    btnFacultySignin.Visibility = Visibility.Hidden;
+                }
+
+                Helper.UpdateLogoVisibility(footerBar);
                 Helper.CleanExtraResources();
             }
             catch(Exception ex)
@@ -190,6 +207,7 @@ namespace SchoolSafeID
             // Shutdown the application.
             Application.Current.Shutdown();
         }
+
 
         private void btnFacultySignin_Click(object sender, RoutedEventArgs e)
         {

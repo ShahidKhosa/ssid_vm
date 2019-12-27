@@ -159,8 +159,7 @@ namespace SchoolSafeID
                     KioskSettings = SimpleJson.DeserializeObject<Dictionary<string, object>>(response.Content);
 
                     if (KioskSettings.ContainsKey("logo"))
-                    {
-                        //++logoNumber;
+                    {                        
                         Download(KioskSettings["logo"].ToString(), LogoPath);
                     }
 
@@ -388,6 +387,15 @@ namespace SchoolSafeID
             request.AddParameter("date_birth", Visitor.DateOfBirth);
             request.AddParameter("is_visitor", Visitor.IsVisitor);
             request.AddParameter("job_id", KioskSettings["job_id"]);
+            
+            if (Visitor.VisitorHasNewImage)
+            {
+                request.AlwaysMultipartFormData = true;
+                request.AddHeader("Content-Type", "multipart/form-data");
+                request.AddFile("file", Visitor.CroppedImagePath, "image/jpg");
+                request.AddParameter("multipart/form-data", Path.GetFileName(Visitor.CroppedImagePath), ParameterType.RequestBody);
+            }
+
             var response = client.Execute(request);
 
             if (response.StatusCode == HttpStatusCode.OK)

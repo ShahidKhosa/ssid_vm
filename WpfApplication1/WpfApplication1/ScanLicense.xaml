@@ -21,7 +21,7 @@
         <StackPanel DockPanel.Dock="Top"></StackPanel>
 
         <StackPanel DockPanel.Dock="Bottom" Height="100" Background="Black">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" Name="footerBar">
                 <StackPanel.Background>
                     <ImageBrush ImageSource="Resources/poweredby_schoolsafe.png" Opacity="1" Stretch="None" AlignmentX="Right"/>
                 </StackPanel.Background>
@@ -54,7 +54,7 @@
 
             <WrapPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top">
                 <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}" TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="35" Margin="0,0,0,0" Text="Scan Drivers License or Frequent Visitor ID"></TextBlock>
-                <StackPanel Name="formWrapper" Visibility="Collapsed" Margin="0 8 0 0">
+                <StackPanel Margin="0 8 0 0">
                     <wpfx1:WatermarkTextBox InputScope="PersonalFullName" Style="{StaticResource WmTextField}" Name="txt_FirstName" Watermark="Legal First Name" IsEnabled="False" />
                     <wpfx1:WatermarkTextBox InputScope="PersonalFullName" Style="{StaticResource WmTextField}" Name="txt_LastName" Watermark="Legal Last Name" IsEnabled="False" />
                     <wpfx1:MaskedTextBox InputScope="Number" Style="{StaticResource MsTextField}" Name="txt_DateOfBirth" IsEnabled="False" GotFocus="txt_DateOfBirth_GotFocus" adorners:Watermark.TextStyle="{StaticResource WaterMarkStyle}" adorners:Watermark.Text="Date of Birth (MM/DD/YYYY)" LostFocus="txt_DateOfBirth_LostFocus"/>

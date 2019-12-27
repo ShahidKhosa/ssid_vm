@@ -27,6 +27,8 @@ namespace SchoolSafeID
         public ParentSignout()
         {
             InitializeComponent();
+            Helper.UpdateLogoVisibility(footerBar);
+
             selectedStudentsList = new ObservableCollection<StudentPersonalInfo>();
         }
 

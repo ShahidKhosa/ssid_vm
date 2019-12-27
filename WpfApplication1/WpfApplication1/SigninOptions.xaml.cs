@@ -23,6 +23,7 @@ namespace SchoolSafeID
         public SigninOptions()
         {
             InitializeComponent();
+            Helper.UpdateLogoVisibility(footerBar);
         }
 
 

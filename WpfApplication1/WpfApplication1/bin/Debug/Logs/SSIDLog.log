@@ -1086,3 +1086,217 @@ System.Net.WebException: The underlying connection was closed: A connection that
 2019-12-19 19:35:43,110 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
 2019-12-19 19:37:19,890 [15] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
 2019-12-19 19:37:34,633 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-12-21 00:52:04,330 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-21 00:52:04,917 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-21 00:52:06,704 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-21 00:54:05,058 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-21 00:54:05,292 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-21 00:54:06,946 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-24 18:24:54,111 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-24 18:24:54,540 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-24 18:24:56,503 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 18:23:23,592 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 18:23:24,394 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 18:23:26,213 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 18:32:24,866 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 18:32:25,096 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 18:32:26,715 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 19:00:21,760 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 19:00:39,004 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 19:00:39,306 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 19:00:40,934 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 19:08:15,410 [1] INFO SchoolSafeID.Helper - {Snagit 2018, Send To OneNote 16, OneNote, Microsoft XPS Document Writer, Microsoft Print to PDF, Fax, DYMO LabelWriter 450 Turbo, \\10.10.10.18\hp LaserJet 1320 PCL 5}
+2019-12-26 19:15:54,626 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 19:15:54,931 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 19:15:56,659 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 19:33:45,454 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 19:33:45,778 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 19:33:48,477 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 19:35:54,753 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 19:35:55,028 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 19:35:56,690 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 19:58:52,712 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 19:58:52,954 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 19:58:54,663 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 20:00:58,861 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 20:00:59,113 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 20:01:00,774 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 20:04:09,388 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 20:04:09,654 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 20:04:11,290 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 20:04:12,590 [1] ERROR SchoolSafeID.Helper - Home Page Error
+System.NotSupportedException: The URI prefix is not recognized.
+   at System.Net.WebRequest.Create(Uri requestUri, Boolean useUriBase)
+   at MS.Internal.WpfWebRequestHelper.CreateRequest(Uri uri)
+   at System.Windows.Media.Imaging.BitmapDecoder.SetupDecoderFromUriOrStream(Uri uri, Stream stream, BitmapCacheOption cacheOption, Guid& clsId, Boolean& isOriginalWritable, Stream& uriStream, UnmanagedMemoryStream& unmanagedMemoryStream, SafeFileHandle& safeFilehandle)
+   at System.Windows.Media.Imaging.BitmapDecoder.CreateFromUriOrStream(Uri baseUri, Uri uri, Stream stream, BitmapCreateOptions createOptions, BitmapCacheOption cacheOption, RequestCachePolicy uriCachePolicy, Boolean insertInDecoderCache)
+   at System.Windows.Media.Imaging.BitmapImage.FinalizeCreation()
+   at System.Windows.Media.Imaging.BitmapImage.EndInit()
+   at SchoolSafeID.Helper.AddBackgroundImage(StackPanel footerBar) in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\Helper.cs:line 190
+   at SchoolSafeID.Helper.UpdateLogoVisibility(StackPanel footerBar) in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\Helper.cs:line 174
+   at SchoolSafeID.HomePage.InitPage() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\HomePage.xaml.cs:line 106
+2019-12-26 20:05:33,643 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 20:05:33,867 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 20:05:35,500 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 20:05:36,778 [1] ERROR SchoolSafeID.Helper - Home Page Error
+System.NotSupportedException: The URI prefix is not recognized.
+   at System.Net.WebRequest.Create(Uri requestUri, Boolean useUriBase)
+   at MS.Internal.WpfWebRequestHelper.CreateRequest(Uri uri)
+   at System.Windows.Media.Imaging.BitmapDecoder.SetupDecoderFromUriOrStream(Uri uri, Stream stream, BitmapCacheOption cacheOption, Guid& clsId, Boolean& isOriginalWritable, Stream& uriStream, UnmanagedMemoryStream& unmanagedMemoryStream, SafeFileHandle& safeFilehandle)
+   at System.Windows.Media.Imaging.BitmapDecoder.CreateFromUriOrStream(Uri baseUri, Uri uri, Stream stream, BitmapCreateOptions createOptions, BitmapCacheOption cacheOption, RequestCachePolicy uriCachePolicy, Boolean insertInDecoderCache)
+   at System.Windows.Media.Imaging.BitmapImage.FinalizeCreation()
+   at System.Windows.Media.Imaging.BitmapImage.EndInit()
+   at SchoolSafeID.Helper.AddBackgroundImage(StackPanel footerBar) in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\Helper.cs:line 190
+   at SchoolSafeID.Helper.UpdateLogoVisibility(StackPanel footerBar) in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\Helper.cs:line 174
+   at SchoolSafeID.HomePage.InitPage() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\HomePage.xaml.cs:line 106
+2019-12-26 20:07:57,522 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 20:07:57,754 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 20:07:59,403 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 20:09:48,846 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 20:09:49,082 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 20:09:50,731 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 20:10:37,478 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 20:10:37,732 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 20:10:39,413 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 20:12:49,213 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 20:12:49,458 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 20:12:51,110 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 20:30:56,379 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 20:30:56,646 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 20:30:58,284 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 20:31:02,648 [1] INFO SchoolSafeID.Helper - {Snagit 2018, Send To OneNote 16, OneNote, Microsoft XPS Document Writer, Microsoft Print to PDF, Fax, DYMO LabelWriter 450 Turbo, \\10.10.10.18\hp LaserJet 1320 PCL 5}
+2019-12-26 20:31:54,170 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 20:31:54,423 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 20:31:56,098 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 20:33:38,272 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 20:33:38,531 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 20:33:40,292 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 20:34:52,940 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 20:34:53,192 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 20:34:54,880 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 20:37:22,510 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 20:37:22,727 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 20:37:24,378 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 20:44:38,102 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 20:44:38,348 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 20:44:40,247 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 20:45:54,758 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 20:45:55,000 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 20:45:56,673 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 20:46:20,855 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 20:46:21,084 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 20:46:22,769 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 20:47:40,273 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 20:47:40,499 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 20:47:42,135 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 20:48:50,847 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 20:48:51,077 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 20:48:52,697 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 20:50:41,299 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 20:50:41,520 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 20:50:43,145 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 20:54:23,570 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 20:54:23,844 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 20:54:25,461 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 20:58:12,742 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 20:58:13,080 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 20:58:14,796 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 21:03:10,991 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-12-26 21:08:05,838 [1] INFO SchoolSafeID.Helper - {Snagit 2018, Send To OneNote 16, OneNote, Microsoft XPS Document Writer, Microsoft Print to PDF, Fax, DYMO LabelWriter 450 Turbo, \\10.10.10.18\hp LaserJet 1320 PCL 5}
+2019-12-26 21:08:48,302 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-26 21:08:48,583 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-26 21:08:50,281 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-26 21:09:26,403 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/visitors/visitor-card-97420.pdf
+2019-12-26 21:09:53,313 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/membership/83/student_card_900002978.pdf
+2019-12-27 00:31:59,515 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-27 00:31:59,791 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-27 00:32:01,464 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-27 00:34:46,808 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-27 00:34:47,151 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-27 00:34:59,264 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-27 00:38:13,296 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-27 00:38:13,734 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-27 00:38:15,894 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-27 00:39:45,187 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-27 00:39:45,496 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-27 00:39:47,152 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-27 00:41:17,495 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-27 00:41:17,787 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-27 00:41:19,426 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-27 00:42:02,559 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/visitors/visitor-card-97321.pdf
+2019-12-27 00:59:14,625 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-27 00:59:15,011 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-27 00:59:16,690 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-27 01:00:14,379 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-12-27 18:14:55,696 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-27 18:14:56,690 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2019-12-27 18:14:58,622 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2019-12-27 18:16:43,628 [1] INFO SchoolSafeID.Helper - {Snagit 2018, Send To OneNote 16, OneNote, Microsoft XPS Document Writer, Microsoft Print to PDF, Fax, DYMO LabelWriter 450 Turbo, \\10.10.10.18\hp LaserJet 1320 PCL 5}
+2019-12-27 18:16:45,940 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 16226
+2019-12-27 18:16:47,469 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/logo_ssi.png
+2019-12-27 18:18:01,543 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-12-27 18:18:04,933 [1] ERROR SchoolSafeID.Helper - Verify Visitor Data Exception 
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at RestSharp.SimpleJson.DeserializeObject(String json, Type type, IJsonSerializerStrategy jsonSerializerStrategy)
+   at RestSharp.SimpleJson.DeserializeObject[T](String json)
+   at SchoolSafeID.APIManager.VerifyVisitorData() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 396
+2019-12-27 18:21:49,050 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-12-27 18:22:15,485 [1] ERROR SchoolSafeID.Helper - Verify Visitor Data Exception 
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at RestSharp.SimpleJson.DeserializeObject(String json, Type type, IJsonSerializerStrategy jsonSerializerStrategy)
+   at RestSharp.SimpleJson.DeserializeObject[T](String json)
+   at SchoolSafeID.APIManager.VerifyVisitorData() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 396
+2019-12-27 18:25:29,168 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-12-27 18:25:35,779 [1] ERROR SchoolSafeID.Helper - Verify Visitor Data Exception 
+System.Runtime.Serialization.SerializationException: Invalid JSON string
+   at RestSharp.SimpleJson.DeserializeObject(String json)
+   at RestSharp.SimpleJson.DeserializeObject(String json, Type type, IJsonSerializerStrategy jsonSerializerStrategy)
+   at RestSharp.SimpleJson.DeserializeObject[T](String json)
+   at SchoolSafeID.APIManager.VerifyVisitorData() in C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\APIManager.cs:line 396
+2019-12-27 18:26:47,339 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-12-27 19:14:22,578 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-27 19:14:22,876 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 16226
+2019-12-27 19:14:24,548 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/logo_ssi.png
+2019-12-27 19:14:57,369 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-12-27 19:18:57,062 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-27 19:18:57,297 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 16226
+2019-12-27 19:18:58,933 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/logo_ssi.png
+2019-12-27 19:19:24,555 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-12-27 19:20:49,954 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-12-27 19:23:08,715 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-12-27 19:29:38,861 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-12-27 19:47:58,118 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-27 19:47:58,355 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 16226
+2019-12-27 19:47:59,997 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/logo_ssi.png
+2019-12-27 20:09:44,169 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-27 20:09:44,438 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 16226
+2019-12-27 20:09:46,090 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/logo_ssi.png
+2019-12-27 20:35:19,531 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-27 20:35:19,783 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 16226
+2019-12-27 20:35:21,485 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/logo_ssi.png
+2019-12-27 20:36:59,570 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-27 20:36:59,838 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 16226
+2019-12-27 20:37:01,469 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/logo_ssi.png
+2019-12-27 20:44:08,614 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-27 20:44:08,870 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 16226
+2019-12-27 20:44:10,570 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/logo_ssi.png
+2019-12-27 20:52:35,946 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-27 20:52:36,213 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 16226
+2019-12-27 20:52:38,102 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/logo_ssi.png
+2019-12-27 20:59:47,764 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-27 20:59:48,005 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 16226
+2019-12-27 20:59:49,652 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/logo_ssi.png
+2019-12-27 21:02:54,024 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-27 21:02:54,337 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 16226
+2019-12-27 21:02:56,328 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/logo_ssi.png
+2019-12-27 21:05:03,385 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-12-27 21:06:28,878 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-27 21:06:29,112 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 16226
+2019-12-27 21:06:30,737 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/logo_ssi.png
+2019-12-27 21:07:24,602 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-12-27 21:08:54,437 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2019-12-27 21:14:15,566 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2019-12-27 21:14:15,799 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 16226
+2019-12-27 21:14:17,476 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/logo_ssi.png

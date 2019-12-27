@@ -15,6 +15,7 @@ namespace SchoolSafeID
         public StudentBadgePreview()
         {
             InitializeComponent();
+            Helper.UpdateLogoVisibility(footerBar);
         }
 
 
@@ -79,9 +80,7 @@ namespace SchoolSafeID
 
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            
-
+        {            
             if (APIManager.KioskSettings.ContainsKey("student_badge_options"))
             {
                 int option = int.Parse(APIManager.KioskSettings["student_badge_options"].ToString());
@@ -113,7 +112,7 @@ namespace SchoolSafeID
 
             try
             {
-                await Task.Delay(500);
+                await Task.Delay(100);
 
                 imgStudentImage.Source = new BitmapImage(new Uri(Student.ImagePath, UriKind.Absolute));
             }

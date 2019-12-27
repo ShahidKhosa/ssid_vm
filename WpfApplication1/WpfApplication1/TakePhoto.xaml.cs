@@ -39,6 +39,7 @@ namespace SchoolSafeID
         public TakePhoto()
         {
             InitializeComponent();
+            Helper.UpdateLogoVisibility(footerBar);
             LoadCamera();            
         }
 
@@ -156,7 +157,7 @@ namespace SchoolSafeID
                 {
                     currentFrame = cf.ToImage<Bgr, Byte>();                    
                     Image<Gray, Byte> grayFrame = currentFrame.Convert<Gray, Byte>();
-                    
+
                     //var detectedFaces = _haarCascade.DetectMultiScale(grayFrame, 1.1, 10, System.Drawing.Size.Empty);                    
                     //var sdetectedFaces = _haarCascade.DetectMultiScale(grayFrame, 1.5, 0, new System.Drawing.Size(277, 352), new System.Drawing.Size(277, 352));                    
                     //foreach (var face in detectedFaces)
@@ -164,7 +165,11 @@ namespace SchoolSafeID
                     //    currentFrame.Draw(face, new Bgr(System.Drawing.Color.Red), 1);
                     //}
 
-                    currentFrame.Draw(new System.Drawing.Rectangle(162, 62, 279, 354), new Bgr(System.Drawing.Color.Red), 1);
+
+                    //601 x 480
+                    //Width="415" Height="355"
+                    currentFrame.Draw(new System.Drawing.Rectangle(69, 0, 279, 354), new Bgr(System.Drawing.Color.Red), 1);
+                    //currentFrame.Draw(new System.Drawing.Rectangle(162, 62, 279, 354), new Bgr(System.Drawing.Color.Red), 1);
 
                     imgCapture.Source = BitmapSourceConvert.ToBitmapSource(currentFrame);
                 }

@@ -35,7 +35,8 @@ namespace SchoolSafeID
 
         public ScanLicense()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            Helper.UpdateLogoVisibility(footerBar);
         }
 
         /// <summary>
@@ -227,8 +228,7 @@ namespace SchoolSafeID
 
                     Dispatcher.BeginInvoke(new Action(() =>
                     {
-                        btnConfirm.IsEnabled    = true;
-                        formWrapper.Visibility  = Visibility.Visible;
+                        btnConfirm.IsEnabled    = true;                        
 
                     }), DispatcherPriority.Background);                    
                 }                    
@@ -240,9 +240,7 @@ namespace SchoolSafeID
         {
             //MessageBox.Show("Executing the Open command");
             Visitor.BarcodeData = "@ANSI 636058050002DL00410217ZO02580064DLDAQY081724446DCSEADSDDENDACSTACYDDFNDADLYNNDDGNDCADDCBNONEDCDNONEDBC2DAU504DAYGRNDAG7016 STONYCREEK DRIVEDAIOKLAHOMACITYDAJOKDAK731320000DCFNONEDCGUSADAW118DBA07312019DBB12091979DBD08262015ZOZOANZOBNZOCRENEWALZODZOE5579ZOF55ZOG33.50ZOHZOINZOJN";
-            SetData();
-
-            SetBarcodeFocus();            
+            SetData();                
         }
 
 
@@ -274,8 +272,7 @@ namespace SchoolSafeID
             txt_DateOfBirth.Text = "";
 
             Visitor.IsOfficeUseOnly = false;
-            Visitor.OfficeUseOnlyPassword = "";
-            formWrapper.Visibility = Visibility.Collapsed;
+            Visitor.OfficeUseOnlyPassword = "";            
 
             txt_FirstName.IsEnabled = false;
             txt_LastName.IsEnabled = false;
@@ -308,15 +305,6 @@ namespace SchoolSafeID
             {
                 System.Windows.MessageBox.Show(ex.Message);
             }
-        }
-
-
-        public void SetBarcodeFocus()
-        {
-            if(!Visitor.IsOfficeUseOnly)
-            {
-                //txtBarcodeData.Focus();
-            }            
         }
 
     }

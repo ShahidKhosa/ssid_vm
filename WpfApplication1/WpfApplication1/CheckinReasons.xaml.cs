@@ -23,6 +23,7 @@ namespace SchoolSafeID
         public CheckinReasons()
         {
             InitializeComponent();
+            Helper.UpdateLogoVisibility(footerBar);
         }
 
 

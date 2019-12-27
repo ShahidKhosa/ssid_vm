@@ -23,6 +23,7 @@ namespace SchoolSafeID
         public FacultyOptions()
         {
             InitializeComponent();
+            Helper.UpdateLogoVisibility(footerBar);
         }
 
         private void btn_Home_Click(object sender, RoutedEventArgs e)

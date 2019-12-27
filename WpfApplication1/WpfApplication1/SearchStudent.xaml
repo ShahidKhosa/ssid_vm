@@ -13,7 +13,7 @@
         <StackPanel DockPanel.Dock="Top"></StackPanel>
         <StackPanel DockPanel.Dock="Right"></StackPanel>
         <StackPanel DockPanel.Dock="Bottom" Height="100" Background="Black">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" Name="footerBar">
                 <StackPanel.Background>
                     <ImageBrush ImageSource="Resources/poweredby_schoolsafe.png" Opacity="1" Stretch="None" AlignmentX="Right"/>
                 </StackPanel.Background>

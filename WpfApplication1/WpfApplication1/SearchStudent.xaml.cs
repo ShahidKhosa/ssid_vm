@@ -17,7 +17,8 @@ namespace SchoolSafeID
 
         public SearchStudent()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            Helper.UpdateLogoVisibility(footerBar);
         }
 
 
@@ -55,18 +56,21 @@ namespace SchoolSafeID
 
             cmb.IsDropDownOpen = true;
 
-            if (!string.IsNullOrEmpty(cmb.Text))
+            if(StudentPersonalInfo.Students != null)
             {
-                string fullText = cmb.Text.Insert(GetChildOfType<TextBox>(cmb).CaretIndex, e.Text);
-                cmb.ItemsSource = StudentPersonalInfo.Students.Where(s => s.Name.IndexOf(fullText, StringComparison.OrdinalIgnoreCase) != -1).ToList();                
-            }
-            else if (!string.IsNullOrEmpty(e.Text))
-            {
-                cmb.ItemsSource = StudentPersonalInfo.Students.Where(s => s.Name.IndexOf(e.Text, StringComparison.OrdinalIgnoreCase) != -1).ToList();
-            }
-            else
-            {
-                cmb.ItemsSource = StudentPersonalInfo.Students;
+                if (!string.IsNullOrEmpty(cmb.Text))
+                {
+                    string fullText = cmb.Text.Insert(GetChildOfType<TextBox>(cmb).CaretIndex, e.Text);
+                    cmb.ItemsSource = StudentPersonalInfo.Students.Where(s => s.Name.IndexOf(fullText, StringComparison.OrdinalIgnoreCase) != -1).ToList();
+                }
+                else if (!string.IsNullOrEmpty(e.Text))
+                {
+                    cmb.ItemsSource = StudentPersonalInfo.Students.Where(s => s.Name.IndexOf(e.Text, StringComparison.OrdinalIgnoreCase) != -1).ToList();
+                }
+                else
+                {
+                    cmb.ItemsSource = StudentPersonalInfo.Students;
+                }
             }
 
             cmb.SelectedValuePath = "ID";

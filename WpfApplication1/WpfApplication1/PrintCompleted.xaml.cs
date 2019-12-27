@@ -27,6 +27,8 @@ namespace SchoolSafeID
         {
             InitializeComponent();
 
+            Helper.UpdateLogoVisibility(footerBar);
+
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(5);
             timer.Tick += timer_Tick;

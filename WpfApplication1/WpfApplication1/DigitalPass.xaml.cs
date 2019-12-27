@@ -23,6 +23,7 @@ namespace SchoolSafeID
         public DigitalPass()
         {
             InitializeComponent();
+            Helper.UpdateLogoVisibility(footerBar);
         }
 
         private void btn_GoBack_Click(object sender, RoutedEventArgs e)

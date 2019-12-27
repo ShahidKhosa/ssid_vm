@@ -32,6 +32,7 @@ namespace SchoolSafeID
         public VisitorSignout()
         {
             InitializeComponent();
+            Helper.UpdateLogoVisibility(footerBar);
         }
 
 
@@ -119,8 +120,7 @@ namespace SchoolSafeID
             {
                 Dispatcher.BeginInvoke(new Action(() =>
                 {
-                    btnConfirm.IsEnabled = true;
-                    formWrapper.Visibility = Visibility.Visible;
+                    btnConfirm.IsEnabled = true;                    
 
                 }), DispatcherPriority.Background);
             }            
@@ -132,8 +132,7 @@ namespace SchoolSafeID
             Visitor.ResetData();         
 
             txt_FirstName.Text = "";
-            txt_LastName.Text = "";                        
-            formWrapper.Visibility = Visibility.Collapsed;
+            txt_LastName.Text = "";                                    
 
             txt_FirstName.IsEnabled = false;
             txt_LastName.IsEnabled = false;            

@@ -60,13 +60,13 @@ namespace SchoolSafeID
         {
             Schedule<KioskCronJob>()
                     .NonReentrant() // Only one instance of the job can run at a time
-                    .ToRunOnceAt(DateTime.Now.AddMinutes(5))    // Delay startup for a while
-                    .AndEvery(10).Minutes();     // Interval
+                    .ToRunOnceAt(DateTime.Now.AddMinutes(1))    // Delay startup for a while
+                    .AndEvery(5).Minutes();     // Interval
 
             Schedule<StudentsCronJob>()
                     .NonReentrant() // Only one instance of the job can run at a time
                     .ToRunOnceAt(DateTime.Now.AddMinutes(30))    // Delay startup for a while
-                    .AndEvery(30).Minutes();     // Interval
+                    .AndEvery(5).Minutes();     // Interval
 
             Schedule<SendLogFile>()
                     .NonReentrant() // Only one instance of the job can run at a time

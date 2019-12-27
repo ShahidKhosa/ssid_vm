@@ -37,8 +37,7 @@ namespace SchoolSafeID
             if (txt_password.Password != String.Empty && txt_password.Password.Equals(APIManager.KioskSettings["office_use_only"].ToString()))
             {
                 if(scanLicense != null)
-                {
-                    scanLicense.formWrapper.Visibility = Visibility.Visible;
+                {                    
                     scanLicense.txt_FirstName.Text   = "";
                     scanLicense.txt_LastName.Text    = "";
                     scanLicense.txt_DateOfBirth.Text = "";
