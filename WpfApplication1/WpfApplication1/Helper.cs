@@ -68,8 +68,8 @@ namespace SchoolSafeID
                 //Width="415" Height="355"
                 //currentFrame.Draw(new System.Drawing.Rectangle(69, 0, 279, 354), new Bgr(System.Drawing.Color.Red), 1);
                 //currentFrame.Draw(new System.Drawing.Rectangle(162, 62, 279, 354), new Bgr(System.Drawing.Color.Red), 1);
-
-                CropImage(Visitor.FullImagePath, 71, 2, 275, 350);
+                
+                CropImage(Visitor.FullImagePath, 182, 64, 275, 350);
             }
             catch( Exception ex)
             {

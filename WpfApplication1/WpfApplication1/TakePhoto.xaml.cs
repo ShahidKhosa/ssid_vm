@@ -43,11 +43,6 @@ namespace SchoolSafeID
             LoadCamera();            
         }
 
-        private void page_Loaded(object sender, System.Windows.RoutedEventArgs e)
-        {
-            //LoadCamera();
-        }
-
 
         private void btnTakePhoto_Click(object sender, RoutedEventArgs e)
         {
@@ -144,6 +139,9 @@ namespace SchoolSafeID
                 _capture = new VideoCapture(1);
             }
 
+            Helper.log.Info(" Camera Width: " + _capture.Width);
+            Helper.log.Info(" Camera Height: " + _capture.Height);
+
             string filePath = System.IO.Path.Combine(Environment.CurrentDirectory, "haarcascade_frontalface_alt_tree.xml");
 
             _haarCascade = new CascadeClassifier(filePath);
@@ -167,11 +165,10 @@ namespace SchoolSafeID
 
 
                     //601 x 480
-                    //Width="415" Height="355"
-                    currentFrame.Draw(new System.Drawing.Rectangle(69, 0, 279, 354), new Bgr(System.Drawing.Color.Red), 1);
-                    //currentFrame.Draw(new System.Drawing.Rectangle(162, 62, 279, 354), new Bgr(System.Drawing.Color.Red), 1);
+                    //Width="415" Height="355"                    
+                    currentFrame.Draw(new System.Drawing.Rectangle(181, 63, 279, 354), new Bgr(System.Drawing.Color.Red), 1);
 
-                    imgCapture.Source = BitmapSourceConvert.ToBitmapSource(currentFrame);
+                    imgCapture.ImageSource = BitmapSourceConvert.ToBitmapSource(currentFrame);
                 }
             };
 

@@ -61,8 +61,10 @@ namespace SchoolSafeID
         }
 
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {            
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            await Task.Delay(100);
+
             setOption("lateness_reason1", btnOption1);
             setOption("lateness_reason2", btnOption2);
             setOption("lateness_reason3", btnOption3);

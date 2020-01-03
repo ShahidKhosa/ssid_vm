@@ -74,8 +74,9 @@ namespace SchoolSafeID
         }
 
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            await Task.Delay(100);
             setOption("checkin_option1", btnOption1);
             setOption("checkin_option2", btnOption2);
             setOption("checkin_option3", btnOption3);
@@ -94,11 +95,13 @@ namespace SchoolSafeID
             {
                 button.Content = APIManager.KioskSettings[checkin_option].ToString();
                 button.Visibility = Visibility.Visible;
+                button.IsEnabled = true;
             }
             else
             {
                 button.Content = "";
                 button.Visibility = Visibility.Hidden;
+                button.IsEnabled = false;
             }
         }
 
