@@ -22,8 +22,8 @@ namespace SchoolSafeID
     {
         public static readonly ILog log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-
-        public static string DefaultImage = GetPath() + "\\placeholder.jpg";
+        
+        public static string DefaultImage = "Default\\placeholder.jpg";
 
 
         public static Visibility LogoVisibility

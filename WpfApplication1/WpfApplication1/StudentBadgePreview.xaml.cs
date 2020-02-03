@@ -118,11 +118,11 @@ namespace SchoolSafeID
             }
             catch (System.NotSupportedException ex)
             {                
-                imgStudentImage.Source = new BitmapImage(new Uri(Helper.DefaultImage, UriKind.Absolute));
+                imgStudentImage.Source = new BitmapImage(new Uri(Helper.DefaultImage, UriKind.Relative));
             }
             catch(Exception ex)
             {
-                imgStudentImage.Source = new BitmapImage(new Uri(Helper.DefaultImage, UriKind.Absolute));
+                imgStudentImage.Source = new BitmapImage(new Uri(Helper.DefaultImage, UriKind.Relative));
             }
                         
             //Student.VisitDateTime.ToString("MM/dd/yyyy hh:mm:ss tt");  

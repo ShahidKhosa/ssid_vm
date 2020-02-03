@@ -190,8 +190,24 @@ namespace SchoolSafeID
 
         private void btnStudentSignout_Click(object sender, RoutedEventArgs e)
         {
-            Visitor.IsVisitor = 1;// 1 mean a parent is checking out a student 
-            this.NavigationService.Navigate(new Uri("ScanLicense.xaml", UriKind.Relative));            
+            if (APIManager.KioskSettings.ContainsKey("student_signout_options"))
+            {
+                if (APIManager.KioskSettings["student_signout_options"].ToString().ToLower().Equals("yes"))
+                {                    
+                    this.NavigationService.Navigate(new Uri("StudentSignoutOptions.xaml", UriKind.Relative));
+                }
+                else
+                {
+                    Visitor.IsVisitor = 1;// 1 mean a parent is checking out a student 
+                    this.NavigationService.Navigate(new Uri("ScanLicense.xaml", UriKind.Relative));
+                }
+            }
+            else
+            {
+                Visitor.IsVisitor = 1;// 1 mean a parent is checking out a student 
+                this.NavigationService.Navigate(new Uri("ScanLicense.xaml", UriKind.Relative));
+            }
+          
         }
 
 

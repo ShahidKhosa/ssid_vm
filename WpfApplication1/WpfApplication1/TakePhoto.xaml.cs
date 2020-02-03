@@ -34,12 +34,17 @@ namespace SchoolSafeID
         Image<Bgr, Byte> currentFrame = null;
         private CascadeClassifier _haarCascade;
         DispatcherTimer _timer;
+        public bool IsStudentCheckout = false;
         
 
         public TakePhoto()
         {
             InitializeComponent();
             Helper.UpdateLogoVisibility(footerBar);
+            IsStudentCheckout = false;
+
+            Helper.log.Info(" Beore Camera Load.");
+
             LoadCamera();            
         }
 
@@ -62,7 +67,14 @@ namespace SchoolSafeID
             Helper.SaveImageCapture(currentFrame);
             Helper.log.Info("Save Visitor Image");
 
-            if (Visitor.IsVerified != 1)
+            if(IsStudentCheckout)
+            {
+                APIManager.Signout();
+
+                this.NavigationService.Navigate(new Uri("SignoutCompleted.xaml", UriKind.Relative));
+            }
+
+            else if (Visitor.IsVerified != 1)
             {
                 int result = APIManager.VerifyVisitorData();
 
@@ -132,48 +144,56 @@ namespace SchoolSafeID
 
         private void LoadCamera()
         {
-            _capture = new VideoCapture(0); 
-            
-            if(_capture.Height < 1 && _capture.Width < 1)
+            try
             {
-                _capture = new VideoCapture(1);
-            }
+                _capture = new VideoCapture(0);
 
-            Helper.log.Info(" Camera Width: " + _capture.Width);
-            Helper.log.Info(" Camera Height: " + _capture.Height);
+                //if(_capture.Height < 1 && _capture.Width < 1)
+                //{
+                //    _capture = new VideoCapture(1);
+                //}
 
-            string filePath = System.IO.Path.Combine(Environment.CurrentDirectory, "haarcascade_frontalface_alt_tree.xml");
+                Helper.log.Info(" Camera Width: " + _capture.Width);
+                Helper.log.Info(" Camera Height: " + _capture.Height);                
 
-            _haarCascade = new CascadeClassifier(filePath);
+                //string filePath = System.IO.Path.Combine(Environment.CurrentDirectory, "haarcascade_frontalface_alt_tree.xml");
+                //Helper.log.Info(" haarcascade_frontalface_alt_tree.xml file Path: " + filePath);
+                _haarCascade = new CascadeClassifier("fonts\\haarcascade_frontalface_alt_tree.xml");
 
-            _timer = new DispatcherTimer();
-            _timer.Tick += (_, __) =>
-            {
-                var cf = _capture.QueryFrame();                
-
-                if (cf != null)
+                _timer = new DispatcherTimer();
+                _timer.Tick += (_, __) =>
                 {
-                    currentFrame = cf.ToImage<Bgr, Byte>();                    
-                    Image<Gray, Byte> grayFrame = currentFrame.Convert<Gray, Byte>();
+                    var cf = _capture.QueryFrame();
 
-                    //var detectedFaces = _haarCascade.DetectMultiScale(grayFrame, 1.1, 10, System.Drawing.Size.Empty);                    
-                    //var sdetectedFaces = _haarCascade.DetectMultiScale(grayFrame, 1.5, 0, new System.Drawing.Size(277, 352), new System.Drawing.Size(277, 352));                    
-                    //foreach (var face in detectedFaces)
-                    //{
-                    //    currentFrame.Draw(face, new Bgr(System.Drawing.Color.Red), 1);
-                    //}
+                    if (cf != null)
+                    {
+                        currentFrame = cf.ToImage<Bgr, Byte>();
+                        Image<Gray, Byte> grayFrame = currentFrame.Convert<Gray, Byte>();
+
+                        //var detectedFaces = _haarCascade.DetectMultiScale(grayFrame, 1.1, 10, System.Drawing.Size.Empty);                    
+                        //var sdetectedFaces = _haarCascade.DetectMultiScale(grayFrame, 1.5, 0, new System.Drawing.Size(277, 352), new System.Drawing.Size(277, 352));                    
+                        //foreach (var face in detectedFaces)
+                        //{
+                        //    currentFrame.Draw(face, new Bgr(System.Drawing.Color.Red), 1);
+                        //}
 
 
-                    //601 x 480
-                    //Width="415" Height="355"                    
-                    currentFrame.Draw(new System.Drawing.Rectangle(181, 63, 279, 354), new Bgr(System.Drawing.Color.Red), 1);
+                        //601 x 480
+                        //Width="415" Height="355"                    
+                        currentFrame.Draw(new System.Drawing.Rectangle(181, 63, 279, 354), new Bgr(System.Drawing.Color.Red), 1);
 
-                    imgCapture.ImageSource = BitmapSourceConvert.ToBitmapSource(currentFrame);
-                }
-            };
+                        imgCapture.ImageSource = BitmapSourceConvert.ToBitmapSource(currentFrame);
+                    }
+                };
 
-            _timer.Interval = new TimeSpan(0, 0, 0, 0, 1);
-            _timer.Start();
+                _timer.Interval = new TimeSpan(0, 0, 0, 0, 1);
+                _timer.Start();
+
+            }
+            catch(Exception ex)
+            {
+                Helper.log.Error("Camera Load Exception: " + ex.Message , ex);
+            }
 
         }
 

@@ -66,7 +66,14 @@ namespace SchoolSafeID
 
         private void btn_Home_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
+            else
+            {
+                this.NavigationService.Navigate(new Uri("HomePage.xaml", UriKind.Relative));
+            }            
         }
 
 
@@ -181,12 +188,13 @@ namespace SchoolSafeID
             {
                 m_pCoreScanner = new CoreScanner.CCoreScannerClass(); 
                 ViewBarcode viewBarcode = new ViewBarcode(m_pCoreScanner);
+                //viewBarcode.ChangeScannerType();
                 BarcodeEventHandler = new CoreScanner._ICoreScannerEvents_BarcodeEventEventHandler(OnBarcodeEvent);
-                m_pCoreScanner.BarcodeEvent += BarcodeEventHandler;
+                m_pCoreScanner.BarcodeEvent += BarcodeEventHandler;                
             }
             catch (Exception ex)
             {
-
+                System.Windows.MessageBox.Show(ex.Message);
             }            
         }
 

@@ -209,3 +209,217 @@ System.Net.WebException: The underlying connection was closed: A connection that
 2019-12-31 20:18:21,048 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
 2019-12-31 20:18:21,387 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
 2019-12-31 20:18:22,964 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2020-01-03 20:20:31,856 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-03 20:20:32,229 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2020-01-03 20:20:33,942 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2020-01-03 20:20:57,869 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-03 20:20:57,869 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-03 20:21:06,063 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2020-01-03 20:21:17,319 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-03 20:21:17,319 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-03 20:21:20,728 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2020-01-03 20:21:29,553 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-03 20:21:29,553 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-03 20:21:32,001 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2020-01-03 20:21:47,895 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-03 20:21:47,895 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-03 20:21:50,769 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2020-01-03 20:21:56,498 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-03 20:21:56,498 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-03 20:21:59,118 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2020-01-03 20:22:03,807 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-03 20:22:03,807 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-03 20:22:06,839 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2020-01-03 21:26:52,610 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-03 21:26:52,884 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2020-01-03 21:26:54,576 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2020-01-03 21:27:09,799 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-03 21:27:09,799 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-03 21:27:47,839 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-03 21:27:48,131 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2020-01-03 21:27:49,808 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2020-01-03 21:28:22,171 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-03 21:28:22,171 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-03 21:29:31,562 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-03 21:29:31,562 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-03 21:29:31,562 [1] INFO SchoolSafeID.Helper -  haarcascade_frontalface_alt_tree.xml file Path: C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\haarcascade_frontalface_alt_tree.xml
+2020-01-03 22:45:27,885 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-03 22:45:28,230 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2020-01-03 22:45:30,315 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2020-01-03 22:46:02,004 [1] INFO SchoolSafeID.Helper -  Beore Camera Load.
+2020-01-03 22:46:02,347 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-03 22:46:02,347 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-03 22:46:02,347 [1] INFO SchoolSafeID.Helper -  haarcascade_frontalface_alt_tree.xml file Path: C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\bin\Debug\haarcascade_frontalface_alt_tree.xml
+2020-01-03 22:46:13,028 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2020-01-03 23:10:05,242 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-03 23:10:05,539 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2020-01-03 23:10:07,408 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2020-01-03 23:25:05,970 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-03 23:25:06,274 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2020-01-03 23:25:08,153 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2020-01-03 23:26:25,236 [1] INFO SchoolSafeID.Helper -  Beore Camera Load.
+2020-01-03 23:26:25,578 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-03 23:26:25,579 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-06 18:46:01,339 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-06 18:46:04,225 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 18872
+2020-01-06 18:46:06,173 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/83/rsz_home_screen_artwork.png
+2020-01-06 18:47:14,058 [1] INFO SchoolSafeID.Helper - {Send To OneNote 16, OneNote, Microsoft XPS Document Writer, Microsoft Print to PDF, Fax}
+2020-01-06 18:47:27,919 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-06 18:47:29,901 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578318161.png
+2020-01-06 18:48:12,083 [19] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2020-01-06 18:57:28,105 [1] INFO SchoolSafeID.Helper -  Beore Camera Load.
+2020-01-06 18:57:57,412 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-06 18:57:57,435 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-06 18:58:24,876 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-06 18:58:27,652 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-06 18:58:29,824 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578318161.png
+2020-01-06 18:59:21,940 [1] INFO SchoolSafeID.Helper -  Beore Camera Load.
+2020-01-06 18:59:38,498 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-06 18:59:38,519 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-06 18:59:45,675 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2020-01-06 19:31:09,204 [1] INFO SchoolSafeID.Helper -  Beore Camera Load.
+2020-01-06 19:31:09,720 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-06 19:31:09,746 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-06 19:33:34,958 [1] INFO SchoolSafeID.Helper -  Beore Camera Load.
+2020-01-06 19:33:35,435 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-06 19:33:35,438 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-06 19:34:35,654 [1] INFO SchoolSafeID.Helper - Download Badge from /assets/membership/146/student_card_320013.pdf
+2020-01-06 19:36:39,638 [1] INFO SchoolSafeID.Helper -  Beore Camera Load.
+2020-01-06 19:36:40,160 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-06 19:36:40,166 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-06 19:36:51,942 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2020-01-06 19:54:21,658 [1] INFO SchoolSafeID.Helper -  Beore Camera Load.
+2020-01-06 19:54:23,363 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-06 19:54:23,544 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-06 22:23:55,151 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-06 22:23:55,677 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-06 22:23:57,489 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578318161.png
+2020-01-06 22:26:06,751 [1] INFO SchoolSafeID.Helper -  Beore Camera Load.
+2020-01-06 22:26:07,144 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-06 22:26:07,145 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-06 22:26:10,611 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2020-01-06 22:27:40,440 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-06 22:27:40,730 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-06 22:27:42,353 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331583.jpg
+2020-01-06 22:28:08,240 [1] INFO SchoolSafeID.Helper -  Beore Camera Load.
+2020-01-06 22:28:08,592 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-06 22:28:08,592 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-06 22:28:10,950 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2020-01-06 22:28:40,763 [1] INFO SchoolSafeID.Helper -  Beore Camera Load.
+2020-01-06 22:28:40,795 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-06 22:28:40,795 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-06 22:28:43,893 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2020-01-06 22:32:23,185 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-06 22:32:23,609 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-06 22:32:25,208 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-01-06 22:32:46,852 [1] INFO SchoolSafeID.Helper -  Beore Camera Load.
+2020-01-06 22:32:47,207 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-06 22:32:47,207 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-06 22:32:49,478 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2020-01-07 22:55:51,626 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-07 22:55:52,017 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-07 22:55:53,829 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-01-07 23:10:14,050 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-07 23:10:14,361 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-07 23:10:15,970 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-01-08 20:09:16,860 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-08 20:09:17,239 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-08 20:09:18,977 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-01-08 20:13:40,536 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-08 20:13:41,001 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-08 20:13:42,694 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-01-08 20:14:00,159 [16] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2020-01-08 20:14:23,820 [15] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2020-01-08 20:14:52,707 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-08 20:14:53,324 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-08 20:14:54,979 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-01-08 20:15:18,043 [14] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2020-01-08 20:15:37,925 [1] INFO SchoolSafeID.Helper -  Beore Camera Load.
+2020-01-08 20:15:38,322 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-08 20:15:38,322 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-08 20:15:44,934 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2020-01-08 20:15:51,303 [1] INFO SchoolSafeID.Helper -  Beore Camera Load.
+2020-01-08 20:15:51,329 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-08 20:15:51,329 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-08 20:15:53,430 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2020-01-08 20:17:24,572 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-08 20:17:24,930 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-08 20:17:26,590 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-01-08 21:31:02,542 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-08 21:31:02,982 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-08 21:31:04,621 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-01-08 22:22:18,401 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-08 22:22:18,740 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-08 22:22:20,417 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-01-08 22:58:15,300 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-08 22:58:15,671 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-08 22:58:17,428 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-01-10 00:24:35,926 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-10 00:24:36,512 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-10 00:24:38,317 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-01-10 00:25:20,845 [14] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2020-01-10 00:30:03,688 [18] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2020-01-10 00:51:50,714 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-10 00:51:51,044 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-10 00:51:52,785 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-01-10 00:52:35,083 [13] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2020-01-10 00:54:07,849 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-10 00:54:08,231 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-10 00:54:09,903 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-01-10 01:01:22,668 [9] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2020-01-14 22:16:31,706 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-14 22:16:32,594 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-14 22:16:34,739 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-01-20 19:41:59,102 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-20 19:41:59,641 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-20 19:42:01,556 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-01-20 19:43:02,252 [9] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2020-01-20 19:46:40,933 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-20 19:46:41,456 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-20 19:46:43,215 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-01-20 20:22:13,707 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-20 20:22:14,047 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-20 20:22:15,883 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-01-20 20:23:42,557 [20] ERROR SchoolSafeID.Helper - Get Visitor Data Error RestSharp.RestRequest
+2020-01-20 22:38:10,970 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-20 22:38:11,308 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-20 22:38:13,167 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-01-23 22:22:58,706 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-23 22:22:59,362 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-23 22:23:01,571 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-01-24 21:25:26,799 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-24 21:25:27,242 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-24 21:25:29,036 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-01-24 21:26:13,264 [1] INFO SchoolSafeID.Helper -  Beore Camera Load.
+2020-01-24 21:26:13,621 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-24 21:26:13,621 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-24 21:26:16,640 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2020-01-24 21:50:47,036 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-01-24 21:50:47,421 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-01-24 21:50:49,106 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-01-24 21:51:25,923 [1] INFO SchoolSafeID.Helper -  Beore Camera Load.
+2020-01-24 21:51:26,214 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-24 21:51:26,214 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-24 21:51:28,592 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2020-01-24 22:32:32,391 [1] INFO SchoolSafeID.Helper -  Beore Camera Load.
+2020-01-24 22:32:32,554 [1] INFO SchoolSafeID.Helper -  Camera Width: 640
+2020-01-24 22:32:32,554 [1] INFO SchoolSafeID.Helper -  Camera Height: 480
+2020-01-24 22:32:34,643 [1] INFO SchoolSafeID.Helper - Save Visitor Image
+2020-02-03 21:08:37,233 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-02-03 21:08:38,031 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-02-03 21:08:39,952 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-02-03 21:12:19,281 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-02-03 21:12:19,735 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-02-03 21:12:21,437 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-02-03 21:13:24,222 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-02-03 21:13:24,674 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-02-03 21:13:26,371 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-02-03 21:14:29,923 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-02-03 21:14:30,264 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-02-03 21:14:31,979 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-02-03 21:16:52,286 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-02-03 21:16:52,644 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-02-03 21:16:54,343 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg
+2020-02-03 21:18:36,392 [1] INFO SchoolSafeID.App -         =============  Started Logging  =============        
+2020-02-03 21:18:36,708 [1] INFO SchoolSafeID.Helper - Fetch Kiosk Settings for Job No 123456
+2020-02-03 21:18:38,410 [1] INFO SchoolSafeID.Helper - Download School Logo https://dev.schoolsafeid.com/assets/school_logos/146/1578331944.jpg

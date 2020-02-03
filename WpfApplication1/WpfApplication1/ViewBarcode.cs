@@ -78,22 +78,29 @@ namespace SchoolSafeID
         }
 
 
-        /// <summary>
-        /// BarcodeEvent received
-        /// </summary>
-        /// <param name="eventType">Type of event</param>
-        /// <param name="scanData">Barcode string</param>
-        public static void OnBarcodeEvent(short eventType, ref string scanData)
+        public void ChangeScannerType()
         {
-            try
-            {
-                string tmpScanData = scanData;                
-                ShowBarcodeLabel(tmpScanData);                
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Barcode Event issue " + e.Message);
-            }
+            string strHostMode = "XUA-45001-9";
+
+            string strSilentSwitch = "TRUE"; // : "FALSE";
+
+            string strPermChange = "TRUE"; // : "FALSE";
+
+            string inXml = "<inArgs>" +
+                                "<scannerID>1</scannerID>" +
+                                "<cmdArgs>" +
+                                "<arg-string>" + strHostMode + "</arg-string>" +
+                                "<arg-bool>" + strSilentSwitch + "</arg-bool>" +
+                                "<arg-bool>" + strPermChange + "</arg-bool>" +
+                                "</cmdArgs>" +
+                                "</inArgs>";
+
+            int opCode = DEVICE_SWITCH_HOST_MODE;
+            string outXml = "";
+            int status = STATUS_FALSE;
+            ExecCmd(opCode, ref inXml, out outXml, out status);
+
+            MessageBox.Show(outXml + " : " + status);
         }
 
 
@@ -500,7 +507,7 @@ namespace SchoolSafeID
 
         //End Symbology Types
 
-        const string APP_TITLE = "Scanner Multi-Interface Test Utility";
+        const string APP_TITLE = "schoolSAFEid Visitor Management System";
         const string STR_OPEN = "Start";
         const string STR_CLOSE = "Stop";
         const string STR_REFRESH = "Rediscover Scanners";

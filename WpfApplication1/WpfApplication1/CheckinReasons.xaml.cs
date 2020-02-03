@@ -77,6 +77,7 @@ namespace SchoolSafeID
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
             await Task.Delay(100);
+
             setOption("checkin_option1", btnOption1);
             setOption("checkin_option2", btnOption2);
             setOption("checkin_option3", btnOption3);
@@ -106,10 +107,27 @@ namespace SchoolSafeID
         }
 
 
-        public void BadgePreview()
+        public async void BadgePreview()
         {
+            disableSigninOptions();
+
+            await Task.Delay(1000);
+
             this.NavigationService.Navigate(new Uri("BadgePreview.xaml", UriKind.Relative));
         }
 
+
+        private void disableSigninOptions()
+        {
+            btnOption1.IsEnabled = false;
+            btnOption2.IsEnabled = false;
+            btnOption3.IsEnabled = false;
+            btnOption4.IsEnabled = false;
+            btnOption5.IsEnabled = false;
+            btnOption6.IsEnabled = false;
+            btnOption7.IsEnabled = false;
+            btnOption8.IsEnabled = false;
+            btnOption9.IsEnabled = false;
+        }
     }
 }

@@ -8,9 +8,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("default/placeholder.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("fonts/haarcascade_frontalface_alt_tree.xml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("x64/concrt140.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("x64/cvextern.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("x64/msvcp140.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("x64/opencv_videoio_ffmpeg411_64.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("x64/vcruntime140.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("x86/concrt140.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("x86/cvextern.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("x86/msvcp140.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("x86/opencv_videoio_ffmpeg411.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("x86/vcruntime140.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("log4net.config")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("fonts/glyphicons-halflings-regular.ttf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("fonts/lato-black.ttf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("fonts/lato-blackitalic.ttf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("fonts/lato-bold.ttf")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("haarcascade_frontalface_alt_tree.xml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("fonts/lato-bolditalic.ttf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("fonts/lato-italic.ttf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("fonts/lato-light.ttf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("fonts/lato-lightitalic.ttf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("fonts/lato-regular.ttf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("fonts/lato-thin.ttf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("fonts/lato-thinitalic.ttf")]
 
 

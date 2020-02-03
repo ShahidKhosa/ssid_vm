@@ -82,11 +82,11 @@ namespace SchoolSafeID
             }
             catch (System.NotSupportedException ex)
             {
-                imgVisitorImage.Source = new BitmapImage(new Uri(Helper.DefaultImage, UriKind.Absolute));
+                imgVisitorImage.Source = new BitmapImage(new Uri(Helper.DefaultImage, UriKind.Relative));
             }
             catch (Exception ex)
             {
-                imgVisitorImage.Source = new BitmapImage(new Uri(Helper.DefaultImage, UriKind.Absolute));
+                imgVisitorImage.Source = new BitmapImage(new Uri(Helper.DefaultImage, UriKind.Relative));
             }
         }
 

@@ -46,7 +46,7 @@ namespace SchoolSafeID
         {
             if (txt_FirstName.Text != String.Empty && txt_LastName.Text != String.Empty && Visitor.ID > 0)
             {                
-                APIManager.Signout();
+                APIManager.StudentSignout();
 
                 this.NavigationService.Navigate(new Uri("SignoutCompleted.xaml", UriKind.Relative));
             }

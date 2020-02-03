@@ -95,9 +95,10 @@ namespace SchoolSafeID
             var response    = await client.ExecuteTaskAsync(request);
 
             if (response.StatusCode == HttpStatusCode.OK)
-            {
+            {                
                 try
                 {
+                    Helper.log.Info("File Downloaded: " + BaseURL + url + " | File Path: " + path);
                     response.RawBytes.SaveAs(path);
                 }                
                 catch(Exception ex)
@@ -107,6 +108,8 @@ namespace SchoolSafeID
 
                 if (printBadge == 1)
                 {
+                    Helper.log.Info("Print Badge Path: " + BadgePath + " | Printer Name: " + AppSettings.PrinterName);
+
                     var printWrapper = new PDFtoPrintWrapper();
                     await printWrapper.Print(BadgePath, AppSettings.PrinterName);
                 }
@@ -460,6 +463,20 @@ namespace SchoolSafeID
             request.AddParameter("job_id", APIManager.KioskSettings["job_id"]);
             request.AddParameter("barcode_data", Visitor.BarcodeData);
             request.AddParameter("check_out_type", Visitor.CheckoutType);
+
+            SendVisitorDataAsync(request, client);
+        }
+
+
+        public static void StudentSignout(string action = "api_signout")
+        {
+            var client = GetClient();
+            var request = new RestRequest("/api/class_api.php", Method.POST);
+            request.AddParameter("action", action);
+            request.AddParameter("id", Student.ID);
+            request.AddParameter("job_id", APIManager.KioskSettings["job_id"]);
+            request.AddParameter("barcode_data", Student.BarcodeData);
+            request.AddParameter("check_out_type", "student");
 
             SendVisitorDataAsync(request, client);
         }
