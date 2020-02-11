@@ -33,7 +33,7 @@
     <ProductName>schoolSAFEid Visitor Management System</ProductName>
     <PublisherName>schoolSAFEid</PublisherName>
     <MinimumRequiredVersion>1.0.0.4</MinimumRequiredVersion>
-    <ApplicationRevision>33</ApplicationRevision>
+    <ApplicationRevision>34</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>

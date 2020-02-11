@@ -349,3 +349,4 @@ C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplicatio
 C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\StudentSignoutOptions.baml
 C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\StudentSignout.g.cs
 C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\StudentSignout.baml
+C:\Users\shahid.amin\Documents\Visual Studio 2017\Projects\ssid_vm\WpfApplication1\WpfApplication1\obj\Debug\SchoolSafeID.csprojResolveAssemblyReference.cache

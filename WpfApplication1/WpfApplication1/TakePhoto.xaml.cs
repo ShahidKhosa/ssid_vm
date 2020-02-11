@@ -69,7 +69,8 @@ namespace SchoolSafeID
 
             if(IsStudentCheckout)
             {
-                APIManager.Signout();
+                Helper.log.Info("Save Studnet Sign-out: " + Visitor.CroppedImagePath);
+                APIManager.StudentSignout();
 
                 this.NavigationService.Navigate(new Uri("SignoutCompleted.xaml", UriKind.Relative));
             }

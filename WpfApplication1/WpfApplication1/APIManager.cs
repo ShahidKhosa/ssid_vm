@@ -478,6 +478,14 @@ namespace SchoolSafeID
             request.AddParameter("barcode_data", Student.BarcodeData);
             request.AddParameter("check_out_type", "student");
 
+            if (Visitor.VisitorHasNewImage)
+            {
+                request.AlwaysMultipartFormData = true;
+                request.AddHeader("Content-Type", "multipart/form-data");
+                request.AddFile("file", Visitor.CroppedImagePath, "image/jpg");
+                request.AddParameter("multipart/form-data", Path.GetFileName(Visitor.CroppedImagePath), ParameterType.RequestBody);
+            }
+
             SendVisitorDataAsync(request, client);
         }
 
